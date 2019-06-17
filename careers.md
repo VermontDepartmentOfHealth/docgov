@@ -9,11 +9,11 @@ If you're here and interested in a job with the Agency of Digital Services & Ver
 ## What to Prepare *(ahead of time)*
 
 1. Create a Personal Project Diagram
-2. Familiarize yourself with MS SQL Server Managment Studio
+2. Familiarize yourself with MS SQL Server Management Studio
 
 ### Personal Project Diagram
 
-Prior to the interview, please provide a simple diagram of a system or appliation that you woked on with a summary of what the end-product did.  We want you to be able to showcase something you've built or you're particularly proud of. Please be prepared to provide techinical details about the system during the interview.
+Prior to the interview, please provide a simple diagram of a system or application that you worked on with a summary of what the end-product did.  We want you to be able to showcase something you've built or you're particularly proud of. Please be prepared to provide technical details about the system during the interview.
 
 Here are a couple of examples of system diagrams [Entity Relationship Diagram][6] | [Software Architectural Diagram][7]. Please feel free to use whatever drawing or diagram tools you'd like, for example, Visio, a pen and paper, or any available free tools like [draw.io][9]
 
@@ -24,7 +24,7 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 
 **Interview Duration**: Please block off approximately two hours for the interview.
 
-**Getting Here**: There are meters and several parking garages around town, and we alre also located right next to the Downtown Center stop on [GMTs busline][14]. Please see the [City of Burlington Parking Guide][13] for more information
+**Getting Here**: There are meters and several parking garages around town, and we are also located right next to the Downtown Center stop on [GMTs bus line][14]. Please see the [City of Burlington Parking Guide][13] for more information
 
 **Location**: We're located at [108 Cherry Street][10], Third floor, Suite 301.  
 
@@ -47,10 +47,10 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 * You'll have full access to Google, Stack Overflow, or any other online resources you might want.
 * We'll have a pair coding setup with two keyboard and two mice
 * We want you to feel as comfortable writing code as you would be at work, which means...
-  * If you want to drive, cool
-  * Don't want to drive, cool
-  * Want to use the internet, cool
-  * Want to use a whiteboard, also cool
+  * If you want to drive, okay
+  * Don't want to drive, okay
+  * Want to use the internet, okay
+  * Want to use a whiteboard, also okay
   * Prefer a sitting or standing desk, both fine
 
 The coding setup should look something like this (well, exactly like this)
@@ -66,15 +66,21 @@ Here's an overview of the types of SQL we'll look at:
 * Read and review some code
 * Discuss database design 
 
+## Next Steps
+
+Following any interview, we'll make sure to get back to you within 1-2 weeks and let you know if we'll be moving forward or not
+
 ## Equal Opportunity
 
 #### Legally, we need you to know this:
 
-The Vermont Department of Health does not disciminate in employment matters on the basis of race, color, religion, gender identity or expression, national orign, age, military service elligibility, veteran status, sexual orientation, martial status, genetic information, AIDS/HIV status, place of birth, credit history, or disability (phyiscal, mental, or emotional)
+The Vermont Department of Health does not discriminate in employment matters on the basis of race, color, religion, gender identity or expression, national origin, age, military service eligibility, veteran status, sexual orientation, marital status, genetic information, AIDS/HIV status, place of birth, credit history, or disability (physical, mental, or emotional).
 
 #### But also, we want you to know this:
 
 We believe that diverse *and* inclusive teams build better products and workplace environments.  We actively encourage people from all groups to join and be a part of our team.
+
+
 
 [1]: https://img.shields.io/badge/Hiring-Yes-green.svg
 [2]: https://humanresources.vermont.gov/talent-acquisition/successfactors-recruiting/successfactors-first-time-login
