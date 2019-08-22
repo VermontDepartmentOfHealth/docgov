@@ -1,0 +1,20 @@
+{
+  "name": "dev_read_me",
+  "version": "1.0.0",
+  "description": "Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Kyle.Mitofsky@ahs-jira-prod.ahs.state.vt.us:8443/stash/scm/vdh/docs.git"
+  },
+  "author": "Kyle.Mitofsky",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "clean-css": "^4.2.1"
+  }
+}

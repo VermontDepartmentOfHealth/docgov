@@ -1,0 +1,9 @@
+*.ssms_suo
+*.suo
+slnx.sqlite
+VSWorkspaceState.json
+
+
+node_modules
+_site
+.env

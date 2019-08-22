@@ -1,0 +1,23 @@
+body {
+    margin: 2rem auto;
+    max-width: 45rem;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #313131;
+    padding: 0 10px;
+  }
+  
+  h1,h2,h3 {
+    line-height: 1.2;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    color: #024222;
+    text-decoration: none;
+    font-size: 3rem; 
+  }
+.brand svg {
+      height: 63px;
+  }

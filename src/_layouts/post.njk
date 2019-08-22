@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" > 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    
+    {# Theme color for browser chrome (chrome android) #}
+    <meta name="theme-color" content="#024222">
+
+    {# Primary Meta Tags #}
+    <title>{{title}}</title>
+    <meta name="title" content="{{title}}">
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Inconsolata" rel="stylesheet">
+
+    {# capture the CSS content as a Nunjucks variable #}
+    {% set css %}{% include "styles.css" %}{% endset %}
+    {# feed it through our cssmin filter to minify #}
+    <style type="text/css">{{ css | cssmin | safe }}</style>
+</head>
+
+<body class="{{title}}">
+
+    <header id="header" class="header">
+        <a href="/" aria-label="Home Page" class="brand" >
+            {% include "bookmark.svg" %}
+            Dev Read Me
+        </a>
+    </header>
+    
+
+
+    <main class="content">
+        
+        <h1>{{title}}</h1>
+
+        {{ content | safe }}
+    
+    </main>
+
+
+    <footer class="footer">
+        
+        
+        <ul id="footer-nav" class="nav-links">
+            <li><a href="#header">Back to top</a></li>
+            <li><a href="/">Home</a></li>
+        </ul>
+
+        <div class="copy-line">
+            <span class="copyright">&copy; Vermont Department of Health 2019 </span>
+        </div>
+
+    </footer>
+</body>
+
+</html>
