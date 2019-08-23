@@ -100,6 +100,7 @@ header.header {
   text-decoration: none;
   font-size: 2.6rem; 
   font-weight: bold;
+  transition: .4s ease color;
 }
 .brand:hover {
   color: hsla(148, 97%, 33%, 1);
