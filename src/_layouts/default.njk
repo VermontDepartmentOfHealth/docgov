@@ -12,8 +12,9 @@
     {# Primary Meta Tags #}
     <title>{{title}}</title>
     <meta name="title" content="{{title}}">
+    <meta name="title" content="{{summary}}">
     
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
 
     {# capture the CSS content as a Nunjucks variable #}
     {% set css %}{% include "styles.css" %}{% endset %}
@@ -25,8 +26,8 @@
 
     <header id="header" class="header">
         <a href="/" aria-label="Home Page" class="brand" >
-            {% include "bookmark.svg" %}
-            Dev Read Me
+            {% include "vt-logo.svg" %}
+            Open Sourced
         </a>
     </header>
     
@@ -34,7 +35,10 @@
 
     <main class="content">
         
-        <h1>{{title}}</h1>
+        {% if not hideTitle %}
+            <h1 class="page-title">{{title}}</h1>
+        {%- endif -%}
+        
 
         {{ content | safe }}
     

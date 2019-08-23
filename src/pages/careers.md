@@ -1,4 +1,12 @@
-# Hiring Overview
+---
+layout: default.njk
+title: Hiring Overview
+tags: ['post', 'workforce']
+authors: ['Kyle', 'Brian']
+date: 2019-08-22
+summary: "An overview of our hiring process as we strive to make our interviewing process as open, fair, and inclusive as we can"
+---
+
 
 [![We are hiring][1]][2]
 

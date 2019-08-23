@@ -1,0 +1,41 @@
+---
+layout: default.njk
+title: "Home Page"
+hideTitle: true
+date: 2019-08-22
+summary: "A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS"
+---
+
+<section class="intro">
+A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at
+ <abbr title="Vermont Department of Health">VDH</abbr> / 
+ <abbr title="Agency of Human Services">AHS</abbr> / 
+ <abbr title="Agency of Digital Services">ADS</abbr> 
+</section>
+
+<ul class="posts">
+{%- for post in collections.post -%}
+  <li class="post">
+    <h2><a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a></h2>
+
+    <span class="post-meta">
+      <span class="post-date">{{ post.data.date | dateDisplay }}</span>
+      <span class="post-byline">
+        -
+        <ul class="post-authors">
+        {%- for author in post.data.authors -%}
+          <li class="post-author">
+            {{ author }}
+            
+            {% if not loop.last %}<span class="separator">,</span>{%- endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+      </span>
+    </span>
+    
+
+    <span class="post-summary">{{ post.data.summary }}</span>
+  </li>
+{%- endfor -%}
+</ul>

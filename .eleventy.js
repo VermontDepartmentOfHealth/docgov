@@ -2,15 +2,15 @@
 
 module.exports = function(eleventyConfig) {
 
-    // Copy the `assets/` directory (css, images, etc)
+    // static passthroughs
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
-    // add cssmin filter
-    const CleanCSS = require("clean-css");
-    eleventyConfig.addFilter("cssmin", function(code) {
-        return new CleanCSS({}).minify(code).styles;
-    });
+
+    // add filters
+    eleventyConfig.addFilter("squash", require("./src/_filters/squash.js") );
+    eleventyConfig.addFilter("cssmin", require("./src/_filters/clean-css.js") );
+    eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );
 
         
     return {
