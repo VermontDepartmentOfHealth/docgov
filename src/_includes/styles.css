@@ -21,8 +21,8 @@ html {
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: minmax(100px, 40rem);
-  place-content: center;
+  grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
+  /* place-content: center; */
   min-height: 100%;
 }
 
@@ -30,6 +30,7 @@ main.content,
 header.header,
 footer.footer {
   padding: 1rem;
+  grid-column-start: 2;
 }
 
 /* typography */
@@ -86,6 +87,30 @@ pre, code {
     height: calc(100% - 6px);
 }
 
+.content .btn,
+.footer .btn {
+  border: 2px solid hsl(300, 83%, 28%);
+  color: hsl(300, 83%, 28%);
+  border-radius: 2px;
+  padding: 1px 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease color, .4s ease border-color;
+}
+.content .btn:hover,
+.footer .btn:hover {
+  color: hsl(300, 83%, 40%);
+  border-color: hsl(300, 83%, 36%);
+}
+.btn svg {
+  height: 16px;
+  margin-right: 6px;
+}
+.content .btn::before,
+.footer .btn::before  {
+  content: none;
+}
 
 /* header */
 header.header {
@@ -188,4 +213,14 @@ img {
   border: 5px solid white;
   box-shadow: 1px 1px 2px 1px #c6c6c6, 0px 0px 4px 1px #c6c6c6;
   border-radius: 3px;
+}
+
+/* media queries */
+@media (max-width: 500px) {
+  .brand {
+    font-size: 2rem;
+  }
+  .brand svg {
+    width: 75px;
+  }
 }
