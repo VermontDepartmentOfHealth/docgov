@@ -17,7 +17,7 @@ Available at https://open-sourced.netlify.com/
 * Install [Node.js & NPM](https://nodejs.org/en/download/)
 * Run `npm install` in the project directory to install local dependencies
 * Install eleventy globally
-    ```js
+    ```bash
     npm i @11ty/eleventy -g
     ```
 * Run `npm run serve` to run a local dev environment
