@@ -1,7 +1,7 @@
 ---
 layout: default.njk
 title: "IT Orientation"
-tags: ['post', 'orientation']
+tags: ['post', 'overview']
 authors: ['Kyle']
 date: 2019-06-17
 summary: "A list of resources, links, and onboarding materials for developers at the Vermont Department of Health"
