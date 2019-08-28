@@ -14,7 +14,7 @@ Thank you for joining our team and we're excited to build awesome stuff together
 
 You can read about the core of what we do in our [Vision & Mission statement on our public website](https://www.healthvermont.gov/about/vision)
 
-Here's some of the broad strokes stuff you can expect in the first couple months and beyond
+Here's some of the broad strokes stuff you can expect in the first couple months and beyond. This is based upon the [SOV Onboarding and Hiring Guide.](https://humanresources.vermont.gov/talent-acquisition/onboarding-and-retention/onboarding-guide/printable-guide)
 
 ## 1. Computer Setup
 
@@ -29,9 +29,16 @@ Here are some things to get started with as you setup your machine:
   * 2012
 * JIRA
 * Bitbucket Server (formerly Stash)
-* Source Tree / Git Bash
+* Source Tree
 * RedGate ToolBelt
 * AHS Global Admin Tool
+
+Additional tools you may find useful
+
+* [MajorGeeks.com - Copy File Name](https://www.majorgeeks.com/files/details/copy_file_name.html) - add's the ability to right-click on a file and copy the full path in a number of formats.
+* [git-scm.com - Git Bash](https://git-scm.com/downloads) - Git Bash for those who enjoy command line fun times.
+* [notepad-plus-plus.org - Notepad++](https://notepad-plus-plus.org/download/all-versions.html) - A good all around editor.
+* [google.com - Chrome Browser](https://www.google.com/chrome/) - A sound alternative to using IE.
 
 ## 2. Department Introductions / Orientation
 
@@ -45,9 +52,20 @@ There are several mandatory health department trainings and many more training a
 
 ### Mandatory Trainings
 
-* VDH Orientation
-* HIPPA Training
-* Sexual Harrassment Training
+The following are a list of mandatory trainings that all new hires must take.
+
+Class signup can be done via [LINC - Lead. Innovate. Navigate. Connect!](https://vermont.csod.com/client/vermont/default.aspx). 
+
+More information on LINC please visit : [https://humanresources.vermont.gov/training/sov-linc](https://humanresources.vermont.gov/training/sov-linc)
+
+* Preventing and Addressing Sexual Harassment – classroom/2 hours 
+* Civility and Unconscious Bias in the Workplace – classroom/2 hours 
+* Diversity Online– online/15 minutes 
+* Ethics in State Government: Decisions and Dilemmas– online/ 15 minutes 
+* Emergency Procedures for the Individual State Employee – online/2 hours 25 minutes 
+* Continuous Improvement 101 – online/30 minutes 
+* Office Ergonomics – online/20 minutes 
+* Defensive Driving Course – online/2 hours
 
 ### Development Trainings
 
@@ -71,6 +89,11 @@ This can be setup on a case by case basis.  A key training tool we lean on is [p
 
    Trainings can always occupy any remaining down time or also be pro-actively used to orient to any new technologies or frameworks.
 
+### 5. Miscilaneous links that you may find useful.
+
+* [Intranet](http://isa2004/Intranet/ITSI/ITSIntranet/default.aspx?Page=Home/ITSHome) - Contains documentation for past and ongoing projects.
+* [Confluence](https://confluence.ahs.state.vt.us/display/AHSDS/Forms) - AHS Data Services Web Portal for forms, standards, documentation, etc., for all database related tasks, requests, and procedures.
+* [Hive](https://vermontgov.sharepoint.com/sites/AHSIntra/Dept/Pages/Department.aspx) - AHS Sharepoint site with links to the various departments Intranet and Internet pages containing resources, documents, and information specific to each.
 
 ----
 
