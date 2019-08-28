@@ -56,7 +56,7 @@ The following are a list of mandatory trainings that all new hires must take.
 
 Class signup can be done via [LINC - Lead. Innovate. Navigate. Connect!](https://vermont.csod.com/client/vermont/default.aspx). 
 
-More information on LINC please visit : [https://humanresources.vermont.gov/training/sov-linc](https://humanresources.vermont.gov/training/sov-linc)
+For more information about LINC please visit : [https://humanresources.vermont.gov/training/sov-linc](https://humanresources.vermont.gov/training/sov-linc)
 
 * Preventing and Addressing Sexual Harassment – classroom/2 hours 
 * Civility and Unconscious Bias in the Workplace – classroom/2 hours 
