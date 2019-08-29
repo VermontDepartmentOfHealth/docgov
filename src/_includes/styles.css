@@ -371,3 +371,40 @@ button#close-search {
 button#close-search:hover {
   background: #e0e0e0;
 }
+
+/* table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0em;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: hsla(148, 94%, 27%, 1);
+  color: rgba(255, 255, 255, 0.91);
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    position: relative;
+}
+
+table tr:nth-child(even){background-color: #fefefe;}
+
+table tr:hover {background-color: #fefefe;}
+
+td .fill {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+td svg {
+  max-width: 50px;
+}
