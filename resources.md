@@ -10,6 +10,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - available data values](https://www.11ty.io/docs/data/)
 * [11ty - permalinks](https://www.11ty.io/docs/permalinks/)
 * [11ty - inline css](https://www.11ty.io/docs/quicktips/inline-css/)
+* [11ty - inline js](https://www.11ty.io/docs/quicktips/inline-js/)
 * [11ty - 404 page](https://www.11ty.io/docs/quicktips/not-found/)
 * [11ty - filters](https://www.11ty.io/docs/filters/)
 * [11ty - frontmatter in .11ty.js files](https://www.11ty.io/docs/languages/javascript/#permalinks)
