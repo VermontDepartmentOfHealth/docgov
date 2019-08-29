@@ -4,7 +4,7 @@ class SearchIndex {
     data() {
       return {
           // https://www.11ty.io/docs/languages/javascript/#permalinks
-        permalink: "/search2.json",
+        permalink: "/search.json",
         eleventyExcludeFromCollections: true,
       };
     }
