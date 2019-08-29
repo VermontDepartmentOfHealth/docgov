@@ -8,7 +8,6 @@ module.exports = function(eleventyConfig) {
 
 
     // add filters
-    eleventyConfig.addFilter("squash", require("./src/_filters/squash.js") );
     eleventyConfig.addFilter("cssmin", require("./src/_filters/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./src/_filters/clean-js.js") );
     eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );

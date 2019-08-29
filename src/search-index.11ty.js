@@ -1,4 +1,5 @@
-const squash = require("./_filters/squash");
+const dateDisplay = require("./_filters/dates");
+var he = require('he');
 
 class SearchIndex {
     data() {
@@ -14,7 +15,9 @@ class SearchIndex {
           return {
             url: item.url,
             title: item.data.title,
-            text: squash(`${item.data.title} ${item.data.templateContent}`)
+            date: dateDisplay(item.data.date),
+            summary: item.data.summary,
+            content: sanitize(item.templateContent)
           }  
         })
         var stringify = JSON.stringify(search, null, 2)
@@ -23,3 +26,24 @@ class SearchIndex {
   }
   
   module.exports = SearchIndex;
+
+
+  let sanitize = text => {
+
+      var content = new String(text);
+    
+      // all lower case, please
+      var content = content.toLowerCase();
+    
+      // remove all html elements and new lines
+      var strippedHtml = content.replace(/<[^>]+>/g, ' ');
+      var plain = he.decode(strippedHtml);
+    
+      //remove newlines, and punctuation
+      result = plain.replace(/\.|\,|\?|-|—|\n/g, '');
+      //remove repeated spaces
+      result = result.replace(/[ ]{2,}/g, ' ');
+    
+      return result;
+    
+  }

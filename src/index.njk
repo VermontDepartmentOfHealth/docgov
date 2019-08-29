@@ -6,12 +6,23 @@ date: 2019-08-22
 summary: "A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS"
 ---
 
+
 <section class="intro">
 A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at
  <abbr title="Vermont Department of Health">VDH</abbr> / 
  <abbr title="Agency of Human Services">AHS</abbr> / 
  <abbr title="Agency of Digital Services">ADS</abbr> 
 </section>
+
+        
+<form action="https://www.google.com/search" id="form-search" class="search" autocomplete="off">
+    <input type="search" name="q" id="input-search" class="hide-clear" placeholder="Type to search" autocomplete="off">
+    <label for="input-search">
+      {% include "search.svg" %}
+    </label>
+</form>
+
+<div id="search-results"></div>
 
 <ul class="posts">
 {%- for post in collections.post -%}
@@ -39,3 +50,10 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
   </li>
 {%- endfor -%}
 </ul>
+
+{# capture the JS content as a Nunjucks variable #}
+{# {% set js %}{% include "search.js" %}{% endset %} #}
+{# feed it through our cssmin filter to minify #}
+{# <script type="text/javascript">{{ js | jsmin | safe }}</script> #}
+
+<script src="/assets/search.js"></script>

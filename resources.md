@@ -18,6 +18,11 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - access templateContent from JS template](https://github.com/11ty/eleventy/issues/664)
 
 
+## JAMStack
+
+* [Adding Search to a Jamstack site](https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/)
+* [How to create a vanilla JS search page for a static website](https://gomakethings.com/how-to-create-a-vanilla-js-search-page-for-a-static-website/)
+
 ## Netlify
 
 * [netlify - TOML](https://www.netlify.com/docs/netlify-toml-reference/)
@@ -47,7 +52,6 @@ A stash for helpful articles, references, documentation looked up along the way
 * [md - extended syntax - ids](https://www.markdownguide.org/extended-syntax/#heading-ids)
 
 
-
 ## Node
 
 * [npm - markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor)
@@ -67,3 +71,20 @@ A stash for helpful articles, references, documentation looked up along the way
 ## HTML
 
 * [html - meta tags](https://metatags.io/)
+* [html - disabling chrome autofill](https://stackoverflow.com/q/15738259/1366033)
+* [chromium - use cases for autocomplete=off](https://bugs.chromium.org/p/chromium/issues/detail?id=587466)
+
+## JS
+
+* [Strip HTML from Text JavaScript](https://stackoverflow.com/a/1237620/1366033)
+* [Native JavaScript or ES6 way to encode and decode HTML entities?](https://stackoverflow.com/a/57702435/1366033)
+
+
+## CSS
+
+* [css - remove 'x' from search input](https://stackoverflow.com/a/57701803/1366033)
+
+
+
+
+
