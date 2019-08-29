@@ -346,7 +346,7 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
 }
 
 .search-result strong {
-  background: hsl(198, 99%, 98%);
+  background: hsl(45, 100%, 89%);
   border-radius: 2px;
 }
 
