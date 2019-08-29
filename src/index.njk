@@ -25,7 +25,7 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
 <div id="search-results"></div>
 
 <ul class="posts">
-{%- for post in collections.post -%}
+{%- for post in collections.post | reverse -%}
   <li class="post">
     <h2><a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a></h2>
 
