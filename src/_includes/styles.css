@@ -452,7 +452,17 @@ td .fill {
     position: absolute;
 }
 td svg {
-  max-width: 50px;
+  max-width: 30px;
+}
+
+h2 {
+  display: flex;
+}
+
+h2 svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 /* tags */
@@ -526,4 +536,16 @@ a.tag-badge:hover {
     position: relative;
     right: initial;
   }
+}
+
+
+/* page specific styles */
+.priority h2+table th {
+  width: 50%;
+  vertical-align: middle;
+  background: #f9f9f9;
+  color: inherit;
+}
+.priority h2+table th svg {
+  vertical-align: inherit;
 }

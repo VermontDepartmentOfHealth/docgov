@@ -53,7 +53,7 @@ A stash for helpful articles, references, documentation looked up along the way
 ## Markdown
 
 * [md - extended syntax - ids](https://www.markdownguide.org/extended-syntax/#heading-ids)
-
+* [md - how to write lists inside a markdown table](https://stackoverflow.com/q/19950648/1366033)
 
 ## Node
 

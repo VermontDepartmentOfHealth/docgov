@@ -2,5 +2,6 @@
     {"name": "workforce", "description": "For posts about workforce development, onboarding, hiring, training, and managing professional talent"},
     {"name": "overview", "description": "An overview of products, services, technologies, or domain specific knowledge"},
     {"name": "team", "description": "Posts relating to a particular team, and their internal structure, prioritization, and process management"},
-    {"name": "how-to", "description": "Step by step instructions on how to install an application, configure your machine, or any other walkthroughs"}
+    {"name": "how-to", "description": "Step by step instructions on how to install an application, configure your machine, or any other walk-throughs"},
+    {"name": "process", "description": "Detailing our current process workflows for planning, prioritizing, development, and maintenance"}
 ]

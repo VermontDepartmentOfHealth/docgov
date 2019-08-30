@@ -4,7 +4,7 @@ title: How to Install SSIS
 tags: ['post', 'how-to']
 authors: ['Sandra']
 date: 2019-08-30
-summary: "Setting up SQL Server Integration Studios"
+summary: "How to install and configure SQL Server Integration Services (SSIS)"
 ---
 
 1. Uninstall VS 2017 (and any other versions of VS)
