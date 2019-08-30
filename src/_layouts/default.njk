@@ -10,8 +10,9 @@
     <meta name="theme-color" content="#024222">
 
     {# Primary Meta Tags #}
-    <title>{{title}}</title>
-    <meta name="title" content="{{title}}">
+    {% set page_title = title or (renderData and renderData.title) %}
+    <title>{{page_title}}</title>
+    <meta name="title" content="{{page_title}}">
     <meta name="title" content="{{summary}}">
     
     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
 
-<body class="{{title}}">
+<body>
 
     <header id="header" class="header">
         <a href="/" aria-label="Home Page" class="brand" >
@@ -35,7 +36,6 @@
 
     <main class="content">
         
-
         {{ content | safe }}
 
     </main>

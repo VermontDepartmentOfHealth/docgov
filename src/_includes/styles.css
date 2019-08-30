@@ -241,20 +241,15 @@ img {
   border-radius: 3px;
 }
 
-a img {
+.content a img {
   border: none;
 }
-
-
-/* media queries */
-@media (max-width: 500px) {
-  .brand {
-    font-size: 2rem;
-  }
-  .brand svg {
-    width: 75px;
-  }
+.content a svg {
+  width: 20px;
+  height: 20px;
 }
+
+
 
 /* search form */
 form.search {
@@ -415,4 +410,77 @@ td .fill {
 }
 td svg {
   max-width: 50px;
+}
+
+/* tags */
+ol.taglist {
+  padding-left: 0;
+  list-style: none;
+}
+
+li.tag {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+a.tag-badge::before {
+  content: none;
+}
+
+a.tag-badge {
+  border: 1px solid hsl(198, 23%, 52%);
+  border-radius: 3px;
+  padding: 1px 7px;
+  background: hsla(198, 70%, 98%, 1);
+  transition: background .4s ease;
+}
+
+
+a.tag-badge:hover {
+  background: hsla(198, 73%, 95%, 1);
+}
+
+.tag-count {
+  border-radius: 50%;
+  background: hsla(148,97%,33%,1);
+  color: #fff;
+  padding: 1px 9px;
+  display: inline-flex;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: calc(100% + 8px);
+}
+
+.post-meta .taglist {
+  display: flex;
+  margin: 0;
+}
+
+.post-meta .tag {
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+}
+
+.post-meta .tag-badge {
+  font-size: 0.9em;
+  padding: 0px 5px;
+}
+
+/* media queries */
+@media (max-width: 500px) {
+  .brand {
+    font-size: 2rem;
+  }
+  .brand svg {
+    width: 75px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tag-count {
+    position: relative;
+    right: initial;
+  }
 }

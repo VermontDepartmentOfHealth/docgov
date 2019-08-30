@@ -17,6 +17,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - Debug 11ty with VS Code](https://github.com/11ty/eleventy/issues/331)
 * [11ty - access templateContent from JS template](https://github.com/11ty/eleventy/issues/664)
 * [11ty - reverse sort](https://www.11ty.io/docs/collections/#sorting)
+* [11ty - generate tag pages](https://www.11ty.io/docs/quicktips/tag-pages/)
+* [11ty - dynamic titles from pagination](https://github.com/11ty/eleventy/issues/480)
 
 ## JAMStack
 
@@ -39,6 +41,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [nunjucks - inline if expression](https://mozilla.github.io/nunjucks/templating.html#if-expression)
 * [nunjucks - substring of string](https://stackoverflow.com/a/48427351/1366033)
 * [nunjucks - iterating with `for`](https://mozilla.github.io/nunjucks/templating.html#for)
+* [nunjucks - sort array](https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr)
 
 ## A11y
 

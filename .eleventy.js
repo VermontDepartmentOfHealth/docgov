@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("cssmin", require("./src/_filters/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./src/_filters/clean-js.js") );
     eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );
+    eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> t !== "post"));
 
         
     return {

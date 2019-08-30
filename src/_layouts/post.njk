@@ -18,6 +18,16 @@ layout: default.njk
     {%- endfor -%}
     </ul>
   </span>
+  
+  <ol class="taglist">
+    {% for tag in tags | contentTags %}
+      <li class="tag">
+        <a href="/tags/{{tag}}" class="tag-badge">{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+
+
 </div>
 
 {{ content | safe }}

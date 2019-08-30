@@ -1,0 +1,18 @@
+---
+layout: default.njk
+title: Tag list
+permalink: /tags/index.html
+---
+
+<h1>Tag list</h1>
+
+<ol class="taglist">
+  {% for tag in taglist | sort(false, false, "name")  %}
+    {% set tagCount = collections[ tag.name ].length %}
+    <li class="tag">
+      <a href="/tags/{{tag.name}}" class="tag-badge">{{ tag.name }}</a>
+      <span class="tag-count">{{tagCount}}</span>
+      <div class="tag-description">{{ tag.description }}</div>
+    </li>
+  {% endfor %}
+</ol>
