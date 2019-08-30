@@ -172,10 +172,14 @@ section.intro {
 
 .post-title, 
 .page-title {
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     font-weight: bold;
     color: #0171a1;
     text-decoration: none;
+}
+
+.page-title + .post-meta {
+  margin-top: -1.5rem;
 }
 
 .post h2 {
@@ -223,6 +227,10 @@ footer.footer {
 .nav-links li a {
   margin: 0px 10px;
   text-decoration: none;
+}
+
+.copy-line {
+  margin: .4em;
 }
 
 /* images */

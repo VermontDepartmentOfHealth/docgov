@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: post.njk
 title: Maintenance & Operations
 tags: ['post', 'team']
 authors: ['Kyle']

@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: post.njk
 title: Hiring Overview
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']

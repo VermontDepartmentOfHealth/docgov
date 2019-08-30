@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: post.njk
 title: "IT Orientation"
 tags: ['post', 'overview']
 authors: ['Kyle']

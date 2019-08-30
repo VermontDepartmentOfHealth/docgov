@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: post.njk
 title: Your First Month
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']

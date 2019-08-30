@@ -35,19 +35,9 @@
 
     <main class="content">
         
-        {% if not hideTitle %}
-            <h1 class="page-title">{{title}}</h1>
-        {%- endif -%}
-        
 
         {{ content | safe }}
-    
-        <div>
-            <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/tree/master/{{ page.inputPath }}">
-                {% include "edit.svg" %}
-                Edit this Page
-            </a>
-        </div>
+
     </main>
 
 
@@ -57,6 +47,12 @@
         <ul id="footer-nav" class="nav-links">
             <li><a href="#header">Back to top</a></li>
             <li><a href="/">Home</a></li>
+            <li>
+                <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/tree/master/{{ page.inputPath }}">
+                    {% include "edit.svg" %}
+                    Edit this Page
+                </a>
+            </li>
         </ul>
 
         <div class="copy-line">
