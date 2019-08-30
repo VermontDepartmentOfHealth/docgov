@@ -42,6 +42,7 @@ body {
   line-height: 1.6;
   font-size: 16px;
   color: #2d2d2d;
+  background: hsl(59, 100%, 99%);
   font-family: 'Noto Serif', serif;
 }
 
@@ -52,24 +53,51 @@ h1,h2,h3 {
 pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
+code {
+  border-radius: 2px;
+  padding: 1px 2px;
+  border: 1px solid #ffdeae;
+}
 
+s {
+  text-decoration: none;
+  color: #7f7a75;
+}
 
 blockquote {
   background: #ffffd7;
   margin: 0;
   padding: 0.1em 1em;
-  border-radius: 6px;
-  border: 1px solid hsla(60, 85%, 67%, 1);
+  border-left: 2px solid hsl(198, 72%, 37%);
+  background: #f6fcff;
 }
 
 blockquote strong {
-  color: hsla(60, 88%, 16%, 1);
+  color: #066188
+}
+
+hr {
+  box-shadow: 1px 1px 2px 0px #cec7b8;
+  border: 1px solid #cec7b8;
 }
 
 /* utility */
 .text-muted {
   color: grey;
 }
+
+.split {
+  display: flex;
+}
+
+.split > * {
+  flex: 1;
+}
+
+.split hr {
+  margin-top: 1.7rem;
+}
+
 
 /* links */
 .content a,
@@ -243,6 +271,7 @@ img {
   border: 5px solid white;
   box-shadow: 1px 1px 2px 1px #c6c6c6, 0px 0px 4px 1px #c6c6c6;
   border-radius: 3px;
+  vertical-align: middle;
 }
 
 .content a img {
