@@ -33,6 +33,10 @@ footer.footer {
   grid-column-start: 2;
 }
 
+main.content {
+  position: relative;
+}
+
 /* typography */
 body {
   line-height: 1.6;
@@ -271,6 +275,11 @@ form.search input {
   font-size: 1.1em;
 }
 
+.searching form.search input {
+  border-radius: 4px 4px 0 0;
+}
+
+
 form.search label {
   position: absolute;
   right: 10px;
@@ -305,8 +314,13 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
 
 #search-results {
   border: 1px solid #d0d0d0;
+  border-radius: 0px 0px 4px 4px;
   padding: .5rem;
-  position: relative;
+  position: absolute;
+  background: white;
+  left: 16px;
+  right: 16px;
+  z-index: 3;
 }
 
 #search-results > p:first-child {

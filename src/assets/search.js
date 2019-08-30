@@ -133,6 +133,9 @@
         resultList.innerHTML = results.length < 1 
             ? createNoResultsHTML()
             : createResultsHTML(results, query);
+
+        // set search mode
+        document.body.classList.add('searching');
     };
 
     /**
@@ -166,8 +169,9 @@
                 // listen for close clicks
                 document.addEventListener('click', function(e) {
                     if (e.target.id === "close-search") {
-                        document.getElementById('search-results').innerHTML = ""
-                        document.getElementById('input-search').value = ""
+                        document.getElementById('search-results').innerHTML = "";
+                        document.getElementById('input-search').value = "";
+                        document.body.classList.remove('searching');
                     }
                 })
             });
