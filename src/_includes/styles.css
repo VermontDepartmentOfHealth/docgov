@@ -484,16 +484,14 @@ a.tag-badge:hover {
 }
 
 .tag-count {
-  border-radius: 50%;
-  background: hsla(148,97%,33%,1);
-  color: #fff;
-  padding: 1px 9px;
+  border-radius: 8px;
+  background: hsl(148, 24%, 95%);
+  font-size: 0.8em;
+  padding: 0px 6px;
   display: inline-flex;
   place-content: center;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: calc(100% + 8px);
 }
 
 .post-meta .taglist {

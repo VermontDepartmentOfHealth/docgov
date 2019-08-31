@@ -23,32 +23,8 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
 
 <div id="search-results"></div>
 
-<ul class="posts">
-{%- for post in collections.post | reverse -%}
-  <li class="post">
-    <h2><a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a></h2>
-
-    <span class="post-meta">
-      <span class="post-date">{{ post.data.date | dateDisplay }}</span>
-      <span class="post-byline">
-        -
-        <ul class="post-authors">
-        {%- for author in post.data.authors -%}
-          <li class="post-author">
-            {{ author }}
-            
-            {% if not loop.last %}<span class="separator">,</span>{%- endif -%}
-          </li>
-        {%- endfor -%}
-        </ul>
-      </span>
-    </span>
-    
-
-    <span class="post-summary">{{ post.data.summary }}</span>
-  </li>
-{%- endfor -%}
-</ul>
+{% set postList = collections.post | reverse %}
+{% include "_partials/postList.njk" %}
 
 {# capture the JS content as a Nunjucks variable #}
 {# {% set js %}{% include "search.js" %}{% endset %} #}

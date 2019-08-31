@@ -1,0 +1,26 @@
+<ul class="posts">
+{%- for post in postList -%}
+  <li class="post">
+    <h2><a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a></h2>
+
+    <span class="post-meta">
+      <span class="post-date">{{ post.data.date | dateDisplay }}</span>
+      <span class="post-byline">
+        -
+        <ul class="post-authors">
+        {%- for author in post.data.authors -%}
+          <li class="post-author">
+            {{ author }}
+            
+            {% if not loop.last %}<span class="separator">,</span>{%- endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+      </span>
+    </span>
+    
+
+    <span class="post-summary">{{ post.data.summary }}</span>
+  </li>
+{%- endfor -%}
+</ul>

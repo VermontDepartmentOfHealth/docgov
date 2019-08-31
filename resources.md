@@ -42,6 +42,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [nunjucks - substring of string](https://stackoverflow.com/a/48427351/1366033)
 * [nunjucks - iterating with `for`](https://mozilla.github.io/nunjucks/templating.html#for)
 * [nunjucks - sort array](https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr)
+* [nunjucks - passing data to includes](https://github.com/mozilla/nunjucks/issues/539#issuecomment-203538566)
+
 
 ## A11y
 

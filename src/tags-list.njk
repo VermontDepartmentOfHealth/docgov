@@ -11,7 +11,7 @@ permalink: /tags/index.html
     {% set tagCount = collections[ tag.name ].length %}
     <li class="tag">
       <a href="/tags/{{tag.name}}" class="tag-badge">{{ tag.name }}</a>
-      <span class="tag-count">{{tagCount}}</span>
+      <span class="tag-count">× {{tagCount}}</span>
       <div class="tag-description">{{ tag.description }}</div>
     </li>
   {% endfor %}

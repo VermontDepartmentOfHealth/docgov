@@ -18,9 +18,6 @@ renderData:
   {{ tag.description }}
 </section>
 
-<ul>
-  {% set tagPosts = collections[ tag.name ] %}
-  {% for post in tagPosts | reverse %}
-    <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-  {% endfor %}
-</ul>
+
+{% set postList = collections[ tag.name ] %}
+{% include "_partials/postList.njk" %}
