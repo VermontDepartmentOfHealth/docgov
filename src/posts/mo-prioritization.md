@@ -6,7 +6,6 @@ authors: ['Kyle']
 team: MO
 date: 2019-08-29
 summary: "Usage guidelines on setting priorities on incoming and existing JIRA tickets"
-class: priority
 ---
 
 In order to triage incoming tickets, we're currently making use of the following priorities (defaulted to *Medium*)
@@ -25,6 +24,7 @@ In order to triage incoming tickets, we're currently making use of the following
 
 ## {% include "images/icons/blocker.svg" %} Blocker
 
+<!-- Authoring Hint: disable line wrap / zoom out for super wide table text -->
 
 | {% include "images/icons/bug.svg" %}  Bug                                                                    | {% include "images/icons/story.svg" %} Enhancement                      |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -76,3 +76,27 @@ In order to triage incoming tickets, we're currently making use of the following
 | {% include "images/icons/bug.svg" %}  Bug                                                                    | {% include "images/icons/story.svg" %} Enhancement                      |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | Unknown Priority at this time. For requester to review and assign.                                           |  Unknown Priority at this time. For requester to review and assign.     |
+
+
+
+<style type="text/css">
+h2 {
+  display: flex;
+}
+
+h2 svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+h2+table th {
+  width: 50%;
+  vertical-align: middle;
+  background: #f9f9f9;
+  color: inherit;
+}
+h2+table th svg {
+  vertical-align: inherit;
+}
+</style>
