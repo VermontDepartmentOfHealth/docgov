@@ -19,22 +19,87 @@ html {
 }
 
 body {
+  /* old display for ie11 compat */
+  display: flex;
+  flex-direction: column;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
-  /* place-content: center; */
+  grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
+  grid-template-areas: "nav . head ."
+                       "nav . main ."
+                       "nav foot foot foot";
   min-height: 100%;
 }
 
-main.content,
 header.header,
+main.content,
 footer.footer {
   padding: 1rem;
-  grid-column-start: 2;
 }
+
+header.header { grid-area: head }
+main.content  { grid-area: main }
+footer.footer { grid-area: foot }
+nav.sidenav   { grid-area: nav  }
 
 main.content {
   position: relative;
+}
+
+/* sidenav */
+.sidenav {
+  background: #0171a1;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 225px;
+  padding: 0;
+  z-index: 10;
+}
+
+.sidenav a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #0171a1;
+  border-left: 4px solid #0171a1;
+  transition: color .4s ease, border-left-color .4s ease;
+}
+
+.sidenav a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.sidenav a:hover {
+  color: #d4f2ff;
+  border-left-color: #9ae1ff;
+}
+
+.sidenav .divider {
+  height: 1px;
+  background: #ffffff33;
+  margin: 5px 18px;
+}
+
+@media (max-width: 850px) {
+  
+  body {
+    grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
+    grid-template-areas: ". head ."
+                         ". main ."
+                         "foot foot foot";
+  }
+  nav.sidenav {
+    display: none;
+  }
+  .nav-active nav.sidenav {
+    display: block;
+  }
 }
 
 /* typography */
@@ -106,6 +171,12 @@ hr {
 .mt-2 {
   margin-top: 2em;
 }
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
 
 /* links */
 
@@ -353,7 +424,7 @@ input:focus + .display-icon {
 
 footer.footer {
   text-align: center;
-  background: #f4faf2;
+  background: hsl(233, 44%, 98%);
 }
 
 .nav-links {
