@@ -14,6 +14,32 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> t !== "post"));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
+
+    // set markdown defaults (inline so we can extend)
+    let markdownIt = require("markdown-it");
+    let options = {
+      html: true,
+      breaks: true,
+      linkify: true
+    };
+    
+    // add markdown anchor options
+	let markdownItAnchor = require("markdown-it-anchor");
+	let opts = {
+		permalink: true,
+		slugify: function(s) {
+            // strip special chars
+            let newStr = s.toLowerCase().replace(/[^a-z ]/gi,'').trim();
+            // take first 4 words and separate with "-""
+            newStr = newStr.split(" ").slice(0,6).join("-");
+			return newStr;
+		},
+		permalinkClass: "direct-link",
+		permalinkSymbol: "#",
+		level: [1,2,3,4]
+	};
+
+    eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
         
     return {
         dir: {

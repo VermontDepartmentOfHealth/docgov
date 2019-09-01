@@ -90,6 +90,9 @@ h2 svg {
   height: 24px;
   margin-right: 8px;
 }
+h2 .direct-link {
+  padding: 0 !important;
+}
 
 h2+table th {
   width: 50%;
