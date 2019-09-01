@@ -22,7 +22,7 @@ A stash for helpful articles, references, documentation looked up along the way
 
 ## JAMStack
 
-* [Adding Search to a Jamstack site](https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/)
+* [Adding Search to a JAMstack site](https://www.hawksworx.com/blog/adding-search-to-a-jamstack-site/)
 * [How to create a vanilla JS search page for a static website](https://gomakethings.com/how-to-create-a-vanilla-js-search-page-for-a-static-website/)
 
 ## Netlify

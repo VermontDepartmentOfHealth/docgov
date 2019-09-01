@@ -33,7 +33,7 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 
 **Interview Duration**: Please block off approximately two hours for the interview.
 
-**Getting Here**: There are meters and several parking garages around town, and we are also located right next to the Downtown Center stop on [GMTs bus line][14]. Please see the [City of Burlington Parking Guide][13] for more information
+**Getting Here**: There are meters and several parking garages around town, and we are also located right next to the Downtown Center stop on [GMT's bus line][14]. Please see the [City of Burlington Parking Guide][13] for more information
 
 **Location**: We're located at [108 Cherry Street][10], Third floor, Suite 301.  
 
@@ -44,7 +44,7 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 
 **Clothing**: Dress attire around here is somewhere between casual and business casual, but feel free to wear whatever makes you feel comfortable.
 
-### Interview Outline:
+### Interview Outline
 
 1. Panel Questions
 2. Personal Project Discussion
@@ -55,7 +55,7 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 
 We want to work through some live-coding examples of the typical sorts of stuff we do here on a regular basis.  Our framing as a pair problems is so we can think-through solutions together and we're available for as much or as little help as is needed.
 
-* We'll be using [SQL Server Express 2017][4] with [SSMS 2018][3] with [RedGate SQL Prompt][5] on Windows 10 
+* We'll be using [SQL Server Express 2017][4] with [SSMS 2018][3] with [RedGate SQL Prompt][5] on Windows 10
 * You'll have full access to Google, Stack Overflow, or any other online resources you might want.
 * We'll have a pair coding setup with two keyboard and two mice
 * We want you to feel as comfortable writing code as you would be at work, which means...
@@ -76,7 +76,7 @@ Here's an overview of the types of SQL we'll look at:
 * Setup a couple tables
 * Write some queries
 * Read and review some code
-* Discuss database design 
+* Discuss database design
 
 ## Next Steps
 
@@ -84,11 +84,11 @@ Following any interview, we'll make sure to get back to you within 1-2 weeks and
 
 ## Equal Opportunity
 
-#### Legally, we need you to know this:
+### Legally, we need you to know this
 
 The Vermont Department of Health does not discriminate in employment matters on the basis of race, color, religion, gender identity or expression, national origin, age, military service eligibility, veteran status, sexual orientation, marital status, genetic information, AIDS/HIV status, place of birth, credit history, or disability (physical, mental, or emotional).
 
-#### But also, we *want* you to know this:
+### But also, we *want* you to know this
 
 We believe that diverse *and* inclusive teams build better products and workplace environments.  We actively encourage people from all groups to join and be a part of our team.
 

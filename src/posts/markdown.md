@@ -80,8 +80,11 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 
 
 # h1 - Primary
+
 ## h2 - Secondary
+
 ### h3 - Tertiary
+
 #### h4 - Quaternary
 
 </span>
@@ -110,7 +113,7 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <div class="split">
 <span>
 
-\* un-orderd list  
+\* un-ordered list  
 \* eggs  
 \* milk  
 
@@ -118,7 +121,7 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <span>
 
 
-* un-orderd list
+* un-ordered list
 * eggs
 * milk
 
@@ -177,7 +180,7 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 | ----- |:----:|
 | Frida | 10   |
 | Buddy | 12   |
-| Gus   | 5    | 
+| Gus   | 5    |
 
 
 </span>

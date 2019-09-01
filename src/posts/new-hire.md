@@ -55,24 +55,24 @@ There are several mandatory health department trainings and many more training a
 
 The following are a list of mandatory trainings that all new hires must take.
 
-Class signup can be done via [LINC - Lead. Innovate. Navigate. Connect!](https://vermont.csod.com/client/vermont/default.aspx). 
+Class signup can be done via [LINC - Lead. Innovate. Navigate. Connect!](https://vermont.csod.com/client/vermont/default.aspx).
 
 For more information about LINC please visit : [https://humanresources.vermont.gov/training/sov-linc](https://humanresources.vermont.gov/training/sov-linc)
 
-* Preventing and Addressing Sexual Harassment – classroom/2 hours 
-* Civility and Unconscious Bias in the Workplace – classroom/2 hours 
-* Diversity Online– online/15 minutes 
-* Ethics in State Government: Decisions and Dilemmas– online/ 15 minutes 
-* Emergency Procedures for the Individual State Employee – online/2 hours 25 minutes 
-* Continuous Improvement 101 – online/30 minutes 
-* Office Ergonomics – online/20 minutes 
+* Preventing and Addressing Sexual Harassment – classroom/2 hours
+* Civility and Unconscious Bias in the Workplace – classroom/2 hours
+* Diversity Online– online/15 minutes
+* Ethics in State Government: Decisions and Dilemmas– online/ 15 minutes
+* Emergency Procedures for the Individual State Employee – online/2 hours 25 minutes
+* Continuous Improvement 101 – online/30 minutes
+* Office Ergonomics – online/20 minutes
 * Defensive Driving Course – online/2 hours
 
 ### Development Trainings
 
 This can be setup on a case by case basis.  A key training tool we lean on is [pluralsight](https://www.pluralsight.com/), so we'll get set up with an account and identify trainings that should help bridge any experiences with things you're familiar with to things that we're working on here.
 
-## 4. Antipated Work Assignments
+## 4. Anticipated Work Assignments
 
 1. **Sprint Work**
 
@@ -90,7 +90,7 @@ This can be setup on a case by case basis.  A key training tool we lean on is [p
 
    Trainings can always occupy any remaining down time or also be pro-actively used to orient to any new technologies or frameworks.
 
-### 5. Miscilaneous links that you may find useful.
+### 5. Miscellaneous links that you may find useful
 
 * [Intranet](http://isa2004/Intranet/ITSI/ITSIntranet/default.aspx?Page=Home/ITSHome) - Contains documentation for past and ongoing projects.
 * [Confluence](https://confluence.ahs.state.vt.us/display/AHSDS/Forms) - AHS Data Services Web Portal for forms, standards, documentation, etc., for all database related tasks, requests, and procedures.
