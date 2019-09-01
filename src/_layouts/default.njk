@@ -28,7 +28,12 @@
     <header id="header" class="header">
         <a href="/" aria-label="Home Page" class="brand" >
             {% include "vt-logo.svg" %}
-            Open Sourced
+            <span class="brand-title">
+                {% set brand_word = header_word or (renderData and renderData.header_word) %}
+                <span class="word">{{brand_word}}</span> 
+                <span class="doc">DOC</span> 
+                <span class="gov">gov</span>
+            </span>
         </a>
     </header>
     

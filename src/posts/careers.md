@@ -1,5 +1,6 @@
 ---
 layout: post.njk
+header_word: Hiring
 title: Hiring Overview
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']

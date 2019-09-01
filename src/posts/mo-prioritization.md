@@ -1,5 +1,6 @@
 ---
 layout: post.njk
+header_word: Prioritization
 title: M&O Prioritization
 tags: ['post', 'team', 'process']
 authors: ['Kyle']

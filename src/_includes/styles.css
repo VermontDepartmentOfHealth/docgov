@@ -185,6 +185,17 @@ header.header {
     margin-right: 20px;
 }
 
+.brand .doc {
+  color: #5b9676;
+  font-size: 0.7em;
+  
+  transform: scaleX(0.8);
+}
+
+.brand .gov {
+  font-size: 1.1em;
+}
+
 /* section */
 section.intro {
   margin-top: 1rem;
