@@ -1,0 +1,30 @@
+---
+layout: default.njk
+title:  "Sorry, Not Found"
+permalink: "404.html"
+summary: "Sorry, we couldn't find that page for some reason"
+---
+
+
+<h1 class="page-title">{{title}}</h1>
+
+<p>
+Sorry, we couldn't find the page you were looking for, but you can <a href="/">explore all pages</a> or try our search below:
+</p>
+
+{% include "_partials/search.njk" %}
+
+<div class="hero">
+{% include "images/undraw_not_found.svg" %}
+</div>
+
+
+
+<style type="text/css">
+.hero {
+    margin-top: 2em;
+}
+.hero svg {
+    height: 404px;
+}
+</style>

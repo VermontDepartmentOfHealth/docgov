@@ -364,6 +364,10 @@ img {
   vertical-align: middle;
 }
 
+svg {
+  max-width: 100%;
+}
+
 .content a img {
   border: none;
 }
