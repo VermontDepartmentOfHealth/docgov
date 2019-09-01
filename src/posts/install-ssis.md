@@ -58,12 +58,12 @@ summary: "How to install and configure SQL Server Integration Services (SSIS)"
     * Other – VS extension and .net core
 
 14.	Installation will restart computer
-15.	Test opening SSIS and SSRS and SSMS . **SUCCESS**!!! 🎉
+15.	Test opening SSIS and SSRS and SSMS . **SUCCESS**!!! 🎉🎉
 16.	Test opening VS sln file – tried Patient profile and got this message
  
     ![aspnet-mvc](/assets/images/install-ssis-aspnet-mvc.png)
 
 
-17. Clicked Install and reopened successfully!!! Yay!!!
+17. Clicked Install and reopened successfully!!! Yay!!! 🎉🎉🎉
  
     ![vs-2017](/assets/images/install-ssis-vs-2017.png)

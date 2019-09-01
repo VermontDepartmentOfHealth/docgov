@@ -108,7 +108,7 @@ hr {
 }
 
 /* links */
-.content a,
+/* .content a,
 .footer a {
   display: inline-block;
   color: #0171a1;  
@@ -132,6 +132,23 @@ hr {
 .content a:hover::before,
 .footer a:hover::before {
     height: calc(100% - 6px);
+} */
+
+.content a, .footer a {
+  color: #111;
+  padding: 0;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),rgba(198,238,255,.35) calc(50% - 8px),rgba(198,238,255,.35) 100%);
+  transition: background-position 120ms ease-in-out,padding 120ms ease-in-out;
+  background-size: 100% 200%;
+  background-position: 0 0
+}
+
+.content a:hover,
+.footer a:hover {
+  padding: 2px 0 4px 0;
+  background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),rgba(198,238,255,1) calc(50% - 8px),rgba(198,238,255,1) 100%);
+  background-position: 0 100%
 }
 
 .content a.post-title {
@@ -145,8 +162,8 @@ hr {
     height: calc(100% - 6px);
 }
 
-.content .btn,
-.footer .btn {
+.page .page .btn,
+.page .footer .btn {
   border: 2px solid hsl(300, 83%, 28%);
   color: hsl(300, 83%, 28%);
   border-radius: 2px;
@@ -156,8 +173,8 @@ hr {
   align-items: center;
   transition: .4s ease color, .4s ease border-color;
 }
-.content .btn:hover,
-.footer .btn:hover {
+.page .content .btn:hover,
+.page .footer .btn:hover {
   color: hsl(300, 83%, 40%);
   border-color: hsl(300, 83%, 36%);
 }
@@ -165,9 +182,10 @@ hr {
   height: 16px;
   margin-right: 6px;
 }
-.content .btn::before,
-.footer .btn::before  {
-  content: none;
+
+.page .content .btn,
+.page .footer .btn {
+  background-image: none;
 }
 
 /* header */
@@ -230,6 +248,9 @@ section.intro {
     font-weight: bold;
     color: #0171a1;
     text-decoration: none;
+}
+.post-title {
+  font-size: 1.7rem;
 }
 
 .page-title + .post-meta {
@@ -471,14 +492,16 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 1rem;
 }
 
-.content .search-results-list a::before {
-  content: none;
-}
-
-.search-result a {
+.page .content .search-result a {
+  background-image: none;
+  display: block;
   padding: .5rem;
   border-radius: 4px;
 }
+.page .content .search-results-list a:hover {
+  background-image: none;
+}
+
 
 .search-result a:hover {
   color: hsl(198, 99%, 40%);
@@ -572,17 +595,18 @@ a.tag-badge::before {
   content: none;
 }
 
-a.tag-badge {
+.page .content .tag-badge {
   border: 1px solid hsl(198, 23%, 52%);
   border-radius: 3px;
   padding: 1px 7px;
-  background: hsla(198, 70%, 98%, 1);
+  background: hsl(198, 70%, 98%);
+  background-image: none;
   transition: background .4s ease;
 }
 
 
-a.tag-badge:hover {
-  background: hsla(198, 73%, 95%, 1);
+.page .content .tag-badge:hover {
+  background: hsl(198, 76%, 93%);
 }
 
 .tag-count {
