@@ -33,6 +33,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [netlify - Asset Optimization / Post Processing](https://www.netlify.com/docs/netlify-toml-reference/#post-processing)
 * [netlify - Deploy Previews](https://www.netlify.com/docs/webhooks/#github-commit-statuses)
 * [netlify - Build Hooks](https://www.netlify.com/docs/webhooks/#incoming-webhooks)
+* [netlify - environment variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
 
 ## Nunjucks
 

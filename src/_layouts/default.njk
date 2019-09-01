@@ -12,10 +12,28 @@
     {# Primary Meta Tags #}
     {% set page_title = title or (renderData and renderData.title) %}
     <title>{{page_title}}</title>
-    <meta name="title" content="{{page_title}}">
-    <meta name="title" content="{{summary}}">
+    <meta name="title" content="{{page_title}} | doc gov">
+    <meta name="description" content="{{summary}}">
+    <meta name="robots" content="{{config.metaRobots}}">
+    <link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
     
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
+    {# Open Graph / Facebook #}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
+    <meta property="og:title" content="{{page_title}}  | doc gov">
+    <meta property="og:description" content="{{summary}}">
+    <meta property="og:image" content="{{config.baseUrl}}/assets/thumbnail.png">
+
+    {# Twitter #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@vtcodecamp">
+    <meta name="twitter:title" content="{{page_title}}">
+    <meta name="twitter:description" content="{{summary}}">
+    <meta name="twitter:image" content="{{config.baseUrl}}/assets/thumbnail.png">
+
+    {# Google Fonts #}
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
 
     {# capture the CSS content as a Nunjucks variable #}
     {% set css %}{% include "styles.css" %}{% endset %}
