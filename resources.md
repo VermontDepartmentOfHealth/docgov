@@ -92,8 +92,7 @@ A stash for helpful articles, references, documentation looked up along the way
 ## CSS
 
 * [css - remove 'x' from search input](https://stackoverflow.com/a/57701803/1366033)
-
-
-
-
+* [css - avoid page break inside row of table](https://stackoverflow.com/q/9288802/1366033)
+* [css - `break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
+* [css - Chrome “Save as PDF” is cutting off text](https://superuser.com/q/1477838/180163)
 
