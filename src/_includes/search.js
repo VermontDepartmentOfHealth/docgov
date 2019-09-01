@@ -166,6 +166,11 @@
                 input.addEventListener('keyup', inputChangeHandler, false);
                 input.addEventListener('change', inputChangeHandler, false);
 
+                // if someone put text there already, fire change on focus
+                input.addEventListener('focus', function(e) {
+                    if (input.value) {inputChangeHandler(e)}
+                }, false);
+
                 // listen for close clicks
                 document.addEventListener('click', function(e) {
                     if (e.target.id === "close-search") {
