@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-header_word: SSIS
+title_word: SSIS
 title: How to Install SSIS
 tags: ['post', 'how-to']
 authors: ['Sandra']

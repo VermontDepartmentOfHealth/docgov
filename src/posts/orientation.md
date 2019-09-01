@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-header_word: Links
+title_word: Links
 title: "IT Orientation"
 tags: ['post', 'overview']
 authors: ['Kyle']

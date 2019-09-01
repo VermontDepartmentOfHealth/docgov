@@ -1,6 +1,6 @@
 ---
 layout: post.njk
-header_word: Welcome
+title_word: Welcome
 title: Your First Month
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']

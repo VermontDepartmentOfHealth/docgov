@@ -177,7 +177,10 @@ header.header {
   font-weight: bold;
   transition: .4s ease color;
 }
-.brand:hover {
+
+.brand svg:hover,
+.brand .site-title:hover .doc,
+.brand .site-title:hover .gov {
   color: hsla(148, 97%, 33%, 1);
 }
 .brand svg {
@@ -185,14 +188,14 @@ header.header {
     margin-right: 20px;
 }
 
-.brand .doc {
+.site-title .doc {
   color: #5b9676;
   font-size: 0.7em;
   
   transform: scaleX(0.8);
 }
 
-.brand .gov {
+.site-title .gov {
   font-size: 1.1em;
 }
 
