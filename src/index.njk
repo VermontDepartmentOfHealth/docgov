@@ -14,21 +14,8 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
 </section>
 
         
-<form action="https://www.google.com/search" id="form-search" class="search" autocomplete="off">
-    <input type="search" name="q" id="input-search" class="hide-clear" placeholder="Type to search" autocomplete="off">
-    <label for="input-search" aria-label="Search Page">
-      {% include "search.svg" %}
-    </label>
-</form>
-
-<div id="search-results"></div>
+{% include "_partials/search.njk" %}
 
 {% set postList = collections.post | reverse %}
 {% include "_partials/postList.njk" %}
 
-{# capture the JS content as a Nunjucks variable #}
-{% set js %}{% include "search.js" %}{% endset %}
-{# feed it through our cssmin filter to minify #}
-<script type="text/javascript">{{ js | jsmin | safe }}</script>
-{# external script for testing purposes #}
-{# <script src="/assets/search.js"></script> #}
