@@ -1,13 +1,13 @@
 <nav class="sidenav">
     <ul class="list-unstyled">
-        <li><a href="/">{% include "images/icons/home.svg" %} Home</a></li>
+        <li><a href="/" class='{{ "active" if "/" == page.url }}'>{% include "images/icons/home.svg" %} Home</a></li>
         <li class="divider"></li>
-        <li><a href="/tags/">{% include "images/icons/tags.svg" %} Tags</a></li>
-        <li><a href="/authors/">{% include "images/icons/user.svg" %} Authors</a></li>
-        <li><a href="/teams/">{% include "images/icons/users.svg" %} Teams</a></li>
-        <li><a href="/projects/">{% include "images/icons/briefcase.svg" %} Projects</a></li>
-        <li><a href="/departments/">{% include "images/icons/landmark.svg" %} Departments</a></li>
-        <li><a href="/archive/">{% include "images/icons/archive.svg" %} Archives</a></li>
+        <li><a href="/tags/" class='{{ "active" if "/tags/" in page.url }}'>{% include "images/icons/tags.svg" %} Tags</a></li>
+        <li><a href="/authors/" class='{{ "active" if "/authors/" in page.url }}'>{% include "images/icons/user.svg" %} Authors</a></li>
+        <li><a href="/teams/" class='{{ "active" if "/teams/" in page.url }}'>{% include "images/icons/users.svg" %} Teams</a></li>
+        <li><a href="/projects/" class='{{ "active" if "/projects/" in page.url }}'>{% include "images/icons/briefcase.svg" %} Projects</a></li>
+        <li><a href="/departments/" class='{{ "active" if "/departments/" in page.url }}'>{% include "images/icons/landmark.svg" %} Departments</a></li>
+        <li><a href="/archive/" class='{{ "active" if "/archive/" == page.url }}'>{% include "images/icons/archive.svg" %} Archives</a></li>
         <li class="divider"></li>
         <li><a href="https://github.com/VermontDepartmentOfHealth/docs/blob/master/README.md">{% include "images/icons/user-edit.svg" %} Write a Post</a></li>
         <li><a href="https://github.com/VermontDepartmentOfHealth/docs/issues">{% include "images/icons/bug-solid.svg" %} Submit an Issue</a></li>

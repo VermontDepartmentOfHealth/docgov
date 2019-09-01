@@ -75,7 +75,8 @@ main.content {
   margin-right: 1rem;
 }
 
-.sidenav a:hover {
+.sidenav a:hover,
+.sidenav a.active {
   color: #d4f2ff;
   border-left-color: #9ae1ff;
 }
