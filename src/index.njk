@@ -27,8 +27,8 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
 {% include "_partials/postList.njk" %}
 
 {# capture the JS content as a Nunjucks variable #}
-{# {% set js %}{% include "search.js" %}{% endset %} #}
+{% set js %}{% include "search.js" %}{% endset %}
 {# feed it through our cssmin filter to minify #}
-{# <script type="text/javascript">{{ js | jsmin | safe }}</script> #}
-
-<script src="/assets/search.js"></script>
+<script type="text/javascript">{{ js | jsmin | safe }}</script>
+{# external script for testing purposes #}
+{# <script src="/assets/search.js"></script> #}
