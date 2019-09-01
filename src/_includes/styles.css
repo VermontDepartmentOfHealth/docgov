@@ -241,6 +241,82 @@ section.intro {
     color: #9f9f9f;
 }
 
+
+/* post display toggle */
+.display-toggle {
+  display: flex;
+  float: right;
+  margin-top: 1em;
+  border: 1px solid #6d6d6d;
+  border-radius: 3px;
+}
+
+.display-toggle label:first-child .display-icon {
+  border-right: 1px solid #6d6d6d;
+  border-radius: 2px 0 0 2px;
+}
+.display-toggle label:last-child .display-icon {
+  border-radius: 0 2px 2px 0;
+}
+
+.display-icon {
+  width: 35px;
+  height: 30px;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-icon .bar {
+  background: #b7b7b7;
+  margin: 2px;
+  border-radius: 3px;
+  flex: 1 1 auto;
+  min-height: 1px;
+  transition: background .4s ease;
+}
+
+.display-toggle input[type="radio"] {
+  /* display: none;  */ /* can't hide because we still need a tab stop */
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+
+input:checked + .display-icon {
+  background: #5757ff;
+  cursor: default;
+}
+
+input:checked + .display-icon .bar {
+  background: #d4d7ff;
+}
+input:focus + .display-icon {
+  box-shadow: 0 0 3px 1px #2196F3;
+}
+.display-toggle:focus-within {
+  border-color: #2196F3;
+  box-shadow: 0 0 2px 0px #2196F3;
+}
+
+.display-icon:hover {
+  background: #bcbcf1;
+}
+
+.display-icon:hover .bar {
+  background: #777dcc;
+}
+
+.display-list .post-meta, 
+.display-list .post-summary {
+    display: none;
+}
+
+.display-list .post h2 {
+    margin-top: 0.3em;
+}
+
 /* footer */
 
 footer.footer {
