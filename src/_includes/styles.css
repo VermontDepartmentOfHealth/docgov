@@ -653,4 +653,30 @@ a.tag-badge::before {
 }
 
 
-/* page specific styles */
+/* print styles */
+@media print {
+  body {
+      background: white;
+  }
+  #footer-nav {
+      display: none
+  }
+  .page .content a {
+      background: none;
+      text-decoration: underline
+  }
+  /* .page .content a::after { content: " (" attr(href) ")"; } */
+  footer.footer {
+      border-top:  1px solid grey;
+      background: white;
+  }
+  blockquote {
+      background: white;
+  }
+  
+  
+  thead { display: table-row-group }
+  tfoot { display: table-row-group }
+  /* table tr { break-inside: avoid; } */
+
+}
