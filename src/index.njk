@@ -16,6 +16,10 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
         
 {% include "_partials/search.njk" %}
 
-{% set postList = collections.post | reverse %}
+<h1 class="mt-2">
+  Recent posts <small><a href="/archive/">(view all)</a></small>
+</h1>
+
+{% set postList = collections.post | reverse | take(10) %}
 {% include "_partials/postList.njk" %}
 

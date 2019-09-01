@@ -1,0 +1,16 @@
+---
+layout: default.njk
+title_word: "Archive"
+title: "Complete Post Archives"
+date: 2019-08-22
+summary: "A complete listing of all posts and pages"
+---
+
+
+<h1 >
+  {{title}}
+</h1>
+
+{% set postList = collections.post | reverse %}
+{% include "_partials/postList.njk" %}
+

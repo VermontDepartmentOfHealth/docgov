@@ -64,6 +64,10 @@ s {
   color: #7f7a75;
 }
 
+small {
+  font-size: .8em;
+}
+
 blockquote {
   background: #ffffd7;
   margin: 0;
@@ -98,6 +102,10 @@ hr {
   margin-top: 1.7rem;
 }
 
+/* spacing */
+.mt-2 {
+  margin-top: 2em;
+}
 
 /* links */
 .content a,
@@ -388,9 +396,9 @@ form.search {
 }
 
 form.search input {
-  height: 32px;
+  height: 43px;
   width: 100%;
-  padding: 5px 8px;
+  padding: 7px 9px;
   border-radius: 4px;
   box-shadow: none;
   border: 1px solid #d0d0d0;

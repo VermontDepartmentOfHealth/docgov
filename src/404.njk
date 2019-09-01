@@ -9,7 +9,7 @@ summary: "Sorry, we couldn't find that page for some reason"
 <h1 class="page-title">{{title}}</h1>
 
 <p>
-Sorry, we couldn't find the page you were looking for, but you can <a href="/">explore all pages</a> or try our search below:
+Sorry, we couldn't find the page you were looking for, but you can <a href="/archive/">explore all pages</a> or try our search below:
 </p>
 
 {% include "_partials/search.njk" %}
@@ -32,7 +32,7 @@ Sorry, we couldn't find the page you were looking for, but you can <a href="/">e
 <script type="text/javascript">
 // prefill search box with path text
 var path = window.location.pathname;
-var text = path.replace("/posts/","").replace(/[/-]/g," ");
+var text = path.replace("/posts/","").replace("index.html","").replace(".html","").replace(/[/-]/g," ").trim();
 var search = document.getElementById("input-search");
 search.value = text;
 </script>
