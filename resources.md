@@ -79,6 +79,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [html - meta tags](https://metatags.io/)
 * [html - disabling chrome autofill](https://stackoverflow.com/q/15738259/1366033)
 * [chromium - use cases for autocomplete=off](https://bugs.chromium.org/p/chromium/issues/detail?id=587466)
+* [http - resource hints - preconnect](https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/)
 
 ## JS
 
