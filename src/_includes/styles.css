@@ -776,6 +776,7 @@ a.tag-badge::before {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  border-radius: 2px;
 }
 
 .hamburger .bar {
@@ -786,7 +787,12 @@ a.tag-badge::before {
   width: 25px;
 }
 
-
+.hamburger:hover {
+  background: #ececec;
+}
+.sidenav .hamburger:hover {
+  background: #0b82b5;
+}
 
 .sidenav .hamburger.times {
   float: right;
