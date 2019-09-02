@@ -8,7 +8,7 @@ summary: "An overview of our hiring process as we strive to make our interviewin
 ---
 
 
-[![We are hiring][1]][2]
+{% include "images/hiring-no.svg" %}
 
 ## Hello & Welcome
 
@@ -93,7 +93,8 @@ We believe that diverse *and* inclusive teams build better products and workplac
 
 
 
-[1]: https://img.shields.io/badge/Hiring-Yes-green.svg
+[yes]: https://img.shields.io/badge/Hiring-Yes-green.svg
+[no]: https://img.shields.io/badge/Hiring-Not%20Currently-orange.svg
 [2]: https://humanresources.vermont.gov/talent-acquisition/successfactors-recruiting/successfactors-first-time-login
 [3]: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
 [4]: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
