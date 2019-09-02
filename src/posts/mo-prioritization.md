@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: Prioritization
 title: M&O Prioritization
 tags: ['post', 'team', 'process']

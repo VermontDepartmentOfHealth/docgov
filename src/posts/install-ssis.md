@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: SSIS
 title: How to Install SSIS
 tags: ['post', 'how-to']

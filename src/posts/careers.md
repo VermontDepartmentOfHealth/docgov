@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: Hiring
 title: Hiring Overview
 tags: ['post', 'workforce']

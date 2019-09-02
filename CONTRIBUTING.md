@@ -32,7 +32,6 @@ There are [recommended extensions](https://code.visualstudio.com/docs/editor/ext
 Each markdown file should start with a [yaml](https://learnxinyminutes.com/docs/yaml/) [frontmatter](https://www.11ty.io/docs/data-frontmatter/) block to provide meta data used to display and categorize the post.
 
 ```yaml
-layout: post.njk              # posts can always just start with post.njk
 title_word: Hiring            # a single word under 15 characters - will be prepended to "doc Gov" on the site title
 title: Hiring Overview        # a short article title - will be
 tags: ['post', 'workforce']   # all posts must have the tag 'post' in addition to at least one other tagging option in ./src/_data/taglist

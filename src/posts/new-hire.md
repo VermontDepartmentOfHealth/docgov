@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: Welcome
 title: Your First Month
 tags: ['post', 'workforce']

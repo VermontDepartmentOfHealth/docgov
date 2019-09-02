@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: Links
 title: "IT Orientation"
 tags: ['post', 'overview']

@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title_word: Markdown
 title: Markdown Example
 tags: ['post', 'overview']

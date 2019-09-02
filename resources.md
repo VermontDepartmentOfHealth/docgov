@@ -19,6 +19,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - reverse sort](https://www.11ty.io/docs/collections/#sorting)
 * [11ty - generate tag pages](https://www.11ty.io/docs/quicktips/tag-pages/)
 * [11ty - dynamic titles from pagination](https://github.com/11ty/eleventy/issues/480)
+* [11ty - navigation links with active class](https://www.11ty.io/docs/collections/#example%3A-navigation-links-with-an-active-class-added-for-on-the-current-page)
+* [11ty - apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
 
 ## JAMStack
 
