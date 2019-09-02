@@ -7,12 +7,11 @@ title: All Authors
 <h1 class="page-title">{{title}}</h1>
 
 <ol class="authorlist list-unstyled">
-  {% for authorName, authorInfo in collections.authors  %}
-  {% set authorCount = authorInfo.posts.length %}
+  {% for name, info in collections.authors  %}
     <li class="author">
-      <a href="/authors/{{authorName | lower}}">{{ authorName }}</a>
-      <span class="tag-count">× {{authorCount}}</span>
-      <div class="author-description">{{ authorInfo.summary }}</div>
+      <a href="/authors/{{name | lower}}">{{ name }}</a>
+      <span class="tag-count">× {{info.posts.length }}</span>
+      <div class="author-description">{{ info.summary }}</div>
     </li>
   {% endfor %}
 </ol>
