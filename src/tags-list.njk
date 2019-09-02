@@ -7,13 +7,13 @@ permalink: /tags/index.html
 
 <h1 class="page-title">{{title}}</h1>
 
-<ol class="taglist">
+<ol class="category-list category-tags list-unstyled taglist">
   {% for tag in taglist | sort(false, false, "name")  %}
     {% set tagCount = collections[ tag.name ].length %}
-    <li class="tag">
-      <a href="/tags/{{tag.name}}" class="tag-badge">{{ tag.name }}</a>
-      <span class="tag-count">× {{tagCount}}</span>
-      <div class="tag-description">{{ tag.description }}</div>
+    <li class="category">
+      <a href="/tags/{{tag.name}}" class="category-name tag-badge">{{ tag.name }}</a>
+      <span class="category-count">× {{tagCount}}</span>
+      <div class="category-description">{{ tag.description }}</div>
     </li>
   {% endfor %}
 </ol>

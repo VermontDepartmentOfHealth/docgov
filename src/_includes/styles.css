@@ -168,6 +168,9 @@ hr {
 }
 
 /* utility */
+.d-flex {
+  display: flex
+}
 .text-muted {
   color: grey;
 }
@@ -184,7 +187,12 @@ hr {
   margin-top: 1.7rem;
 }
 
-/* spacing */
+/* spacing 
+https://getbootstrap.com/docs/4.0/utilities/spacing/
+*/
+.m-0 {
+  margin: 0;
+}
 .mt-2 {
   margin-top: 2em;
 }
@@ -665,20 +673,34 @@ td svg {
   max-width: 30px;
 }
 
-/* tags */
-ol.taglist {
-  padding-left: 0;
-  list-style: none;
+
+
+/* categories
+  * tags 
+  * authors
+  * teams
+  * projects
+  * departments
+*/
+.category-item a {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.category-count {
+  border-radius: 8px;
+  background: hsl(148, 24%, 95%);
+  font-size: 0.8em;
+  padding: 0px 6px;
+  display: inline-flex;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.category-description {
+  margin-bottom: 1.5rem;
 }
 
-li.tag {
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-a.tag-badge::before {
-  content: none;
-}
+/* tag pages */
 
 .page .content .tag-badge {
   border: 1px solid hsl(198, 23%, 52%);
@@ -694,21 +716,7 @@ a.tag-badge::before {
   background: hsl(198, 76%, 93%);
 }
 
-.tag-count {
-  border-radius: 8px;
-  background: hsl(148, 24%, 95%);
-  font-size: 0.8em;
-  padding: 0px 6px;
-  display: inline-flex;
-  place-content: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.post-meta .taglist {
-  display: flex;
-  margin: 0;
-}
+/* post tags */
 
 .post-meta .tag {
   margin-bottom: 1rem;
@@ -720,14 +728,6 @@ a.tag-badge::before {
   padding: 0px 5px;
 }
 
-/* authors */
-.author-description {
-  margin-bottom: 1.5rem;
-}
-.author a {
-  font-weight: bold;
-  font-size: 1.2em;
-}
 
 /* media queries */
 @media (max-width: 500px) {

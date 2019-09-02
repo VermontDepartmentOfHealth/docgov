@@ -1,6 +1,6 @@
 
 module.exports = function(collection) {
-    validateAuthors(collection)
+    validateTeams(collection)
 
     // grab global data from any item
     let authorPages = collection.getFilteredByTag("author")
@@ -21,19 +21,19 @@ module.exports = function(collection) {
 }
 
   
-function validateAuthors(collection) {
+function validateTeams(collection) {
     // get all authors in author pages
     let authorPages = collection.getFilteredByTag("author")
-    var allAuthorPages = authorPages.map(p => p.data.name)
+    var allAuthorsFromPages = authorPages.map(p => p.data.name)
 
     // get all authors referenced by posts
     let allPosts = collection.getAll()
-    var allPostAuthors = allPosts.filter(p => p.data.authors).map(p => p.data.authors)
-    allPostAuthors = allPostAuthors.reduce((a, b) => a.concat(b), []); // flatten
-    allPostAuthors = [...new Set(allPostAuthors)]                      // deduplicate
+    var allAuthorsFromPosts = allPosts.filter(p => p.data.authors).map(p => p.data.authors)
+    allAuthorsFromPosts = allAuthorsFromPosts.reduce((a, b) => a.concat(b), []); // flatten
+    allAuthorsFromPosts = [...new Set(allAuthorsFromPosts)]                      // deduplicate
 
     // check for any post authors w/o author pages
-    var missingAuthors = allPostAuthors.filter(a => !allAuthorPages.includes(a))
+    var missingAuthors = allAuthorsFromPosts.filter(a => !allAuthorsFromPages.includes(a))
 
     if (missingAuthors.length) {
         const chalk = require('chalk');

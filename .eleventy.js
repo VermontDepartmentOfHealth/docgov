@@ -17,6 +17,7 @@ module.exports = function(eleventyConfig) {
 
     // custom collections
     eleventyConfig.addCollection("authors", require("./src/_collections/authors.js") );
+    eleventyConfig.addCollection("teams", require("./src/_collections/teams.js") );
 
 
 

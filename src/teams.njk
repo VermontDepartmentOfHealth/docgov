@@ -1,15 +1,15 @@
 ---
 layout: default.njk
-title_word: Authors
-title: All Authors
+title_word: Teams
+title: All Teams
 ---
 
 <h1 class="page-title">{{title}}</h1>
 
-<ol class="category-list category-authors list-unstyled">
-  {% for name, info in collections.authors  %}
+<ol class="category-list category-teams list-unstyled">
+  {% for name, info in collections.teams  %}
     <li class="category-item">
-      <a href="/authors/{{name | lower}}" class="category-name">{{ name }}</a>
+      <a href="/teams/{{name | lower}}" class="category-name">{{ name }}</a>
       <span class="category-count">× {{info.posts.length }}</span>
       <div class="category-description">{{ info.summary }}</div>
     </li>

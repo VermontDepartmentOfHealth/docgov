@@ -1,7 +1,7 @@
 ---
 title_word: Prioritization
 title: M&O Prioritization
-tags: ['post', 'team', 'process']
+tags: ['post', 'process']
 authors: ['Kyle']
 team: MO
 date: 2019-08-29
