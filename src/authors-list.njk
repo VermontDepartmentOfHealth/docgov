@@ -1,0 +1,19 @@
+---
+layout: default.njk
+title_word: Authors
+title: Authors
+permalink: /authors/index.html
+---
+
+<h1 class="page-title">Author list</h1>
+
+<ol class="authorlist list-unstyled">
+  {% for author in authorlist | sort(false, false, "name")  %}
+  {% set tagCount = collections.authors[author.name].length %}
+    <li class="author">
+      <a href="/authors/{{author.name}}">{{ author.name }}</a>
+      <span class="tag-count">× {{tagCount}}</span>
+      <div class="author-description">{{ author.description }}</div>
+    </li>
+  {% endfor %}
+</ol>

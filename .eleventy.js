@@ -15,6 +15,30 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
 
+    // custom collections
+    eleventyConfig.addCollection("authors", function(collection) {
+        var authors = collection.items[0].data.authorlist.map(author => {
+            var allPosts = collection.getAll()
+            var authorName = author.name
+            var authorPosts = allPosts.filter(col => col.data.authors && col.data.authors.includes(authorName))
+            return {
+                name: authorName,
+                posts: authorPosts
+            }
+        })
+        let object = {};
+
+        for (let item of authors) {
+            // destructure to split up name and everything else
+            let {name, posts} = item
+            object[name] = posts;
+        }
+
+
+        return object;
+    });
+
+
     // set markdown defaults (inline so we can extend)
     let markdownIt = require("markdown-it");
     let options = {

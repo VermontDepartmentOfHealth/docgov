@@ -20,6 +20,7 @@
         "Sharepoint",
         "ahsfiles",
         "aspnet",
+        "destructure",
         "frontmatter",
         "lifecycle",
         "linkify",
@@ -36,6 +37,7 @@
         "signup",
         "slugify",
         "taglist",
-        "vdhwebapps"
+        "vdhwebapps",
+        "walkthroughs"
     ]
 }

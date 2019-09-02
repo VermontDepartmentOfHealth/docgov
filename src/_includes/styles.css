@@ -715,6 +715,15 @@ a.tag-badge::before {
   padding: 0px 5px;
 }
 
+/* authors */
+.author-description {
+  margin-bottom: 1.5rem;
+}
+.author a {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 /* media queries */
 @media (max-width: 500px) {
   .brand {

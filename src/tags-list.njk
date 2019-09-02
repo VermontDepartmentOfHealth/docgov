@@ -1,11 +1,11 @@
 ---
 layout: default.njk
-title_word: Taxonomy
+title_word: Tags
 title: Tag list
 permalink: /tags/index.html
 ---
 
-<h1>Tag list</h1>
+<h1 class="page-title">Tag list</h1>
 
 <ol class="taglist">
   {% for tag in taglist | sort(false, false, "name")  %}
