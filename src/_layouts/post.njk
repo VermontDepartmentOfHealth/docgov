@@ -12,7 +12,7 @@ layout: default.njk
     {%- for author in authors -%}
       <li class="post-author">
 
-        {% set authorInfo = authorlist[author] %}
+        {% set authorInfo = collections.authors[author] %}
         {% if authorInfo %}
           <a href="/authors/{{author | lower}}">{{ author }}</a>
         {% else %}

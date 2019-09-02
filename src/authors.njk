@@ -1,24 +1,18 @@
 ---
 layout: default.njk
-pagination:
-  data: authorlist
-  size: 1
-  alias: author
-permalink: /authors/{{ author | lower }}/
-renderData:
-  title: Posts from {{ author }}
-  title_word: '{{author}}'
+title_word: Authors
+title: All Authors
 ---
 
+<h1 class="page-title">{{title}}</h1>
 
-<h2><a href="/authors/"> {% include "images/icons/arrow-left.svg" %} All Authors</a></h2>
-
-<h1 class="page-title">Posts from {{ author }}</h1>
-
-<section class="intro">
-  {{ authorlist[author].description }}
-</section>
-
-
-{% set postList = collections.authors[author].posts %}
-{% include "_partials/postList.njk" %}
+<ol class="authorlist list-unstyled">
+  {% for authorName, authorInfo in collections.authors  %}
+  {% set authorCount = authorInfo.posts.length %}
+    <li class="author">
+      <a href="/authors/{{authorName | lower}}">{{ authorName }}</a>
+      <span class="tag-count">× {{authorCount}}</span>
+      <div class="author-description">{{ authorInfo.summary }}</div>
+    </li>
+  {% endfor %}
+</ol>

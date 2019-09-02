@@ -18,16 +18,26 @@ module.exports = function(eleventyConfig) {
     // custom collections
     eleventyConfig.addCollection("authors", function(collection) {
         // grab global data from any item
-        var authors = collection.items[0].data.authorlist
-        var allPosts = collection.getAll()
+        let authorPages = collection.getFilteredByTag("author")
+        let allPosts = collection.getAll()
 
-        for (let [key, value] of Object.entries(authors)) {
-            var authorPosts = allPosts.filter(p => p.data.authors && p.data.authors.includes(key))
-            value.posts = authorPosts;
+        var authorData = {}
+        for (let page of authorPages) {
+            let authorName = page.data.name;
+            let authorPosts = allPosts.filter(p => p.data.authors && p.data.authors.includes(authorName))
+            let data = {
+                summary: page.data.summary,
+                posts: authorPosts
+            }
+            authorData[authorName] = data;
         }
 
-        return authors;
+        return authorData;
+
     });
+
+
+ 
 
 
     // set markdown defaults (inline so we can extend)
