@@ -17,25 +17,16 @@ module.exports = function(eleventyConfig) {
 
     // custom collections
     eleventyConfig.addCollection("authors", function(collection) {
-        var authors = collection.items[0].data.authorlist.map(author => {
-            var allPosts = collection.getAll()
-            var authorName = author.name
-            var authorPosts = allPosts.filter(col => col.data.authors && col.data.authors.includes(authorName))
-            return {
-                name: authorName,
-                posts: authorPosts
-            }
-        })
-        let object = {};
+        // grab global data from any item
+        var authors = collection.items[0].data.authorlist
+        var allPosts = collection.getAll()
 
-        for (let item of authors) {
-            // destructure to split up name and everything else
-            let {name, posts} = item
-            object[name] = posts;
+        for (let [key, value] of Object.entries(authors)) {
+            var authorPosts = allPosts.filter(p => p.data.authors && p.data.authors.includes(key))
+            value.posts = authorPosts;
         }
 
-
-        return object;
+        return authors;
     });
 
 

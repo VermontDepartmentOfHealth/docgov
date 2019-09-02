@@ -4,20 +4,21 @@ pagination:
   data: authorlist
   size: 1
   alias: author
-permalink: /authors/{{ author.name }}/
+permalink: /authors/{{ author | lower }}/
 renderData:
-  title: Posts from {{ author.name }}
-  title_word: '{{author.name}}'
+  title: Posts from {{ author }}
+  title_word: '{{author}}'
 ---
+
 
 <h2><a href="/authors/"> {% include "images/icons/arrow-left.svg" %} All Authors</a></h2>
 
-<h1 class="page-title">Posts from {{ author.name }}</h1>
+<h1 class="page-title">Posts from {{ author }}</h1>
 
 <section class="intro">
-  {{ author.description }}
+  {{ authorlist[author].description }}
 </section>
 
 
-{% set postList = collections.authors[author.name] %}
+{% set postList = collections.authors[author].posts %}
 {% include "_partials/postList.njk" %}

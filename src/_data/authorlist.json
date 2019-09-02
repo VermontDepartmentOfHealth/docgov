@@ -1,5 +1,5 @@
-[
-    {"name": "Kyle", "description": "Likes .NET Development, JavaScript, and Cats"},
-    {"name": "Brian", "description": "Automation champion, pottery hobbyist, and volleyball enthusiast"},
-    {"name": "Sandra", "description": "Swiss army knife developer, and early morning script powerhouse"}
-]
+{
+    "Kyle": {"description": "Likes .NET Development, JavaScript, and Cats"},
+    "Brian": {"description": "Automation champion, pottery hobbyist, and volleyball enthusiast"},
+    "Sandra": {"description": "Swiss army knife developer, and early morning script powerhouse"}
+}
