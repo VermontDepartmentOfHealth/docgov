@@ -1,19 +1,15 @@
 ---
 layout: default.njk
 ---
-        
-        
+
+
 <h2><a href="/authors/"> {% include "images/icons/arrow-left.svg" %} All Authors</a></h2>
 
-<h1 class="page-title">Posts from {{ name }}</h1>
+<h1 class="page-title">{{ title }}</h1>
 
 {{ content | safe }}
 
 
 {% set postList = collections.authors[name].posts %}
 {% include "_partials/postList.njk" %}
-
-
-
-
     
