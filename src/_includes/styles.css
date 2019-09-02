@@ -53,9 +53,12 @@ main.content {
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 225px;
+  overflow-x: hidden;
   padding: 0;
   z-index: 10;
+  transition: left .3s ease;
 }
 
 .sidenav a {
@@ -88,20 +91,19 @@ main.content {
 }
 
 @media (max-width: 850px) {
-  
-  body {
+  /* default closed */
+  body.nav-closed {
     grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
     grid-template-areas: ". head ."
                          ". main ."
                          "foot foot foot";
   }
-  nav.sidenav {
-    display: none;
+  .nav-closed nav.sidenav {
+    left: -240px;
   }
-  .nav-active nav.sidenav {
-    display: block;
-  }
-}
+
+ 
+}                       
 
 /* typography */
 body {
@@ -253,11 +255,14 @@ h4:hover .direct-link {
 header.header {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .brand {
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: hsl(148, 100%, 26%);
   text-decoration: none;
   font-size: 2.6rem; 
@@ -740,4 +745,118 @@ a.tag-badge::before {
   tfoot { display: table-row-group }
   /* table tr { break-inside: avoid; } */
 
+}
+
+
+/*!
+ * Hamburgers by Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* Hamburger - Slider */
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--slider.is-active .hamburger-inner::before {
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+
+/* custom hamburger overrides */
+.hamburger:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px #2196f3;
+}
+.hamburger-box {
+    height: 17px;
 }
