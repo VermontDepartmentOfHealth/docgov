@@ -66,12 +66,14 @@
         
         
         <ul id="footer-nav" class="nav-links">
-            <li><a href="#header">Back to top</a></li>
-            <li><a href="/">Home</a></li>
             <li>
                 <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/tree/master/{{ page.inputPath }}">
-                    {% include "edit.svg" %}
+                    {% include "images/icons/edit.svg" %}
                     Edit this Page
+                </a>
+                <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/commits/master/{{ page.inputPath }}">
+                    {% include "images/icons/history.svg" %}
+                    View Page History
                 </a>
             </li>
         </ul>
