@@ -209,7 +209,6 @@ hr {
 
 .content a:hover,
 .footer a:hover {
-  padding: 2px 0 4px 0;
   background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),rgba(198,238,255,1) calc(50% - 8px),rgba(198,238,255,1) 100%);
   background-position: 0 100%
 }
@@ -230,17 +229,22 @@ hr {
 .page .footer .btn {
   border: 2px solid hsl(300, 83%, 28%);
   color: hsl(300, 83%, 28%);
+  background: transparent;
   border-radius: 2px;
   padding: 1px 8px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transition: .4s ease color, .4s ease border-color;
+  transition: .4s ease;
+  transition-property: color, border-color, background;
+  /* transition-duration: 0.4s;
+  transition-timing-function: ease; */
 }
 .page .content .btn:hover,
 .page .footer .btn:hover {
   color: hsl(300, 83%, 40%);
   border-color: hsl(300, 83%, 36%);
+  background: hsla(300, 100%, 99%, 1);
 }
 .btn svg {
   height: 16px;
@@ -355,6 +359,7 @@ section.intro {
 .post-author {
   display: flex;
 }
+
 
 .separator {
     margin-right: 6px;

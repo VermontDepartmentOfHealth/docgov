@@ -11,7 +11,13 @@ layout: default.njk
     <ul class="post-authors">
     {%- for author in authors -%}
       <li class="post-author">
-        {{ author }}
+
+        {% set authorInfo = authorlist[author] %}
+        {% if authorInfo %}
+          <a href="/authors/{{author | lower}}">{{ author }}</a>
+        {% else %}
+          {{ author }}
+        {% endif %}
         
         {% if not loop.last %}<span class="separator">,</span>{%- endif -%}
       </li>
