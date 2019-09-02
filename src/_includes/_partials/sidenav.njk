@@ -1,4 +1,12 @@
 <nav class="sidenav">
+
+    <button class="hamburger times nav-toggle" type="button" id="navToggleSide" 
+            aria-haspopup="true" aria-expanded="false" aria-label="Toggle side navbar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+
     <ul class="list-unstyled">
         <li><a href="/" class='{{ "active" if "/" == page.url }}'>{% include "images/icons/home.svg" %} Home</a></li>
         <li class="divider"></li>

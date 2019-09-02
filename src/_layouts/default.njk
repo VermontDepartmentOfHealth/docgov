@@ -43,13 +43,11 @@
 <body class="page {{class}} nav-closed">
 
     <header id="header" class="header">
-        {# <a href="#footer-nav" id="navToggle" class='nav-toggle' gitaria-hidden="true" > </a> #}
-
-        <button class="hamburger hamburger--slider" type="button" id="navToggle" 
+        <button class="hamburger nav-toggle" type="button" id="navToggleBody" 
                 aria-haspopup="true" aria-expanded="false" aria-label="Toggle side navbar">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </button>
 
         <a href="/" aria-label="Home Page" class="brand" >
@@ -63,17 +61,6 @@
         </a>
     </header>
 
-        <script>
-        let navToggle = document.getElementById('navToggle');
-        navToggle.onclick = function (event) {
-            event.preventDefault();
-
-            var isOpen = navToggle.classList.contains('is-active')
-            navToggle.setAttribute('aria-expanded', !isOpen)
-            navToggle.classList.toggle('is-active', !isOpen);
-            document.body.classList.toggle('nav-closed', isOpen);
-        };
-    </script>
 
     <main class="content">
         
@@ -107,6 +94,10 @@
         
     {% include "_partials/sidenav.njk" %}
 
+    {# capture the JS content as a Nunjucks variable #}
+    {% set js %}{% include "scripts/nav-toggle.js" %}{% endset %}
+    {# feed it through our cssmin filter to minify #}
+    <script type="text/javascript">{{ js | jsmin | safe }}</script>
 </body>
 
 </html>

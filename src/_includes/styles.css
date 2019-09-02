@@ -90,14 +90,28 @@ main.content {
   margin: 5px 18px;
 }
 
+/* had nav toggles by default */
+.page .hamburger {display:none}
+
 @media (max-width: 850px) {
-  /* default closed */
-  body.nav-closed {
+  /* only show nav toggles on small screens */
+  .page  .hamburger {
+    display:flex
+  }
+
+  /* remove nav from grid-template */
+  body {
     grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
     grid-template-areas: ". head ."
                          ". main ."
                          "foot foot foot";
   }
+
+  /* animated opening by changing left toggle */
+  .nav-closed nav.sidenav {
+    left: -240px;
+  }
+
   .nav-closed nav.sidenav {
     left: -240px;
   }
@@ -748,115 +762,47 @@ a.tag-badge::before {
 }
 
 
-/*!
- * Hamburgers by Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- */
+/* hamburger */
 .hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
   font: inherit;
   color: inherit;
-  text-transform: none;
   background-color: transparent;
   border: 0;
   margin: 0;
   overflow: visible;
+  width: 35px;
+  height: 30px;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
-.hamburger:hover {
-  opacity: 0.7;
-}
-
-.hamburger.is-active:hover {
-  opacity: 0.7;
-}
-
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
-}
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  background-color: #000;
-  border-radius: 4px;
-  position: absolute;
-  transition-property: transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
-}
-
-.hamburger-inner::before,
-.hamburger-inner::after {
-  content: "";
-  display: block;
-}
-
-.hamburger-inner::before {
-  top: -10px;
-}
-
-.hamburger-inner::after {
-  bottom: -10px;
-}
-
-/* Hamburger - Slider */
-.hamburger--slider .hamburger-inner {
-  top: 2px;
-}
-
-.hamburger--slider .hamburger-inner::before {
-  top: 10px;
-  transition-property: transform, opacity;
-  transition-timing-function: ease;
-  transition-duration: 0.15s;
-}
-
-.hamburger--slider .hamburger-inner::after {
-  top: 20px;
-}
-
-.hamburger--slider.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(45deg);
-}
-
-.hamburger--slider.is-active .hamburger-inner::before {
-  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-  opacity: 0;
-}
-
-.hamburger--slider.is-active .hamburger-inner::after {
-  transform: translate3d(0, -20px, 0) rotate(-90deg);
+.hamburger .bar {
+  background: #5d5d5d;
+  margin: 2px;
+  border-radius: 2px;
+  flex: 1 1 auto;
+  width: 25px;
 }
 
 
-/* custom hamburger overrides */
-.hamburger:focus {
-    outline: none;
-    box-shadow: 0 0 3px 1px #2196f3;
+
+.sidenav .hamburger.times {
+  float: right;
+  margin-top: 0.4rem;
+  margin-right: 0.4rem;
 }
-.hamburger-box {
-    height: 17px;
+
+.sidenav .hamburger.times .bar {
+  background: none; /*  middle bar */
+}
+.sidenav .hamburger.times .bar:first-child {
+  background: #fff;
+  transform: translateY(8px)rotate(45deg);
+}
+
+.sidenav .hamburger.times .bar:last-child {
+  background: #fff;
+  transform: translateY(-8px)rotate(-45deg);
 }
