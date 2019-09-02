@@ -20,5 +20,8 @@
     "he": "^1.2.0",
     "markdown-it-anchor": "^5.2.4",
     "terser": "^4.2.1"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2"
   }
 }

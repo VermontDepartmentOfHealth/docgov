@@ -91,7 +91,9 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [Strip HTML from Text JavaScript](https://stackoverflow.com/a/1237620/1366033)
 * [Native JavaScript or ES6 way to encode and decode HTML entities?](https://stackoverflow.com/a/57702435/1366033)
-
+* [Create object from Array](https://stackoverflow.com/a/42974762/1366033)
+* [Remove Array Duplicates in ES6](https://medium.com/dailyjs/how-to-remove-array-duplicates-in-es6-5daa8789641c)
+* [Flatten Array in ES6](https://www.jstips.co/en/javascript/flattening-multidimensional-arrays-in-javascript/)
 
 ## CSS
 
