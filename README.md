@@ -31,28 +31,3 @@ Available at [https://open-sourced.netlify.com/](https://open-sourced.netlify.co
 npm run build             # runs `npx eleventy` to build the site
 npm run serve             # builds site + serves `_site` directory
 ```
-
-
-## Linting
-
-### Markdown
-
-Markdown validation is provided by [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint).
-
-Exceptions should be saved to `/.markdownlint.json`
-
-* [MD012](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md012---multiple-consecutive-blank-lines) - Multiple blank lines
-  * Headings often have a tall visual margin to separate content - if markdown authors want to emulate that, okay
-* [MD013](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md013---line-length) - Line Length too long
-  * If folks want to put paragraphs in markdown, that's fine, just use an IDE that wraps lines
-* [MD025](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md025---multiple-top-level-headers-in-the-same-document) - Multiple Headers
-  * False reading from building our markdown pages using templates like this `# {{title}}`
-* [MD033](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - Inline HTML
-  * If we want to make use of inline html, go for it
-
-### Spelling
-
-Spelling validation is provided by [vscode-spell-checker](https://github.com/streetsidesoftware/vscode-spell-checker).
-
-Exceptions should be saved to `./.vscode/settings.json` in the `cSpell.words` section
-

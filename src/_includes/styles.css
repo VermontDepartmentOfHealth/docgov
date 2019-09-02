@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  /* old display for ie11 compat */
+  /* old display for ie11 compatibility */
   display: flex;
   flex-direction: column;
   display: grid;

@@ -74,7 +74,8 @@ A stash for helpful articles, references, documentation looked up along the way
 ## Github
 
 * [Github - Community health guidelines](https://help.github.com/en/articles/creating-a-default-community-health-file-for-your-organization)
-
+* [Github - Issue and pull request templates](https://help.github.com/en/articles/about-issue-and-pull-request-templates)
+* [Github - Setting guidelines for repository contributors](https://help.github.com/en/articles/setting-guidelines-for-repository-contributors)
 
 ## HTML
 
