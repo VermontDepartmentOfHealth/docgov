@@ -9,8 +9,8 @@ title: All Teams
 <ol class="category-list category-teams list-unstyled">
   {% for name, info in collections.teams  %}
     <li class="category-item">
-      <a href="/teams/{{name | lower}}" class="category-name">{{ name }}</a>
-      <span class="category-count">× {{info.posts.length }}</span>
+      <a href="{{info.url}}" class="category-name">{{ name }}</a>
+      {# <span class="category-count">× {{info.posts.length }}</span> #}
       <div class="category-description">{{ info.summary }}</div>
     </li>
   {% endfor %}

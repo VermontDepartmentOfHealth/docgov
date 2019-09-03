@@ -1,0 +1,15 @@
+---
+layout: default.njk
+---
+
+
+<h2><a href="/projects/"> {% include "images/icons/arrow-left.svg" %} All Projects</a></h2>
+
+<h1 class="page-title">{{ title }}</h1>
+
+{{ content | safe }}
+
+
+{% set postList = collections.projects[name].posts %}
+{% include "_partials/postList.njk" %}
+    

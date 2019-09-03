@@ -16,11 +16,10 @@ module.exports = function(eleventyConfig) {
 
 
     // custom collections
-    eleventyConfig.addCollection("authors", require("./src/_collections/authors.js") );
-    eleventyConfig.addCollection("teams", require("./src/_collections/teams.js") );
-
-
-
+    var builder = require("./src/_collections/builder.js")
+    eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./src/projects/"));
+    eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./src/authors/"));
+    eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./src/teams/"));
  
 
 
