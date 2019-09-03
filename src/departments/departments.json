@@ -1,0 +1,4 @@
+{ 
+    "layout": "department.njk",
+    "tags": ["department"]
+}

@@ -1,0 +1,15 @@
+---
+layout: default.njk
+---
+
+
+<h2><a href="/departments/"> {% include "images/icons/arrow-left.svg" %} All Teams</a></h2>
+
+<h1 class="page-title">{{ title }}</h1>
+
+{{ content | safe }}
+
+
+{% set postList = collections.departments[name].posts %}
+{% include "_partials/postList.njk" %}
+    
