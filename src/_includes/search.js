@@ -20,16 +20,26 @@
 
     var highlightSnippet = function (text, query, summary) {
         var ellipsis = "<span class='text-muted'>...</span>"
-        var startPos = text.indexOf(query)
+        
+        // find starting word
+        var wordStartIndexes = query.split(" ").map(function(word) {
+            return text.indexOf(word) // -1 or real value
+        }).filter(function(pos) {
+            return pos >= 0;
+        })
+    
         
         // return summary if we didn't get a match
-        if (startPos < 0) {
+        if (wordStartIndexes.length === 0) {
             return summary.length > 150 ? summary.slice(0, 150) + ellipsis : summary
         }
 
+        // get earliest match in article
+        var startPos = Math.min.apply(this, wordStartIndexes)
+
         // get starting point
         var prev_counter = 0
-        var prev_words = 3
+        var prev_words = 2
         var prev_index = startPos
         for (var i = startPos - 1; i > 0; i--) {
             if (text[i] === " ") { //word
@@ -42,7 +52,7 @@
 
         // get ending point
         var next_counter = 0
-        var next_words = 15
+        var next_words = 8
         var next_index = startPos
         for (var i = startPos - 1; i < text.length - 1; i++) {
             if (text[i] === " ") { //word
@@ -58,14 +68,14 @@
         var result = highlightText(snippet, query)
         
 
-        result = (prev_index > 0 ? `${ellipsis} ` : "") + result + (next_index < text.length ? ` ${ellipsis}` : "")
+        result = "<span class='match'>" + (prev_index > 0 ? `${ellipsis} ` : "") + result + (next_index < text.length ? ` ${ellipsis}` : "") + "</span>"
 
         return result;
     }
 
     var highlightText = function(text, match) {
-        var reg = new RegExp(match, 'gi')
-        var result = text.replace(reg, "<strong>$&</strong>")
+        var reg = new RegExp(match.replace(/ /g, "|"), 'gi')
+        var result = text.replace(reg, "<mark>$&</mark>")
         return result;
     }
 
@@ -76,11 +86,12 @@
     * @return {String}         The markup
     */
     var createResultHTML = function (article, id, query) {
+        var matchInTitle = testWordMatch(query, article.title)
         var html =
             '<li class="search-result">' +
                 '<a href="' + article.url + '">' +
                     '<h2>' + highlightText(article.title, query) + '</h2>' +
-                    highlightSnippet(article.content, query, article.summary) +
+                    (matchInTitle ? "" : highlightSnippet(article.content, query, article.summary)) +
                 '</a>' +
             '</li>';
         return html;
@@ -111,23 +122,23 @@
     */
     var search = function (query) {
 
-        // all lower case, please
-        query = query.toLowerCase();
-
-        // Variables
-        var reg = new RegExp(query, 'gi');
-
         var priority1 = [];
         var priority2 = [];
+        var priority3 = [];
+        var priority4 = [];
 
         // Search the content
         searchIndex.forEach(function (article) {
-            if (reg.test(article.title)) return priority1.push(article);
-            if (reg.test(article.content)) priority2.push(article);
+            if (testExactMatch(query, article.title)) return priority1.push(article);
+            if (testExactMatch(query, article.content)) priority2.push(article);
+            if (testWordMatch(query, article.title)) return priority3.push(article);
+            if (testWordMatch(query, article.content)) priority4.push(article);
         });
+        // todo - more algorithms to prioritize - # of matches
 
         // Combine the results into a single array
-        var results = [].concat(priority1, priority2);
+        var results = [].concat(priority1, priority2, priority3, priority4);
+        results = [...new Set(results)]  // deduplicate 
 
         // Display the results
         resultList.innerHTML = results.length < 1 
@@ -137,6 +148,27 @@
         // set search mode
         document.body.classList.add('searching');
     };
+
+    var testExactMatch = function (query, text) {
+        // all lower case, please
+        query = query.toLowerCase();
+
+        // Variables
+        var reg = new RegExp(query, 'gi');
+
+        return reg.test(text)
+    }
+
+    
+    var testWordMatch = function (query, text) {
+        // all lower case, please
+        query = query.toLowerCase().replace(/ /g,"|");
+        
+        // Variables
+        var reg = new RegExp(query, 'gi');
+
+        return reg.test(text)
+    }
 
     /**
     * Handle submit events
@@ -179,6 +211,15 @@
                         document.body.classList.remove('searching');
                     }
                 })
+
+                // on mobile, make room for the keyboard
+                input.addEventListener('focus', function(e) {
+                    // 'ontouchstart' in document.documentElement
+                    if (window.innerWidth < 900) {
+                        form.scrollIntoView(true)
+                    }
+                });
+                
             });
     };
 

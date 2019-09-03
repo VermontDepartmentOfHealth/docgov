@@ -517,7 +517,7 @@ form.search {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 1em;
 }
 
 form.search input {
@@ -529,6 +529,7 @@ form.search input {
   border: 1px solid #d0d0d0;
   background: #f3f3f3;
   font-size: 1.1em;
+  margin-top: 2em;
 }
 
 .searching form.search input {
@@ -538,8 +539,9 @@ form.search input {
 
 form.search label {
   position: absolute;
-  right: 10px;
-  height: 18px;
+  right: 15px;
+  top: 2.9em;
+  height: 20px;
   color: #676767;
 }
 form.search svg {
@@ -608,7 +610,6 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
 
 
 .search-result a:hover {
-  color: hsl(198, 99%, 40%);
   background: hsl(198, 65%, 97%);
 }
 
@@ -620,9 +621,20 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
   font-size: 1.3em;
 }
 
-.search-result strong {
-  background: hsl(45, 100%, 89%);
+span.match {
+  /* in case we match a url */
+  word-break: break-word;
+}
+
+.search-result h2 mark {
+  background: #dfecf1;
   border-radius: 2px;
+  color: #018eca;
+}
+.search-result .match mark {
+  background: none;
+  box-shadow: inset 0 -3px 0 0 #018ecad9; /* can replace text-decoration-* styles once supported */
+  color: inherit;
 }
 
 .search-result .text-muted {
