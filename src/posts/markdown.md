@@ -1,6 +1,6 @@
 ---
 title_word: Markdown
-title: Markdown Example
+title: Markdown Overview
 tags: ['post', 'overview']
 authors: ['Kyle']
 date: 2019-08-30
@@ -186,4 +186,29 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 </div>
 
 
+### Syntax Highlighting
 
+For more info on supported languages, see [syntax highlighting](/posts/syntax-highlighting/)
+
+<div class="split">
+<span>
+
+\`\`\`js
+var pet = {
+    name: "Frida",
+    age: 13
+}
+\`\`\`
+
+</span>
+<span>
+
+```js
+var pet = {
+    name: "Frida",
+    age: 13
+}
+```
+
+</span>
+</div>

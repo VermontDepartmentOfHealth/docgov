@@ -23,13 +23,25 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./src/departments/"));
  
 
+    // configure syntax highlighting
+    var hljs = require('highlightjs'); 
+    let highlight = function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(lang, str).value;
+          } catch (__) {}
+        }
+        return ''; // use external default escaping
+      }
+
 
     // set markdown defaults (inline so we can extend)
     let markdownIt = require("markdown-it");
     let options = {
       html: true,
       breaks: true,
-      linkify: true
+      linkify: true,
+      highlight: highlight
     };
     
     // add markdown anchor options
@@ -46,7 +58,9 @@ module.exports = function(eleventyConfig) {
 		permalinkClass: "direct-link",
 		permalinkSymbol: "#",
 		level: [1,2,3,4]
-	};
+    };
+    
+
 
     eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
         

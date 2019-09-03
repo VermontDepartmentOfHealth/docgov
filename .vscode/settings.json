@@ -24,6 +24,7 @@
         "authorlist",
         "destructure",
         "frontmatter",
+        "hljs",
         "lifecycle",
         "linkify",
         "markdownlint",

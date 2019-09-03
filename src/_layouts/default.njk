@@ -98,6 +98,9 @@
     {% set js %}{% include "scripts/nav-toggle.js" %}{% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
+
+
+    <link rel="stylesheet" href="/assets/styles/hljs/ocean.css">
 </body>
 
 </html>
