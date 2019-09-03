@@ -90,9 +90,13 @@ main.content {
   margin: 5px 18px;
 }
 
-/* had nav toggles by default */
-.page .hamburger {display:none}
 
+@media (min-width: 850px) {
+  /* had nav toggles by default */
+  .page .hamburger {
+    display:none
+  }
+}
 @media (max-width: 850px) {
   /* only show nav toggles on small screens */
   .page  .hamburger {
@@ -116,8 +120,11 @@ main.content {
     left: -240px;
   }
 
- 
-}                       
+  .header .brand {
+    justify-content: flex-start;
+  }
+}     
+                
 
 /* typography */
 body {
@@ -314,7 +321,7 @@ header.header {
 }
 .brand svg {
     height: 40px;
-    margin-right: 20px;
+    margin: 0px 20px;
 }
 
 .site-title .doc {
@@ -831,21 +838,22 @@ td svg {
   background: #0b82b5;
 }
 
-.sidenav .hamburger.times {
+.sidenav .hamburger {
   float: right;
   margin-top: 0.4rem;
   margin-right: 0.4rem;
 }
 
-.sidenav .hamburger.times .bar {
+
+.sidenav .hamburger .bar {
   background: none; /*  middle bar */
 }
-.sidenav .hamburger.times .bar:first-child {
+.sidenav .hamburger .bar:first-child {
   background: #fff;
   transform: translateY(8px)rotate(45deg);
 }
 
-.sidenav .hamburger.times .bar:last-child {
+.sidenav .hamburger .bar:last-child {
   background: #fff;
   transform: translateY(-8px)rotate(-45deg);
 }
