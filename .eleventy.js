@@ -8,15 +8,15 @@ module.exports = function(eleventyConfig) {
 
 
     // add filters
-    eleventyConfig.addFilter("cssmin", require("./src/_filters/clean-css.js") );
-    eleventyConfig.addFilter("jsmin", require("./src/_filters/clean-js.js") );
-    eleventyConfig.addFilter("dateDisplay", require("./src/_filters/dates.js") );
+    eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );
+    eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );
+    eleventyConfig.addFilter("dateDisplay", require("./src/_plugins/dates.js") );
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> t !== "post"));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
 
     // custom collections
-    var builder = require("./src/_collections/builder.js")
+    var builder = require("./src/_plugins/builder.js")
     eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./src/projects/"));
     eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./src/authors/"));
     eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./src/teams/"));
@@ -24,45 +24,9 @@ module.exports = function(eleventyConfig) {
  
 
     // configure syntax highlighting
-    var hljs = require('highlightjs'); 
-    let highlight = function (str, lang) {
-        if (lang && hljs.getLanguage(lang)) {
-          try {
-            return hljs.highlight(lang, str).value;
-          } catch (__) {}
-        }
-        return ''; // use external default escaping
-      }
+    var md = require("./src/_plugins/customize-markdown.js")()
+    eleventyConfig.setLibrary("md", md);
 
-
-    // set markdown defaults (inline so we can extend)
-    let markdownIt = require("markdown-it");
-    let options = {
-      html: true,
-      breaks: true,
-      linkify: true,
-      highlight: highlight
-    };
-    
-    // add markdown anchor options
-	let markdownItAnchor = require("markdown-it-anchor");
-	let opts = {
-		permalink: true,
-		slugify: function(s) {
-            // strip special chars
-            let newStr = s.toLowerCase().replace(/[^a-z ]/gi,'').trim();
-            // take first 4 words and separate with "-""
-            newStr = newStr.split(" ").slice(0,6).join("-");
-			return newStr;
-		},
-		permalinkClass: "direct-link",
-		permalinkSymbol: "#",
-		level: [1,2,3,4]
-    };
-    
-
-
-    eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
         
     return {
         dir: {

@@ -1,0 +1,44 @@
+
+module.exports =  function CustomizeMD() {
+   // configure syntax highlighting
+   var hljs = require('highlightjs'); 
+   let highlight = function (str, lang) {
+       if (lang && hljs.getLanguage(lang)) {
+         try {
+           return hljs.highlight(lang, str).value;
+         } catch (__) {}
+       }
+       return ''; // use external default escaping
+     }
+
+
+   // set markdown defaults (inline so we can extend)
+   let markdownIt = require("markdown-it");
+   let options = {
+     html: true,
+     breaks: true,
+     linkify: true,
+     highlight: highlight
+   };
+   
+   // add markdown anchor options
+   let markdownItAnchor = require("markdown-it-anchor");
+   let opts = {
+       permalink: true,
+       slugify: function(s) {
+           // strip special chars
+           let newStr = s.toLowerCase().replace(/[^a-z ]/gi,'').trim();
+           // take first 4 words and separate with "-""
+           newStr = newStr.split(" ").slice(0,6).join("-");
+           return newStr;
+       },
+       permalinkClass: "direct-link",
+       permalinkSymbol: "#",
+       level: [1,2,3,4]
+   };
+   
+   return markdownIt(options)
+            .use(markdownItAnchor, opts);
+}
+
+  
