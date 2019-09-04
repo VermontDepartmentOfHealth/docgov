@@ -1,6 +1,6 @@
 ---
 title_word: SSIS
-title: How to Install SSIS
+title: How to Install SSIS 2010
 tags: ['post', 'how-to']
 authors: ['Sandra']
 date: 2019-08-30
@@ -10,7 +10,7 @@ summary: "How to install and configure SQL Server Integration Services (SSIS)"
 1. Uninstall VS 2017 (and any other versions of VS)
 2. Uninstall SQL Server 2012 (and any other versions of SQL Server)
 3. Restart computer
-4. Install SQL Server 2008 from <\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Software\SQL Server 2008 R2 SP2 - Advanced - BIDS>
+4. Install SQL Server 2008 from $$\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Software\SQL Server 2008 R2 SP2 - Advanced - BIDS$$
 
      I selected these options and accepted all defaults
 

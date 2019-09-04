@@ -37,8 +37,12 @@ module.exports =  function CustomizeMD() {
        level: [1,2,3,4]
    };
    
+   // add file extension
+   let markdownItFile = require("./markdown-it-file");
+
    return markdownIt(options)
-            .use(markdownItAnchor, opts);
+            .use(markdownItAnchor, opts)
+            .use(markdownItFile);
 }
 
   
