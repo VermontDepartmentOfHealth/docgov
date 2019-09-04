@@ -13,8 +13,14 @@ Here's the list of resources I've been keeping for new hires / folks.
 
 ## Bookmarks
 
+
 * Web
   * IT Intranet -  http://isa2004/Intranet/ITSI/ITSIntranet/default.aspx?Page=Home/ITSHome
+  * Department of Health - http://www.healthvermont.gov/
+  * The Hive - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/Pages/default.aspx
+  * ADS - https://digitalservices.vermont.gov/
+  * Human Resources - https://humanresources.vermont.gov/
+  * VTHR - https://vthr.erp.state.vt.us/psp/HRPRD/?cmd=login
   * IT Employee Orientation
   * IT Standards
   * Jira - https://ahs-jira-prod.ahs.state.vt.us/jira/secure/Dashboard.jspa
@@ -25,6 +31,10 @@ Here's the list of resources I've been keeping for new hires / folks.
   * Prod Web Apps - https://apps.health.vermont.gov/VHCForm/
   * LANDESK - https://itsupport.vermont.gov/
   * AHS Data Services Confluence - https://confluence/pages/viewpage.action?pageId=13533235
+* Org Charts
+  * VDH - http://www.healthvermont.gov/about-us/organization-locations/organizational-charts
+  * VDH Divisions - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/resources/Pages/Org-Charts.aspx
+  * ADS - https://digitalservices.vermont.gov/about-us/how-we-are-organized
 * Folder Share
 * "Nessie"
   * Old - \\nessie
