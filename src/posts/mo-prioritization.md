@@ -93,14 +93,15 @@ h2 .direct-link {
 }
 h2 + ul {
     list-style: none;
-    padding-left: 50px;
+    padding-left: 54px;
 }
 h2 + ul li {
-    text-indent: -20px;
+    text-indent: -22px;
 }
 h2 + ul li svg {
   height: 16px;
   margin-top: -2px;
   vertical-align: middle;
+  margin-right: 2px;
 }
 </style>
