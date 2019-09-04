@@ -214,7 +214,34 @@ var pet = {
 </div>
 
 
-### Extension
+## Extensions
+
+### Definition List
+
+
+<div class="split">
+<span>
+
+Term 1
+  \~ Definition 1
+
+Term 2
+\:   Definition  2
+
+</span>
+<span>
+
+
+Term 1
+  ~ Definition 1
+
+Term 2
+:   Definition  2
+
+</span>
+</div>
+
+### File
 
 <div class="split">
 <span>
@@ -229,6 +256,7 @@ $$\\\\nessie\prog\Software\\$$
 
 </span>
 </div>
+
 
 
 
