@@ -13,29 +13,35 @@ Here's the list of resources I've been keeping for new hires / folks.
 
 ## Bookmarks
 
+### Intranet
 
-* Web
-  * IT Intranet -  http://isa2004/Intranet/ITSI/ITSIntranet/default.aspx?Page=Home/ITSHome
-  * Department of Health - http://www.healthvermont.gov/
-  * The Hive - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/Pages/default.aspx
-  * ADS - https://digitalservices.vermont.gov/
-  * Human Resources - https://humanresources.vermont.gov/
-  * VTHR - https://vthr.erp.state.vt.us/psp/HRPRD/?cmd=login
-  * IT Employee Orientation
-  * IT Standards
-  * Jira - https://ahs-jira-prod.ahs.state.vt.us/jira/secure/Dashboard.jspa
-  * Stash - https://ahs-jira-prod.ahs.state.vt.us:8443/stash/projects
-  * Balsamiq - https://balsamiq.cloud/ssbm1o7/projects
-  * Citrix Test / Prod Win Apps - https://nws.vdh.state.vt.us/
-  * Test Web Apps - https://apps-test.health.vermont.gov/VHCForm/
-  * Prod Web Apps - https://apps.health.vermont.gov/VHCForm/
-  * LANDESK - https://itsupport.vermont.gov/
-  * AHS Data Services Confluence - https://confluence/pages/viewpage.action?pageId=13533235
-* Org Charts
-  * VDH - http://www.healthvermont.gov/about-us/organization-locations/organizational-charts
-  * VDH Divisions - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/resources/Pages/Org-Charts.aspx
-  * ADS - https://digitalservices.vermont.gov/about-us/how-we-are-organized
-* Folder Share
+### Web Links
+
+* IT Intranet -  https://webmail.vdh.state.vt.us/Intranet/ITSI/ITSIntranet/default.aspx
+* Department of Health - http://www.healthvermont.gov/
+* The Hive - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/Pages/default.aspx
+* ADS - https://digitalservices.vermont.gov/
+* Human Resources - https://humanresources.vermont.gov/
+* VTHR - https://vthr.erp.state.vt.us/psp/HRPRD/?cmd=login
+* IT Employee Orientation
+* IT Standards
+* Jira - https://ahs-jira-prod.ahs.state.vt.us/jira/secure/Dashboard.jspa
+* Stash - https://ahs-jira-prod.ahs.state.vt.us:8443/stash/projects
+* Balsamiq - https://balsamiq.cloud/ssbm1o7/projects
+* Citrix Test / Prod Win Apps - https://nws.vdh.state.vt.us/
+* Test Web Apps - https://apps-test.health.vermont.gov/VHCForm/
+* Prod Web Apps - https://apps.health.vermont.gov/VHCForm/
+* LANDESK - https://itsupport.vermont.gov/
+* AHS Data Services Confluence - https://confluence/pages/viewpage.action?pageId=13533235
+
+### Org Charts
+
+* VDH - http://www.healthvermont.gov/about-us/organization-locations/organizational-charts
+* VDH Divisions - https://vermontgov.sharepoint.com/sites/AHSIntra/VDH/resources/Pages/Org-Charts.aspx
+* ADS - https://digitalservices.vermont.gov/about-us/how-we-are-organized
+
+### Folder Share
+
 * "Nessie"
   * Old - \\nessie
     * New - \\ahs\ahsfiles\VDH\Divisional Shares
@@ -46,14 +52,16 @@ Here's the list of resources I've been keeping for new hires / folks.
   * Error Log - \\ahs\ahsfiles\VDH\Divisional Shares\SPHINX$\Error Log
   * Dev Docs - \\nessie\prog\Documentation
   * Business Docs: \\nessie\prog\Rational\Projects
-* Network
-  * Win Apps Test - \\ahs-nwstest\NetApps
-  * Win Apps Prod - \\ahs-nwsprod\NetApps
-  * Web Apps Test - \\vdhwebapps-test\WebApps
-  * Web Apps Prod - \\vdhwebapps-prod\WebApps
+
+### Server Shares
+
+* Win Apps Test - \\ahs-nwstest\NetApps
+* Win Apps Prod - \\ahs-nwsprod\NetApps
+* Web Apps Test - \\vdhwebapps-test\WebApps
+* Web Apps Prod - \\vdhwebapps-prod\WebApps
 
 
-## Software Installations
+## Required Software
 
 * Visual Studio 2010
 * Visual Studio 2017
@@ -62,7 +70,7 @@ Here's the list of resources I've been keeping for new hires / folks.
 * \\ahs\ahsfiles\VDH\Divisional Shares\Prog\Software\
 * SourceTree
 * SSMS 2012
-* WinMerge 
+* WinMerge
 * Notepad++
 * KDiff
 
@@ -83,56 +91,64 @@ Here's the list of resources I've been keeping for new hires / folks.
 
 ## User Guides
 
-* Jira - \\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\JIRA\JIRA User Guide.docx
-* Git - \\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\JIRA\Git User Guide.docx
+* Jira - $$\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\JIRA\JIRA User Guide.docx$$
+* Git - $$\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\JIRA\Git User Guide.docx$$
 * VDH Code Standards - https://webmail.vdh.state.vt.us/intranet/itsi/sysdevgrp/staff_area/dev/applicationdeveloperhandbook.pdf
 * MS Code Standards - \\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\Code Standards\All-In-One Code Framework Coding Standards.docx
 * Build Email - \\ahs\ahsfiles\VDH\Divisional Shares\Prog\Training\Developer Resources\Email Templates\Build.oft
 
-## Global Skills / Training
+## Developer Skills
 
-**If new to Git**:
+### New to git
 
-* Using Git with a GUI | Pluralsight
-* Introduction to Git | Pluralsight
-* Git for Visual Studio Developers | Pluralsight
+* [Using Git with a GUI](https://app.pluralsight.com/library/courses/using-git-with-gui/table-of-contents)
+* [Introduction to Git](https://app.pluralsight.com/library/courses/introduction-to-git/table-of-contents)
+* [Git for Visual Studio Developers](https://app.pluralsight.com/library/courses/git-visual-studio-developers/table-of-contents)
 
-**If new to .NET**:
+### New to .NET
 
-* Introduction to Visual Studio 2010 - Part 1 | Pluralsight
-* Visual Studio 2015: A First Look at the IDE | Pluralsight
+* [Introduction to Visual Studio 2010 - Part 1](https://app.pluralsight.com/library/courses/vs2010-gettingstarted/table-of-contents)
+* [Visual Studio 2015: A First Look at the IDE](https://app.pluralsight.com/library/courses/visual-studio-2015-first-look-ide/table-of-contents)
 
-**If new to VB.NET**: 
-* VB.NET Fundamentals | Pluralsight
-* C# for Visual Basic .NET Developers | Pluralsight
+### New to VB
 
-If new to SQL
-* Developer's T-SQL Playbook | Pluralsight
-* SQL Server Fundamentals | Pluralsight
+* [VB.NET Fundamentals](https://app.pluralsight.com/library/courses/vb-fundamentals/table-of-contents)
+* [C# for Visual Basic .NET Developers](https://app.pluralsight.com/library/courses/csharp-visual-basic-dotnet-developers/table-of-contents)
 
-If new to Agile / JIRA
-* Scrum Development with Jira & JIRA Agile | Pluralsight
+### New to SQL
+
+* [Developer's T-SQL Playbook](https://app.pluralsight.com/library/courses/tsql-playbook/table-of-contents)
+* [SQL Server Fundamentals](https://app.pluralsight.com/library/courses/sql-server-fundamentals/table-of-contents)
+
+### New to Agile
+
+* [Scrum Development with Jira & JIRA Agile](https://app.pluralsight.com/library/courses/scrum-development-jira-agile/table-of-contents)
 
 
-Project Based Skills / Training
+## Project Skills
 
-If assigned a WinForms Project
-* Introduction to Windows Forms | Pluralsight
-* ClickOnce Deployment Fundamentals | Pluralsight
+### New to WinForms
 
-If assigned a WebForms Project
-* Introduction to ASP.NET 4 WebForms | Pluralsight
+* [Introduction to Windows Forms](https://app.pluralsight.com/library/courses/windows-forms-introduction-with-visual-basic/table-of-contents)
+* [ClickOnce Deployment Fundamentals](https://app.pluralsight.com/library/courses/clickonce-deployment-fundamentals/table-of-contents)
 
-If assigned a WPF Project
-* WPF and XAML Fundamentals | Pluralsight
-* WPF MVVM In Depth | Pluralsight
+### New to WebForms
 
-If assigned a ASP.NET MVC Project
-* ASP.NET MVC Fundamentals | Pluralsight
-* ASP.NET MVC 4 Fundamentals | Pluralsight
-* ASP.NET MVC 5 Fundamentals | Pluralsight
+* [Introduction to ASP.NET 4 WebForms](https://app.pluralsight.com/library/courses/aspdotnet-webforms4-intro/table-of-contents)
 
-If assigned an Access Project
-* Access 2007 Part 1: Getting Started | Pluralsight
-* Access 2010: Getting Started | Pluralsight
-* Microsoft Access (2016) | Pluralsight
+### New to WPF
+
+* [WPF and XAML Fundamentals](https://app.pluralsight.com/library/courses/wpf-fundamentals/table-of-contents)
+* [WPF MVVM In Depth](https://app.pluralsight.com/library/courses/wpf-mvvm-in-depth/table-of-contents)
+
+### New to ASP.NET MVC
+
+* [ASP.NET MVC Fundamentals](https://app.pluralsight.com/library/courses/aspdotnet-mvc/table-of-contents)
+* [ASP.NET MVC 4 Fundamentals](https://app.pluralsight.com/library/courses/mvc4/table-of-contents)
+* [ASP.NET MVC 5 Fundamentals](https://app.pluralsight.com/library/courses/aspdotnet-mvc5-fundamentals/table-of-contents)
+
+### New to MS Access
+
+* [Access 2007 Part 1: Getting Started](https://app.pluralsight.com/library/courses/access-2007-getting-started/table-of-contents)
+* [Access 2010: Getting Started](https://app.pluralsight.com/library/courses/access-2010-getting-started/table-of-contents)
+* [Microsoft Access (2016)](https://app.pluralsight.com/library/courses/microsoft-access-2016/table-of-contents)

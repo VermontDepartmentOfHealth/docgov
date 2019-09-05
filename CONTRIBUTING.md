@@ -57,6 +57,8 @@ Exceptions should be saved to `/.markdownlint.json`
   * False reading from building our markdown pages using templates like this `# {{title}}`
 * [MD033](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - Inline HTML
   * If we want to make use of inline html, go for it
+* [MD034](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - No Bare URLS
+  * We explicitly convert bare urls in our markdown via `linkify: true`
 
 ### Spelling
 
