@@ -184,9 +184,10 @@ aside.toc {
   opacity: 0;
   transition: opacity .3s ease;
 }
-.toc a:hover::before {
+.toc a:hover::before,
+.toc li.active > a::before {
   opacity: 1;
-}       
+}     
 
 /* typography */
 body {
