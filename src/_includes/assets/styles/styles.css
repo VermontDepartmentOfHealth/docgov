@@ -124,7 +124,7 @@ main.content {
   }
 
   /* remove nav from grid-template */
-  body {
+  body.page {
     grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
     grid-template-areas: ". head ."
                          ". main ."
