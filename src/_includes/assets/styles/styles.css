@@ -147,12 +147,10 @@ main.content {
 
 /* table of contents */
 aside.toc {
-  position: fixed;
-  top: 100px;
-  right: 0;
-  width: 225px;
-  height: 100vh;
   position: sticky;
+  top: -15px;
+  height: 100vh;
+  padding: 0px 10px;
 }
 .toc > h3 {
   margin-top: 2.6rem;
