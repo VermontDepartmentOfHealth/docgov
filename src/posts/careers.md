@@ -14,7 +14,7 @@ summary: "An overview of our hiring process as we strive to make our interviewin
 
 If you're here and interested in a job with the Agency of Digital Services & Vermont Department of Health, a warm welcome and big hello.   Our goal is to make the hiring process as inclusive, transparent, and fair as humanely possible.  We want you to be able to show off your core competencies, and how those skills transfer to our team.
 
-## What to Prepare *(ahead of time)*
+## What to Prepare
 
 1. Create a System Diagram of a Previous Project
 2. Familiarize yourself with MS SQL Server Management Studio
@@ -28,7 +28,7 @@ Here are a couple of examples of system diagrams [Entity Relationship Diagram][6
 If for whatever reason, you're unable to produce a diagram before the interview, please let us know.
 
 
-## What to Expect *(day of)*
+## What to Expect
 
 **Interview Duration**: Please block off approximately two hours for the interview.
 

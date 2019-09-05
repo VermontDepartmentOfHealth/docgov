@@ -96,13 +96,13 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <span>
 
 \[link text\](http://example.com/)  
-\![img alt text\](/assets/heart.svg)  
+\![img alt text\](/assets//heart.svg)  
 
 </span>
 <span>
 
 [link text](http://example.com/)  
-![img alt text](/assets/heart.svg)  
+![img alt text](/assets/images/icons/fa/heart.svg)  
 
 </span>
 </div>
@@ -262,3 +262,13 @@ $$\\\\nessie\prog\Software\\$$
 
 
 
+
+
+<style>
+/* prevent examples from showing up in toc */
+li [href='#h--secondary'],
+li [href='#h--tertiary'],
+li [href='#h--quaternary'] {
+    display: none;
+}
+</style>

@@ -41,7 +41,7 @@ Additional tools you may find useful
 * [notepad-plus-plus.org - Notepad++](https://notepad-plus-plus.org/download/all-versions.html) - A good all around editor.
 * [google.com - Chrome Browser](https://www.google.com/chrome/) - A sound alternative to using IE.
 
-## 2. Department Introductions / Orientation
+## 2. Introductions
 
 1. **Building Tour** - Overview of program areas and conference rooms (especially the hard to find ones)
 2. **Brief Intros** - Introductions to IT division personnel.  Get to know folks around the office and where they sit
@@ -72,7 +72,7 @@ For more information about LINC please visit : [https://humanresources.vermont.g
 
 This can be setup on a case by case basis.  A key training tool we lean on is [pluralsight](https://www.pluralsight.com/), so we'll get set up with an account and identify trainings that should help bridge any experiences with things you're familiar with to things that we're working on here.
 
-## 4. Anticipated Work Assignments
+## 4. Anticipated Work
 
 1. **Sprint Work**
 
@@ -90,7 +90,7 @@ This can be setup on a case by case basis.  A key training tool we lean on is [p
 
    Trainings can always occupy any remaining down time or also be pro-actively used to orient to any new technologies or frameworks.
 
-### 5. Miscellaneous links that you may find useful
+## 5. Miscellaneous links that you may find useful
 
 * [Intranet](http://isa2004/Intranet/ITSI/ITSIntranet/default.aspx?Page=Home/ITSHome) - Contains documentation for past and ongoing projects.
 * [Confluence](https://confluence.ahs.state.vt.us/display/AHSDS/Forms) - AHS Data Services Web Portal for forms, standards, documentation, etc., for all database related tasks, requests, and procedures.

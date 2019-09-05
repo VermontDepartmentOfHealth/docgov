@@ -10,12 +10,13 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );
     eleventyConfig.addFilter("dateDisplay", require("./src/_plugins/dates.js") );
+    eleventyConfig.addFilter("removeHash", html => html.replace(/ #/g,"") );
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> t !== "post"));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
 
     // custom collections
-    var builder = require("./src/_plugins/builder.js")
+    let builder = require("./src/_plugins/builder.js")
     eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./src/projects/"));
     eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./src/authors/"));
     eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./src/teams/"));
@@ -23,9 +24,13 @@ module.exports = function(eleventyConfig) {
  
 
     // configure syntax highlighting
-    var md = require("./src/_plugins/customize-markdown.js")()
+    let md = require("./src/_plugins/customize-markdown.js")()
     eleventyConfig.setLibrary("md", md);
 
+
+    // add plugins
+    let pluginTOC = require('eleventy-plugin-nesting-toc');
+    eleventyConfig.addPlugin(pluginTOC);
         
     return {
         dir: {

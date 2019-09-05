@@ -17,6 +17,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
     "clean-css": "^4.2.1",
+    "eleventy-plugin-nesting-toc": "^1.1.0",
     "he": "^1.2.0",
     "highlightjs": "^9.12.0",
     "markdown-it-anchor": "^5.2.4",

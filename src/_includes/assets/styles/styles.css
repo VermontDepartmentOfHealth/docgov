@@ -26,9 +26,16 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
   grid-template-areas: "nav . head ."
-                       "nav . main ."
-                       "nav foot foot foot";
+                      "nav . main ."
+                      "nav foot foot foot";                       
   min-height: 100%;
+}
+
+body.post-layout {
+  grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr 225px;
+  grid-template-areas: "nav . head . ."
+                       "nav . main . toc"
+                       "nav foot foot foot foot";
 }
 
 header.header,
@@ -41,6 +48,7 @@ header.header { grid-area: head }
 main.content  { grid-area: main }
 footer.footer { grid-area: foot }
 nav.sidenav   { grid-area: nav  }
+aside.toc     { grid-area: toc  }
 
 main.content {
   position: relative;
@@ -90,6 +98,18 @@ main.content {
   margin: 5px 18px;
 }
 
+@media (max-width: 1100px) {
+  body.post-layout {
+    grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
+    grid-template-areas: "nav . head ."
+                         "nav . main ."
+                         "nav foot foot foot";
+  }
+  aside.toc {
+    display: none;
+  }
+}
+
 
 @media (min-width: 850px) {
   /* had nav toggles by default */
@@ -123,8 +143,52 @@ main.content {
   .header .brand {
     justify-content: flex-start;
   }
-}     
-                
+}    
+
+/* table of contents */
+aside.toc {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 225px;
+  height: 100vh;
+  position: sticky;
+}
+.toc > h3 {
+  margin-top: 2.6rem;
+}
+
+.toc ol {
+  list-style: none;
+  padding-left: 0;
+}
+.toc ol ol {
+  padding-left: 15px;
+}
+.toc ol ol ol {
+  padding-left: 0;
+}
+
+.toc a {
+  color: #436877;
+  text-decoration: none;
+  position: relative;
+  transition: color .3s ease;
+}
+.toc a:hover {
+  color: #1a7498;
+}
+.toc a::before {
+  content: "{";
+  color: #1a7498;
+  position: absolute;
+  left: -11px;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.toc a:hover::before {
+  opacity: 1;
+}       
 
 /* typography */
 body {
@@ -297,16 +361,17 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 }
 
 .content .direct-link {
-  display: none;
+  opacity: 0;
   color: grey;
   margin-left: 5px;
+  transition: opacity .2s ease;
 }
 
 h1:hover .direct-link,
 h2:hover .direct-link,
 h3:hover .direct-link,
 h4:hover .direct-link {
-  display: inline;
+  opacity: 1;
 }
 
 /* header */
