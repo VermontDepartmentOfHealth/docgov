@@ -338,6 +338,10 @@ header.header {
     margin: 0px 20px;
 }
 
+.site-title {
+  margin-top: -4px;
+  margin-left: 1rem;
+}
 .site-title .doc {
   color: #5b9676;
   font-size: 0.7em;
@@ -775,21 +779,34 @@ td svg {
 
 
 /* media queries */
+@media (max-width: 800px) {
+  .brand { font-size: 2.4rem;  }
+}
+
+@media (max-width: 650px) {
+  .brand { font-size: 2.2rem; }
+}
+
+
 @media (max-width: 500px) {
   .brand {
     font-size: 2rem;
   }
   .brand svg {
-    width: 75px;
+    display:none;
+  }
+  .site-title {
+    margin-left: 1rem;
   }
 }
 
-@media (max-width: 800px) {
-  .tag-count {
-    position: relative;
-    right: initial;
+@media (max-width: 380px) {
+  .word {
+    display:none;
   }
 }
+
+
 
 
 /* print styles */
