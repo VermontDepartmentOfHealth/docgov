@@ -70,7 +70,7 @@ main.content {
 }
 
 .sidenav a {
-  color: white;
+  color: #e8f6fd;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -88,7 +88,7 @@ main.content {
 
 .sidenav a:hover,
 .sidenav a.active {
-  color: #d4f2ff;
+  color: #ffffff;
   border-left-color: #9ae1ff;
 }
 
@@ -151,6 +151,7 @@ aside.toc {
   top: -15px;
   height: 100vh;
   padding: 0px 10px;
+  overflow-y: auto;
 }
 .toc > h3 {
   margin-top: 2.6rem;
@@ -196,6 +197,7 @@ body {
   color: #2d2d2d;
   background: hsl(59, 100%, 99%);
   font-family: 'Noto Serif', serif;
+  word-break: break-word;
 }
 
 h1,h2,h3 {
@@ -955,4 +957,32 @@ td svg {
 .sidenav .hamburger .bar:last-child {
   background: #fff;
   transform: translateY(-8px)rotate(-45deg);
+}
+
+/* custom scrollbars */
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+nav::-webkit-scrollbar {
+  width: 5px;
+}
+aside::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d8d7ca;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0a4b67;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1f81ab;
 }
