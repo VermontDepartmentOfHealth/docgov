@@ -85,5 +85,5 @@ form.search input {
 }
 </style>
 
-<script src="/assets/scripts/lib/mark.js"></script>
+<script src="/vendor/scripts/mark.js"></script>
 <script src="/assets/scripts/filter-text.js"></script>

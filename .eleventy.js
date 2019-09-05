@@ -6,6 +6,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
     eleventyConfig.addPassthroughCopy({"src/_includes/assets": "/assets"});
 
+    // grab 3rd party dependencies
+    eleventyConfig.addPassthroughCopy({"node_modules/mark.js/dist/mark.min.js": "/vendor/scripts/mark.js"});
+    eleventyConfig.addPassthroughCopy({"node_modules/gumshoejs/dist/gumshoe.polyfills.min.js": "/vendor/scripts/gumshoe.js"});
+    eleventyConfig.addPassthroughCopy({"node_modules/highlightjs/styles": "/vendor/styles/hljs"});
+    
     // add filters
     eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );

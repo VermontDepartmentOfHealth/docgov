@@ -105,10 +105,10 @@
     {% set js %}{% include "assets/scripts/nav-toggle.js" %}{% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
-    <script src="/assets/scripts/lib/gumshoe.js"></script>
+    <script src="/vendor/scripts/gumshoe.js"></script>
     <script src="/assets/scripts/scroll-spy.js"></script>
 
-    <link rel="stylesheet" href="/assets/styles/hljs/ocean.css">
+    <link rel="stylesheet" href="/vendor/styles/hljs/ocean.css">
 </body>
 
 </html>
