@@ -192,6 +192,7 @@ dl {
 }
 dt {
   font-weight: bold;
+  margin-bottom: 0.3em;
 }
 
 
@@ -218,14 +219,17 @@ dt {
 /* spacing 
 https://getbootstrap.com/docs/4.0/utilities/spacing/
 */
-.m-0 {
+.page .m-0 {
   margin: 0;
 }
-.mt-2 {
+.page .mt-2 {
   margin-top: 2em;
 }
+.page .mt-0 {
+  margin-top: 0;
+}
 
-.list-unstyled {
+.page .list-unstyled {
   list-style: none;
   padding-left: 0;
 }
@@ -533,7 +537,7 @@ form.search {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 1em;
 }
 
@@ -555,9 +559,8 @@ form.search input {
 
 
 form.search label {
-  position: absolute;
-  right: 15px;
-  top: 2.9em;
+  margin-left: -35px;
+  margin-top: 2em;
   height: 20px;
   color: #676767;
 }
@@ -643,12 +646,14 @@ span.match {
   word-break: break-word;
 }
 
-.search-result h2 mark {
+.search-result h2 mark,
+dt mark {
   background: #dfecf1;
   border-radius: 2px;
   color: #018eca;
 }
-.search-result .match mark {
+.search-result .match mark,
+dd mark {
   background: none;
   box-shadow: inset 0 -3px 0 0 #018ecad9; /* can replace text-decoration-* styles once supported */
   color: inherit;

@@ -121,6 +121,8 @@
     * @param  {String} query The term to search for
     */
     var search = function (query) {
+        // all lower case, please
+        query = query.toLowerCase().trim();
 
         var priority1 = [];
         var priority2 = [];
@@ -150,10 +152,7 @@
     };
 
     var testExactMatch = function (query, text) {
-        // all lower case, please
-        query = query.toLowerCase();
-
-        // Variables
+        // build regex
         var reg = new RegExp(query, 'gi');
 
         return reg.test(text)
@@ -161,8 +160,8 @@
 
     
     var testWordMatch = function (query, text) {
-        // all lower case, please
-        query = query.toLowerCase().replace(/ /g,"|");
+        // empty spaces become bool alternators
+        query = query.replace(/ /g,"|");
         
         // Variables
         var reg = new RegExp(query, 'gi');

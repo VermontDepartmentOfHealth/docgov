@@ -8,7 +8,14 @@ summary: "A semi-complete listing of acronyms and other jargon used across the S
 ---
 
 
+<form id="form-filter" class="search" autocomplete="off">
+    <input type="search" id="input-filter" class="mt-0" placeholder="Type to filter" autocomplete="off">
+    <label for="input-search" aria-label="Search Page" class="mt-0">
+      {% include "assets/images/icons/fa/filter.svg" %}
+    </label>
+</form>
 
+## Acronyms
 
 SPHINX
     ~ Shared Public Health Information eXchange
@@ -51,4 +58,32 @@ EBRS
 
 FEDRS
     ~ Fetal Death Registration System
-    
+
+
+## Terms
+
+Agile
+    ~ A collection of development practices that aim to deliver smaller, more incremental software with a full team approach
+
+Kanban
+    ~ A board to track the status of tasks throughout the software development lifecycle. Also a style of process management that limits work in progress. 
+      See also *information radiator*.
+
+
+<style>
+.filtering dt,
+.filtering dt + dd {
+    display: none;
+}
+
+.filtering dt.marked,
+.filtering dt.marked + dd {
+    display: block;
+}
+form.search input {
+    width: 75%;
+}
+</style>
+
+<script src="/assets/scripts/lib/mark.js"></script>
+<script src="/assets/scripts/filter-text.js"></script>

@@ -2,10 +2,15 @@
     "cSpell.words": [
         "Balsamiq",
         "Bitbucket",
+        "CHHS",
         "Citrix",
+        "EBRS",
+        "EDRS",
+        "FEDRS",
         "FOUC",
         "Frida",
         "Gruber",
+        "HHLPSS",
         "JAMstack",
         "JIRA",
         "Kanban",
@@ -14,6 +19,7 @@
         "LINQ",
         "NOINDEX",
         "Nessie",
+        "SAMS",
         "SSDT",
         "SSIS",
         "SSMS",
@@ -40,6 +46,7 @@
         "signup",
         "slugify",
         "taglist",
+        "unmark",
         "vdhwebapps",
         "walkthroughs"
     ]
