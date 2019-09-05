@@ -22,20 +22,20 @@
     <meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
     <meta property="og:title" content="{{page_title}}  | doc gov">
     <meta property="og:description" content="{{summary}}">
-    <meta property="og:image" content="{{config.baseUrl}}/assets/thumbnail.png">
+    <meta property="og:image" content="{{config.baseUrl}}/assets/images/thumbnail.png">
 
     {# Twitter #}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{page_title}}">
     <meta name="twitter:description" content="{{summary}}">
-    <meta name="twitter:image" content="{{config.baseUrl}}/assets/thumbnail.png">
+    <meta name="twitter:image" content="{{config.baseUrl}}/assets/images/thumbnail.png">
 
     {# Google Fonts #}
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
 
     {# capture the CSS content as a Nunjucks variable #}
-    {% set css %}{% include "styles.css" %}{% endset %}
+    {% set css %}{% include "assets/styles/styles.css" %}{% endset %}
     {# feed it through our cssmin filter to minify #}
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
@@ -51,7 +51,7 @@
         </button>
 
         <a href="/" aria-label="Home Page" class="brand" >
-            {% include "vt-logo.svg" %}
+            {% include "assets/images/vt-logo.svg" %}
             <span class="site-title">
                 {% set site_title_word = title_word or (renderData and renderData.title_word) %}
                 <span class="word">{{site_title_word}}</span> 
@@ -75,11 +75,11 @@
         <ul id="footer-nav" class="nav-links">
             <li>
                 <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/tree/master/{{ page.inputPath }}">
-                    {% include "images/icons/edit.svg" %}
+                    {% include "assets/images/icons/fa/edit.svg" %}
                     Edit this Page
                 </a>
                 <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/commits/master/{{ page.inputPath }}">
-                    {% include "images/icons/history.svg" %}
+                    {% include "assets/images/icons/fa/history.svg" %}
                     View Page History
                 </a>
             </li>
@@ -95,7 +95,7 @@
     {% include "_partials/sidenav.njk" %}
 
     {# capture the JS content as a Nunjucks variable #}
-    {% set js %}{% include "scripts/nav-toggle.js" %}{% endset %}
+    {% set js %}{% include "assets/scripts/nav-toggle.js" %}{% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
 

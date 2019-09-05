@@ -6,6 +6,7 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [11ty - config input directory](https://www.11ty.io/docs/config/#input-directory)
 * [11ty - addPassthroughCopy](https://www.11ty.io/docs/copy/)
+* [11ty - change the output directory](https://www.11ty.io/docs/copy/#change-the-output-directory)
 * [11ty - YAML Front Matter](https://www.11ty.io/docs/data-frontmatter/)
 * [11ty - available data values](https://www.11ty.io/docs/data/)
 * [11ty - permalinks](https://www.11ty.io/docs/permalinks/)

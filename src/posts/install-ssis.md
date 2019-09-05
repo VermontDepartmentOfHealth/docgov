@@ -14,18 +14,18 @@ summary: "How to install and configure SQL Server Integration Services (SSIS)"
 
      I selected these options and accepted all defaults
 
-     ![feature-selection](/assets/images/install-ssis-feature-selection.png)
+     ![feature-selection](/assets/images/posts/ssis/install-ssis-feature-selection.png)
 
 5. Restart computer
 6. Install SQL Server 2012 from <\\ahs\ahsfiles\AHS ALL SHARE\AHS IT DBA\SQL_Server\SQL_2012\InstallationMedia\DeveloperEdition\Desktop\>
 
     Selected options in screenshots below, otherwise accepted defaults.
 
-    ![setup-role](/assets/images/install-ssis-setup-role.png)
+    ![setup-role](/assets/images/posts/ssis/install-ssis-setup-role.png)
 
-    ![reporting-services](/assets/images/install-ssis-reporting-services.png)
+    ![reporting-services](/assets/images/posts/ssis/install-ssis-reporting-services.png)
 
-    ![instance-configuration](/assets/images/install-ssis-instance-configuration.png)
+    ![instance-configuration](/assets/images/posts/ssis/install-ssis-instance-configuration.png)
 
 
 7. Restart computer
@@ -40,7 +40,7 @@ summary: "How to install and configure SQL Server Integration Services (SSIS)"
    > [08/29/19,15:10:19] Microsoft SQL Server 2008 Express Service Pack 1 (x64): [2] Component Microsoft SQL Server 2008 Express Service Pack 1 (x64) returned an unexpected value.
    > \*\*\*EndOfSession\*\*\*
 
-    ![vs-2010](/assets/images/install-ssis-vs-2010.png)
+    ![vs-2010](/assets/images/posts/ssis/install-ssis-vs-2010.png)
 
 9. Restart computer
 10. Install Visual Studio 2010 SP1 from <\\ahs\ahsfiles\VDH\Divisional Shares\Prog\Software\Visual Studio 2010 SP1>
@@ -59,9 +59,9 @@ summary: "How to install and configure SQL Server Integration Services (SSIS)"
 15. Test opening SSIS and SSRS and SSMS . **SUCCESS**!!! 🎉🎉
 16. Test opening VS sln file – tried Patient profile and got this message
 
-    ![aspnet-mvc](/assets/images/install-ssis-aspnet-mvc.png)
+    ![aspnet-mvc](/assets/images/posts/ssis/install-ssis-aspnet-mvc.png)
 
 
 17. Clicked Install and reopened successfully!!! Yay!!! 🎉🎉🎉
 
-    ![vs-2017](/assets/images/install-ssis-vs-2017.png)
+    ![vs-2017](/assets/images/posts/ssis/install-ssis-vs-2017.png)

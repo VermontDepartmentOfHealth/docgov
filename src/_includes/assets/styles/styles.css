@@ -185,6 +185,16 @@ hr {
   border: 1px solid #cec7b8;
 }
 
+/* display list */
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+dt {
+  font-weight: bold;
+}
+
+
 /* utility */
 .d-flex {
   display: flex

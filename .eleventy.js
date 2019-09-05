@@ -3,9 +3,8 @@
 module.exports = function(eleventyConfig) {
 
     // static passthroughs
-    eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
-
+    eleventyConfig.addPassthroughCopy({"src/_includes/assets": "/assets"});
 
     // add filters
     eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );

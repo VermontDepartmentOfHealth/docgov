@@ -8,7 +8,7 @@ summary: "An overview of our hiring process as we strive to make our interviewin
 ---
 
 
-{% include "images/hiring-no.svg" %}
+{% include "assets/images/hiring-no.svg" %}
 
 ## Hello & Welcome
 
@@ -101,10 +101,10 @@ We believe that diverse *and* inclusive teams build better products and workplac
 [5]: https://www.red-gate.com/products/sql-development/sql-prompt/
 [6]: https://i.imgur.com/3pF4vzs.png
 [7]: https://i.imgur.com/8TF8Niv.png
-[8]: https://i.imgur.com/myDfIbQl.png
+[8]: /assets/images/posts/hiring/pair-desktop.png
 [9]: https://www.draw.io/
 [10]: https://www.google.com/maps/place/108+Cherry+St,+Burlington,+VT+05401/
-[11]: https://i.imgur.com/bmkHy9Ml.png
+[11]: /assets/images/posts/hiring/vdh-zampieri-building.png
 [12]: https://www.google.com/maps/@44.4792551,-73.2138143,3a,75y,6.07h,82.04t/data=!3m7!1e1!3m5!1soZtO_DFW4FHeZw4j4gcGxA!2e0!6s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3DoZtO_DFW4FHeZw4j4gcGxA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D311.1357%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656
 [13]: https://www.burlingtonvt.gov/DPW/Parking
 [14]: http://ridegmt.com/gmt-schedules/
