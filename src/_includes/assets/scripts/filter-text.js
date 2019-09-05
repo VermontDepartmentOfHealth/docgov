@@ -1,6 +1,6 @@
 // Create an instance of mark.js and pass an argument containing
 // the DOM object of the context (where to search for matches)
-var context = document.querySelector("dl");
+var context = document.querySelectorAll("dl");
 var markInstance = new Mark(context);
 // Cache DOM elements
 var keywordInput = document.querySelector("#input-filter");
@@ -11,7 +11,9 @@ function performMark() {
   var keyword = keywordInput.value;
 
   // apply filtering class if we have a search term
-  context.classList.toggle('filtering', keyword)
+  context.forEach(function(el){
+    el.classList.toggle('filtering', keyword)
+  })
 
   // Remove previous marked elements and mark
   // the new keyword inside the context
@@ -45,3 +47,11 @@ function performMark() {
 
 // Listen to input and option changes
 keywordInput.addEventListener("input", performMark);
+
+// on mobile, make room for the keyboard
+keywordInput.addEventListener('focus', function(e) {
+    // 'ontouchstart' in document.documentElement
+    if (window.innerWidth < 900) {
+        document.getElementById('form-filter').scrollIntoView(true)
+    }
+});

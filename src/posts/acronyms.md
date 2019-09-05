@@ -8,9 +8,9 @@ summary: "A semi-complete listing of acronyms and other jargon used across the S
 ---
 
 
-<form id="form-filter" class="search" autocomplete="off">
-    <input type="search" id="input-filter" class="mt-0" placeholder="Type to filter" autocomplete="off">
-    <label for="input-search" aria-label="Search Page" class="mt-0">
+<form id="form-filter" class="search mt-0" autocomplete="off">
+    <input type="search" id="input-filter" class="hide-clear mt-1" placeholder="Type to filter" autocomplete="off">
+    <label for="input-search" aria-label="Search Page" class="mt-1">
       {% include "assets/images/icons/fa/filter.svg" %}
     </label>
 </form>

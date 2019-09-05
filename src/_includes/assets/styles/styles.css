@@ -285,6 +285,9 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 .page .m-0 {
   margin: 0;
 }
+.page .mt-1 {
+  margin-top: 1em;
+}
 .page .mt-2 {
   margin-top: 2em;
 }
