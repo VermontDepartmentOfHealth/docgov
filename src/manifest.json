@@ -1,0 +1,9 @@
+{
+    "name": "Doc Gov",
+    "short_name": "Doc Gov",
+    "theme_color": "#03a64f",
+    "background_color": "#bfd3dc",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/"
+  }

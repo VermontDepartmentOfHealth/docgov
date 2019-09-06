@@ -73,7 +73,7 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [vs code - workspace recommended extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 * [vs code - debug on windows and mac](https://stackoverflow.com/a/42471528/1366033)
-
+* [vs code - add json schema definition](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
 
 ## Github
 
@@ -104,3 +104,12 @@ A stash for helpful articles, references, documentation looked up along the way
 * [css - `break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
 * [css - Chrome “Save as PDF” is cutting off text](https://superuser.com/q/1477838/180163)
 
+## Images
+
+* [svg - How to scale SVG](https://css-tricks.com/scale-svg/)
+* [svg - optimize svg](https://jakearchibald.github.io/svgomg/)
+
+## PWA
+
+* [pwa - generate icons from svg](http://cthedot.de/icongen/)
+* [pwa - manifest schema definition](http://json.schemastore.org/web-manifest)

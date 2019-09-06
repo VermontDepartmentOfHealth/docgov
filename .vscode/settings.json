@@ -1,4 +1,12 @@
 {
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "manifest.json"
+            ],
+            "url": "http://json.schemastore.org/web-manifest"
+        }
+    ]
     "cSpell.words": [
         "Balsamiq",
         "Bitbucket",
@@ -55,11 +63,13 @@
         "pptx",
         "preconnect",
         "prepended",
+        "scrollbar",
         "sidenav",
         "signup",
         "slugify",
         "taglist",
         "unmark",
+        "unstyled",
         "vdhwebapps",
         "walkthroughs"
     ]
