@@ -108,6 +108,7 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [svg - How to scale SVG](https://css-tricks.com/scale-svg/)
 * [svg - optimize svg](https://jakearchibald.github.io/svgomg/)
+* [svg - `viewBox` is case-sensitive](https://stackoverflow.com/q/38062394/1366033)
 
 ## PWA
 
