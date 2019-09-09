@@ -465,6 +465,7 @@ section.intro {
 }
 
 .post-authors {
+  margin: 0;
   padding-left: 0;
   list-style: none;
   display: inline-flex;
@@ -481,6 +482,10 @@ section.intro {
 
 .post-date {
     color: #6f6f6f;
+}
+
+.page  .taglist {
+  margin-top: 1em;
 }
 
 

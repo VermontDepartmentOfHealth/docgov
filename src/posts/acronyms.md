@@ -3,7 +3,7 @@ title_word: Acronyms
 title: Acronyms List
 tags: ['post', 'overview']
 authors: ['Kyle']
-date: 2019-09-04
+create_date: 2019-09-04
 summary: "A semi-complete listing of acronyms and other jargon used across the State of Vermont"
 ---
 

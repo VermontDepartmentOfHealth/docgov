@@ -4,7 +4,7 @@ title: Your First Month
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']
 department: VDH
-date: 2019-08-26
+create_date: 2019-08-26
 summary: "An overview of resources, tasks, trainings, and expectations for your first couple months and beyond"
 ---
 

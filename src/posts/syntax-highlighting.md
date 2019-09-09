@@ -3,7 +3,7 @@ title_word: Code
 title: Syntax Highlighting
 tags: ['post', 'overview']
 authors: ['Kyle']
-date: 2019-09-02
+create_date: 2019-09-02
 summary: "Syntax highlighting makes code snippets readable and enjoyable"
 ---
 

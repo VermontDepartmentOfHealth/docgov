@@ -4,7 +4,7 @@ title: M&O Prioritization
 tags: ['post', 'process']
 authors: ['Kyle']
 team: MO
-date: 2019-08-29
+create_date: 2019-08-29
 summary: "Usage guidelines on setting priorities on incoming and existing JIRA tickets"
 ---
 
