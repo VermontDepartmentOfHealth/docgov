@@ -6,7 +6,7 @@
             ],
             "url": "http://json.schemastore.org/web-manifest"
         }
-    ]
+    ],
     "cSpell.words": [
         "Balsamiq",
         "Bitbucket",
@@ -26,6 +26,7 @@
         "LINC",
         "LINQ",
         "MVVM",
+        "Mitofsky",
         "NEDDS",
         "NOINDEX",
         "Nessie",
@@ -54,6 +55,7 @@
         "linkify",
         "markdownlint",
         "minmax",
+        "netlify",
         "nwsprod",
         "nwstest",
         "passthroughs",

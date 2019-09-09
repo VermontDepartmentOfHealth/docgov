@@ -20,6 +20,15 @@ That said, feel free to **Submit a PR** and we can always work through any feedb
 
 Happy Coding! 😀
 
+## GitHub
+
+The codebase, issues, pull requests, and project backlog is all managed through our [GitHub](https://github.com/) organization Page for the [Vermont Department of Health](https://github.com/VermontDepartmentOfHealth).  To update and contribute to this repository, you'll need both:
+
+1. A [free github account](https://github.com/join)
+2. Invitation to join our [Organization Members](https://github.com/orgs/VermontDepartmentOfHealth/people)
+
+Please contact Kyle.Mitofsky@vermont.gov with your Github username to request access to the VDH Organization account to get started
+
 
 ## Coding Environment
 

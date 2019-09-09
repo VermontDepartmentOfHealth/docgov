@@ -1,6 +1,6 @@
 {
-  "name": "dev_read_me",
-  "version": "1.0.0",
+  "name": "doc_gov",
+  "version": "0.3.2",
   "description": "Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://Kyle.Mitofsky@ahs-jira-prod.ahs.state.vt.us:8443/stash/scm/vdh/docs.git"
+    "url": "https://github.com/VermontDepartmentOfHealth/docs.git"
   },
-  "author": "Kyle.Mitofsky",
+  "author": "VermontDepartmentOfHealth",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",

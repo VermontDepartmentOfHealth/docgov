@@ -23,6 +23,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - pagination with an object](https://www.11ty.io/docs/pagination/#paging-an-object)
 * [11ty - navigation links with active class](https://www.11ty.io/docs/collections/#example%3A-navigation-links-with-an-active-class-added-for-on-the-current-page)
 * [11ty - apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
+* [11ty - content dates](https://www.11ty.io/docs/dates/)
 
 ## JAMStack
 
@@ -80,6 +81,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Github - Community health guidelines](https://help.github.com/en/articles/creating-a-default-community-health-file-for-your-organization)
 * [Github - Issue and pull request templates](https://help.github.com/en/articles/about-issue-and-pull-request-templates)
 * [Github - Setting guidelines for repository contributors](https://help.github.com/en/articles/setting-guidelines-for-repository-contributors)
+* [Github - Organizing members into teams](https://help.github.com/en/articles/organizing-members-into-teams)
 
 ## HTML
 
