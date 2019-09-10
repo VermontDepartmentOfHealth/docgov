@@ -24,7 +24,7 @@ All of the above goals can be *trivially* accomplished by using Basic Authentica
 
 > * The password is sent over the wire in base64 encoding (which can be easily converted to plaintext).
 > * The password is sent repeatedly, for each request. (Larger attack window)
-> * The password is cached by the webbrowser, at a minimum for the length of the window / process. (Can be silently reused by any other request to the server, e.g. CSRF)
+> * The password is cached by the web browser, at a minimum for the length of the window / process. (Can be silently reused by any other request to the server, e.g. <abbr title="Cross-site request forgery">CSRF</abbr>)
 
 Because the browser owns the credentials, we cannot forcefully expire a user's session from the server, since the credentials are stored for the entire life of the browser's process.  There are some attempts to [log out a user from a web site using Basic Authentication][4], but largely prove problematic and iffy when implementing across browsers.  And **ALL** rely on JavaScript to *hopefully* do what we want, leaving an easy attack vector available.
 
@@ -49,11 +49,12 @@ First the easy part.  Cookies can be added to a browser for a given domain for v
 
 If you want to look at all the cookies for any application, you can go to `Dev Tools` > `Application` > `Cookies`
 
-![App Cookies - Browser][33]
+![App Cookies - Browser](/assets/images/posts/impersonation/app-cookies-browser.png)
+
 
 And if you want to see how they are passed back to the application on each request, that information (as well as literally any information the server is going to be able to discern) will be sent on the request data visible in `Dev Tools` > `Network`
 
-![App Cookies - Request][34]
+![App Cookies - Request](/assets/images/posts/impersonation/app-cookies-request.png)
 
 Nothing scary, but it is the client side mechanism for being able to track a user.  Once authenticated, we want to dump their plain text credentials as fast as possible and thereafter communicate with tokens we can store as cookies on the client to identify *that* client
 
@@ -73,11 +74,11 @@ Here are some of the terms/players involved in making a claim:
 
 **Getting a Token**:
 
-![Getting a Token](https://i.imgur.com/ypRcgxq.png)
+![Getting a Token](/assets/images/posts/impersonation/getting-a-token.png)
 
 **Using a Token**
 
-![Using a Token](https://i.imgur.com/zTWnLmA.png)
+![Using a Token](/assets/images/posts/impersonation/using-a-token.png)
 
 What this provides is a way to not care about how an Identity Provider does it's job, merely the fact that you trust their judgement and that they will produce a token which contains information about an authenticated user that is useful to your application for making access control decisions.  Normally identity providers will take in a username/password combo, but they can do many other things, like 2-factor auth. used in their own assessment of verifying that the user is who they claim to be.
 
@@ -168,9 +169,8 @@ We've put in whatever due diligence we need to be certain that we have the curre
 	 *i.e. allowing someone into a bar based on the authenticated age claims on their drivers licence*
 
 
-<img width="250" src="https://i.imgur.com/7Z0EYcE.png" alt="Principal vs. Identity" />
+<img width="250" src="/assets/images/posts/impersonation/principal-vs-identity.png" alt="Principal vs. Identity" />
 **<sup>Principal vs. Identity</sup>**
-
 
 
 #### User Principal & Identity - .NET Implementation
@@ -240,18 +240,18 @@ You'll notice that when you call `AuthenticationManager.SignIn()` the [current u
 
 So it won't be until the response gives the cookie to the client and it is passed back by the next incoming request that [OWIN middleware will take the cookie and use it to set the current user during each request pipeline][67]:
 
-<img width="600" src="https://i.imgur.com/ELzzCZD.png" alt="ASP.NET Pipeline" />
+<img width="600" src="/assets/images/posts/impersonation/asp-net-pipeline.png" alt="ASP.NET Pipeline" />
 **<sup>ASP.NET Identity Pipeline</sup>**
 
 
-### 1. Using Active Directory with Forms Authentication { #problem1}
+## 1. Using Active Directory with Forms Authentication
 
-More 
+**TODO**...
 
 [A primer on OWIN cookie authentication middleware for the ASP.NET developer][73]
 
 
-### 2. Using ASP.NET Impersonation with Forms Authentication { #problem2}
+## 2. Using ASP.NET Impersonation with Forms Authentication
 
 Our next mission is to replace this little line in the `web.config`
 
@@ -314,7 +314,7 @@ In an ASP.NET application, the `// insert code here` section is actually the ent
 To be able to wrap the code execution as described above, we'll look at the handlers exposed by  [`HttpApplication Events`][19] in **`Globals.asax.cs`**.  For our purposes, we'll use  the [`Application_PreRequestHandlerExecute`][17] and [`Application_PostRequestHandlerExecute`][18] 
 
 
-<img width="500" src="https://i.imgur.com/CQA72NH.png" alt="HttpApplication Events" />
+<img width="500" src="/assets/images/posts/impersonation/HttpApplication-events.png" alt="HttpApplication Events" />
 **<sup>HttpApplication Events</sup>**
 
 
@@ -339,20 +339,20 @@ Obviously there's some finessing here to store `impersonationContext` in `Sessio
 
 Lest you worry that this is overly complicated, consider that this is exactly what `<identity impersonate="true" />` is doing at a high level.  If you inspect the process identity for a normal application, it'll always read something like `IIS APPPOOL\\DefaultAppPool`
 
-![IIS Process Identity][20]
+![IIS Process Identity](/assets/images/posts/impersonation/process-identity.png)
 
 So what black magic is in place that requests are ever impersonated, when the default identity for any thread is based on the app pool?  As soon as a request is initialized, if `identity=true`, ASP.NET will automatically convert the identity on that thread so any subsequent resources that are requested are done so under the new credentials. And when the request is finished, ASP.NET will automatically restore the identity back to the original thread.
 
 Here's a view of the  Request/Process lifecycle from [How To: Use Impersonation and Delegation in ASP.NET][21]
 
-[![Using programmatic impersonation to temporarily impersonate the original caller][22]][23]
+[![Using programmatic impersonation to temporarily impersonate the original caller](/assets/images/posts/impersonation/programmatic-impersonation.png)][23]
 **<sup>Using programmatic impersonation to temporarily impersonate the original caller</sup>**
 
 
 And here's a high level view of the lifecycle of impersonating a user
 
 
-<img width="500" src="https://i.imgur.com/nHkILj1.png" alt="Impersonate Request" />
+<img width="500" src="/assets/images/posts/impersonation/impersonate-request.png" alt="Impersonate Request" />
 **<sup>Impersonate Request Lifecycle</sup>**
 
 
@@ -421,11 +421,11 @@ public static extern bool CloseHandle(IntPtr handle);
 > ```
 
 
-### Third Goal - Windows Auth + Form Login
+## 3. Windows Auth + Form Login
 
 In our development code - we can't *entirely* rely on passing credentials and redirect to login until we do because it would grind the development experience to a screeching halt.  By default, [Visual Studio will launch with Windows Authentication enabled][72] and run under your own credentials
 
-![Project Properties - Windows Auth][29]
+![Project Properties - Windows Auth](/assets/images/posts/impersonation/vs-windows-auth.png)
 
 So our project should have two entirely separate available entry points:
 
@@ -438,11 +438,11 @@ For as consistent a development experience as possible, both should invoke the s
 
 When you go to deploy, you might see the following problem:
 
-![Bundle Network Error][31]
+![Bundle Network Error](/assets/images/posts/impersonation/bundle-network-error.png)
 
 And there's not a very big difference between the original request and the subsequent resource requests it makes to load the rest of the page
 
-![Request Types][37]
+![Request Types](/assets/images/posts/impersonation/request-types.png)
 
 The problem, in this case, if you've followed the code above so far, is just a thrown exception when trying to retrieve the identity from session since the [session object is null when requesting a CSS, image, STatic HTML or JS file][30]:
 
@@ -475,7 +475,7 @@ The solution for which is just to hide our `BeginImpersonationSession` inside of
 > **Note**: Where we attempt to impersonate users is up to you and your use case.  In some cases, you might just want user permissions during any `System.IO` events.  In this article, we're trying to manually recreate Impersonation as close as possible to its implementation in ASP.NET, so our goal is to impersonate during the entire lifespan of the thread being handled.
 
 
-### Further Reading (ugh, seriously):
+### Further Reading ~~(ugh, seriously)~~
 
 Here are some additional materials that were helpful in investigating this issue:
 
@@ -504,24 +504,16 @@ Here are some additional materials that were helpful in investigating this issue
 [17]: https://msdn.microsoft.com/en-us/library/System.Web.HttpApplication.PreRequestHandlerExecute "System.Web.HttpApplication.PreRequestHandlerExecute"
 [18]: https://msdn.microsoft.com/en-us/library/System.Web.HttpApplication.PostRequestHandlerExecute "System.Web.HttpApplication.PostRequestHandlerExecute"
 [19]: https://msdn.microsoft.com/en-us/library/System.Web.HttpApplication_Events "System.Web.HttpApplication_Events"
-[20]: https://i.imgur.com/gvwoeUm.png
 [21]: https://msdn.microsoft.com/en-us/library/ms998351.aspx
-[22]: https://i.imgur.com/REyswGG.gif
 [23]: https://msdn.microsoft.com/en-us/library/ms998351.aspx#paght000023_impersonatingorigcallertemp
 [24]: https://msdn.microsoft.com/en-us/library/windows/desktop/aa378184(v=vs.85).aspx
 [25]: https://msdn.microsoft.com/en-us/library/System.Runtime.InteropServices.DLLImportAttribute "System.Runtime.InteropServices.DLLImportAttribute"
 [26]: https://msdn.microsoft.com/en-us/library/windows/desktop/ms724211.aspx
 [27]: https://en.wikipedia.org/wiki/Microsoft_Windows_library_files#KERNEL32.DLL "KERNEL32.DLL exposes to applications most of the Win32 base APIs, such as memory management, input/output (I/O) operations, process and thread creation, and synchronization functions"
 [28]: https://en.wikipedia.org/wiki/Microsoft_Windows_library_files#ADVAPI32.DLL "ADVAPI32.DLL provides security calls and functions for manipulating the registry."
-[29]: https://i.imgur.com/mBRmDQ2.png
 [30]: https://forums.asp.net/t/1569930.aspx?Session+object+is+null+when+requesting+a+CSS+image+STatic+HTML+or+JS+file
-[31]: https://i.imgur.com/ScrgONI.png
 [32]: https://stackoverflow.com/a/12932276/1366033
-[33]: https://i.imgur.com/01asA5W.png
-[34]: https://i.imgur.com/apzfJw3.png
 [35]: https://app.pluralsight.com/library/courses/claims-based-identity-big-picture/table-of-contents
-[37]: https://i.imgur.com/kXWk6VL.png
-
 [36]: https://stackoverflow.com/q/41845902/1366033
 [38]: https://msdn.microsoft.com/en-us/library/System.Security.Claims.Claim "System.Security.Claims.Claim"
 [39]: https://msdn.microsoft.com/en-us/library/System.Security.Claims.ClaimsIdentity "System.Security.Claims.ClaimsIdentity"
@@ -547,16 +539,12 @@ Here are some additional materials that were helpful in investigating this issue
 [59]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/cookie?tabs=aspnetcore2x
 [60]: https://stackoverflow.com/a/7250145/1366033
 [61]: https://msdn.microsoft.com/en-us/library/System.Security.PermissionSet "System.Security.PermissionSet"
-[62]: https://i.imgur.com/7Z0EYcE.png
-[63]: https://i.imgur.com/nHkILj1.png
-[64]: https://i.imgur.com/ELzzCZD.png
 [65]: https://stackoverflow.com/a/25311865/1366033
 [66]: http://tech.trailmax.info/2014/08/aspnet-identity-and-owin-who-is-who/
 [67]: https://coding.abel.nu/2014/06/asp-net-identity-and-owin-overview/
 [68]: https://coding.abel.nu/2014/06/understanding-the-owin-external-authentication-pipeline/
 [69]: https://www.red-gate.com/simple-talk/dotnet/.net-framework/creating-custom-oauth-middleware-for-mvc-5/
 [70]: https://msdn.microsoft.com/en-us/library/aa479041.aspx
-[71]: https://i.imgur.com/CQA72NH.png
 [72]: https://stackoverflow.com/a/17045276/1366033
 [73]: https://brockallen.com/2013/10/24/a-primer-on-owin-cookie-authentication-middleware-for-the-asp-net-developer/
 [74]: https://msdn.microsoft.com/en-us/library/System.Web.Security.Membership.GetUser "System.Web.Security.Membership.GetUser"
