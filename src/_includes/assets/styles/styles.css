@@ -69,6 +69,14 @@ main.content {
   transition: left .3s ease;
 }
 
+.sidenav ul {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 10px 0px;
+}
+
 .sidenav a {
   color: #e8f6fd;
   display: flex;
@@ -94,8 +102,12 @@ main.content {
 
 .sidenav .divider {
   height: 1px;
+  min-height: 1px; /* prevent sub-pixel rendering */
   background: #ffffff33;
   margin: 5px 18px;
+}
+.sidenav .spacer {
+  flex-grow: 1;
 }
 
 @media (max-width: 1100px) {
