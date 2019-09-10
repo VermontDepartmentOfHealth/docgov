@@ -33,6 +33,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setLibrary("md", md);
 
 
+    eleventyConfig.addPairedShortcode("markdown", (content, inline = null) => {
+        return inline
+          ? md.renderInline(content)
+          : md.render(content);
+      });
+
     // add plugins
     let pluginTOC = require('eleventy-plugin-nesting-toc');
     eleventyConfig.addPlugin(pluginTOC);

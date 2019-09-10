@@ -10,18 +10,97 @@ class: settings
 <h1 class="page-title">{{title}}</h1>
 
 
-<h3>Display Density</h3>
+<h3 class="mt-2 mb-0" id="density">Display Density</h3>
 
 <div class="display-settings"> 
   {% include "_partials/displayDensity.njk" %}
 </div>
 
+<h3 class="mt-2 mb-0" id="theme">Syntax Highlighting Theme</h3>
 
+<div class="theme-picker">
+
+  <div class="themes">
+    <label >
+      <input type="radio" name="theme" value="gist" id="gist" >
+      <span>Gist</span>
+    </label>
+    <label >
+      <input type="radio" name="theme" value="github" id="github" >
+      <span>Github</span>
+    </label>
+    <label >
+      <input type="radio" name="theme" value="ocean" id="ocean" checked >
+      <span>Ocean</span>
+    </label>
+    <label >
+      <input type="radio" name="theme" value="vs" id="vs" >
+      <span>VS 2015</span>
+    </label>
+  </div>
+
+  {% markdown %}
+  ```html
+  <!doctype html>
+  <html lang="en">
+      <head>
+          <title>doc GOV</title>
+      </head>
+      <body class="page">
+      </body>
+  </html>
+  ```
+  {% endmarkdown %}
+
+</div>
 
 
 
 <style>
 .settings .display-toggle {
   float: none;
+}
+
+/* theme picker */
+.theme-picker {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.theme-picker pre {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.themes {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+.themes label {
+    cursor: pointer;
+}
+
+.themes input[type=radio] {
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+
+.themes span {
+    width: 100px;
+    display: inline-block;
+    padding: 0px 5px;
+    border-radius: 2px;
+    background: transparent;
+    transition: background .4s ease;
+}
+.themes :checked + span {
+    background: #b6c9f5;
+}
+
+.themes label:hover span {
+    background: #cfdaf5;
 }
 </style>

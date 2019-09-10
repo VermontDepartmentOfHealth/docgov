@@ -11,6 +11,8 @@ For general markdown support, checkout [our markdown overview](/posts/markdown/)
 
 Here's a list of supported languages that will be transformed by [highlight.js](https://highlightjs.org/)
 
+> **Bonus!**
+> Head over to the [settings page](/settings/#theme) to set a custom theme
 
 ## JavaScript
 
@@ -23,13 +25,13 @@ var pet = {
 
 ## HTML
 
-```js
+```html
 <!doctype html>
 <html lang="en">
     <head>
         <title>doc GOV</title>
     </head>
-    <body class="page ">
+    <body class="page">
     </body>
 </html>
 ```

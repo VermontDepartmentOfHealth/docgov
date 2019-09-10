@@ -3,13 +3,16 @@ module.exports =  function CustomizeMD() {
    // configure syntax highlighting
    var hljs = require('highlightjs'); 
    let highlight = function (str, lang) {
-       if (lang && hljs.getLanguage(lang)) {
-         try {
-           return hljs.highlight(lang, str).value;
-         } catch (__) {}
-       }
-       return ''; // use external default escaping
-     }
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(lang, str, true).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
 
 
    // set markdown defaults (inline so we can extend)

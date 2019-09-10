@@ -52,6 +52,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [nunjucks - sort array](https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr)
 * [nunjucks - passing data to includes](https://github.com/mozilla/nunjucks/issues/539#issuecomment-203538566)
 * [nunjucks - built in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters)
+* [nunjucks - paired shortcode](https://github.com/11ty/eleventy/issues/685#issuecomment-528980239)
+
 
 ## A11y
 

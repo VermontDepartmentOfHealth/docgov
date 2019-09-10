@@ -230,8 +230,6 @@ pre code {
   display: block;
   border: none;
   overflow-x: auto;
-  background: #2b303b;
-  color: #c0c5ce;
   padding: 0.5em;
   font-size: 1.1em;
 }
@@ -307,6 +305,9 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 }
 .page .mt-0 {
   margin-top: 0;
+}
+.page .mb-0 {
+  margin-bottom: 0;
 }
 
 .page .list-unstyled {
