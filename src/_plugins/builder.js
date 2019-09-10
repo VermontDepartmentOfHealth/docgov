@@ -14,7 +14,7 @@ module.exports =  function BuildCollection(collection, categoryTagName,  categor
     let categoryPages = collection.getFilteredByTag(categoryTagName)
 
     // grab all posts
-    let allPosts = collection.getAll()
+    let allPosts = collection.getFilteredByTag('post')
 
     // go through each category page and attach relevant posts
     var categoryData = {}

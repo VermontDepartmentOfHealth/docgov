@@ -1,0 +1,15 @@
+---
+layout: default.njk
+title_word: "Drafts"
+title: "Drafts"
+summary: "Some (hidden) works in progress"
+---
+
+
+<h1 class="page-title">
+  {{title}}
+</h1>
+
+{% set postList = collections.draft | reverse %}
+{% include "_partials/postList.njk" %}
+

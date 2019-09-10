@@ -255,9 +255,29 @@ blockquote strong {
   color: #066188
 }
 
+.content blockquote a {
+  background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),rgb(198, 238, 255) calc(50% - 8px),rgb(137, 188, 210) 100%);
+}
+
 hr {
   box-shadow: 1px 1px 2px 0px #cec7b8;
   border: 1px solid #cec7b8;
+}
+
+/* alerts */
+.alert {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.alert.alert-warn {
+  background: #fde4b6;
+  border: 1px solid #f3d49b;
+}
+
+.alert.alert-warn a,
+.alert.alert-warn a:hover {
+  background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),#ffbe2d calc(50% - 8px),#ffbe2d 100%);
 }
 
 /* display list */

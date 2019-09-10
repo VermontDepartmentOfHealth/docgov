@@ -2,6 +2,13 @@
 layout: default.njk
 ---
         
+{% if 'draft' in tags %}
+  <div class="alert alert-warn">
+    This post is in <a href="/drafts/">Draft Mode</a>
+  </div>
+{% endif %}
+
+
 <h1 class="page-title">{{title}}</h1>
         
 <div class="post-meta">

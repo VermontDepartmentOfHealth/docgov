@@ -42,7 +42,7 @@
     {# feed it through our cssmin filter to minify #}
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
-{% set isPost = tags and ('post' in tags) %}
+{% set isPost = tags and ('post' in tags) or ('draft' in tags) %}
 <body class="page {{class}} nav-closed {% if isPost %} post-layout {% endif %}">
 
     <header id="header" class="header">

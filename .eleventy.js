@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );
     eleventyConfig.addFilter("dateDisplay", require("./src/_plugins/dates.js") );
     eleventyConfig.addFilter("removeHash", html => html.replace(/ #/g,"") );
-    eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> t !== "post"));
+    eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> !["post","draft"].includes(t)));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
 
