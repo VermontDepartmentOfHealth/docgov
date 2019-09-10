@@ -17,9 +17,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("dateDisplay", require("./src/_plugins/dates.js") );
     eleventyConfig.addFilter("removeHash", html => html.replace(/ #/g,"") );
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> !["post","draft"].includes(t)));
+    eleventyConfig.addFilter("isPostType", tags => tags && tags.some(t => ["post","draft"].includes(t)));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
 
-
+    
     // custom collections
     let builder = require("./src/_plugins/builder.js")
     eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./src/projects/"));

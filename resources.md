@@ -100,6 +100,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Remove Array Duplicates in ES6](https://medium.com/dailyjs/how-to-remove-array-duplicates-in-es6-5daa8789641c)
 * [Flatten Array in ES6](https://www.jstips.co/en/javascript/flattening-multidimensional-arrays-in-javascript/)
 * [Copy to clipboard in JavaScript?](https://stackoverflow.com/a/30810322/1366033)
+* [Check if element of array in another array](https://stackoverflow.com/a/39893636/1366033)
 
 ## CSS
 

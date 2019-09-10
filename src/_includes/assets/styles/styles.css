@@ -216,6 +216,10 @@ h1,h2,h3 {
   line-height: 1.2;
 }
 
+h1 a, h2 a, h3 a {
+  line-height: 1.4;
+}
+
 pre, code {
   font-family: 'Ubuntu Mono', monospace;
 }
