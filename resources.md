@@ -101,6 +101,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Flatten Array in ES6](https://www.jstips.co/en/javascript/flattening-multidimensional-arrays-in-javascript/)
 * [Copy to clipboard in JavaScript?](https://stackoverflow.com/a/30810322/1366033)
 * [Check if element of array in another array](https://stackoverflow.com/a/39893636/1366033)
+* [Update window.location.hash without jumping the document?](https://stackoverflow.com/a/14690177/1366033)
 
 ## CSS
 

@@ -74,7 +74,7 @@
     {% if isPostType %}
         <aside class="toc">
             <h3>Contents</h3>
-            {{ content | toc | removeHash | safe }}
+            {{ content | toc | removeHash | removeParen | safe }}
         </aside>    
     {% endif %}
     

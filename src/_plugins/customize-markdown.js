@@ -29,8 +29,8 @@ module.exports =  function CustomizeMD() {
    let opts = {
        permalink: true,
        slugify: function(s) {
-           // strip special chars
-           let newStr = s.toLowerCase().replace(/[^a-z ]/gi,'').trim();
+           // remove parens & strip special chars
+           let newStr = s.toLowerCase().replace(/\(.*?\)/g,"").replace(/[^a-z ]/gi,'').trim();
            // take first 4 words and separate with "-""
            newStr = newStr.split(" ").slice(0,6).join("-");
            return newStr;

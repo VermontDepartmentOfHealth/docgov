@@ -10,6 +10,9 @@ if (document.body.scrollIntoView) {
             if (el) {
                 e.preventDefault();
                 el.scrollIntoView({behavior: "smooth"})
+                if (history.pushState) {
+                    history.pushState(null, null, '#' + id)
+                }
             }
         }
     })
