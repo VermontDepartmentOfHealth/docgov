@@ -6,7 +6,8 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "favicon": "npx real-favicon generate \"./tools/favicon-generator.json\" \"./tools/faviconData.json\" \"./src/_includes/assets/images/icons/fav\""
   },
   "repository": {
     "type": "git",

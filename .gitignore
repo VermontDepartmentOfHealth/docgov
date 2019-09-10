@@ -10,3 +10,6 @@ _site
 
 # Local Netlify folder
 .netlify
+
+# generated output
+tools/faviconData.json
