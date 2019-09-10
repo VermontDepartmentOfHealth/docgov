@@ -1,12 +1,13 @@
 // on form load, set radio and body (immediately after body opening tag)
 function setTheme(val) {
-    var displayCard = val === "card"
-    document.body.classList.toggle("display-card", displayCard)
-    document.body.classList.toggle("display-list", !displayCard)
+    // remove all themes
+    document.body.className = document.body.className.split(" ").filter(function(c) { return !c.startsWith("theme-")}).join(" ");
+    // set current theme
+    document.body.classList.add("theme-" + val)
 }
 
 // get stored value or default
-var displayVal = localStorage.getItem('display-toggle') || "card"
+var displayVal = localStorage.getItem('theme-color') || "ocean"
 
 // immediately set style to prevent FOUC
 setTheme(displayVal)
@@ -16,16 +17,16 @@ setTheme(displayVal)
 document.addEventListener("DOMContentLoaded", function(){
 
     // set appropriate state on checkboxes once they've loaded
-    var displayEl = document.querySelector("input[type='radio'][name='display-toggle'][value='" + displayVal + "']")
+    var displayEl = document.querySelector("input[type='radio'][name='theme'][value='" + displayVal + "']")
     if (displayEl) { displayEl.checked = true}
 
 
     // on change, set body class and local storage (after dom loaded)
-	document.querySelectorAll("input[type='radio'][name='display-toggle']").forEach(function(el) {
+	document.querySelectorAll("input[type='radio'][name='theme']").forEach(function(el) {
         el.addEventListener("change",function(e) {
             var curDisplayVal = e.target.value
             setTheme(curDisplayVal)
-            localStorage.setItem('display-toggle', curDisplayVal)
+            localStorage.setItem('theme-color', curDisplayVal)
         });
     });
 });

@@ -52,6 +52,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [nunjucks - sort array](https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr)
 * [nunjucks - passing data to includes](https://github.com/mozilla/nunjucks/issues/539#issuecomment-203538566)
 * [nunjucks - built in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters)
+* [nunjucks - paired shortcode](https://github.com/11ty/eleventy/issues/685#issuecomment-528980239)
+
 
 ## A11y
 
@@ -105,6 +107,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [css - avoid page break inside row of table](https://stackoverflow.com/q/9288802/1366033)
 * [css - `break-inside`](https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside)
 * [css - Chrome “Save as PDF” is cutting off text](https://superuser.com/q/1477838/180163)
+* [css - How to justify a single flexbox item](https://stackoverflow.com/q/23621650/1366033)
 
 ## Images
 

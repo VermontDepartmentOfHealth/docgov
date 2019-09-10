@@ -35,7 +35,10 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
 
     {# capture the CSS content as a Nunjucks variable #}
-    {% set css %}{% include "assets/styles/styles.css" %}{% endset %}
+    {% set css %}
+        {% include "assets/styles/styles.css" %}
+        {% include "assets/styles/hljs.css" %}
+    {% endset %}
     {# feed it through our cssmin filter to minify #}
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
@@ -102,13 +105,15 @@
     {% include "_partials/sidenav.njk" %}
 
     {# capture the JS content as a Nunjucks variable #}
-    {% set js %}{% include "assets/scripts/nav-toggle.js" %}{% endset %}
+    {% set js %}
+        {% include "assets/scripts/nav-toggle.js" %}
+        {% include "assets/scripts/theme-picker.js" %}
+    {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
     <script src="/vendor/scripts/gumshoe.js"></script>
     <script src="/assets/scripts/scroll-spy.js"></script>
 
-    <link rel="stylesheet" href="/vendor/styles/hljs/ocean.css">
 </body>
 
 </html>

@@ -69,6 +69,14 @@ main.content {
   transition: left .3s ease;
 }
 
+.sidenav ul {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 10px 0px;
+}
+
 .sidenav a {
   color: #e8f6fd;
   display: flex;
@@ -94,8 +102,12 @@ main.content {
 
 .sidenav .divider {
   height: 1px;
+  min-height: 1px; /* prevent sub-pixel rendering */
   background: #ffffff33;
   margin: 5px 18px;
+}
+.sidenav .spacer {
+  flex-grow: 1;
 }
 
 @media (max-width: 1100px) {
@@ -218,8 +230,6 @@ pre code {
   display: block;
   border: none;
   overflow-x: auto;
-  background: #2b303b;
-  color: #c0c5ce;
   padding: 0.5em;
   font-size: 1.1em;
 }
@@ -295,6 +305,9 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 }
 .page .mt-0 {
   margin-top: 0;
+}
+.page .mb-0 {
+  margin-bottom: 0;
 }
 
 .page .list-unstyled {
@@ -491,18 +504,25 @@ section.intro {
 
 /* post display toggle */
 .display-toggle {
-  display: flex;
-  float: right;
+  display: inline-flex;
+  align-items: center;
   margin-top: 1em;
-  border: 1px solid #6d6d6d;
-  border-radius: 3px;
+  float: right;
 }
 
-.display-toggle label:first-child .display-icon {
+
+.display-toggle-group {
+  display: inline-flex;
+  border: 1px solid #6d6d6d;
+  border-radius: 3px;
+  margin: 0px 7px;
+}
+
+.display-toggle-group label:first-child .display-icon {
   border-right: 1px solid #6d6d6d;
   border-radius: 2px 0 0 2px;
 }
-.display-toggle label:last-child .display-icon {
+.display-toggle-group label:last-child .display-icon {
   border-radius: 0 2px 2px 0;
 }
 
@@ -524,7 +544,7 @@ section.intro {
   transition: background .4s ease;
 }
 
-.display-toggle input[type="radio"] {
+.display-toggle-group input[type="radio"] {
   /* display: none;  */ /* can't hide because we still need a tab stop */
   height: 0;
   width: 0;
@@ -542,7 +562,7 @@ input:checked + .display-icon .bar {
 input:focus + .display-icon {
   box-shadow: 0 0 3px 1px #2196F3;
 }
-.display-toggle:focus-within {
+.display-toggle-group:focus-within {
   border-color: #2196F3;
   box-shadow: 0 0 2px 0px #2196F3;
 }
