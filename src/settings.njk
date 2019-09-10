@@ -1,0 +1,27 @@
+---
+layout: default.njk
+title_word: "Settings"
+title: "Device Settings"
+summary: "Some minor customizations"
+class: settings
+---
+
+
+<h1 class="page-title">{{title}}</h1>
+
+
+<h3>Display Density</h3>
+
+<div class="display-settings"> 
+  {% include "_partials/displayDensity.njk" %}
+</div>
+
+
+
+
+
+<style>
+.settings .display-toggle {
+  float: none;
+}
+</style>
