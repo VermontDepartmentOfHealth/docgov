@@ -2,9 +2,9 @@
 title_word: Links
 title: "IT Orientation"
 tags: ['post', 'overview']
-authors: ['Kyle', 'Brian']
-create_date: 2019-06-17
-last_modified_date: 2019-09-09
+authors: ['Kyle']
+date: 2019-06-17
+updated: 2019-09-09
 summary: "A list of resources, links, and onboarding materials for developers at the Vermont Department of Health"
 ---
 

@@ -3,7 +3,7 @@ title_word: Hiring
 title: Hiring Overview
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']
-create_date: 2019-08-22
+date: 2019-08-22
 summary: "An overview of our hiring process as we strive to make our interviewing process as open, fair, and inclusive as we can"
 ---
 

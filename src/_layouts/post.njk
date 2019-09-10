@@ -14,12 +14,12 @@ layout: default.njk
 <div class="post-meta">
 
 
-  {% if last_modified_date %}
-    <div class="post-date"><strong>Created</strong>: {{ create_date | dateDisplay }}</div>
-    <div class="post-date"><strong>Updated</strong>: {{ last_modified_date | dateDisplay }}</div>
+  {% if updated %}
+    <div class="post-date"><strong>Created</strong>: {{ date | dateDisplay }}</div>
+    <div class="post-date"><strong>Updated</strong>: {{ updated | dateDisplay }}</div>
     <div class="post-date"><strong>Author{% if authors.length > 1 %}s{% endif %}</strong>:
   {% else %}
-    <span class="post-date">{{ create_date | dateDisplay }}</span> -
+    <span class="post-date">{{ date | dateDisplay }}</span> -
   {% endif %}
   
   <span class="post-byline">
@@ -41,7 +41,7 @@ layout: default.njk
   </span>
   
   {# wrap byline with field label if we have multiple dates #}
-  {% if last_modified_date %}
+  {% if updated %}
     </div>
   {% endif %}
 

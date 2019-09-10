@@ -3,7 +3,7 @@ title_word: Markdown
 title: Markdown Overview
 tags: ['post', 'overview']
 authors: ['Kyle']
-create_date: 2019-08-30
+date: 2019-08-30
 summary: "Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage"
 ---
 
