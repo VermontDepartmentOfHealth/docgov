@@ -9,6 +9,9 @@ class: settings
 
 <h1 class="page-title">{{title}}</h1>
 
+<section class="intro">
+Device specific settings are saved in <code>localStorage</code> on this device
+</section>
 
 <h3 class="mt-2 mb-0" id="density">Display Density</h3>
 
@@ -85,6 +88,8 @@ class: settings
     height: 0;
     width: 0;
     position: absolute;
+    left: -999px;
+    top: -999px;
 }
 
 

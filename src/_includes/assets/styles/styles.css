@@ -573,6 +573,8 @@ section.intro {
   height: 0;
   width: 0;
   position: absolute;
+  left: -999px;
+  top: -999px;
 }
 
 input:checked + .display-icon {
