@@ -91,6 +91,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [html - disabling chrome autofill](https://stackoverflow.com/q/15738259/1366033)
 * [chromium - use cases for autocomplete=off](https://bugs.chromium.org/p/chromium/issues/detail?id=587466)
 * [http - resource hints - preconnect](https://www.smashingmagazine.com/2019/06/optimizing-google-fonts-performance/)
+* [http - ETag](https://en.wikipedia.org/wiki/HTTP_ETag)
 
 ## JS
 
@@ -131,3 +132,6 @@ A stash for helpful articles, references, documentation looked up along the way
 * [pwa - manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [pwa - service worker reader](https://jakearchibald.github.io/isserviceworkerready/)
 * [pwa - serving files from cache](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#serving_files_from_the_cache)
+* [pwa - cache + network race](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/#cache-and-network-race)
+* [pwa - cache, update & refresh](https://serviceworke.rs/strategy-cache-update-and-refresh_service-worker_doc.html)
+
