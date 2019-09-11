@@ -51,8 +51,8 @@
     {# feed it through our cssmin filter to minify #}
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
-{% set isPostType = tags | isPostType %}
-<body class="page {{class}} nav-closed {% if isPostType %} post-layout {% endif %}">
+{% set displayTOC = tags | isPostType %}
+<body class="page {{class}} nav-closed {% if displayTOC %} toc-layout {% endif %}">
 
     <header id="header" class="header">
         <button class="hamburger nav-toggle" type="button" id="navToggleBody" 
@@ -80,7 +80,7 @@
 
     </main>
 
-    {% if isPostType %}
+    {% if displayTOC %}
         <aside class="toc">
             <h3>Contents</h3>
             {{ content | toc | removeHash | removeParen | safe }}
@@ -121,8 +121,14 @@
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
-    <script src="/vendor/scripts/gumshoe.js"></script>
-    <script src="/assets/scripts/scroll-spy.js"></script>
+
+    {# we only need scroll spy if we have a table of contents #}
+    {% if displayTOC %}
+        <script src="/vendor/scripts/gumshoe.js"></script>
+        <script src="/assets/scripts/scroll-spy.js"></script>  
+    {% endif %}
+    
+
 
 </body>
 

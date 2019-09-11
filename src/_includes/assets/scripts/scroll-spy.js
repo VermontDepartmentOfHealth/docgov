@@ -1,5 +1,7 @@
 // add scroll spy
-var spy = new Gumshoe('.toc a');
+if (document.querySelectorAll('.toc a').length) {
+    var spy = new Gumshoe('.toc a');
+}
 
 // add smooth scroll to fragment ids
 if (document.body.scrollIntoView) {

@@ -31,7 +31,7 @@ body {
   min-height: 100%;
 }
 
-body.post-layout {
+body.toc-layout {
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr 225px;
   grid-template-areas: "nav . head . ."
                        "nav . main . toc"
@@ -111,7 +111,7 @@ main.content {
 }
 
 @media (max-width: 1100px) {
-  body.post-layout {
+  body.toc-layout {
     grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
     grid-template-areas: "nav . head ."
                          "nav . main ."
