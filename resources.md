@@ -123,3 +123,4 @@ A stash for helpful articles, references, documentation looked up along the way
 * [pwa - manifest schema definition](http://json.schemastore.org/web-manifest)
 * [pwa - manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [pwa - service worker reader](https://jakearchibald.github.io/isserviceworkerready/)
+* [pwa - serving files from cache](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#serving_files_from_the_cache)

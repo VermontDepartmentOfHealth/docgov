@@ -102,10 +102,34 @@ Device specific settings are saved in <code>localStorage</code> on this device
     transition: background .4s ease;
 }
 .themes :checked + span {
-    background: #b6c9f5;
+    background: #dce7ff;
+    border-left: 2px solid #2565f9;
 }
 
 .themes label:hover span {
     background: #cfdaf5;
+}
+
+@media (max-width: 650px) {
+  .theme-picker {
+    flex-direction: column;
+  }
+
+  .themes :checked + span {
+      border-left: none;
+      border-bottom: 2px solid #2565f9;
+  }
+
+  .themes {
+      flex-direction: row;
+      margin-bottom: 1rem;
+  }
+
+  .themes span {
+    width: auto;
+    padding: 0px 5px;
+    margin-right: .5rem;
+  }
+  
 }
 </style>
