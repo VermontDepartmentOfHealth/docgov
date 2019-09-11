@@ -12,7 +12,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"node_modules/mark.js/dist/mark.min.js": "/vendor/scripts/mark.js"});
     eleventyConfig.addPassthroughCopy({"node_modules/gumshoejs/dist/gumshoe.polyfills.min.js": "/vendor/scripts/gumshoe.js"});
     eleventyConfig.addPassthroughCopy({"node_modules/highlightjs/styles": "/vendor/styles/hljs"});
-    
+    eleventyConfig.addPassthroughCopy({"node_modules/firacode/distr/woff": "/assets/fonts/"});
+    eleventyConfig.addPassthroughCopy({"node_modules/firacode/distr/woff2/": "/assets/fonts/"});
+    eleventyConfig.addPassthroughCopy({"node_modules/typeface-noto-serif/files": "/assets/fonts/"});
+    eleventyConfig.addPassthroughCopy({"node_modules/typeface-roboto/files": "/assets/fonts/"});
+
     // add filters
     eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );
     eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );

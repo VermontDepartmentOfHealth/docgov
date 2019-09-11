@@ -7,7 +7,7 @@ date: 2019-08-30
 summary: "Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage"
 ---
 
-It's no surprise... Markdown is my favorite ever! It translates really well into how I \*want\* to write out of the box.
+It's no surprise... Markdown is my favorite ever! It translates really well into how I want to *\*write\** out of the box.
 
 It powers Stack Overflow, Github, and a good chunk of the internet, while offering a delicate balance between robust expressiveness in typography, human readability on all platforms, and amazingly simple full text search.
 

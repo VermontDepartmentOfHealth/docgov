@@ -208,20 +208,28 @@ body {
   font-size: 16px;
   color: #2d2d2d;
   background: hsl(59, 100%, 99%);
-  font-family: 'Noto Serif', serif;
+  font-family: 'Roboto', sans-serif;
   word-break: break-word;
 }
 
+
+
 h1,h2,h3 {
   line-height: 1.2;
+  font-family: 'Noto Serif', serif;
 }
+
+#header {
+  font-family: 'Noto Serif', serif;
+}
+
 
 h1 a, h2 a, h3 a {
   line-height: 1.4;
 }
 
 pre, code {
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Fira Code', monospace;
 }
 code {
   border-radius: 2px;

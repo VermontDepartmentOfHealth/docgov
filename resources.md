@@ -111,6 +111,13 @@ A stash for helpful articles, references, documentation looked up along the way
 * [css - Chrome “Save as PDF” is cutting off text](https://superuser.com/q/1477838/180163)
 * [css - How to justify a single flexbox item](https://stackoverflow.com/q/23621650/1366033)
 
+
+## Fonts
+
+* [fonts - caniuse - WOFF2](https://caniuse.com/#feat=woff2)
+* [fonts - Fira Code typeface](https://github.com/KyleAMathews/typefaces/issues/78)
+* [fonts - downloading a Google font](https://stackoverflow.com/a/53470702/1366033)
+
 ## Images
 
 * [svg - How to scale SVG](https://css-tricks.com/scale-svg/)

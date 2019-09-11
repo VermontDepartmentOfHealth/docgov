@@ -40,11 +40,11 @@
     <meta name="twitter:image" content="{{config.baseUrl}}/assets/images/thumbnail.png">
 
     {# Google Fonts #}
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Ubuntu+Mono&display=swap" rel="stylesheet">
+    {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
 
     {# capture the CSS content as a Nunjucks variable #}
     {% set css %}
+        {% include "assets/styles/fonts.css" %}
         {% include "assets/styles/styles.css" %}
         {% include "assets/styles/hljs.css" %}
     {% endset %}
