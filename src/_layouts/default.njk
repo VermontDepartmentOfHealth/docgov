@@ -54,6 +54,11 @@
 {% set displayTOC = tags | isPostType %}
 <body class="page {{class}} nav-closed {% if displayTOC %} toc-layout {% endif %}">
 
+    {# hide by default - show if offline #}
+    <div class="banner banner-dark banner-offline">
+        Offline Mode <img src="/assets/images/icons/fa/wifi-slash.svg" class="fa ml-1" alt="WiFi Disonnected">
+    </div>
+
     <header id="header" class="header">
         <button class="hamburger nav-toggle" type="button" id="navToggleBody" 
                 aria-haspopup="true" aria-expanded="false" aria-label="Toggle side navbar">
@@ -71,6 +76,8 @@
                 <span class="gov">gov</span>
             </span>
         </a>
+
+
     </header>
 
 
@@ -118,6 +125,7 @@
         {% include "assets/scripts/nav-toggle.js" %}
         {% include "assets/scripts/theme-picker.js" %}
         {% include "assets/scripts/register-service-worker.js" %}
+        {% include "assets/scripts/offline.js" %}
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>

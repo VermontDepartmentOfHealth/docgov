@@ -56,8 +56,14 @@ EDRS
 EBRS
     ~ Electronic Birth Registration System
 
-FEDRS
+FDRS
     ~ Fetal Death Registration System
+
+CVX
+    ~ Code for Vaccine  - https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
+
+NDC
+    ~ National Drug Code - https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 
 
 ## Terms

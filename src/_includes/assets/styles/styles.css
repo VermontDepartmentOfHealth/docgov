@@ -23,9 +23,10 @@ body {
   display: flex;
   flex-direction: column;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
-  grid-template-areas: "nav . head ."
+  grid-template-areas: "banner banner banner banner" 
+                      "nav . head ."
                       "nav . main ."
                       "nav foot foot foot";                       
   min-height: 100%;
@@ -33,7 +34,8 @@ body {
 
 body.toc-layout {
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr 225px;
-  grid-template-areas: "nav . head . ."
+  grid-template-areas: "banner banner banner banner banner"
+                       "nav . head . ."
                        "nav . main . toc"
                        "nav foot foot foot foot";
 }
@@ -44,6 +46,7 @@ footer.footer {
   padding: 1rem;
 }
 
+.banner       { grid-area: banner }
 header.header { grid-area: head }
 main.content  { grid-area: main }
 footer.footer { grid-area: foot }
@@ -113,7 +116,8 @@ main.content {
 @media (max-width: 1100px) {
   body.toc-layout {
     grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
-    grid-template-areas: "nav . head ."
+    grid-template-areas: "banner banner banner banner" 
+                         "nav . head ."
                          "nav . main ."
                          "nav foot foot foot";
   }
@@ -138,7 +142,8 @@ main.content {
   /* remove nav from grid-template */
   body.page {
     grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
-    grid-template-areas: ". head ."
+    grid-template-areas: "banner banner banner" 
+                         ". head ."
                          ". main ."
                          "foot foot foot";
   }
@@ -292,6 +297,28 @@ hr {
   background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),#ffbe2d calc(50% - 8px),#ffbe2d 100%);
 }
 
+/* banner */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 15px;
+}
+
+.banner.banner-dark {
+  background: #1b1b1b;
+  color: white;
+}
+
+/* offline */
+.banner-offline {
+  display: none;
+}
+.offline .banner-offline {
+  display: flex;
+}
+
 /* display list */
 dl {
   display: grid;
@@ -329,14 +356,17 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 .page .m-0 {
   margin: 0;
 }
+.page .mt-0 {
+  margin-top: 0;
+}
 .page .mt-1 {
   margin-top: 1em;
 }
 .page .mt-2 {
   margin-top: 2em;
 }
-.page .mt-0 {
-  margin-top: 0;
+.page .ml-1 {
+  margin-left: 1em;
 }
 .page .mb-0 {
   margin-bottom: 0;
@@ -663,6 +693,14 @@ svg {
   height: 20px;
 }
 
+img.fa {
+  box-shadow: none;
+  border: none;
+  height: 20px;
+}
+.banner-dark img.fa {
+  filter: invert(1);
+}
 
 
 /* search form */
