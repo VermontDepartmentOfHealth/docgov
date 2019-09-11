@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
 
     // static passthroughs
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
+    eleventyConfig.addPassthroughCopy("src/manifest.json");
     eleventyConfig.addPassthroughCopy({"src/_includes/assets": "/assets"});
 
     // grab 3rd party dependencies

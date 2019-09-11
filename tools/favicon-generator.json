@@ -1,6 +1,6 @@
 {
 	"masterPicture": "./src/_includes/assets/images/vt-book-logo.svg",
-	"iconsPath": "/",
+	"iconsPath": "/assets/images/icons/fav/",
 	"design": {
 		"ios": {
 			"pictureAspect": "backgroundAndMargin",
