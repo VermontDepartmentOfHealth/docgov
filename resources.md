@@ -122,3 +122,4 @@ A stash for helpful articles, references, documentation looked up along the way
 * [pwa - generate icons from svg](http://cthedot.de/icongen/)
 * [pwa - manifest schema definition](http://json.schemastore.org/web-manifest)
 * [pwa - manifest.json](https://developers.google.com/web/fundamentals/web-app-manifest/)
+* [pwa - service worker reader](https://jakearchibald.github.io/isserviceworkerready/)

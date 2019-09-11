@@ -117,6 +117,7 @@
     {% set js %}
         {% include "assets/scripts/nav-toggle.js" %}
         {% include "assets/scripts/theme-picker.js" %}
+        {% include "assets/scripts/register-service-worker.js" %}
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
