@@ -1,4 +1,5 @@
-var CACHE_NAME = 'doc-gov-cache-v3';
+// update in register-service-worker.js
+var CACHE_NAME = 'doc-gov-cache-v4';
 
 var urlsToCache = [
   '/index.html',
@@ -75,41 +76,52 @@ function fromCache(evt) {
 
 function update(evt) {
   var request = evt.request.clone()
-  // return promise to open cache
-return caches.open(CACHE_NAME).then(function (cache) {
-    // go get live page hit every time
-    return fetch(request).then(function (response) {
-      // clone request so we don't modify original
-      var responseToCache = response.clone(); 
 
-      var shouldCache = request.method === "GET" && 
-                        !/http:\/\/localhost:\d+\/browser-sync/i.test(request.url) &&
-                        response &&
-                        response.status === 200 &&
-                        response.type === 'basic';
+  var shouldUpdate = request.method === "GET" && 
+                    !/http:\/\/localhost:\d+\/browser-sync/i.test(request.url)
+  if (!shouldUpdate) { return; }
 
-      if (shouldCache) {
-        cache.put(request, responseToCache);
-      }
+
+  // go get live page hit
+  return fetch(request).then(function (response) {
+
+    // clone response so we don't modify original
+    var responseToCache = response.clone(); 
+
+    var shouldCache = response &&
+                      response.status === 200 &&
+                      response.type === 'basic';    
+
+    if (!shouldCache) { return responseToCache }
+
+    // return promise to open cache
+    return caches.open(CACHE_NAME).then(function (cache) {
+      return cache.put(request, responseToCache).then(function () {
+        return response;
+      });
     });
+
   });
 }
 
 function refresh(response) {
-  // return self.clients.matchAll().then(function (clients) {
-  //   clients.forEach(function (client) {
+  // if we didn't get anything, head back
+  if (!response) return;
+  
+  return self.clients.matchAll().then(function (clients) {
+    clients.forEach(function (client) {
 
  
-  //     var message = {
-  //       type: 'refresh',
-  //       url: response.url,
+      var message = {
+        type: 'refresh',
+        url: response.url,
 
  
-  //       eTag: response.headers.get('ETag')
-  //     };
+        eTag: response.headers.get('ETag')
+      };
 
  
-  //     client.postMessage(JSON.stringify(message));
-  //   });
-  // });
+      client.postMessage(JSON.stringify(message));
+    });
+  });
 }
