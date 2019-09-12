@@ -2,10 +2,10 @@
 
 module.exports = function(eleventyConfig) {
 
-    // static passthroughs
-    eleventyConfig.addPassthroughCopy("src/favicon.ico");
-    eleventyConfig.addPassthroughCopy("src/manifest.json");
-    eleventyConfig.addPassthroughCopy("src/sw.js");
+    // static passthroughs - remap to root
+    eleventyConfig.addPassthroughCopy({"src/_includes/assets/images/icons/fav/favicon.ico": "/favicon.ico"});
+    eleventyConfig.addPassthroughCopy({"src/_includes/assets/images/icons/fav/manifest.json": "/manifest.json"});
+    eleventyConfig.addPassthroughCopy({"src/_includes/assets/scripts/service-worker.js": "/service-worker.js"});
     eleventyConfig.addPassthroughCopy({"src/_includes/assets": "/assets"});
 
     // grab 3rd party dependencies

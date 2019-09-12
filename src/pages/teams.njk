@@ -1,13 +1,14 @@
 ---
 layout: default.njk
-title_word: Projects
-title: All Projects
+title_word: Teams
+title: All Teams
+permalink: "teams/index.html"
 ---
 
 <h1 class="page-title">{{title}}</h1>
 
-<ol class="category-list category-projects list-unstyled">
-  {% for name, info in collections.projects  %}
+<ol class="category-list category-teams list-unstyled">
+  {% for name, info in collections.teams  %}
     <li class="category-item">
       <a href="{{info.url}}" class="category-name">{{ name }}</a>
       {# <span class="category-count">× {{info.posts.length }}</span> #}
