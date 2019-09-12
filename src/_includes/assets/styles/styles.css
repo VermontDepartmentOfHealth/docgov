@@ -1089,7 +1089,9 @@ aside::-webkit-scrollbar {
   background: #1f81ab;
 }
 
-/* tooltips */
+/**
+ * Tooltip Styles
+ */
 
 /* Base styles for the element that has a tooltip */
 .tooltip {
@@ -1103,10 +1105,13 @@ aside::-webkit-scrollbar {
   position: absolute;
   visibility: hidden;
   opacity: 0;
-	transition-property: opacity, visibility, transform;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transform: translate3d(0, 0, 0);
+	transition:         
+		opacity 0.2s ease-in-out,
+		visibility 0.2s ease-in-out,
+		transform 0.2s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform:    translate3d(0, 0, 0);
+  transform:         translate3d(0, 0, 0);
   pointer-events: none;
 }
 
@@ -1132,11 +1137,31 @@ aside::-webkit-scrollbar {
   z-index: 1000;
   padding: 8px;
   width: 160px;
-  background-color: #272727;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
   color: #fff;
   content: attr(data-tooltip);
   font-size: 14px;
   line-height: 1.2;
+}
+
+/* Directions */
+
+/* Top (default) */
+.tooltip:before,
+.tooltip:after,
+.tooltip-top:before,
+.tooltip-top:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+.tooltip:before,
+.tooltip-top:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
 }
 
 /* Horizontally align top/bottom tooltips */
@@ -1148,21 +1173,142 @@ aside::-webkit-scrollbar {
 .tooltip:hover:before,
 .tooltip:hover:after,
 .tooltip:focus:before,
-.tooltip:focus:after {
-  transform: translateY(12px); 
+.tooltip:focus:after,
+.tooltip-top:hover:before,
+.tooltip-top:hover:after,
+.tooltip-top:focus:before,
+.tooltip-top:focus:after {
+  -webkit-transform: translateY(-12px);
+  -moz-transform:    translateY(-12px);
+  transform:         translateY(-12px); 
+}
+
+/* Left */
+.tooltip-left:before,
+.tooltip-left:after {
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+}
+
+.tooltip-left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+  -webkit-transform: translateX(-12px);
+  -moz-transform:    translateX(-12px);
+  transform:         translateX(-12px); 
 }
 
 /* Bottom */
-.tooltip:before,
-.tooltip:after {
+.tooltip-bottom:before,
+.tooltip-bottom:after {
   top: 100%;
   bottom: auto;
   left: 50%;
 }
 
-.tooltip:before {
+.tooltip-bottom:before {
   margin-top: -12px;
   margin-bottom: 0;
   border-top-color: transparent;
-  border-bottom-color: #272727;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+  -webkit-transform: translateY(12px);
+  -moz-transform:    translateY(12px);
+  transform:         translateY(12px); 
+}
+
+/* Right */
+.tooltip-right:before,
+.tooltip-right:after {
+  bottom: 50%;
+  left: 100%;
+}
+
+.tooltip-right:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+  -webkit-transform: translateX(12px);
+  -moz-transform:    translateX(12px);
+  transform:         translateX(12px); 
+}
+
+/* Move directional arrows down a bit for left/right tooltips */
+.tooltip-left:before,
+.tooltip-right:before {
+  top: 3px;
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.tooltip-left:after,
+.tooltip-right:after {
+  margin-left: 0;
+  margin-bottom: -16px;
+}
+
+/* copy snippet */
+.hljs > code {
+  position: relative;
+}
+
+.btn-copy {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.hljs:hover .btn-copy {
+  opacity: 1;
+}
+
+.btn-icon {
+  padding: 3px 6px;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 1px;
+  margin: 1px;
+  border: 1px solid transparent;
+}
+.btn-icon:focus {
+  outline: none;
+  border: 1px solid #2196F3;
+  box-shadow: 0px 0px 1px 1px #2196F3;
+}
+
+.btn-icon img {
+  border: none;
+  box-shadow: none;
+  width: 20px;
+}
+
+.btn-copy img {
+  filter: invert(1);
 }

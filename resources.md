@@ -103,6 +103,9 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Copy to clipboard in JavaScript?](https://stackoverflow.com/a/30810322/1366033)
 * [Check if element of array in another array](https://stackoverflow.com/a/39893636/1366033)
 * [Update window.location.hash without jumping the document?](https://stackoverflow.com/a/14690177/1366033)
+* [JS - Get Closest Parent](https://gomakethings.com/a-native-vanilla-javascript-way-to-get-the-closest-matching-parent-element/)
+* [MDN - `Element.Closest`](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
+
 
 ## CSS
 
