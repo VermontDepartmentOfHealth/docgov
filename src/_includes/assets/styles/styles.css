@@ -1309,6 +1309,6 @@ aside::-webkit-scrollbar {
   width: 20px;
 }
 
-.btn-copy img {
+.theme-ocean .btn-copy img {
   filter: invert(1);
 }
