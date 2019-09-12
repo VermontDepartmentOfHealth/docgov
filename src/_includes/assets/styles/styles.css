@@ -281,6 +281,10 @@ hr {
   border: 1px solid #cec7b8;
 }
 
+abbr[title] {
+  text-decoration: underline dotted #3e71c1;
+}
+
 /* alerts */
 .alert {
   padding: 5px 10px;
@@ -1083,4 +1087,82 @@ aside::-webkit-scrollbar {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #1f81ab;
+}
+
+/* tooltips */
+
+/* Base styles for the element that has a tooltip */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Base styles for the entire tooltip */
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+	transition-property: opacity, visibility, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.tooltip:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.tooltip:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #272727;
+  color: #fff;
+  content: attr(data-tooltip);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Horizontally align top/bottom tooltips */
+.tooltip:after,
+.tooltip-top:after {
+  margin-left: -80px;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after,
+.tooltip:focus:before,
+.tooltip:focus:after {
+  transform: translateY(12px); 
+}
+
+/* Bottom */
+.tooltip:before,
+.tooltip:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.tooltip:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #272727;
 }
