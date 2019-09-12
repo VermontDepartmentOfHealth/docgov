@@ -25,7 +25,7 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
-  grid-template-areas: "banner banner banner banner" 
+  grid-template-areas: "nav banner banner banner" 
                       "nav . head ."
                       "nav . main ."
                       "nav foot foot foot";                       
@@ -34,7 +34,7 @@ body {
 
 body.toc-layout {
   grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr 225px;
-  grid-template-areas: "banner banner banner banner banner"
+  grid-template-areas: "nav banner banner banner banner"
                        "nav . head . ."
                        "nav . main . toc"
                        "nav foot foot foot foot";
@@ -116,7 +116,7 @@ main.content {
 @media (max-width: 1100px) {
   body.toc-layout {
     grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
-    grid-template-areas: "banner banner banner banner" 
+    grid-template-areas: "nav banner banner banner" 
                          "nav . head ."
                          "nav . main ."
                          "nav foot foot foot";
@@ -308,6 +308,7 @@ abbr[title] {
   align-items: center;
   text-align: center;
   padding: 5px 15px;
+  z-index: 99;
 }
 
 .banner.banner-dark {
@@ -616,7 +617,6 @@ section.intro {
   width: 0;
   position: absolute;
   left: -999px;
-  top: -999px;
 }
 
 input:checked + .display-icon {

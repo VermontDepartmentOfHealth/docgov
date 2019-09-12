@@ -1,5 +1,5 @@
 // on form load, set radio and body (immediately after body opening tag)
-function setTheme(val) {
+function setDisplay(val) {
     var displayCard = val === "card"
     document.body.classList.toggle("display-card", displayCard)
     document.body.classList.toggle("display-list", !displayCard)
@@ -9,7 +9,7 @@ function setTheme(val) {
 var displayVal = localStorage.getItem('display-toggle') || "card"
 
 // immediately set style to prevent FOUC
-setTheme(displayVal)
+setDisplay(displayVal)
 
 
 // wait for the dom load to parse remaining elements
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.querySelectorAll("input[type='radio'][name='display-toggle']").forEach(function(el) {
         el.addEventListener("change",function(e) {
             var curDisplayVal = e.target.value
-            setTheme(curDisplayVal)
+            setDisplay(curDisplayVal)
             localStorage.setItem('display-toggle', curDisplayVal)
         });
     });
