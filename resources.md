@@ -105,7 +105,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Update window.location.hash without jumping the document?](https://stackoverflow.com/a/14690177/1366033)
 * [JS - Get Closest Parent](https://gomakethings.com/a-native-vanilla-javascript-way-to-get-the-closest-matching-parent-element/)
 * [MDN - `Element.Closest`](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
-
+* [Vanilla JS - Detect Touch](https://stackoverflow.com/a/30192291/1366033)
+* [MDN - Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
 
 ## CSS
 
