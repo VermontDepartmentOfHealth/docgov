@@ -29,6 +29,18 @@ The codebase, issues, pull requests, and project backlog is all managed through 
 
 Please contact Kyle.Mitofsky@vermont.gov with your Github username to request access to the VDH Organization account to get started
 
+## Branch Deploys & Deploy Context
+
+Netlify creates [atomic](https://www.netlify.com/docs/versioning-and-rollbacks/#atomic-deploys), [immutable](https://medium.com/netlify/how-netlifys-deploying-and-routing-infrastructure-works-c90adbde3b8d) deploys with [instant rollbacks](https://www.netlify.com/docs/versioning-and-rollbacks/#rollbacks) to any deployment you've ever made.
+
+Any commits pushed to master will automatically be built and deployed to the production url. If you push a commit to a branch, netlify will create a build preview for that commit and branch.  [Branch deploys](https://www.netlify.com/docs/continuous-deployment/#branches-deploys) can also be deployed to the docgov domain if we [setup a custom subdomain](https://app.netlify.com/sites/open-sourced/settings/domain#branch-subdomains).  For example if you wanted your own site at `kyle.docgov.dev` or `beta.docgov.dev`.  Netlify will also build a [deploy preview for every pull request](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/).
+
+* Master - https://docgov.dev/
+* Commit - https://5d7c35838fe05f0008d062e5--open-sourced.netlify.com/
+* Branch - https://feature-domain--open-sourced.netlify.com/
+* Preview - https://deploy-preview-42--open-sourced.netlify.com/
+
+To test out a your changes, you can run the build locally following the instructions in the [ReadMe.md](./README.MD) or just commit changes directly on github and view the staged deployment.
 
 ## Coding Environment
 
