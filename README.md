@@ -4,7 +4,7 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9f4b70bd-ec3e-4e7e-b036-4446fbcd4b74/deploy-status)](https://app.netlify.com/sites/open-sourced/deploys)
 
-Available at [https://open-sourced.netlify.com/](https://open-sourced.netlify.com/)
+Available at [DocGov.dev](https://docgov.dev/)
 
 
 ## Built With

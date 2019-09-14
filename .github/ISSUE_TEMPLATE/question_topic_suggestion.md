@@ -20,7 +20,7 @@ What should it cover?
 
 **Potential Tags**
 <!-- Does it look like this falls into a topic category that already exists here:
-https://open-sourced.netlify.com/tags/
+https://docgov.dev/tags/
 Please list any tags that might be applicable -->
 
 **Suggestion or Brainstorm?**

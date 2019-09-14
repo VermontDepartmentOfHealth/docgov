@@ -19,7 +19,7 @@ module.exports = {
      * Base URL (protocol, domain)
      * For when fully qualified urls are needed.  
      * https://www.netlify.com/docs/continuous-deployment/#environment-variables
-     * Values:  https://open-sourced.netlify.com/ | 
+     * Values:  https://docgov.dev/ | 
      *          https://deploy-preview-x--open-sourced.netlify.com/ |
      *          https://branch--open-sourced.netlify.com | 
      *          http://localhost:8080 
@@ -29,7 +29,7 @@ module.exports = {
     /**
      * Base Canonical URL
      * Only for <link rel="canonical">
-     * Values:  https://open-sourced.netlify.com/ | http://localhost:8080
+     * Values:  https://docgov.dev/ | http://localhost:8080
      */
     baseUrlCanonical: (URL) ? URL : DEFAULT_DEV_URL,
 
