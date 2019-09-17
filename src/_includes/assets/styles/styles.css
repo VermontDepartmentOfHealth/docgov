@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
+  grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr;
   grid-template-areas: "nav banner banner banner" 
                       "nav . head ."
                       "nav . main ."
@@ -33,7 +33,7 @@ body {
 }
 
 body.toc-layout {
-  grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr 225px;
+  grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr 225px;
   grid-template-areas: "nav banner banner banner banner"
                        "nav . head . ."
                        "nav . main . toc"
@@ -115,7 +115,7 @@ main.content {
 
 @media (max-width: 1100px) {
   body.toc-layout {
-    grid-template-columns: 225px 1fr minmax(100px, 40rem) 1fr;
+    grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr;
     grid-template-areas: "nav banner banner banner" 
                          "nav . head ."
                          "nav . main ."
@@ -141,7 +141,7 @@ main.content {
 
   /* remove nav from grid-template */
   body.page {
-    grid-template-columns: 1fr minmax(100px, 40rem) 1fr;
+    grid-template-columns: 1fr minmax(100px, 48rem) 1fr;
     grid-template-areas: "banner banner banner" 
                          ". head ."
                          ". main ."
@@ -248,7 +248,6 @@ pre code {
   border: none;
   overflow-x: auto;
   padding: 0.5em;
-  font-size: 1.1em;
 }
 
 s {

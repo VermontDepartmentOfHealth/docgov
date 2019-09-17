@@ -67,6 +67,12 @@ A stash for helpful articles, references, documentation looked up along the way
 * [md - extended syntax - ids](https://www.markdownguide.org/extended-syntax/#heading-ids)
 * [md - how to write lists inside a markdown table](https://stackoverflow.com/q/19950648/1366033)
 
+## Highlight.JS
+
+* [highlight - keywords](https://highlightjs.readthedocs.io/en/latest/language-guide.html#keywords)
+* [highlight - customize syntax highlighting keywords](https://github.com/highlightjs/highlight.js/issues/1271#issuecomment-243354193)
+
+
 ## Node
 
 * [npm - markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor)

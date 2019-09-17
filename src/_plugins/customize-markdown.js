@@ -2,6 +2,10 @@
 module.exports =  function CustomizeMD() {
    // configure syntax highlighting
    var hljs = require('highlightjs'); 
+
+   // customize
+   hljs.getLanguage('sql').keywords += ' with'; 
+
    let highlight = function (str, lang) {
     if (lang && hljs.getLanguage(lang)) {
       try {

@@ -40,9 +40,21 @@ var pet = {
 
 ```css
 @media (max-width: 850px) {
-  /* only show nav toggles on small screens */
+  /* only show nav toggles on small screens only show nav toggles on small screens */
   .hamburger {
     display:flex
   }
 }
+```
+
+## SQL
+
+```sql
+-- Setup CTE
+WITH ActiveEmployee AS (
+    SELECT *
+    FROM Employee e
+    WHERE e.IsActive = TRUE
+)
+SELECT * FROM Employees
 ```
