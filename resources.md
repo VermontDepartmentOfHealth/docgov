@@ -61,6 +61,9 @@ A stash for helpful articles, references, documentation looked up along the way
 * [a11y - link names](https://dequeuniversity.com/rules/axe/3.2/link-name)
 * [a11y - semantic vs decorative icons](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 * [a11y - aria-hidden](https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/)
+* [a11y - label svg alt text](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names)
+* [a11y - FF a11y inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
+* [a11y - semantic vs decorative icons](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 
 ## Markdown
 
