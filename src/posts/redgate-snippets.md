@@ -197,3 +197,12 @@ The following GIF illustrates how to do this.
 [7]: /assets/images/posts/redgate/SQLPrompt-AlterTable-4.gif
 [8]: /assets/images/posts/redgate/SQLPrompt-SAS-1.png
 [9]: /assets/images/posts/redgate/SQLPrompt-SAS-2.gif
+
+
+
+<!-- page specific styles -->
+<style type="text/css">
+table thead th:first-child {
+    width: 11rem;
+}
+</style>
