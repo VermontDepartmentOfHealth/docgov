@@ -10,7 +10,7 @@ summary: "An overview of how to create custom Redgate Snippets"
 
 ## Overview
 
-![Redgate Snippets][3] are custom blocks of code with pre-defined fields that allow users to quickly create SQL Queries in SSMS by allowing the user to focus on what it is they want to do but not requiring them to remember every bit of syntax.
+[Redgate Snippets][3] are custom blocks of code with pre-defined fields that allow users to quickly create SQL Queries in SSMS by allowing the user to focus on what it is they want to do but not requiring them to remember every bit of syntax.
 
 ## Using existing Snippets
 
@@ -19,7 +19,7 @@ Redgate SQL Prompt comes with a large number of pre-defined snippets. While most
 1. To view, edit, and/or add existing snippets, navigate to **SQL Prompt**->**Snippet Manager...**
 2. Select **Snippets** under the **Suggestions** category.
 
-![SQL Prompt - Menu][1]]
+![SQL Prompt - Menu][1]
 ![SQL Prompt - Options][2]
 
 ### Syntax Overview
@@ -190,7 +190,7 @@ The following GIF illustrates how to do this.
 
 [1]: /assets/images/posts/redgate/SQLPrompt-menu-1.png
 [2]: /assets/images/posts/redgate/SQLPrompt-menu-2.png
-[3]: https://documentation.red-gate.com/sp7/speeding-up-your-queries/managing-snippets
+[3]: https://documentation.red-gate.com/sp7/speeding-up-your-queries/managing-snippets/
 [4]: /assets/images/posts/redgate/SQLPrompt-AlterTable-1.png
 [5]: /assets/images/posts/redgate/SQLPrompt-AlterTable-2.png
 [6]: /assets/images/posts/redgate/SQLPrompt-AlterTable-3.png
