@@ -1,23 +1,6 @@
 
 module.exports =  function CustomizeMD() {
-   // configure syntax highlighting
-   var hljs = require('highlightjs'); 
-
-   // customize
-   hljs.getLanguage('sql').keywords += ' with'; 
-
-   let highlight = function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return '<pre class="hljs"><code>' +
-               hljs.highlight(lang, str, true).value +
-               '</code></pre>';
-      } catch (__) {}
-    }
-
-    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
-  }
-
+  var highlight = require('./customize-highlight.js'); 
 
    // set markdown defaults (inline so we can extend)
    let markdownIt = require("markdown-it");

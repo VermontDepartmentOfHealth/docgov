@@ -1,20 +1,19 @@
-document.querySelectorAll("pre.hljs > code").forEach(function(code) {
-	var img = document.createElement('img')
-    img.src = '/assets/images/icons/fa/copy.svg'
-    img.alt = 'copy icon'
-
-	var btn = document.createElement('button')
-    btn.append(img)
-    btn.classList.add("btn-icon","btn-copy", "tooltip-left")
-    btn.title = "Copy Snippet"
-
-	code.append(btn)
-});
-
 document.addEventListener("click", function(e) {
     var el = e.target;
-    if (el.matches(".btn-copy, .btn-copy *")) {
-        var text = el.closest(".hljs").innerText
+
+    // if event was raised inside a copy button
+    var btn = el.closest(".btn-copy")
+    if (btn) {
+        var btnTxt = btn.querySelector(".btn-text")
+        btnTxt.innerText = "Copied!"
+
+        // revert text after 3 seconds
+        setTimeout(function() {
+          btnTxt.innerText = "Copy"
+        }, 3000)
+      
+
+        var text = el.nextSibling.innerText
         copyToClipboard(text, function() {
             console.log("Copied: " + text)
         })
@@ -78,18 +77,18 @@ function copyToClipboard(text, callback) {
     }
   
     return false;
-  }
+}
 
-  if (window.Element && !Element.prototype.closest) {
-    Element.prototype.closest =
-    function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i,
-            el = this;
-        do {
-            i = matches.length;
-            while (--i >= 0 && matches.item(i) !== el) {};
-        } while ((i < 0) && (el = el.parentElement));
-        return el;
-    };
+if (window.Element && !Element.prototype.closest) {
+  Element.prototype.closest =
+  function(s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+          i,
+          el = this;
+      do {
+          i = matches.length;
+          while (--i >= 0 && matches.item(i) !== el) {};
+      } while ((i < 0) && (el = el.parentElement));
+      return el;
+  };
 }
