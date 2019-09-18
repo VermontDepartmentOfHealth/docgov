@@ -1,0 +1,29 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: directory
+  path: pages/authors
+  label: Authors
+  create: documents
+  match: "*.md"
+- type: directory
+  path: posts
+  label: Posts
+  create: documents
+  match: "*.md"
+  new_doc_ext: md
+upload_dir: assets/images/posts
+public_path: "/assets/images/posts"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: _site
+  install_dependencies_command: npm install
+  preview_docker_image: node:10
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run build
