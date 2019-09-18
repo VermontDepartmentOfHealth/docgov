@@ -1,5 +1,5 @@
 // update in register-service-worker.js
-var CACHE_NAME = 'doc-gov-cache-v4';
+var CACHE_NAME = 'doc-gov-cache-v5';
 
 var urlsToCache = [
   '/index.html',
@@ -37,91 +37,57 @@ self.addEventListener('activate', function(event) {
 
 
 // intercept all network traffic
-// cache first strategy
+// network then cache fallback
 // live requests will cache subsequent content
 self.addEventListener('fetch', function(evt) {
 
   // respond with cache + network fallback
-  evt.respondWith(fromCache(evt));
+  evt.respondWith(networkThenCache(evt));
 
-  // always go hit network and update cache
-  evt.waitUntil(update(evt).then(refresh));
-  
 });
 
 
-function fromCache(evt) {
+async function networkThenCache(evt) {
 
-  // return promise to open cache
-  return caches.open(CACHE_NAME).then(function (cache) {
+  // start with live page hit every time
+  try {
+    const response = await fetch(evt.request);
 
-    // when the cache is open, check request
-    return cache.match(evt.request).then(function(response) {
+    // begin async cache if we got a response
+    evt.waitUntil(updateCache(evt.request, response));
 
-      // if we get a cache hit - return response
-      if (response) { return response;}
+    // return the response right away
+    return response;
+  }
+  catch (e) {
+    // open cache and look for match
+    const cache = await caches.open(CACHE_NAME);
+    const cacheHit = await cache.match(evt.request);
 
-      // otherwise, fallback to network (we'll update later)
-      return fetch(evt.request).then(function(response) {
-        return response;
-      });
+    // if we get a cache hit - return response
+    if (cacheHit) { return cacheHit; }
 
-    }).catch(function() {
-      // If both fail (we're probably offline), show a generic fallback:
-      return caches.match('/offline.html');
-    })
-  });
+    // if both fail (we're probably offline), show a generic fallback:
+    return caches.match('/offline.html');
+  }
 }
 
 
-function update(evt) {
-  var request = evt.request.clone()
-
-  var shouldUpdate = request.method === "GET" && 
-                    !/http:\/\/localhost:\d+\/browser-sync/i.test(request.url)
-  if (!shouldUpdate) { return; }
-
-
-  // go get live page hit
-  return fetch(request).then(function (response) {
-
+async function updateCache(request, response) {
     // clone response so we don't modify original
     var responseToCache = response.clone(); 
 
-    var shouldCache = response &&
+    var shouldCache = request.method === "GET" && 
+                      !/http:\/\/localhost:\d+\/browser-sync/i.test(request.url) &&
+                      response &&
                       response.status === 200 &&
                       response.type === 'basic';    
 
-    if (!shouldCache) { return responseToCache }
-
-    // return promise to open cache
-    return caches.open(CACHE_NAME).then(function (cache) {
-      return cache.put(request, responseToCache).then(function () {
-        return response;
-      });
-    });
-
-  });
-}
-
-function refresh(response) {
-  // if we didn't get anything, head back
-  if (!response) return;
-  
-  return self.clients.matchAll().then(function (clients) {
-    clients.forEach(function (client) {
-
- 
-      var message = {
-        type: 'refresh',
-        url: response.url,
-
- 
-        eTag: response.headers.get('ETag')
-      };
-
- 
-      client.postMessage(JSON.stringify(message));
-    });
-  });
+    if (shouldCache) {
+      // return promise to open cache
+      const cache = await caches.open(CACHE_NAME);
+      await cache.put(request, responseToCache);
+      return response;
+     }
+    
 }

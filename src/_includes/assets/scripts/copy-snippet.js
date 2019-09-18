@@ -4,18 +4,19 @@ document.addEventListener("click", function(e) {
     // if event was raised inside a copy button
     var btn = el.closest(".btn-copy")
     if (btn) {
-        var btnTxt = btn.querySelector(".btn-text")
-        btnTxt.innerText = "Copied!"
-
-        // revert text after 3 seconds
-        setTimeout(function() {
-          btnTxt.innerText = "Copy"
-        }, 3000)
-      
-
+       
         var text = el.nextSibling.innerText
         copyToClipboard(text, function() {
-            console.log("Copied: " + text)
+
+          // success!
+          var btnTxt = btn.querySelector(".btn-text")
+          btnTxt.innerText = "Copied!"
+  
+          // revert text after 3 seconds
+          setTimeout(function() {
+            btnTxt.innerText = "Copy"
+          }, 3000)
+          
         })
     }
 })
