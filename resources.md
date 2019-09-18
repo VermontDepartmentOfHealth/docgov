@@ -24,6 +24,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [11ty - navigation links with active class](https://www.11ty.io/docs/collections/#example%3A-navigation-links-with-an-active-class-added-for-on-the-current-page)
 * [11ty - apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
 * [11ty - content dates](https://www.11ty.io/docs/dates/)
+* [11ty - ignores](https://www.11ty.io/docs/ignores/)
+
 
 ## JAMStack
 

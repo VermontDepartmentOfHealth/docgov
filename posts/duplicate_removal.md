@@ -9,7 +9,7 @@ summary: "A brief description of using CTEs to remove duplicates from a table."
 
 ## Overview
 
-Imports from a variety of sources and direct entry of records can often result in duplicate records within database tables. These duplicates make many operations unreliable and threaten overall data integrity and. One effective strategy for removing duplicates is to use a [CTE](https://www.essentialsql.com/introduction-common-table-expressions-ctes/) (Common Table Expression) and a [`PARTITION`](http://www.sqltutorial.org/sql-window-functions/sql-partition-by/) clause. 
+Imports from a variety of sources and direct entry of records can often result in duplicate records within database tables. These duplicates make many operations unreliable and threaten overall data integrity and. One effective strategy for removing duplicates is to use a [CTE](https://www.essentialsql.com/introduction-common-table-expressions-ctes/) (Common Table Expression) and a [`PARTITION`](http://www.sqltutorial.org/sql-window-functions/sql-partition-by/) clause.
 
 ## Example
 

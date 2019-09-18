@@ -72,7 +72,7 @@ Agile
     ~ A collection of development practices that aim to deliver smaller, more incremental software with a full team approach
 
 Kanban
-    ~ A board to track the status of tasks throughout the software development lifecycle. Also a style of process management that limits work in progress. 
+    ~ A board to track the status of tasks throughout the software development lifecycle. Also a style of process management that limits work in progress.
       See also *information radiator*.
 
 
