@@ -1,7 +1,7 @@
 ---
 title_word: Redgate
 title: Redgate Snippets
-tags: ['post', 'redgate']
+tags: ['post', 'redgate', 'sql']
 authors: ['Brian']
 date: 2019-09-17
 summary: "An overview of how to create custom Redgate Snippets"
