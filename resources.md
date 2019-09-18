@@ -64,6 +64,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [a11y - label svg alt text](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names)
 * [a11y - FF a11y inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
 * [a11y - semantic vs decorative icons](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
+* [a11y - SVG alt text and role](https://stackoverflow.com/q/57983591/1366033)
 
 ## Markdown
 
