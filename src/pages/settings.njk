@@ -24,24 +24,44 @@ Device specific settings are saved in <code>localStorage</code> on this device
 
 <div class="theme-picker">
 
-  <div class="themes">
-    <label >
-      <input type="radio" name="theme" value="gist" id="gist" >
-      <span>Gist</span>
-    </label>
-    <label >
-      <input type="radio" name="theme" value="github" id="github" >
-      <span>Github</span>
-    </label>
-    <label >
-      <input type="radio" name="theme" value="ocean" id="ocean" checked >
-      <span>Ocean</span>
-    </label>
-    <label >
-      <input type="radio" name="theme" value="vs" id="vs" >
-      <span>VS 2015</span>
-    </label>
-  </div>
+  <ol class="themes list-unstyled">
+    <li class="opt-group">
+      <span class="opt-group-title themes-dark">Dark</span>
+      <ol class="list-unstyled">
+        <li>
+          <label >
+            <input type="radio" name="theme" value="ocean" id="ocean" checked >
+            <span>Ocean</span>
+          </label>
+        </li>
+        <li>
+            <label >
+              <input type="radio" name="theme" value="vs" id="vs" >
+              <span>VS 2015</span>
+            </label>
+        </li>
+      </ol>
+    </li>
+
+    <li class="opt-group">
+      <span class="opt-group-title themes-light">Light</span>
+      <ol class="list-unstyled">
+        <li>
+          <label >
+            <input type="radio" name="theme" value="gist" id="gist" >
+            <span>Gist</span>
+          </label>
+        </li>
+        <li>
+          <label >
+            <input type="radio" name="theme" value="github" id="github" >
+            <span>Github</span>
+          </label>
+        </li>
+      </ol>
+    </li>
+
+  </ol>
 
   {% markdown %}
   ```html
@@ -60,7 +80,7 @@ Device specific settings are saved in <code>localStorage</code> on this device
 
 
 
-<style>
+<style type="text/css">
 .settings .display-toggle {
   float: none;
 }
@@ -85,6 +105,10 @@ Device specific settings are saved in <code>localStorage</code> on this device
     cursor: pointer;
 }
 
+.themes .opt-group ol {
+    margin-left: 1rem;
+}
+
 .themes input[type=radio] {
     height: 0;
     width: 0;
@@ -92,9 +116,18 @@ Device specific settings are saved in <code>localStorage</code> on this device
     left: -999px;
 }
 
-
+.opt-group .themes-dark {
+  width: 7em;
+  background: #4c4c4c;
+  color: white;
+}
+.opt-group .themes-light {
+  width: 7em;
+  background: #f1f1f1;
+  color: black;
+}
 .themes span {
-    width: 100px;
+    width: 6em;
     display: inline-block;
     padding: 0px 5px;
     border-radius: 2px;

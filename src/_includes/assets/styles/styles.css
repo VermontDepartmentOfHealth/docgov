@@ -186,19 +186,23 @@ aside.toc {
 }
 
 .toc a {
-  color: #436877;
+  color: #66777d;
   text-decoration: none;
   position: relative;
   transition: color .3s ease;
+  width: 100%;
+  display: inline-block;
 }
-.toc a:hover {
+.toc a:hover,
+.toc li.active > a {
   color: #1a7498;
 }
 .toc a::before {
   content: "{";
   color: #1a7498;
   position: absolute;
-  left: -11px;
+  left: -10px;
+  top: -1px;
   opacity: 0;
   transition: opacity .3s ease;
 }
@@ -235,19 +239,23 @@ h1 a, h2 a, h3 a {
 
 pre, code {
   font-family: 'Fira Code', monospace;
+  font-size: .9em;
 }
 code {
   border-radius: 2px;
   padding: 1px 2px;
-  border: 1px solid #ffdeae;
+  border: 1px solid #ffedd2;
+  background: #fff8ee;
 }
 
 pre code {
   width: 100%;
   display: block;
   border: none;
+  background: inherit;
   overflow-x: auto;
   padding: 0.5em;
+  max-height: 40rem;
 }
 
 s {
@@ -1060,6 +1068,22 @@ td svg {
   transform: translateY(-8px)rotate(-45deg);
 }
 
+/* custom select */
+::-moz-selection {
+  background: #97defd; /* Gecko Browsers */
+}
+::selection {
+  background: #97defd; /* WebKit/Blink Browsers */
+}
+
+.theme-ocean .hljs *::-moz-selection {
+  background: #0171a1; /* WebKit/Blink Browsers */
+}
+.theme-ocean .hljs * ::selection {
+  background: #0171a1; /* WebKit/Blink Browsers */
+}
+
+
 /* custom scrollbar */
 
 /* width */
@@ -1271,14 +1295,19 @@ aside::-webkit-scrollbar {
 }
 
 /* copy snippet */
-.hljs > code {
+.hljs-container.hljs {
+  overflow: hidden;
   position: relative;
+}
+
+.hljs {
+  margin: 0;
 }
 
 .btn-copy {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: .5em;
+  top: .5em;
   opacity: 0;
   transition: opacity .4s ease;
 }
@@ -1286,7 +1315,14 @@ aside::-webkit-scrollbar {
   opacity: 1;
 }
 
+.btn-text {
+  font-size: 1.2em;
+  margin-right: .5em;
+}
+
 .btn-icon {
+  display: flex;
+  align-items: center;
   padding: 3px 6px;
   border: none;
   box-shadow: none;
@@ -1295,6 +1331,10 @@ aside::-webkit-scrollbar {
   border-radius: 1px;
   margin: 1px;
   border: 1px solid transparent;
+  width: auto;
+  white-space: normal;
+  user-select: none;
+  color: inherit;
 }
 .btn-icon:focus {
   outline: none;
@@ -1308,6 +1348,18 @@ aside::-webkit-scrollbar {
   width: 20px;
 }
 
-.theme-ocean .btn-copy img {
+/* light / dark syntax theme toggles */
+.btn-icon:hover {
+  color: black;
+}
+
+.theme-ocean .btn-icon:hover,
+.theme-vs .btn-icon:hover{
+  color: white;
+}
+
+.theme-ocean .btn-copy img,
+.theme-vs .btn-copy img {
   filter: invert(1);
 }
+
