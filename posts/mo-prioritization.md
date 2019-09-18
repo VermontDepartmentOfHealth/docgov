@@ -22,9 +22,7 @@ In order to triage incoming tickets, we're currently making use of the following
 | **Backlog** | {% include "assets/images/icons/jira/backlog.svg" %} | <div style="background:#131372" class="fill"></div> |
 | **Unknown** | {% include "assets/images/icons/jira/unknown.svg" %} | <div style="background:#B0BAC5" class="fill"></div> |
 
-## {% include "assets/images/icons/jira/blocker.svg" %} Blocker
-
-<!-- Authoring Hint: disable line wrap / zoom out for super wide table text -->
+## Blocker
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** - Blocks development and/or testing work, production could not run. Crashes, loss of data, severe memory leak.
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** - Vital to release.  Time mandated deadline by legislature or grant
@@ -32,7 +30,7 @@ In order to triage incoming tickets, we're currently making use of the following
 
 
 
-## {% include "assets/images/icons/jira/major.svg" %}  Major
+## Major
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** -  Major loss of function. 
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** - ex. code refactoring for maintainability, providing better UX on forms
@@ -40,7 +38,7 @@ In order to triage incoming tickets, we're currently making use of the following
 
 
 
-## {% include "assets/images/icons/jira/medium.svg" %} Medium
+## Medium
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** -  Impairment to functionality with time intensive or incomplete workaround.
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** - Quality of Life enhancement which adds value to interface, process.  Makes usage and maintainability easier or more efficient. 
@@ -49,7 +47,7 @@ In order to triage incoming tickets, we're currently making use of the following
 
 
 
-## {% include "assets/images/icons/jira/minor.svg" %} Minor
+## Minor
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** -  Minor loss of function, or other problem where easy workaround is present.
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** -  Minor addition of business value from completing 
@@ -57,14 +55,14 @@ In order to triage incoming tickets, we're currently making use of the following
 
 
 
-## {% include "assets/images/icons/jira/trivial.svg" %} Trivial
+## Trivial
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** - Cosmetic problem like misspelt words or misaligned text. 
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** -  Minor UI tweaks. Addressing minor technical debt issues in code and documentation.
 
 
 
-## {% include "assets/images/icons/jira/backlog.svg" %} Backlog
+## Backlog
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** - ~~N/A~~
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** -  Work that can be completed as time allows. Ex. Efficiency improvements, non-critical lifecycle upgrades, technical debt 
@@ -72,7 +70,7 @@ In order to triage incoming tickets, we're currently making use of the following
 
 
 
-## {% include "assets/images/icons/jira/unknown.svg" %} Unknown
+## Unknown
 
 * {% include "assets/images/icons/jira/bug.svg" %}  **Bug** -Unknown Priority at this time. For requester to review and assign.  
 * {% include "assets/images/icons/jira/story.svg" %} **Enhancement** -  Unknown Priority at this time. For requester to review and assign.  
