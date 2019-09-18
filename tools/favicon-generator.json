@@ -1,5 +1,5 @@
 {
-	"masterPicture": "./src/_includes/assets/images/vt-book-logo.svg",
+	"masterPicture": "./assets/images/vt-book-logo.svg",
 	"iconsPath": "/assets/images/icons/fav/",
 	"design": {
 		"ios": {

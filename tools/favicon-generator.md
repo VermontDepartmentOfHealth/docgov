@@ -17,7 +17,7 @@ npm run favicon
 Which will execute the following command
 
 ```bash
-npx real-favicon generate "./tools/favicon-generator.json" "./tools/faviconData.json" "./src/_includes/assets/images/icons/fav"
+npx real-favicon generate "./tools/favicon-generator.json" "./tools/faviconData.json" "./assets/images/icons/fav"
 ```
 
 After the generation is complete, move the following files to the src root:

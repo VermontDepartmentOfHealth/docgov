@@ -1,4 +1,4 @@
-const dateDisplay = require("./_plugins/dates");
+const dateDisplay = require("./plugins/dates");
 var he = require('he');
 
 class SearchIndex {

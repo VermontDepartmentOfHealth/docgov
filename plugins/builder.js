@@ -5,7 +5,7 @@
  * @param {string} categoryKey on a category detail page, the unique key eg. "name"
  * @param {string} categoryDataField on a category detail page, any extra info eg. "summary"
  * @param {string} postDataFieldName on a content post, the font matter data field eg. "author"
- * @param {string} filePath the folder path where category detail page is placed eg. "./src/projects/"
+ * @param {string} filePath the folder path where category detail page is placed eg. "./projects/"
  */
 module.exports =  function BuildCollection(collection, categoryTagName,  categoryKey, categoryDataField, postDataFieldName, filePath) {
     validateCategory(collection, categoryTagName,  categoryKey, categoryDataField, postDataFieldName, filePath)

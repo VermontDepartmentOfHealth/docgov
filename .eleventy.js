@@ -3,10 +3,13 @@
 module.exports = function(eleventyConfig) {
 
     // static passthroughs - remap to root
-    eleventyConfig.addPassthroughCopy({"src/_includes/assets/images/icons/fav/favicon.ico": "/favicon.ico"});
-    eleventyConfig.addPassthroughCopy({"src/_includes/assets/images/icons/fav/manifest.json": "/manifest.json"});
-    eleventyConfig.addPassthroughCopy({"src/_includes/assets/scripts/service-worker.js": "/service-worker.js"});
-    eleventyConfig.addPassthroughCopy({"src/_includes/assets": "/assets"});
+    eleventyConfig.addPassthroughCopy({"assets/images/icons/fav/favicon.ico": "/favicon.ico"});
+    eleventyConfig.addPassthroughCopy({"assets/images/icons/fav/manifest.json": "/manifest.json"});
+    eleventyConfig.addPassthroughCopy({"assets/scripts/service-worker.js": "/service-worker.js"});
+    
+    eleventyConfig.addPassthroughCopy("assets/images");
+    eleventyConfig.addPassthroughCopy("assets/scripts");
+    eleventyConfig.addPassthroughCopy("assets/styles");
 
     // grab 3rd party dependencies
     eleventyConfig.addPassthroughCopy({"node_modules/mark.js/dist/mark.min.js": "/vendor/scripts/mark.js"});
@@ -18,9 +21,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"node_modules/typeface-roboto/files": "/assets/fonts/"});
 
     // add filters
-    eleventyConfig.addFilter("cssmin", require("./src/_plugins/clean-css.js") );
-    eleventyConfig.addFilter("jsmin", require("./src/_plugins/clean-js.js") );
-    eleventyConfig.addFilter("dateDisplay", require("./src/_plugins/dates.js") );
+    eleventyConfig.addFilter("cssmin", require("./plugins/clean-css.js") );
+    eleventyConfig.addFilter("jsmin", require("./plugins/clean-js.js") );
+    eleventyConfig.addFilter("dateDisplay", require("./plugins/dates.js") );
     eleventyConfig.addFilter("removeHash", html => html.replace(/ #/g,""));
     eleventyConfig.addFilter("removeParen", html => html.replace(/\(.*?\)/g,""));
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> !["post","draft"].includes(t)));
@@ -29,15 +32,15 @@ module.exports = function(eleventyConfig) {
 
     
     // custom collections
-    let builder = require("./src/_plugins/builder.js")
-    eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./src/projects/"));
-    eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./src/authors/"));
-    eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./src/teams/"));
-    eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./src/departments/"));
+    let builder = require("./plugins/builder.js")
+    eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./projects/"));
+    eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./authors/"));
+    eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./teams/"));
+    eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./departments/"));
  
 
     // configure syntax highlighting
-    let md = require("./src/_plugins/customize-markdown.js")()
+    let md = require("./plugins/customize-markdown.js")()
     eleventyConfig.setLibrary("md", md);
 
 
@@ -53,8 +56,9 @@ module.exports = function(eleventyConfig) {
         
     return {
         dir: {
-            input: "src",
-            layouts: "_layouts"
+            "data": "data",
+            includes: "assets",
+            layouts: "layouts"
         },
 
         // By default markdown files are pre-processing with liquid template engine

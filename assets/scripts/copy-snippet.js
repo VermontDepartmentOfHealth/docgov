@@ -4,8 +4,8 @@ document.addEventListener("click", function(e) {
     // if event was raised inside a copy button
     var btn = el.closest(".btn-copy")
     if (btn) {
-       
-        var text = el.nextSibling.innerText
+        var text = btn.nextSibling.innerText
+
         copyToClipboard(text, function() {
 
           // success!
