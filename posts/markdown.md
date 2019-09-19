@@ -146,31 +146,6 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 </span>
 </div>
 
-<div class="split">
-<span>
-
-
-\- [x] Make a Task List
-\- [x] Make a Nested Task List
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\- [ ] Learn *MORE* Markdown.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\- [ ] ...?
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\- [ ] Profit!
-\- [ ]  
-
-</span>
-<span>
-
-- [x] Make a Task List
-- [x] Make a Nested Task List
-  - [ ] Learn *MORE* Markdown.
-  - [ ] ...?
-  - [ ] Profit!
-- [ ]  
-
-</span>
-</div>
-
-
 ### Horizontal Rule
 
 <div class="split">
