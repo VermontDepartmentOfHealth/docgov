@@ -146,14 +146,14 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 </span>
 </div>
 
-
-
 ### Horizontal Rule
 
 <div class="split">
 <span>
 
-\---
+Three Dashes: \---
+OR three Astrix: \***
+OR three Underscore: \___
 
 </span>
 <span>
