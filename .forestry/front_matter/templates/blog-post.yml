@@ -46,8 +46,8 @@ fields:
     required: false
     options: []
     source:
-      type: pages
+      type: simple
       section: authors-a678b3ef-5d67-4e33-bd5e-be0636dae19b
       file: 
       path: 
-  label: Department
+  label: Department (optional)
