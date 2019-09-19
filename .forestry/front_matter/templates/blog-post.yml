@@ -39,3 +39,15 @@ fields:
 - type: textarea
   name: summary
   label: Post Summary
+- name: department
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors-a678b3ef-5d67-4e33-bd5e-be0636dae19b
+      file: 
+      path: 
+  label: Department
