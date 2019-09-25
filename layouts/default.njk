@@ -52,7 +52,7 @@
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
 {% set displayTOC = tags | isPostType %}
-<body class="page {{class}} nav-closed {% if displayTOC %} toc-layout {% endif %}">
+<body class="page {{pageClass}} nav-closed {% if displayTOC %} toc-layout {% endif %}">
 
     {# hide by default - show if offline #}
     <div class="banner banner-dark banner-offline">
@@ -104,6 +104,8 @@
                     {% include "assets/images/icons/fa/edit.svg" %}
                     Edit this Page
                 </a>
+            </li>
+            <li>
                 <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/commits/master/{{ page.inputPath }}">
                     {% include "assets/images/icons/fa/history.svg" %}
                     View Page History
@@ -122,15 +124,20 @@
 
     {# capture the JS content as a Nunjucks variable #}
     {% set js %}
+        {% include "assets/scripts/polyfill.js" %}
         {% include "assets/scripts/nav-toggle.js" %}
         {% include "assets/scripts/theme-picker.js" %}
         {% include "assets/scripts/register-service-worker.js" %}
         {% include "assets/scripts/offline.js" %}
         {% include "assets/scripts/copy-snippet.js" %}
         {% include "assets/scripts/tooltip.js" %}
+        {% if pageClass and 'search' in pageClass %}
+            {% include "assets/scripts/search.js" %}   
+        {% endif %}
+        
     {% endset %}
     {# feed it through our cssmin filter to minify #}
-    <script type="text/javascript">{{ js | jsmin | safe }}</script>
+    <script type="text/javascript">{{ js  | safe }}</script>
 
     {# we only need scroll spy if we have a table of contents #}
     {% if displayTOC %}

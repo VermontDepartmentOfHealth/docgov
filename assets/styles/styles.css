@@ -18,10 +18,33 @@ html {
   box-sizing: inherit;
 }
 
+/* ie11 fallback */
+header.header,
+main.content,
+footer.footer,
+div.banner {
+  margin-left: 225px;
+}
 body {
   /* old display for ie11 compatibility */
   display: flex;
   flex-direction: column;
+}
+
+
+@supports (display: grid) {
+  /* if we have grid, we don't need left margin */
+  header.header,
+  main.content,
+  footer.footer,
+  div.banner {
+    margin-left: 0;
+  }
+}
+
+
+
+body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr;
@@ -139,6 +162,13 @@ main.content {
     display:flex
   }
 
+  header.header,
+  main.content,
+  footer.footer,
+  div.banner {
+    margin-left: 0;
+  }
+
   /* remove nav from grid-template */
   body.page {
     grid-template-columns: 1fr minmax(100px, 48rem) 1fr;
@@ -155,6 +185,10 @@ main.content {
 
   .nav-closed nav.sidenav {
     left: -240px;
+  }
+
+  body:not(.nav-closed) .banner {
+    margin-left: 225px;
   }
 
   .header .brand {

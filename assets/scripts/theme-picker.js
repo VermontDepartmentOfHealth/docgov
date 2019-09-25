@@ -1,7 +1,7 @@
 // on form load, set radio and body (immediately after body opening tag)
 function setTheme(val) {
-    // remove all themes
-    document.body.className = document.body.className.split(" ").filter(function(c) { return !c.startsWith("theme-")}).join(" ");
+    // remove all themes 
+    document.body.className = document.body.className.split(" ").filter(function(c) { return !c.startsWith("theme-")}).join(" "); 
     // set current theme
     document.body.classList.add("theme-" + val)
 }
