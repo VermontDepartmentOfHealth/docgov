@@ -13,6 +13,76 @@ The `MERGE` statement can be used to insert, update or delete records on a targe
 
 ## Example
 
+A Customers table contains records for everyone that has made a purchas at our store. At the end of the day all transactions must be processed by either updating existing customer records or inserting new ones.
+
+### Create example tables
+
+```SQL
+CREATE TABLE Customers(
+  FirstName         VARCHAR(20)
+  ,LastName         VARCHAR(20)
+  ,PhoneNumber      VARCHAR(20)
+  ,LastPurchase     VARCHAR(20)
+  ,IsRepeatCustomer BIT
+ );
+
+  
+CREATE TABLE Transactions (
+  Customer_FirstName    VARCHAR(20)
+  ,Customer_LastName    VARCHAR(20)
+  ,Customer_PhoneNumber VARCHAR(20)
+  ,PurchasedItem        VARCHAR(20)
+);
+```
+
+### Add example rows
+
+```SQL
+
+INSERT INTO Customers(FirstName,
+                      LastName,
+                      PhoneNumber,
+                      LastPurchase,
+                      IsRepeatCustomer)
+VALUES ('Alfred', 'Jones',  '802 555 1234', 'Clock',    0),
+       ('Ashley', 'Berry',  '802 333 9999', 'Table Saw',0),
+       ('Jeff',   'Probst', '802 222 0000', 'Fire Wood',0);
+
+
+INSERT INTO Transactions(Customer_FirstName,
+                         Customer_LastName,
+                         Customer_PhoneNumber,
+                         PurchasedItem)
+VALUES ('Samantha', 'Smith',    '518 123 9876', 'Apple Basket'),
+       ('Henry',    'Mcdonald', '802 122 4322', 'Trampoline'),
+       ('Ashley',   'Berry',    '802 333 9999', 'Saw Blade');
+```
+
+### We have these two tables
+
+```SQL
+SELECT * FROM Customers;
+SELECT * FROM Transactions;
+```
+
+### Customers
+
+| FirstName | LastName | PhoneNumber  | LastPurchase | IsRepeatCustomer |
+|-----------|----------|--------------|--------------|------------------|
+| Alfred    | Jones    | 802 555 1234 | Clock        | false            |
+| Ashley    | Berry    | 802 333 9999 | Table Saw    | false            |
+| Jeff      | Probst   | 802 222 0000 | Fire Wood    | false            |
+
+### Transactions
+
+| Customer_FirstName | Customer_LastName | Customer_PhoneNumber | PurchasedItem |
+|--------------------|-------------------|----------------------|---------------|
+| Samantha           | Smith             | 518 123 9876         | Apple Basket  |
+| Henry              | Mcdonald          | 802 122 4322         | Trampoline    |
+| Ashley             | Berry             | 802 333 9999         | Saw Blade     |
+
+### Exectute `MERGE` with Transactions as source table and Customers as Target Table
+
 ```SQL
 MERGE INTO targetCustomerTable t
   USING sourceCustomerTable s
