@@ -934,6 +934,12 @@ td svg {
   max-width: 30px;
 }
 
+table td.highlight {
+  background-color:#857bf4;
+}
+table tr.border td {
+  border-color:#857bf4; border-width:medium;
+}
 
 
 /* categories
