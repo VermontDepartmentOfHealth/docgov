@@ -650,12 +650,12 @@ input:focus + .display-icon {
   background: #777dcc;
 }
 
-.display-list .post-meta, 
-.display-list .post-summary {
+.display-density-list .post-meta, 
+.display-density-list .post-summary {
     display: none;
 }
 
-.display-list .post h2 {
+.display-density-list .post h2 {
     margin-top: 0.3em;
 }
 
@@ -1076,10 +1076,10 @@ td svg {
   background: #97defd; /* WebKit/Blink Browsers */
 }
 
-.theme-ocean .hljs *::-moz-selection {
+.highlight-theme-ocean .hljs *::-moz-selection {
   background: #0171a1; /* WebKit/Blink Browsers */
 }
-.theme-ocean .hljs * ::selection {
+.highlight-theme-ocean .hljs * ::selection {
   background: #0171a1; /* WebKit/Blink Browsers */
 }
 
@@ -1353,13 +1353,19 @@ aside::-webkit-scrollbar {
   color: black;
 }
 
-.theme-ocean .btn-icon:hover,
-.theme-vs .btn-icon:hover{
+.highlight-theme-ocean .btn-icon:hover,
+.highlight-theme-vs .btn-icon:hover{
   color: white;
 }
 
-.theme-ocean .btn-copy img,
-.theme-vs .btn-copy img {
+.highlight-theme-ocean .btn-copy img,
+.highlight-theme-vs .btn-copy img {
   filter: invert(1);
+}
+
+/* disable transitions during page load */
+.page-loading,
+.page-loading * {
+  transition: none !important;
 }
 
