@@ -52,7 +52,11 @@
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
 {% set displayTOC = tags | isPostType %}
-<body class="page {{class}} nav-closed {% if displayTOC %} toc-layout {% endif %}">
+<body class="page no-js page-loading nav-closed {{class}} {% if displayTOC %} toc-layout {% endif %}">
+
+    {# scripts to run asap #}
+    {% set js %} {% include "assets/scripts/init.js" %}{% endset %}
+    <script type="text/javascript">{{ js | jsmin | safe }}</script>
 
     {# hide by default - show if offline #}
     <div class="banner banner-dark banner-offline">
