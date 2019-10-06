@@ -13,7 +13,7 @@ The `MERGE` statement can be used to insert, update or delete records on a targe
 
 ## Example
 
-A Customers table contains records for everyone that has made a purchas at our store. At the end of the day all transactions must be processed by either updating existing customer records or inserting new ones.
+A Customers table contains records for everyone that has made a purchase at a store. At the end of the day all transactions must be processed by either updating existing customer records or inserting new ones.
 
 ### Create example tables
 
