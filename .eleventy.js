@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets/images");
     eleventyConfig.addPassthroughCopy("assets/scripts");
     eleventyConfig.addPassthroughCopy("assets/styles");
+    eleventyConfig.addPassthroughCopy("admin");
 
     // grab 3rd party dependencies
     eleventyConfig.addPassthroughCopy({"node_modules/mark.js/dist/mark.min.js": "/vendor/scripts/mark.js"});
