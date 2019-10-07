@@ -938,6 +938,7 @@ table th {
     border: 1px solid #ddd;
     padding: 8px;
     position: relative;
+    overflow: hidden;
 }
 
 table tr:nth-child(even){background-color: #fefefe;}
@@ -956,25 +957,13 @@ td svg {
 }
 
 /* table highlighting */
-td > ins, td > mark {
-  display: block;
-  margin: -8px;
-  padding: 8px;
-}
-
-td.ins {
-  background: #77ff9a;
-  border-color: #4ae672;
-}
-td.mark {
-  background: #fff36b;
-  border-color: #ece056;
-}
-td.ins > ins,
-td.mark > mark {
+td > ins  {
+  box-shadow: 0 0 0 250px #77ff9a;
   border: none;
-  margin: 0;
-  padding: 0;
+}
+td > mark  {
+  box-shadow: 0 0 0 250px #fff36b;
+  border: none;
 }
 
 

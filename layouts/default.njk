@@ -134,12 +134,6 @@
         {% if pageClass and 'search' in pageClass %}
             {% include "assets/scripts/search.js" %}   
         {% endif %}
-        document.querySelectorAll('td > mark').forEach(function(item){
-            item.parentElement.classList.add("mark")
-        });
-        document.querySelectorAll('td > ins').forEach(function(item){
-            item.parentElement.classList.add("ins")
-        });
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js  | safe }}</script>
