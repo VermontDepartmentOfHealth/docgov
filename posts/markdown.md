@@ -216,6 +216,24 @@ var pet = {
 
 ## Extensions
 
+### Inline Text
+
+
+<div class="split">
+<span>
+
+\+\+inserted\+\+  
+\=\=mark\=\=  
+
+</span>
+<span>
+
+++inserted++  
+==mark==  
+
+</span>
+</div>
+
 ### Definition List
 
 

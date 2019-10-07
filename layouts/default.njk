@@ -134,7 +134,6 @@
         {% if pageClass and 'search' in pageClass %}
             {% include "assets/scripts/search.js" %}   
         {% endif %}
-        
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js  | safe }}</script>
