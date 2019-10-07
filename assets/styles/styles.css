@@ -326,6 +326,25 @@ abbr[title] {
   text-decoration: underline dotted #3e71c1;
 }
 
+mark {
+  padding: 1px;
+  background: #fff36b;
+  border: 1px solid #ece056;
+  border-radius: 1px;
+  
+}
+
+ins {
+  padding: 1px;
+  color: black;
+  background: #77ff9a;
+  border: 1px solid #4ae672;
+  border-radius: 1px;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+
 /* alerts */
 .alert {
   padding: 5px 10px;

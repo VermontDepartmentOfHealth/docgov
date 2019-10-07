@@ -30,11 +30,15 @@ module.exports =  function CustomizeMD() {
    // add file extension
    let markdownItFile = require("./markdown-it-file");
    let markdownItDefList = require("markdown-it-deflist")
+   let markdownItMark = require('markdown-it-mark')
+   let markdownItIns = require('markdown-it-ins')
 
    return markdownIt(options)
             .use(markdownItAnchor, opts)
             .use(markdownItFile)
-            .use(markdownItDefList);
+            .use(markdownItDefList)
+            .use(markdownItMark)
+            .use(markdownItIns);
 }
 
   
