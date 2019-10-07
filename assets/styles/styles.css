@@ -78,6 +78,7 @@ aside.toc     { grid-area: toc  }
 
 main.content {
   position: relative;
+  overflow-x: auto;
 }
 
 /* sidenav */
@@ -921,6 +922,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin: 1em 0em;
+    min-width: 580px; /* todo - more responsive table width */
 }
 
 table th {
@@ -953,11 +955,26 @@ td svg {
   max-width: 30px;
 }
 
-table td.highlight {
-  background-color:#857bf4;
+/* table highlighting */
+td > ins, td > mark {
+  display: block;
+  margin: -8px;
+  padding: 8px;
 }
-table tr.border td {
-  border-color:#857bf4; border-width:medium;
+
+td.ins {
+  background: #77ff9a;
+  border-color: #4ae672;
+}
+td.mark {
+  background: #fff36b;
+  border-color: #ece056;
+}
+td.ins > ins,
+td.mark > mark {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 

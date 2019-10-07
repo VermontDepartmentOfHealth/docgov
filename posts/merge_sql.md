@@ -103,50 +103,13 @@ MERGE INTO targetCustomerTable t
 
 Here's the Customer Table after `Merge` operation, which adds two new rows and updates one row.
 
- <table>
-  <tr>
-    <th>FirstName</th>
-    <th>LastName</th>
-    <th>PhoneNumber</th>
-    <th>LastPurchase</th>
-    <th>IsRepeatCustomer</th>
-  </tr>
-  <tr>
-    <td> Alfred</td>
-    <td>Jones</td>
-    <td>802 555 1234</td>
-    <td>Clock</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td class=>Ashley</td>
-    <td class=>Berry</td>
-    <td class=>802 333 9999</td>
-    <td class="highlight">Saw Blade</td>
-    <td class="highlight">true</td>
-  </tr>
-  <tr>
-    <td>Jeff</td>
-    <td>Probst</td>
-    <td>802 222 0000</td>
-    <td>Fire Wood</td>
-    <td>false</td>
-  </tr>
-  <tr class="border">
-    <td>Samantha</td>
-    <td>Smith</td>
-    <td>518 123 9876</td>
-    <td>Apple Basket</td>
-    <td>false</td>
-  </tr>
-  <tr class="border">
-    <td>Henry</td>
-    <td>McDonald</td>
-    <td>802 122 4322</td>
-    <td>Trampoline</td>
-    <td>false</td>
-  </tr>
-</table>
+| FirstName     | LastName     | PhoneNumber      | LastPurchase     | IsRepeatCustomer |
+|---------------|--------------|------------------|------------------|------------------|
+| Alfred        | Jones        | 802 555 1234     | Clock            | FALSE            |
+| Ashley        | Berry        | 802 333 9999     | ==Saw Blade==    | ==TRUE==         |
+| Jeff          | Probst       | 802 222 0000     | Fire   Wood      | FALSE            |
+| ++Samantha++  | ++Smith++    | ++518 123 9876++ | ++Apple Basket++ | ++FALSE++        |
+| ++Henry++     | ++McDonald++ | ++802 122 4322++ | ++Trampoline++   | ++FALSE++        |
 
 
 ## Notes
