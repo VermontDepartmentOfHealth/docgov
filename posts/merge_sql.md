@@ -19,16 +19,16 @@ A Customers table contains records for everyone that has made a purchase at a st
 
 ```SQL
 CREATE TABLE Customer(
-  FirstName         VARCHAR(20)
+   FirstName        VARCHAR(20)
   ,LastName         VARCHAR(20)
   ,PhoneNumber      VARCHAR(20)
   ,LastPurchase     VARCHAR(20)
   ,IsRepeatCustomer BIT
- );
+);
 
   
 CREATE TABLE Transaction (
-  Customer_FirstName    VARCHAR(20)
+   Customer_FirstName   VARCHAR(20)
   ,Customer_LastName    VARCHAR(20)
   ,Customer_PhoneNumber VARCHAR(20)
   ,PurchasedItem        VARCHAR(20)
@@ -40,21 +40,21 @@ CREATE TABLE Transaction (
 ```SQL
 
 INSERT INTO Customer(FirstName,
-                      LastName,
-                      PhoneNumber,
-                      LastPurchase,
-                      IsRepeatCustomer)
-VALUES ('Alfred', 'Jones',  '802 555 1234', 'Clock',    0),
-       ('Ashley', 'Berry',  '802 333 9999', 'Table Saw',0),
-       ('Jeff',   'Probst', '802 222 0000', 'Fire Wood',0);
+                     LastName,
+                     PhoneNumber,
+                     LastPurchase,
+                     IsRepeatCustomer)
+VALUES ('Alfred', 'Jones',  '802 555 1234', 'Clock',     0),
+       ('Ashley', 'Berry',  '802 333 9999', 'Table Saw', 0),
+       ('Jeff',   'Probst', '802 222 0000', 'Fire Wood', 0);
 
 
 INSERT INTO Transaction(Customer_FirstName,
-                         Customer_LastName,
-                         Customer_PhoneNumber,
-                         PurchasedItem)
+                        Customer_LastName,
+                        Customer_PhoneNumber,
+                        PurchasedItem)
 VALUES ('Samantha', 'Smith',    '518 123 9876', 'Apple Basket'),
-       ('Henry',    'Mcdonald', '802 122 4322', 'Trampoline'),
+       ('Henry',    'McDonald', '802 122 4322', 'Trampoline'),
        ('Ashley',   'Berry',    '802 333 9999', 'Saw Blade');
 ```
 
@@ -65,7 +65,7 @@ SELECT * FROM Customer;
 SELECT * FROM Transaction;
 ```
 
-### Customer
+#### Customer Table
 
 | FirstName | LastName | PhoneNumber  | LastPurchase | IsRepeatCustomer |
 |-----------|----------|--------------|--------------|------------------|
@@ -73,15 +73,17 @@ SELECT * FROM Transaction;
 | Ashley    | Berry    | 802 333 9999 | Table Saw    | false            |
 | Jeff      | Probst   | 802 222 0000 | Fire Wood    | false            |
 
-### Transaction Table
+#### Transaction Table
 
 | Customer_FirstName | Customer_LastName | Customer_PhoneNumber | PurchasedItem |
 |--------------------|-------------------|----------------------|---------------|
 | Samantha           | Smith             | 518 123 9876         | Apple Basket  |
-| Henry              | Mcdonald          | 802 122 4322         | Trampoline    |
+| Henry              | McDonald          | 802 122 4322         | Trampoline    |
 | Ashley             | Berry             | 802 333 9999         | Saw Blade     |
 
-### Exectute `MERGE` with Transactions as source table and Customers as Target Table
+### Execute `MERGE`
+
+In the following example, we'll execute the `MERGE` statement, with `Transactions` as the *source table* and `Customers` as the *target table*.
 
 ```SQL
 MERGE INTO targetCustomerTable t
@@ -97,9 +99,9 @@ MERGE INTO targetCustomerTable t
     VALUES(s.ID, s.Fullname, s.CurrentPurchase)
 ```
 
-### Customer Table after `Merge` operation
+### Result
 
-Merge operation adds two new rows and updates one row.
+Here's the Customer Table after `Merge` operation, which adds two new rows and updates one row.
 
  <table>
   <tr>
@@ -139,7 +141,7 @@ Merge operation adds two new rows and updates one row.
   </tr>
   <tr class="border">
     <td>Henry</td>
-    <td>Mcdonald</td>
+    <td>McDonald</td>
     <td>802 122 4322</td>
     <td>Trampoline</td>
     <td>false</td>

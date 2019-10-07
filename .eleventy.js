@@ -52,7 +52,7 @@ module.exports = function(eleventyConfig) {
 
     // add plugins
     let pluginTOC = require('eleventy-plugin-nesting-toc');
-    eleventyConfig.addPlugin(pluginTOC);
+    eleventyConfig.addPlugin(pluginTOC, {tags: ['h2, h3']});
         
     return {
         dir: {
