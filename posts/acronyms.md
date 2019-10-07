@@ -1,13 +1,17 @@
 ---
 title_word: Acronyms
 title: Acronyms List
-tags: ['post', 'overview']
-authors: ['Kyle']
-date: 2019-09-04
-summary: "A semi-complete listing of acronyms and other jargon used across the State of Vermont"
+summary: >-
+  A semi-complete listing of acronyms and other jargon used across the State of
+  Vermont
+tags:
+  - post
+  - overview
+authors:
+  - Kyle
+date: 2019-09-04T00:00:00.000Z
+updated: 2019-10-07T21:00:31.857Z
 ---
-
-
 <form id="form-filter" class="search mt-0" autocomplete="off">
     <input type="search" id="input-filter" class="hide-clear mt-1" placeholder="Type to filter" autocomplete="off">
     <label for="input-search" aria-label="Search Page" class="mt-1">
@@ -34,6 +38,13 @@ PP
 
 IMR
     ~ Immunization Registry
+
+AFIX
+    ~ Assessment Feedback Incentive eXchange. Deprecated - see IQIP
+
+IQIP
+    ~ Immunization Quality Improvement for Providers
+
 
 HHLPSS
     ~ Healthy Homes and Lead Poisoning Surveillance System
@@ -65,7 +76,6 @@ CVX
 NDC
     ~ National Drug Code - https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 
-
 ## Terms
 
 Agile
@@ -73,8 +83,7 @@ Agile
 
 Kanban
     ~ A board to track the status of tasks throughout the software development lifecycle. Also a style of process management that limits work in progress.
-      See also *information radiator*.
-
+      See also _information radiator_.
 
 <style>
 .filtering dt,
@@ -92,4 +101,5 @@ form.search input {
 </style>
 
 <script src="/vendor/scripts/mark.js"></script>
+
 <script src="/assets/scripts/filter-text.js"></script>
