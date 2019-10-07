@@ -9,5 +9,11 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@2.9.7/dist/netlify-cms.js"></script>
+  <script>
+      CMS.registerPreviewStyle("/assets/styles/styles.css");
+      CMS.registerPreviewStyle("/assets/styles/fonts.css");
+      CMS.registerPreviewStyle("/assets/styles/hljs.css");
+      CMS.registerPreviewStyle("/assets/styles/preview.css");
+  </script>
 </body>
 </html>
