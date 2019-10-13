@@ -6,7 +6,7 @@ function setDisplayDensity(val) {
 }
 
 // get stored value or default
-var siteThemeVal = localStorage.getItem('settings-display-density') || "card"
+var displayDensitySetting = localStorage.getItem('settings-display-density') || "card"
 
 // immediately set style to prevent FOUC
 setDisplayDensity(siteThemeVal)
@@ -16,7 +16,7 @@ setDisplayDensity(siteThemeVal)
 document.addEventListener("DOMContentLoaded", function(){
 
     // set appropriate state on checkboxes once they've loaded
-    var displayEl = document.querySelector("input[type='radio'][name='display-toggle'][value='" + siteThemeVal + "']")
+    var displayEl = document.querySelector("input[type='radio'][name='display-toggle'][value='" + displayDensitySetting + "']")
     if (displayEl) { displayEl.checked = true}
 
 

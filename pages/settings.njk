@@ -14,6 +14,44 @@ class: settings
 Device specific settings are saved in <code>localStorage</code> on this device
 </section>
 
+<h3 class="mt-2 mb-0" id="site-theme">Site Theme</h3>
+<div class="settings-row">
+
+  <div class="display-toggle">
+
+    <label for="light" class="display-toggle-text">Light</label>
+
+    <div class="display-toggle-group">
+      <label >
+        <input type="radio" name="site-theme" value="light" id="light" checked>
+        {% include "assets/images/icons/fa/lightbulb-on.svg" %}
+      </label>
+      <label >
+        <input type="radio" name="site-theme" value="dark" id="dark">
+        {% include "assets/images/icons/fa/lightbulb-slash.svg" %}
+      </label>
+    </div>
+
+    <label for="dark" class="display-toggle-text">Dark</label>
+  </div>
+
+  <div id="site-theme-system" class="site-theme-system radio-hidden">
+    <div class="display-toggle-group">
+      <label >
+        <input type="radio" name="site-theme" value="system" id="system">
+        {% include "assets/images/icons/fa/laptop.svg" %}
+      </label>
+    </div>
+
+    <label for="system" class="display-toggle-text">
+      Use System Theme: <b id="system-theme-current"></b>
+    </label>
+      
+  </div>
+
+</div>
+
+
 <h3 class="mt-2 mb-0" id="density">Display Density</h3>
 
 <div class="display-settings"> 
@@ -24,7 +62,7 @@ Device specific settings are saved in <code>localStorage</code> on this device
 
 <div class="theme-picker">
 
-  <ol class="themes list-unstyled">
+  <ol class="themes list-unstyled radio-hidden">
     <li class="opt-group">
       <span class="opt-group-title themes-dark">Dark</span>
       <ol class="list-unstyled">
@@ -85,7 +123,34 @@ Device specific settings are saved in <code>localStorage</code> on this device
   float: none;
 }
 
-/* theme picker */
+/* site theme */
+
+.settings-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.site-theme-system {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.site-theme-system > label {
+    display: flex;
+    align-items: center;
+}
+.site-theme-system .display-toggle-group label:first-child svg {
+    border-right: none;
+}
+#system-theme-current {
+    margin-left: 5px;
+}
+
+
+/* syntax theme  */
 .theme-picker {
     display: flex;
     margin-top: 1rem;
@@ -109,7 +174,7 @@ Device specific settings are saved in <code>localStorage</code> on this device
     margin-left: 1rem;
 }
 
-.themes input[type=radio] {
+.radio-hidden input[type=radio] {
     height: 0;
     width: 0;
     position: absolute;
@@ -136,12 +201,14 @@ Device specific settings are saved in <code>localStorage</code> on this device
 }
 .themes :checked + span {
     background: #dce7ff;
+    color: white;
     border-left: 2px solid #2565f9;
 }
 
 .themes label:hover span {
     background: #cfdaf5;
 }
+
 
 @media (max-width: 650px) {
   .theme-picker {
@@ -166,3 +233,26 @@ Device specific settings are saved in <code>localStorage</code> on this device
   
 }
 </style>
+
+<script type="text/javascript">
+
+    var colorSchemeLight = window.matchMedia('(prefers-color-scheme: light)')
+    var colorSchemeDark = window.matchMedia('(prefers-color-scheme: dark)')
+    var supportsColorScheme = colorSchemeLight.matches || colorSchemeDark.matches
+
+    var elSysThemeBlock = document.getElementById("site-theme-system")
+    var elSysThemeCurrent = document.getElementById("system-theme-current")
+
+    if (!supportsColorScheme) { elSysThemeBlock.style.display = "none" }
+
+
+    var sysThemeCurrent = colorSchemeLight.matches ? "Light" : "Dark"
+    elSysThemeCurrent.innerText = sysThemeCurrent;
+
+    // add listener to catch changes
+    colorSchemeLight.addListener(function() {
+      var sysThemeCurrent = colorSchemeLight.matches ? "Light" : "Dark"
+      elSysThemeCurrent.innerText = sysThemeCurrent;
+    })
+    
+</script>

@@ -58,6 +58,7 @@
     {% set js %} {% include "assets/scripts/init.js" %}{% endset %}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
 
+
     {# hide by default - show if offline #}
     <div class="banner banner-dark banner-offline">
         Offline Mode <img src="/assets/images/icons/fa/wifi-slash.svg" class="fa ml-1" alt="WiFi Disonnected">
@@ -128,10 +129,12 @@
     {% set js %}
         {% include "assets/scripts/nav-toggle.js" %}
         {% include "assets/scripts/settings-highlight-theme.js" %}
+        {% include "assets/scripts/settings-color-scheme.js" %}
         {% include "assets/scripts/register-service-worker.js" %}
         {% include "assets/scripts/offline.js" %}
         {% include "assets/scripts/copy-snippet.js" %}
         {% include "assets/scripts/tooltip.js" %}
+        {% include "assets/scripts/site.js" %}
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>
