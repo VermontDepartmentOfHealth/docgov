@@ -5,4 +5,5 @@ function updateIndicator() {
 // Update the online status icon based on connectivity
 window.addEventListener('online',  updateIndicator);
 window.addEventListener('offline', updateIndicator);
+
 updateIndicator();

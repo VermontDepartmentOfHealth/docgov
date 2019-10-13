@@ -57,9 +57,11 @@ title_word: Hiring             # a single word under 15 characters - will be pre
 title: Hiring Overview         # a short article title - will be
 tags: ['post', 'workforce']    # all posts must have the tag 'post' in addition to at least one other tagging option in /data/taglist
 authors: ['Kyle', 'Brian']     # an array of authors - each should correspond to a key in /authors/
-date: 2019-08-22        # the original create date for the post
-updated: 2019-08-22 # most recent change date (optional)
-summary: "An overview of ..."  # the summary that will appear when the article is referenced elsewhere.  Should be 1-2 short sentences with the elevator pitch for the article
+date: 2019-08-22               # the original create date for the post
+updated: 2019-08-22            # (optional) most recent change date
+summary: "An overview of ..."  # the summary that will appear when the article is referenced elsewhere.  
+                               # Should be 1-2 short sentences with the elevator pitch for the article
+pageClass: "search"            # (optional) class string that will be added to document.body
 ```
 
 

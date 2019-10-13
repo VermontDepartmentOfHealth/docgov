@@ -146,14 +146,14 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 </span>
 </div>
 
-
-
 ### Horizontal Rule
 
 <div class="split">
 <span>
 
-\---
+Three Dashes: \---
+OR three Astrix: \***
+OR three Underscore: \___
 
 </span>
 <span>
@@ -215,6 +215,24 @@ var pet = {
 
 
 ## Extensions
+
+### Inline Text
+
+
+<div class="split">
+<span>
+
+\+\+inserted\+\+  
+\=\=mark\=\=  
+
+</span>
+<span>
+
+++inserted++  
+==mark==  
+
+</span>
+</div>
 
 ### Definition List
 

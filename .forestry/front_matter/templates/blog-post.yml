@@ -1,0 +1,54 @@
+---
+label: Blog Post
+hide_body: false
+fields:
+- type: text
+  name: title_word
+  label: Site Title Prefix
+  description: Single word, less than 12 characters
+- type: text
+  name: title
+  label: Article Title
+  config:
+    required: true
+- type: list
+  name: tags
+  label: List of Tags
+  description: Post or Draft required
+  config:
+    use_select: false
+- type: list
+  name: authors
+  label: Post Authors
+- type: datetime
+  name: date
+  label: Create Date
+  default: now
+  config:
+    date_format: MM/DD/YYYY
+    required: true
+- name: updated
+  type: datetime
+  label: Last Updated Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- type: textarea
+  name: summary
+  label: Post Summary
+- name: department
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - VDH
+    source:
+      type: simple
+      section: authors-a678b3ef-5d67-4e33-bd5e-be0636dae19b
+      file: 
+      path: 
+  label: Department (optional)

@@ -68,7 +68,7 @@
         var result = highlightText(snippet, query)
         
 
-        result = "<span class='match'>" + (prev_index > 0 ? `${ellipsis} ` : "") + result + (next_index < text.length ? ` ${ellipsis}` : "") + "</span>"
+        result = "<span class='match'>" + (prev_index > 0 ? ellipsis + ' ' : "") + result + (next_index < text.length ? " " + ellipsis : "") + "</span>"
 
         return result;
     }
@@ -140,13 +140,23 @@
 
         // Combine the results into a single array
         var results = [].concat(priority1, priority2, priority3, priority4);
-        results = [...new Set(results)]  // deduplicate 
+
+        var unique = function(arr) {
+            return arr.sort().filter(function(item, pos, ary) {
+                return !pos || item != ary[pos - 1];
+            })
+        }
+        // deduplicate - https://stackoverflow.com/a/9229821/1366033
+        results = unique(results)
 
         // Display the results
         resultList.innerHTML = results.length < 1 
             ? createNoResultsHTML()
             : createResultsHTML(results, query);
 
+        resultList.innerHTML += ""
+        
+        console.log(resultList)
         // set search mode
         document.body.classList.add('searching');
     };
@@ -184,7 +194,7 @@
 
 
     var getData = function(){
-        fetch('/search.json')
+        fetch('/search.json') // todo ie11
             .then(function(response) {
                 return response.json();
             })

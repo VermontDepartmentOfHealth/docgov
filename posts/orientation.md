@@ -1,14 +1,17 @@
 ---
 title_word: Links
-title: "IT Orientation"
-tags: ['post', 'overview']
-authors: ['Kyle']
+title: IT Orientation
+tags:
+- post
+- overview
+authors:
+- Kyle
 date: 2019-06-17
-updated: 2019-09-09
-summary: "A list of resources, links, and onboarding materials for developers at the Vermont Department of Health"
+updated: 2019-10-07T04:00:00Z
+summary: A list of resources, links, and onboarding materials for developers at the
+  Vermont Department of Health.
+
 ---
-
-
 Here's the list of resources I've been keeping for new hires / folks.
 
 

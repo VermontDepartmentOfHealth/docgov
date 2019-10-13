@@ -1,0 +1,22 @@
+---
+label: Author Page
+hide_body: false
+fields:
+- type: text
+  name: title_word
+  label: Site Title Prefix
+  description: Single word, less than 12 characters
+- type: text
+  name: name
+  label: Author Name
+  description: Should match author list in Blog Post Frontmatter
+  config:
+    required: true
+- type: text
+  name: title
+  label: Page Title (Author Name)
+  config:
+    required: true
+- type: text
+  name: summary
+  label: Author Summary

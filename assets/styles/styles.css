@@ -18,10 +18,33 @@ html {
   box-sizing: inherit;
 }
 
+/* ie11 fallback */
+header.header,
+main.content,
+footer.footer,
+div.banner {
+  margin-left: 225px;
+}
 body {
   /* old display for ie11 compatibility */
   display: flex;
   flex-direction: column;
+}
+
+
+@supports (display: grid) {
+  /* if we have grid, we don't need left margin */
+  header.header,
+  main.content,
+  footer.footer,
+  div.banner {
+    margin-left: 0;
+  }
+}
+
+
+
+body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr;
@@ -55,6 +78,7 @@ aside.toc     { grid-area: toc  }
 
 main.content {
   position: relative;
+  overflow-x: auto;
 }
 
 /* sidenav */
@@ -139,6 +163,13 @@ main.content {
     display:flex
   }
 
+  header.header,
+  main.content,
+  footer.footer,
+  div.banner {
+    margin-left: 0;
+  }
+
   /* remove nav from grid-template */
   body.page {
     grid-template-columns: 1fr minmax(100px, 48rem) 1fr;
@@ -155,6 +186,10 @@ main.content {
 
   .nav-closed nav.sidenav {
     left: -240px;
+  }
+
+  body:not(.nav-closed) .banner {
+    margin-left: 225px;
   }
 
   .header .brand {
@@ -290,6 +325,25 @@ hr {
 abbr[title] {
   text-decoration: underline dotted #3e71c1;
 }
+
+mark {
+  padding: 1px;
+  background: #fff36b;
+  border: 1px solid #ece056;
+  border-radius: 1px;
+  
+}
+
+ins {
+  padding: 1px;
+  color: black;
+  background: #77ff9a;
+  border: 1px solid #4ae672;
+  border-radius: 1px;
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
 
 /* alerts */
 .alert {
@@ -877,6 +931,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin: 1em 0em;
+    min-width: 580px; /* todo - more responsive table width */
 }
 
 table th {
@@ -892,6 +947,7 @@ table th {
     border: 1px solid #ddd;
     padding: 8px;
     position: relative;
+    overflow: hidden;
 }
 
 table tr:nth-child(even){background-color: #fefefe;}
@@ -909,6 +965,15 @@ td svg {
   max-width: 30px;
 }
 
+/* table highlighting */
+td > ins  {
+  box-shadow: 0 0 0 250px #77ff9a;
+  border: none;
+}
+td > mark  {
+  box-shadow: 0 0 0 250px #fff36b;
+  border: none;
+}
 
 
 /* categories

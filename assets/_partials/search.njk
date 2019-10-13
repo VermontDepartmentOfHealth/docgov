@@ -7,9 +7,7 @@
 
 <div id="search-results"></div>
 
-{# capture the JS content as a Nunjucks variable #}
-{% set js %}{% include "assets/scripts/search.js" %}{% endset %}
-{# feed it through our cssmin filter to minify #}
-<script type="text/javascript">{{ js | jsmin | safe }}</script>
-{# external script for testing purposes #}
-{# <script src="/assets/scripts/search.js"></script> #}
+{# 
+  must include assets/scripts/search.js at end of body
+  use pageClass: search
+#}

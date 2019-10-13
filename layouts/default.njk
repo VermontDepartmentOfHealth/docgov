@@ -52,7 +52,7 @@
     <style type="text/css">{{ css | cssmin | safe }}</style>
 </head>
 {% set displayTOC = tags | isPostType %}
-<body class="page no-js page-loading nav-closed {{class}} {% if displayTOC %} toc-layout {% endif %}">
+<body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
 
     {# scripts to run asap #}
     {% set js %} {% include "assets/scripts/init.js" %}{% endset %}
@@ -109,6 +109,8 @@
                     {% include "assets/images/icons/fa/edit.svg" %}
                     Edit this Page
                 </a>
+            </li>
+            <li>
                 <a class="btn" href="https://github.com/VermontDepartmentOfHealth/docs/commits/master/{{ page.inputPath }}">
                     {% include "assets/images/icons/fa/history.svg" %}
                     View Page History
@@ -127,6 +129,7 @@
 
     {# capture the JS content as a Nunjucks variable #}
     {% set js %}
+        {% include "assets/scripts/polyfill.js" %}
         {% include "assets/scripts/nav-toggle.js" %}
         {% include "assets/scripts/settings-highlight-theme.js" %}
         {% include "assets/scripts/settings-color-scheme.js" %}
@@ -135,6 +138,9 @@
         {% include "assets/scripts/copy-snippet.js" %}
         {% include "assets/scripts/tooltip.js" %}
         {% include "assets/scripts/site.js" %}
+        {% if pageClass and 'search' in pageClass %}
+            {% include "assets/scripts/search.js" %}   
+        {% endif %}
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <script type="text/javascript">{{ js | jsmin | safe }}</script>

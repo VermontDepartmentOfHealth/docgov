@@ -2,8 +2,7 @@
 title_word: Kyle
 name: Kyle
 title: Posts from Kyle
-summary: "Likes .NET Development, JavaScript, and Cats"
+summary: Likes .NET Development, JavaScript, and Cats
+
 ---
-
-
-Likes .NET Development, JavaScript, and Cats
+Likes .NET Development, JavaScript, and Cats and Dogs
