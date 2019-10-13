@@ -1,16 +1,16 @@
 // on form load, set radio and body (immediately after body opening tag)
-function setTheme(val) {
-    // remove all themes 
-    document.body.className = document.body.className.split(" ").filter(function(c) { return !c.startsWith("theme-")}).join(" "); 
+function setHighlightTheme(val) {
+    // remove all themes
+    document.body.className = document.body.className.split(" ").filter(function(c) { return !c.startsWith("highlight-theme-")}).join(" ");
     // set current theme
-    document.body.classList.add("theme-" + val)
+    document.body.classList.add("highlight-theme-" + val)
 }
 
 // get stored value or default
-var displayVal = localStorage.getItem('theme-color') || "ocean"
+var displayVal = localStorage.getItem('settings-highlight-theme') || "ocean"
 
 // immediately set style to prevent FOUC
-setTheme(displayVal)
+setHighlightTheme(displayVal)
 
 
 // wait for the dom load to parse remaining elements
@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.querySelectorAll("input[type='radio'][name='theme']").forEach(function(el) {
         el.addEventListener("change",function(e) {
             var curDisplayVal = e.target.value
-            setTheme(curDisplayVal)
-            localStorage.setItem('theme-color', curDisplayVal)
+            setHighlightTheme(curDisplayVal)
+            localStorage.setItem('settings-highlight-theme', curDisplayVal)
         });
     });
 });

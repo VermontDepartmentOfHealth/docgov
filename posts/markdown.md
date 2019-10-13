@@ -96,7 +96,7 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <span>
 
 \[link text\](http://example.com/)  
-\![img alt text\](/assets//heart.svg)  
+\![img alt text\](/assets/heart.svg)  
 
 </span>
 <span>
