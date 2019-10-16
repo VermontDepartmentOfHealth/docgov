@@ -39,7 +39,7 @@ var pet = {
 ## CSS
 
 ```css
-@media (max-width: 850px) {
+@media (max-width: 865px) {
   /* only show nav toggles on small screens only show nav toggles on small screens */
   .hamburger {
     display:flex

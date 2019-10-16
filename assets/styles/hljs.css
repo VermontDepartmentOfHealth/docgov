@@ -4,7 +4,7 @@
  * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
  */
 
- .theme-gist .hljs {
+ .highlight-theme-gist .hljs {
     display: block;
     background: white;
     padding: 0.5em;
@@ -12,69 +12,69 @@
     overflow-x: auto;
   }
   
-  .theme-gist .hljs-comment,
-  .theme-gist .hljs-meta {
+  .highlight-theme-gist .hljs-comment,
+  .highlight-theme-gist .hljs-meta {
     color: #969896;
   }
   
-  .theme-gist .hljs-variable,
-  .theme-gist .hljs-template-variable,
-  .theme-gist .hljs-strong,
-  .theme-gist .hljs-emphasis,
-  .theme-gist .hljs-quote {
+  .highlight-theme-gist .hljs-variable,
+  .highlight-theme-gist .hljs-template-variable,
+  .highlight-theme-gist .hljs-strong,
+  .highlight-theme-gist .hljs-emphasis,
+  .highlight-theme-gist .hljs-quote {
     color: #df5000;
   }
   
-  .theme-gist .hljs-keyword,
-  .theme-gist .hljs-selector-tag,
-  .theme-gist .hljs-type {
+  .highlight-theme-gist .hljs-keyword,
+  .highlight-theme-gist .hljs-selector-tag,
+  .highlight-theme-gist .hljs-type {
     color: #d73a49;
   }
   
-  .theme-gist .hljs-literal,
-  .theme-gist .hljs-symbol,
-  .theme-gist .hljs-bullet,
-  .theme-gist .hljs-attribute {
+  .highlight-theme-gist .hljs-literal,
+  .highlight-theme-gist .hljs-symbol,
+  .highlight-theme-gist .hljs-bullet,
+  .highlight-theme-gist .hljs-attribute {
     color: #0086b3;
   }
   
-  .theme-gist .hljs-section,
-  .theme-gist .hljs-name {
+  .highlight-theme-gist .hljs-section,
+  .highlight-theme-gist .hljs-name {
     color: #63a35c;
   }
   
-  .theme-gist .hljs-tag {
+  .highlight-theme-gist .hljs-tag {
     color: #333333;
   }
   
-  .theme-gist .hljs-title,
-  .theme-gist .hljs-attr,
-  .theme-gist .hljs-selector-id,
-  .theme-gist .hljs-selector-class,
-  .theme-gist .hljs-selector-attr,
-  .theme-gist .hljs-selector-pseudo {
+  .highlight-theme-gist .hljs-title,
+  .highlight-theme-gist .hljs-attr,
+  .highlight-theme-gist .hljs-selector-id,
+  .highlight-theme-gist .hljs-selector-class,
+  .highlight-theme-gist .hljs-selector-attr,
+  .highlight-theme-gist .hljs-selector-pseudo {
     color: #6f42c1;
   }
   
-  .theme-gist .hljs-addition {
+  .highlight-theme-gist .hljs-addition {
     color: #55a532;
     background-color: #eaffea;
   }
   
-  .theme-gist .hljs-deletion {
+  .highlight-theme-gist .hljs-deletion {
     color: #bd2c00;
     background-color: #ffecec;
   }
   
-  .theme-gist .hljs-link {
+  .highlight-theme-gist .hljs-link {
     text-decoration: underline;
   }
   
-  .theme-gist .hljs-number {
+  .highlight-theme-gist .hljs-number {
     color: #005cc5;
   }
   
-  .theme-gist .hljs-string {
+  .highlight-theme-gist .hljs-string {
     color: #032f62;
   }
   
@@ -84,7 +84,7 @@
   
   */
   
-  .theme-github .hljs {
+  .highlight-theme-github .hljs {
     display: block;
     overflow-x: auto;
     padding: 0.5em;
@@ -92,89 +92,89 @@
     background: #f8f8f8;
   }
   
-  .theme-github .hljs-comment,
-  .theme-github .hljs-quote {
+  .highlight-theme-github .hljs-comment,
+  .highlight-theme-github .hljs-quote {
     color: #998;
     font-style: italic;
   }
   
-  .theme-github .hljs-keyword,
-  .theme-github .hljs-selector-tag,
-  .theme-github .hljs-subst {
+  .highlight-theme-github .hljs-keyword,
+  .highlight-theme-github .hljs-selector-tag,
+  .highlight-theme-github .hljs-subst {
     color: #333;
     font-weight: bold;
   }
   
-  .theme-github .hljs-number,
-  .theme-github .hljs-literal,
-  .theme-github .hljs-variable,
-  .theme-github .hljs-template-variable,
-  .theme-github .hljs-tag .hljs-attr {
+  .highlight-theme-github .hljs-number,
+  .highlight-theme-github .hljs-literal,
+  .highlight-theme-github .hljs-variable,
+  .highlight-theme-github .hljs-template-variable,
+  .highlight-theme-github .hljs-tag .hljs-attr {
     color: #008080;
   }
   
-  .theme-github .hljs-string,
-  .theme-github .hljs-doctag {
+  .highlight-theme-github .hljs-string,
+  .highlight-theme-github .hljs-doctag {
     color: #d14;
   }
   
-  .theme-github .hljs-title,
-  .theme-github .hljs-section,
-  .theme-github .hljs-selector-id {
+  .highlight-theme-github .hljs-title,
+  .highlight-theme-github .hljs-section,
+  .highlight-theme-github .hljs-selector-id {
     color: #900;
     font-weight: bold;
   }
   
-  .theme-github .hljs-subst {
+  .highlight-theme-github .hljs-subst {
     font-weight: normal;
   }
   
-  .theme-github .hljs-type,
-  .theme-github .hljs-class .hljs-title {
+  .highlight-theme-github .hljs-type,
+  .highlight-theme-github .hljs-class .hljs-title {
     color: #458;
     font-weight: bold;
   }
   
-  .theme-github .hljs-tag,
-  .theme-github .hljs-name,
-  .theme-github .hljs-attribute {
+  .highlight-theme-github .hljs-tag,
+  .highlight-theme-github .hljs-name,
+  .highlight-theme-github .hljs-attribute {
     color: #000080;
     font-weight: normal;
   }
   
-  .theme-github .hljs-regexp,
-  .theme-github .hljs-link {
+  .highlight-theme-github .hljs-regexp,
+  .highlight-theme-github .hljs-link {
     color: #009926;
   }
   
-  .theme-github .hljs-symbol,
-  .theme-github .hljs-bullet {
+  .highlight-theme-github .hljs-symbol,
+  .highlight-theme-github .hljs-bullet {
     color: #990073;
   }
   
-  .theme-github .hljs-built_in,
-  .theme-github .hljs-builtin-name {
+  .highlight-theme-github .hljs-built_in,
+  .highlight-theme-github .hljs-builtin-name {
     color: #0086b3;
   }
   
-  .theme-github .hljs-meta {
+  .highlight-theme-github .hljs-meta {
     color: #999;
     font-weight: bold;
   }
   
-  .theme-github .hljs-deletion {
+  .highlight-theme-github .hljs-deletion {
     background: #fdd;
   }
   
-  .theme-github .hljs-addition {
+  .highlight-theme-github .hljs-addition {
     background: #dfd;
   }
   
-  .theme-github .hljs-emphasis {
+  .highlight-theme-github .hljs-emphasis {
     font-style: italic;
   }
   
-  .theme-github .hljs-strong {
+  .highlight-theme-github .hljs-strong {
     font-weight: bold;
   }
   
@@ -183,82 +183,84 @@
   /* Original theme - https://github.com/chriskempson/base16 */
   
   /* Ocean Comment */
-  .theme-ocean .hljs-comment,
-  .theme-ocean .hljs-quote {
+  .highlight-theme-ocean .hljs-comment,
+  .highlight-theme-ocean .hljs-quote {
     color: #65737e;
   }
   
   /* Ocean Red */
-  .theme-ocean .hljs-variable,
-  .theme-ocean .hljs-template-variable,
-  .theme-ocean .hljs-tag,
-  .theme-ocean .hljs-name,
-  .theme-ocean .hljs-selector-id,
-  .theme-ocean .hljs-selector-class,
-  .theme-ocean .hljs-regexp,
-  .theme-ocean .hljs-deletion {
+  .highlight-theme-ocean .hljs-variable,
+  .highlight-theme-ocean .hljs-template-variable,
+  .highlight-theme-ocean .hljs-tag,
+  .highlight-theme-ocean .hljs-name,
+  .highlight-theme-ocean .hljs-selector-id,
+  .highlight-theme-ocean .hljs-selector-class,
+  .highlight-theme-ocean .hljs-regexp,
+  .highlight-theme-ocean .hljs-deletion {
     color: #bf616a;
   }
   
   /* Ocean Orange */
-  .theme-ocean .hljs-number,
-  .theme-ocean .hljs-built_in,
-  .theme-ocean .hljs-builtin-name,
-  .theme-ocean .hljs-literal,
-  .theme-ocean .hljs-type,
-  .theme-ocean .hljs-params,
-  .theme-ocean .hljs-meta,
-  .theme-ocean .hljs-link {
+  .highlight-theme-ocean .hljs-number,
+  .highlight-theme-ocean .hljs-built_in,
+  .highlight-theme-ocean .hljs-builtin-name,
+  .highlight-theme-ocean .hljs-literal,
+  .highlight-theme-ocean .hljs-type,
+  .highlight-theme-ocean .hljs-params,
+  .highlight-theme-ocean .hljs-meta,
+  .highlight-theme-ocean .hljs-link {
     color: #d08770;
   }
   
   /* Ocean Yellow */
-               .hljs-attribute
-  .theme-ocean .hljs-attribute {
+                        .hljs-attribute
+  .highlight-theme-ocean .hljs-attribute {
     color: #ebcb8b;
   }
   
   /* Ocean Green */
-               .hljs-string,
-               .hljs-symbol,
-               .hljs-bullet,
-               .hljs-addition,
-  .theme-ocean .hljs-string,
-  .theme-ocean .hljs-symbol,
-  .theme-ocean .hljs-bullet,
-  .theme-ocean .hljs-addition {
+                         .hljs-string,
+                         .hljs-symbol,
+                         .hljs-bullet,
+                         .hljs-addition,
+  .highlight-theme-ocean .hljs-string,
+  .highlight-theme-ocean .hljs-symbol,
+  .highlight-theme-ocean .hljs-bullet,
+  .highlight-theme-ocean .hljs-addition {
     color: #a3be8c;
   }
   
   /* Ocean Blue */
-               .hljs-title,
-               .hljs-section,
-  .theme-ocean .hljs-title,
-  .theme-ocean .hljs-section {
+                         .hljs-title,
+                         .hljs-section,
+  .highlight-theme-ocean .hljs-title,
+  .highlight-theme-ocean .hljs-section {
     color: #8fa1b3;
   }
   
   /* Ocean Purple */
-               .hljs-keyword,
-               .hljs-selector-tag,
-  .theme-ocean .hljs-keyword,
-  .theme-ocean .hljs-selector-tag {
+                         .hljs-keyword,
+                         .hljs-selector-tag,
+  .highlight-theme-ocean .hljs-keyword,
+  .highlight-theme-ocean .hljs-selector-tag {
     color: #b48ead;
   }
-               .hljs,
-  .theme-ocean .hljs {
+
+                         .hljs,
+  .highlight-theme-ocean .hljs {
     display: block;
     overflow-x: auto;
     background: #2b303b;
     color: #c0c5ce;
     padding: 0.5em;
   }
-               .hljs-emphasis,
-  .theme-ocean .hljs-emphasis {
+
+                         .hljs-emphasis,
+  .highlight-theme-ocean .hljs-emphasis {
     font-style: italic;
   }
-               .hljs-strong,
-  .theme-ocean .hljs-strong {
+                         .hljs-strong,
+  .highlight-theme-ocean .hljs-strong {
     font-weight: bold;
   }
   
@@ -267,7 +269,7 @@
    * Author: Nicolas LLOBERA <nllobera@gmail.com>
    */
   
-   .theme-vs .hljs {
+   .highlight-theme-vs .hljs {
     display: block;
     overflow-x: auto;
     padding: 0.5em;
@@ -275,81 +277,81 @@
     color: #DCDCDC;
   }
   
-  .theme-vs .hljs-keyword,
-  .theme-vs .hljs-literal,
-  .theme-vs .hljs-symbol,
-  .theme-vs .hljs-name {
+  .highlight-theme-vs .hljs-keyword,
+  .highlight-theme-vs .hljs-literal,
+  .highlight-theme-vs .hljs-symbol,
+  .highlight-theme-vs .hljs-name {
     color: #569CD6;
   }
-  .theme-vs .hljs-link {
+  .highlight-theme-vs .hljs-link {
     color: #569CD6;
     text-decoration: underline;
   }
   
-  .theme-vs .hljs-built_in,
-  .theme-vs .hljs-type {
+  .highlight-theme-vs .hljs-built_in,
+  .highlight-theme-vs .hljs-type {
     color: #4EC9B0;
   }
   
-  .theme-vs .hljs-number,
-  .theme-vs .hljs-class {
+  .highlight-theme-vs .hljs-number,
+  .highlight-theme-vs .hljs-class {
     color: #B8D7A3;
   }
   
-  .theme-vs .hljs-string,
-  .theme-vs .hljs-meta-string {
+  .highlight-theme-vs .hljs-string,
+  .highlight-theme-vs .hljs-meta-string {
     color: #D69D85;
   }
   
-  .theme-vs .hljs-regexp,
-  .theme-vs .hljs-template-tag {
+  .highlight-theme-vs .hljs-regexp,
+  .highlight-theme-vs .hljs-template-tag {
     color: #9A5334;
   }
   
-  .theme-vs .hljs-subst,
-  .theme-vs .hljs-function,
-  .theme-vs .hljs-title,
-  .theme-vs .hljs-params,
-  .theme-vs .hljs-formula {
+  .highlight-theme-vs .hljs-subst,
+  .highlight-theme-vs .hljs-function,
+  .highlight-theme-vs .hljs-title,
+  .highlight-theme-vs .hljs-params,
+  .highlight-theme-vs .hljs-formula {
     color: #DCDCDC;
   }
   
-  .theme-vs .hljs-comment,
-  .theme-vs .hljs-quote {
+  .highlight-theme-vs .hljs-comment,
+  .highlight-theme-vs .hljs-quote {
     color: #57A64A;
     font-style: italic;
   }
   
-  .theme-vs .hljs-doctag {
+  .highlight-theme-vs .hljs-doctag {
     color: #608B4E;
   }
   
-  .theme-vs .hljs-meta,
-  .theme-vs .hljs-meta-keyword,
-  .theme-vs .hljs-tag {
+  .highlight-theme-vs .hljs-meta,
+  .highlight-theme-vs .hljs-meta-keyword,
+  .highlight-theme-vs .hljs-tag {
     color: #9B9B9B;
   }
   
-  .theme-vs .hljs-variable,
-  .theme-vs .hljs-template-variable {
+  .highlight-theme-vs .hljs-variable,
+  .highlight-theme-vs .hljs-template-variable {
     color: #BD63C5;
   }
   
-  .theme-vs .hljs-attr,
-  .theme-vs .hljs-attribute,
-  .theme-vs .hljs-builtin-name {
+  .highlight-theme-vs .hljs-attr,
+  .highlight-theme-vs .hljs-attribute,
+  .highlight-theme-vs .hljs-builtin-name {
     color: #9CDCFE;
   }
   
-  .theme-vs .hljs-section {
+  .highlight-theme-vs .hljs-section {
     color: gold;
   }
   
-  .theme-vs .hljs-emphasis {
+  .highlight-theme-vs .hljs-emphasis {
     font-style: italic;
   }
   
-  .theme-vs .hljs-strong {
+  .highlight-theme-vs .hljs-strong {
     font-weight: bold;
   }
   
@@ -357,22 +359,22 @@
     font-family:'Monospace';
   }*/
   
-  .theme-vs .hljs-bullet,
-  .theme-vs .hljs-selector-tag,
-  .theme-vs .hljs-selector-id,
-  .theme-vs .hljs-selector-class,
-  .theme-vs .hljs-selector-attr,
-  .theme-vs .hljs-selector-pseudo {
+  .highlight-theme-vs .hljs-bullet,
+  .highlight-theme-vs .hljs-selector-tag,
+  .highlight-theme-vs .hljs-selector-id,
+  .highlight-theme-vs .hljs-selector-class,
+  .highlight-theme-vs .hljs-selector-attr,
+  .highlight-theme-vs .hljs-selector-pseudo {
     color: #D7BA7D;
   }
   
-  .theme-vs .hljs-addition {
+  .highlight-theme-vs .hljs-addition {
     background-color: #144212;
     display: inline-block;
     width: 100%;
   }
   
-  .theme-vs .hljs-deletion {
+  .highlight-theme-vs .hljs-deletion {
     background-color: #600;
     display: inline-block;
     width: 100%;

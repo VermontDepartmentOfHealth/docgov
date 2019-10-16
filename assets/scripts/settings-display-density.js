@@ -1,22 +1,22 @@
 // on form load, set radio and body (immediately after body opening tag)
-function setDisplay(val) {
+function setDisplayDensity(val) {
     var displayCard = val === "card"
-    document.body.classList.toggle("display-card", displayCard)
-    document.body.classList.toggle("display-list", !displayCard)
+    document.body.classList.toggle("display-density-card", displayCard)
+    document.body.classList.toggle("display-density-list", !displayCard)
 }
 
 // get stored value or default
-var displayVal = localStorage.getItem('display-toggle') || "card"
+var displayDensitySetting = localStorage.getItem('settings-display-density') || "card"
 
 // immediately set style to prevent FOUC
-setDisplay(displayVal)
+setDisplayDensity(siteThemeVal)
 
 
 // wait for the dom load to parse remaining elements
 document.addEventListener("DOMContentLoaded", function(){
 
     // set appropriate state on checkboxes once they've loaded
-    var displayEl = document.querySelector("input[type='radio'][name='display-toggle'][value='" + displayVal + "']")
+    var displayEl = document.querySelector("input[type='radio'][name='display-toggle'][value='" + displayDensitySetting + "']")
     if (displayEl) { displayEl.checked = true}
 
 
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	document.querySelectorAll("input[type='radio'][name='display-toggle']").forEach(function(el) {
         el.addEventListener("change",function(e) {
             var curDisplayVal = e.target.value
-            setDisplay(curDisplayVal)
-            localStorage.setItem('display-toggle', curDisplayVal)
+            setDisplayDensity(curDisplayVal)
+            localStorage.setItem('settings-display-density', curDisplayVal)
         });
     });
 });
