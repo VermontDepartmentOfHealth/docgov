@@ -213,11 +213,16 @@
   }
   
   /* Ocean Yellow */
+                        .hljs-attribute
   .highlight-theme-ocean .hljs-attribute {
     color: #ebcb8b;
   }
   
   /* Ocean Green */
+                         .hljs-string,
+                         .hljs-symbol,
+                         .hljs-bullet,
+                         .hljs-addition,
   .highlight-theme-ocean .hljs-string,
   .highlight-theme-ocean .hljs-symbol,
   .highlight-theme-ocean .hljs-bullet,
@@ -226,17 +231,22 @@
   }
   
   /* Ocean Blue */
+                         .hljs-title,
+                         .hljs-section,
   .highlight-theme-ocean .hljs-title,
   .highlight-theme-ocean .hljs-section {
     color: #8fa1b3;
   }
   
   /* Ocean Purple */
+                         .hljs-keyword,
+                         .hljs-selector-tag,
   .highlight-theme-ocean .hljs-keyword,
   .highlight-theme-ocean .hljs-selector-tag {
     color: #b48ead;
   }
-  
+
+                         .hljs,
   .highlight-theme-ocean .hljs {
     display: block;
     overflow-x: auto;
@@ -244,11 +254,12 @@
     color: #c0c5ce;
     padding: 0.5em;
   }
-  
+
+                         .hljs-emphasis,
   .highlight-theme-ocean .hljs-emphasis {
     font-style: italic;
   }
-  
+                         .hljs-strong,
   .highlight-theme-ocean .hljs-strong {
     font-weight: bold;
   }
