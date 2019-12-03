@@ -130,9 +130,9 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <div class="split">
 <span>
 
-\1. ordered list  
-\2. home  
-\3. go to 2  
+1\. ordered list  
+2\. home  
+3\. go to 2  
 
 
 </span>
@@ -167,12 +167,16 @@ OR three Underscore: \___
 ### Tables
 
 <div class="split">
-<span><pre>| Name  | Age  |
+<span>
+
+<pre>| Name  | Age  |
 | ----- |:----:|
 | Frida | 10   |
 | Buddy | 12   |
 | Gus   | 5    |
-</pre></span>
+</pre>
+
+</span>
 <span>
 
 | Name  | Age  |
@@ -230,6 +234,22 @@ var pet = {
 
 ++inserted++  
 ==mark==  
+
+</span>
+</div>
+
+### Spoiler
+
+
+<div class="split">
+<span>
+
+\!\!Secret\!\!
+
+</span>
+<span>
+
+!!Secret!!
 
 </span>
 </div>
