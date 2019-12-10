@@ -130,7 +130,7 @@ WHERE NAME LIKE '%ONE%'
 ![Where Clause - Wild Card All][7]
 
 
-##### WHERE - Ranges
+##### WHERE - Date Ranges
 
 There may be instances where you want to search for data that falls within a range of values, say two dates.
 
@@ -146,7 +146,7 @@ AND LICENSE_TYPE LIKE '%CATERER'
 
 ## Exporting Data
 
-Exporting can be done in a few different ways
+Exporting can be done in a few ~~different~~ ways
 
 * Copy and Paste results
 * Exporting to...
