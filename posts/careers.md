@@ -1,14 +1,41 @@
 ---
-title_word: Hiring
-title: Hiring Overview
 tags: ['post', 'workforce']
 authors: ['Kyle', 'Brian']
 date: 2019-08-22
 summary: "An overview of our hiring process as we strive to make our interviewing process as open, fair, and inclusive as we can"
+pagination:
+  data: roles
+  size: 1
+  alias: role
+roles:
+ - DBA
+ - App
+permalink: "interview/{{role | lower }}/index.html"
+renderData:
+  title: "Dev Interview Process"
+  title_word: 'Interviews'
 ---
 
 
-{% include "assets/images/hiring-no.svg" %}
+
+{% if 'app' == role | lower %}
+    {% include "assets/images/hiring-yes.svg" %}
+{% elif 'dba' == role | lower%}
+    {% include "assets/images/hiring-no.svg" %}
+{% endif %}
+
+## Positions
+
+Slightly different versions of this page exist for two different roles:
+
+
+<ul class="radio-buttons list-unstyled d-flex">
+{%- for rl in roles %}
+  <li><a href="/interview/{{rl | lower }}/" {% if rl == role %} aria-current {% endif %} >
+     {{ rl }} 
+   </a></li>
+{% endfor -%}
+</ul>
 
 ## Hello & Welcome
 
@@ -17,7 +44,7 @@ If you're here and interested in a job with the Agency of Digital Services & Ver
 ## What to Prepare
 
 1. Create a System Diagram of a Previous Project
-2. Familiarize yourself with MS SQL Server Management Studio
+2. Familiarize yourself with our Development Environment (see below for details)
 
 ### Project Diagram
 
@@ -54,7 +81,6 @@ If for whatever reason, you're unable to produce a diagram before the interview,
 
 We want to work through some live-coding examples of the typical sorts of stuff we do here on a regular basis.  Our framing as a pair problems is so we can think-through solutions together and we're available for as much or as little help as is needed.
 
-* We'll be using [SQL Server Express 2017][4] with [SSMS 2018][3] with [RedGate SQL Prompt][5] on Windows 10
 * You'll have full access to Google, Stack Overflow, or any other online resources you might want.
 * We'll have a pair coding setup with two keyboard and two mice
 * We want you to feel as comfortable writing code as you would be at work, which means...
@@ -68,7 +94,30 @@ The coding setup should look something like this (well, exactly like this).
 
 ![office setup][8]
 
-#### Coding Exercise Examples
+
+
+{% if 'app' == role | lower %}
+
+## Application / .NET Developer
+
+We'll be using [Visual Studio 2017][15] with [Resharper][16] on Windows 10
+
+Here's an overview of the types of coding question we'll look at:
+
+* Probably do a FizzBuzz example in C# (or language of your choice*)
+* Read and explain some existing code in C#
+* Discuss architectural design considerations
+
+>***Note**: If your primary language is not C#, please contact us ahead of time, and we'll try our best to setup a development environment that you're comfortable in so you can showcase your skills.
+
+
+
+{% elif 'dba' == role | lower%}
+
+
+## DBA / SQL Developer
+
+We'll be using [SQL Server Express 2017][4] with [SSMS 2018][3] with [RedGate SQL Prompt][5] on Windows 10
 
 Here's an overview of the types of SQL we'll look at:
 
@@ -76,6 +125,13 @@ Here's an overview of the types of SQL we'll look at:
 * Write some queries
 * Read and review some code
 * Discuss database design
+
+
+{% endif %}
+
+
+
+
 
 ## Next Steps
 
@@ -99,8 +155,8 @@ We believe that diverse *and* inclusive teams build better products and workplac
 [3]: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
 [4]: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 [5]: https://www.red-gate.com/products/sql-development/sql-prompt/
-[6]: https://i.imgur.com/3pF4vzs.png
-[7]: https://i.imgur.com/8TF8Niv.png
+[6]: /assets/images/posts/hiring/CIS-ERD.png
+[7]: /assets/images/posts/hiring/CSHN-Arichitecture.png
 [8]: /assets/images/posts/hiring/pair-desktop.png
 [9]: https://www.draw.io/
 [10]: https://www.google.com/maps/place/108+Cherry+St,+Burlington,+VT+05401/
@@ -108,3 +164,5 @@ We believe that diverse *and* inclusive teams build better products and workplac
 [12]: https://www.google.com/maps/@44.4792551,-73.2138143,3a,75y,6.07h,82.04t/data=!3m7!1e1!3m5!1soZtO_DFW4FHeZw4j4gcGxA!2e0!6s%2F%2Fgeo2.ggpht.com%2Fcbk%3Fpanoid%3DoZtO_DFW4FHeZw4j4gcGxA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D311.1357%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656
 [13]: https://www.burlingtonvt.gov/DPW/Parking
 [14]: http://ridegmt.com/gmt-schedules/
+[15]: https://visualstudio.microsoft.com/vs/
+[16]: https://www.jetbrains.com/resharper/

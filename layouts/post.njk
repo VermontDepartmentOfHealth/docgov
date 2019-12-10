@@ -8,8 +8,8 @@ layout: default.njk
   </div>
 {% endif %}
 
-
-<h1 class="page-title">{{title}}</h1>
+{% set page_title = title or (renderData and renderData.title) %}
+<h1 class="page-title">{{page_title}}</h1>
         
 <div class="post-meta">
 

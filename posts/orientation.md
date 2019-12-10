@@ -10,8 +10,9 @@ date: 2019-06-17
 updated: 2019-10-07T04:00:00Z
 summary: A list of resources, links, and onboarding materials for developers at the
   Vermont Department of Health.
-
 ---
+
+
 Here's the list of resources I've been keeping for new hires / folks.
 
 
@@ -35,7 +36,7 @@ Here's the list of resources I've been keeping for new hires / folks.
 * Citrix Test / Prod Win Apps - https://nws.vdh.state.vt.us/
 * Test Web Apps - https://apps-test.health.vermont.gov/VHCForm/
 * Prod Web Apps - https://apps.health.vermont.gov/VHCForm/
-* LANDESK - https://itsupport.vermont.gov/
+* Ivanti Helpdesk - https://itsupport.apps.vermont.gov/HEAT/Default.aspx, previously [LANDESK](https://itsupport.vermont.gov/)
 * AHS Data Services Confluence - https://confluence/pages/viewpage.action?pageId=13533235
 
 ### Org Charts

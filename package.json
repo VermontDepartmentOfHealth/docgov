@@ -4,7 +4,7 @@
   "description": "Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "npx eleventy",
     "serve": "npx eleventy --serve",
     "clean": "rm -rf _site",
     "favicon": "npx real-favicon generate \"./tools/favicon-generator.json\" \"./tools/faviconData.json\" \"./assets/images/icons/fav\""
@@ -16,7 +16,7 @@
   "author": "VermontDepartmentOfHealth",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0-beta.1",
     "clean-css": "^4.2.1",
     "eleventy-plugin-nesting-toc": "^1.1.0",
     "firacode": "^2.0.0",

@@ -502,6 +502,29 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
     height: calc(100% - 6px);
 }
 
+/* radio button */
+
+.radio-buttons a {
+  padding: 5px 10px;
+  border: 1px solid #64747b;
+}
+
+.radio-buttons li:first-child a {
+  border-radius: 4px 0px 0px 4px;
+}
+.radio-buttons li:last-child a {
+  border-radius: 0px 4px 4px 0px
+}
+.radio-buttons li + li a {
+  margin-left: -1px;
+}
+
+.radio-buttons a[aria-current] {
+  background-image: linear-gradient(transparent 0,transparent calc(50% - 8px),rgb(221, 245, 255) calc(50% - 8px),rgba(221, 245, 255) 100%);
+  background-position: 0 100%;
+  cursor: default;
+}
+
 /* alt links */
 .page .page .btn,
 .page .footer .btn {
