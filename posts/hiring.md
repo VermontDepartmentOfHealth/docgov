@@ -10,7 +10,7 @@ pagination:
 roles:
  - DBA
  - App
-permalink: "interview/{{role | lower }}/index.html"
+permalink: "hiring/{{role | lower }}/index.html"
 renderData:
   title: "Dev Interview Process"
   title_word: 'Interviews'
@@ -31,7 +31,7 @@ Slightly different versions of this page exist for two different roles:
 
 <ul class="radio-buttons list-unstyled d-flex">
 {%- for rl in roles %}
-  <li><a href="/interview/{{rl | lower }}/" {% if rl == role %} aria-current {% endif %} >
+  <li><a href="/hiring/{{rl | lower }}/" {% if rl == role %} aria-current {% endif %} >
      {{ rl }} 
    </a></li>
 {% endfor -%}
