@@ -166,6 +166,8 @@ OR three Underscore: \___
 
 ### Tables
 
+Here's an awesome [markdown table generator](https://www.tablesgenerator.com/markdown_tables) if you're copying data from another source
+
 <div class="split">
 <span>
 

@@ -78,7 +78,7 @@ aside.toc     { grid-area: toc  }
 
 main.content {
   position: relative;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 /* sidenav */
@@ -318,7 +318,6 @@ blockquote strong {
 }
 
 hr {
-  box-shadow: 1px 1px 2px 0px #cec7b8;
   border: 1px solid #cec7b8;
 }
 
@@ -626,6 +625,7 @@ section.intro {
 .posts {
     padding-left: 0;
     list-style: none;
+    clear: both;
 }
 
 .post {
