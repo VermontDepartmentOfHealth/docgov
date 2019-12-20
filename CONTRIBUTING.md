@@ -4,7 +4,7 @@ Hi There! 👋
 
 Thanks for taking the time to help improve the this documentation repository.  This will help outline some of the tools and options for making meaningful contributions.
 
-If you have content you'd like to share, I'd love if you'd do it here
+If you have content you'd like to share, I'd love if you wanted to share it here
 
 ## Pull Requests
 
@@ -15,7 +15,7 @@ We'd love to merge in any Pull Requests that help improve the website's design, 
 That said, feel free to **Submit a PR** and we can always work through any feedback.
 
 1. Fork the repo on github to push changes on your own branch
-2. Checkout the [README.md][/README.md] for more info on how to get the project setup on your local machine
+2. Checkout the [README](/readme/) for more info on how to get the project setup on your local machine
 3. When submitting a pull request, please check the box [`Allow Edits from Maintainers`](https://help.github.com/en/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork) which will allow project members to make changes to your branch prior to merging in.
 
 Happy Coding! 😀
@@ -71,18 +71,22 @@ pageClass: "search"            # (optional) class string that will be added to d
 
 Markdown validation is provided by [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint).
 
-Exceptions should be saved to `/.markdownlint.json`
+Current exceptions, which are saved to `/.markdownlint.json`, and their rationale
 
-* [MD012](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md012---multiple-consecutive-blank-lines) - Multiple blank lines
-  * Headings often have a tall visual margin to separate content - if markdown authors want to emulate that, okay
-* [MD013](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md013---line-length) - Line Length too long
-  * If folks want to put paragraphs in markdown, that's fine, just use an IDE that wraps lines
-* [MD025](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md025---multiple-top-level-headers-in-the-same-document) - Multiple Headers
-  * False reading from building our markdown pages using templates like this `# {{title}}`
-* [MD033](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - Inline HTML
-  * If we want to make use of inline html, go for it
-* [MD034](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - No Bare URLS
-  * We explicitly convert bare urls in our markdown via `linkify: true`
+* [MD012](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md012---multiple-consecutive-blank-lines) - **Multiple blank lines**  
+  Headings often have a tall visual margin to separate content - if markdown authors want to emulate that, okay
+
+* [MD013](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md013---line-length) - **Line Length too long**  
+  If folks want to put paragraphs in markdown, that's fine, just use an IDE that wraps lines
+
+* [MD025](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md025---multiple-top-level-headers-in-the-same-document) - **Multiple Headers**  
+  False reading from building our markdown pages using templates like this `# {{title}}`
+
+* [MD033](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - **Inline HTML**  
+  If we want to make use of inline html, go for it
+
+* [MD034](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md033---inline-html) - **No Bare URLS**  
+  We explicitly convert bare urls in our markdown via `linkify: true`
 
 ### Spelling
 
