@@ -134,7 +134,7 @@ WHERE NAME LIKE '%ONE%'
 
 There may be instances where you want to search for data that falls within a range of values, say two dates.
 
-The following selects all columns where the **EFFECTIVE_DATE** is between **'01/01/2010' AND '12/31/2011'** and the **LICENSE_TYPE** starts with **"caterer"**
+The following selects all columns where the **EFFECTIVE_DATE** is between **'01/01/2010' AND '12/31/2011'** and the **LICENSE_TYPE** ends with **"caterer"**
 
 ```sql
 SELECT * 
@@ -146,7 +146,7 @@ AND LICENSE_TYPE LIKE '%CATERER'
 
 ## Exporting Data
 
-Exporting can be done in a few ~~different~~ ways
+Exporting can be done in a few ways
 
 * Copy and Paste results
 * Exporting to...
