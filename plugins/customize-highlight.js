@@ -2,7 +2,7 @@
 var hljs = require('highlightjs'); 
 
 // customize
-hljs.getLanguage('sql').keywords += ' with'; 
+hljs.getLanguage('sql').keywords += ' with RAISERROR'; 
 
 // pin button to side of container
 var copyBtn = `<button class="btn-icon btn-copy" >
