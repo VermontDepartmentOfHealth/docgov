@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> !["post","draft"].includes(t)));
     eleventyConfig.addFilter("isPostType", tags => tags && tags.some(t => ["post","draft"].includes(t)));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
+    eleventyConfig.addFilter("sortByPostCount", arr => arr.sort((a,b) => (a.posts.length < b.posts.length ? 1 : -1)));
 
     
     // custom collections

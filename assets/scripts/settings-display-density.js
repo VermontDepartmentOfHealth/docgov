@@ -9,7 +9,7 @@ function setDisplayDensity(val) {
 var displayDensitySetting = localStorage.getItem('settings-display-density') || "card"
 
 // immediately set style to prevent FOUC
-setDisplayDensity(siteThemeVal)
+setDisplayDensity(displayDensitySetting)
 
 
 // wait for the dom load to parse remaining elements

@@ -14,7 +14,7 @@
   
   .highlight-theme-gist .hljs-comment,
   .highlight-theme-gist .hljs-meta {
-    color: #969896;
+    color: #737373;
   }
   
   .highlight-theme-gist .hljs-variable,
@@ -35,12 +35,12 @@
   .highlight-theme-gist .hljs-symbol,
   .highlight-theme-gist .hljs-bullet,
   .highlight-theme-gist .hljs-attribute {
-    color: #0086b3;
+    color: #01759c;
   }
   
   .highlight-theme-gist .hljs-section,
   .highlight-theme-gist .hljs-name {
-    color: #63a35c;
+    color: #477742;
   }
   
   .highlight-theme-gist .hljs-tag {
@@ -110,7 +110,7 @@
   .highlight-theme-github .hljs-variable,
   .highlight-theme-github .hljs-template-variable,
   .highlight-theme-github .hljs-tag .hljs-attr {
-    color: #008080;
+    color: #016d6d;
   }
   
   .highlight-theme-github .hljs-string,
@@ -137,7 +137,8 @@
   
   .highlight-theme-github .hljs-tag,
   .highlight-theme-github .hljs-name,
-  .highlight-theme-github .hljs-attribute {
+  .highlight-theme-github .hljs-attribute,
+  .highlight-theme-github .hljs-attr {
     color: #000080;
     font-weight: normal;
   }
@@ -185,7 +186,7 @@
   /* Ocean Comment */
   .highlight-theme-ocean .hljs-comment,
   .highlight-theme-ocean .hljs-quote {
-    color: #65737e;
+    color: #98c1a3;
   }
   
   /* Ocean Red */
@@ -197,7 +198,7 @@
   .highlight-theme-ocean .hljs-selector-class,
   .highlight-theme-ocean .hljs-regexp,
   .highlight-theme-ocean .hljs-deletion {
-    color: #bf616a;
+    color: #e0838c;
   }
   
   /* Ocean Orange */
@@ -213,11 +214,18 @@
   }
   
   /* Ocean Yellow */
-  .highlight-theme-ocean .hljs-attribute {
+                         .hljs-attribute,
+                         .hljs-attr
+  .highlight-theme-ocean .hljs-attribute,
+  .highlight-theme-ocean .hljs-attr {
     color: #ebcb8b;
   }
   
   /* Ocean Green */
+                         .hljs-string,
+                         .hljs-symbol,
+                         .hljs-bullet,
+                         .hljs-addition,
   .highlight-theme-ocean .hljs-string,
   .highlight-theme-ocean .hljs-symbol,
   .highlight-theme-ocean .hljs-bullet,
@@ -226,17 +234,22 @@
   }
   
   /* Ocean Blue */
+                         .hljs-title,
+                         .hljs-section,
   .highlight-theme-ocean .hljs-title,
   .highlight-theme-ocean .hljs-section {
     color: #8fa1b3;
   }
   
   /* Ocean Purple */
+                         .hljs-keyword,
+                         .hljs-selector-tag,
   .highlight-theme-ocean .hljs-keyword,
   .highlight-theme-ocean .hljs-selector-tag {
     color: #b48ead;
   }
-  
+
+                         .hljs,
   .highlight-theme-ocean .hljs {
     display: block;
     overflow-x: auto;
@@ -244,11 +257,12 @@
     color: #c0c5ce;
     padding: 0.5em;
   }
-  
+
+                         .hljs-emphasis,
   .highlight-theme-ocean .hljs-emphasis {
     font-style: italic;
   }
-  
+                         .hljs-strong,
   .highlight-theme-ocean .hljs-strong {
     font-weight: bold;
   }
@@ -328,6 +342,7 @@
   
   .highlight-theme-vs .hljs-attr,
   .highlight-theme-vs .hljs-attribute,
+  .highlight-theme-vs .hljs-attr,
   .highlight-theme-vs .hljs-builtin-name {
     color: #9CDCFE;
   }

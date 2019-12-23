@@ -8,11 +8,11 @@ permalink: "departments/index.html"
 <h1 class="page-title">{{title}}</h1>
 
 <ol class="category-list category-departments list-unstyled">
-  {% for name, info in collections.departments  %}
+  {% for deptartment in collections.departments  %}
     <li class="category-item">
-      <a href="{{info.url}}" class="category-name">{{ name }}</a>
-      {# <span class="category-count">× {{info.posts.length }}</span> #}
-      <div class="category-description">{{ info.summary }}</div>
+      <a href="{{deptartment.url}}" class="category-name">{{ deptartment.name }}</a>
+      {# <span class="category-count">× {{deptartment.posts.length }}</span> #}
+      <div class="category-description">{{ deptartment.summary }}</div>
     </li>
   {% endfor %}
 </ol>

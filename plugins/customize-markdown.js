@@ -32,13 +32,15 @@ module.exports =  function CustomizeMD() {
    let markdownItDefList = require("markdown-it-deflist")
    let markdownItMark = require('markdown-it-mark')
    let markdownItIns = require('markdown-it-ins')
+   let markdownItSpoiler = require('markdown-it-spoiler')
 
    return markdownIt(options)
             .use(markdownItAnchor, opts)
             .use(markdownItFile)
             .use(markdownItDefList)
             .use(markdownItMark)
-            .use(markdownItIns);
+            .use(markdownItIns)
+            .use(markdownItSpoiler);
 }
 
   

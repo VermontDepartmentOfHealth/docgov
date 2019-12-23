@@ -17,21 +17,29 @@ module.exports =  function BuildCollection(collection, categoryTagName,  categor
     let allPosts = collection.getFilteredByTag('post')
 
     // go through each category page and attach relevant posts
-    var categoryData = {}
-    for (let page of categoryPages) {
+    var categoryCollection = categoryPages.map(page => {
         let categoryName = page.data[categoryKey]; 
 
-        // find all relevant posts
-        let categoryPosts = allPosts.filter(p => p.data[postDataFieldName] && (p.data[postDataFieldName] === categoryName || p.data[postDataFieldName].includes(categoryName)));
-        let data = {
+        // find all relevant posts - do you have field (i.e. 'author') and if so is the value equal to the current category
+        let categoryPosts = allPosts.filter(p => equalsOrIncludes(p.data[postDataFieldName], categoryName));
+
+        let colItem = {
+            name: page.data[categoryKey],
             summary: page.data[categoryDataField],
             url: page.url,
             posts: categoryPosts
         }
-        categoryData[categoryName] = data;
-    }
+        return colItem
+    })
 
-    return categoryData;
+    return categoryCollection;
+}
+
+function equalsOrIncludes(stringOrArray, checkValue) {
+    if (!stringOrArray) return false
+    if (stringOrArray === checkValue) return true         // works only if `typeof stringOrArray === "string"`
+    if (stringOrArray.includes(checkValue)) return true;  // works only if `Array.IsArray(stringOrArray)`
+    return false;
 }
 
   
