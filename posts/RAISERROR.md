@@ -12,7 +12,7 @@ summary: "What does RAISERROR(50001, 16, 1, 'dbo.GetPerson', 'PersonId') do and 
 Let's start with two questions:
 
 1. What does `RAISERROR(50001, 16, 1, 'dbo.GetPerson', 'PersonId')` do?  
-2. And do all those [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) mean?
+2. And what do all those [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) mean?
 
 To answer that, let's first look at what each parameter is doing:
 
@@ -37,9 +37,9 @@ RAISERROR('Hi %s', 16, 1, 'Kyle')
 RAISERROR('Hi Kyle', 16, 1)
 ```
 
-However, passing in a message ID allows you to leverage a re-usable string template in the database.
+However, passing in a message ID allows you to leverage re-usable string templates in the database.
 
-According to [`RAISERROR` docs](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql):
+There's a special range reserved for our own error ids, according to [`RAISERROR` docs](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql):
 
 > Error numbers for user-defined error messages should be greater than 50000
 
@@ -85,7 +85,7 @@ The severity levels can be divided up into the following ranges:
 
 \* Check out the MS docs on [Database Engine Error Severities](https://docs.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-error-severities) for the full list, with detailed descriptions for each number
 
-Since the `message_id` comes with a default security level, you can actually pass `-1` to use the one associated to that message.  So the following two statements do the same thing:
+Since the `message_id` sets a default severity level, you can also pass `-1` to use the one associated to that message.  So the following two statements do the same thing:
 
 ```sql
 RAISERROR(50010, 16, 1, 'My bad')
@@ -99,7 +99,7 @@ We often use `RAISERROR` within a procedure to validate incoming parameters and 
 
 Be aware, there are [specific conditions](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql#remarks) under which `RAISERROR` will impact the [control of flow](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/control-of-flow) for the statement being executed:
 
-> When RAISERROR is run with a **severity of 11 or higher** in a **TRY block**, it transfers control to the associated CATCH block.
+> When RAISERROR is run with a **severity of 11 or higher** [AND] inside a **TRY block**, it transfers control to the associated CATCH block.
 
 So the following raise error statement will abort execution and transfer to the catch block
 
@@ -121,16 +121,16 @@ However, if you use a severity of < 11 or anytime you call `RAISERROR` outside a
 
 ## State & Logging Output
 
-The last parameter captures a number ranging from 0-127 to represent the "state" of your script.  This would be helpful if you had the same error message repeat multiple times, and wanted to quickly identify which line was causing the problem:
+The last parameter captures a number ranging from 0-127 to represent the "state" of your script.  This might be helpful if you had the same error being generated multiple times in a really long script and wanted to quickly identify which line was causing the problem:
 
-Here's a trivial example where the same we might have two different checks for the same ID, and we want to capture state to report which check detected the error
+Here's a trivial example where we have two different checks for the against the same param, and we can use the 'state' param to capture which check detected the error
 
 ```SQL
 -- make sure the person exists
 IF NOT EXISTS (SELECT 1 FROM dbo.Person p WHERE p.entity_uid = @PersonId)
     RAISERROR(50002, 16, 1, 'dbo.GetPerson', 'PersonId')
 
--- make sure the person has the relevant record
+-- make sure the person has an existing record
 IF NOT EXISTS (SELECT 1 FROM dbo.HearingTest h WHERE h.entity_uid = @PersonId)
     RAISERROR(50002, 16, 2, 'dbo.GetPerson', 'PersonId')
 ```
@@ -144,13 +144,15 @@ However, RAISERROR also generates metadata that is available through calling the
 * [`ERROR_SEVERITY()`](https://docs.microsoft.com/en-us/sql/t-sql/functions/error-severity-transact-sql)
 * [`ERROR_STATE()`](https://docs.microsoft.com/en-us/sql/t-sql/functions/error-state-transact-sql)
 
-So the state number can probably be gleaned more reliably just from relying on the line number from the error message
+So the state number can probably be gleaned more reliably just from relying on the line number being reported
 
 ## Throw VS. RaisError
 
 Another way to report problems & control flow is to use the `THROW` command which has a similar syntax / parameters.  The official guidance, according to the [docs on RAISERROR](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/raiserror-transact-sql) is that:
 
-> New applications [SQL Server 2012+] should use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) instead
+> New applications [SQL Server 2012+] should use [`THROW`](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/throw-transact-sql) instead of `RAISERROR`
+
+The severity is set to 16 by default, and the state value comes last, but otherwise the syntax is pretty similar:
 
 ```sql
 BEGIN TRY
@@ -169,7 +171,7 @@ END CATCH
 
 One advantage is that `THROW` will honor the [`SET XACT_ABORT`](https://docs.microsoft.com/en-us/sql/t-sql/statements/set-xact-abort-transact-sql) flag
 
-However, since our script templates are designed to work across a variety of SQL Server instances, at this point in time, we're likely to continue with our adoption of RAISERROR for the time being.
+> **NOTE**: Currently, most of our sql templates are setup to use `RAISERROR`, but at some point we might investigate switching to `THROW`
 
 ## Further Reading
 
