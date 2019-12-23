@@ -29,7 +29,7 @@ layout: default.njk
 
         {% set authorInfo = collections.authors[author] %}
         {% if authorInfo %}
-          <a href="/authors/{{author | lower}}">{{ author }}</a>
+          <a href="/pages/authors/{{author | lower}}">{{ author }}</a>
         {% else %}
           {{ author }}
         {% endif %}
