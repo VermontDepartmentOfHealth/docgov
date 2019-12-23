@@ -1092,10 +1092,19 @@ td > mark  {
   transition: background .4s ease;
 }
 
-
 .page .content .tag-badge:hover {
   background: hsl(198, 76%, 93%);
 }
+
+/* unclickable */
+.page .content span.tag-badge {
+  background: white;
+  border-color: #95b1bd;
+}
+.page .content span.tag-badge:hover {
+  background: white;
+}
+
 
 /* post tags */
 
@@ -1659,6 +1668,14 @@ body.color-theme-dark {
 }
 .color-theme-dark .content .tag-badge:hover {
   background: #2e2e2f;
+}
+/* unclickable */
+.color-theme-dark .content span.tag-badge {
+  background: #272727;
+  border-color: #4b6975;
+}
+.color-theme-dark .content span.tag-badge:hover {
+  background: #272727;
 }
 .color-theme-dark .category-count {
   background: #131313;

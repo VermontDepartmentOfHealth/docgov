@@ -48,12 +48,15 @@ layout: default.njk
   <ol class="taglist list-unstyled d-flex m-0">
     {% for tag in tags | contentTags %}
       <li class="tag">
-        <a href="/tags/{{tag}}" class="tag-badge">{{ tag }}</a>
+        {% set tagInfo = taglist | findByName(tag) %}
+        {% if tagInfo %}
+          <a href="/tags/{{tag}}" class="tag-badge" title="{{tagInfo.description}}">{{ tag }}</a>
+        {% else %}
+          <span class="tag-badge">{{ tag }}</span>
+        {% endif %}
       </li>
     {% endfor %}
   </ol>
-
-
 
 </div>
 
