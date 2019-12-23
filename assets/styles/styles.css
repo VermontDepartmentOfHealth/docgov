@@ -1014,6 +1014,7 @@ table th {
   background-color: hsla(148, 94%, 27%, 1);
   color: rgba(255, 255, 255, 0.91);
   min-width: 75px; /* reasonable min size, especially with break-word on */
+  word-break: keep-all;
 }
 
 
