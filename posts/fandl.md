@@ -17,9 +17,9 @@ The following will lay out how to:
 
 ## Connecting to the database
 
-When you open SQL Server Management Studio (SSMS), you sill be prompted to connect to a Database Server. The first time you connect, you'll need to type in the name of the server. After the initial connection, the next time you start SSMS, it will be there by default. If it is not there, you can always type it in again, or use the drop down to select a previously visited server.
+When you open SQL Server Management Studio (SSMS), you will be prompted to connect to a Database Server. The first time you connect, you'll need to type in the name of the server. After the initial connection, the next time you start SSMS, it will be there by default. If it is not there, you can always type it in again, or use the drop down to select a previously visited server.
 
-The "Authentication:" field will always be "Windows Authentication". You should never need to type in a password in order to connect. 
+The "Authentication" field will always be "Windows Authentication". You should never need to type in a password in order to connect. 
 
 ![Connecting to the server][1]
 
@@ -46,7 +46,7 @@ You can follow this same process to expand the **Tables** folder if you wish to 
 
 There are a number of ways data can be queried.
 
-**Option 1**
+**Option 1 -  From Object Explorer**
 
 If you **Right-Click** on a view, you can then use the **SELECT Top 1000 Rows** option. 
 
@@ -58,11 +58,11 @@ This will generate a select statement against the system for the TOP 1000 rows i
 
 **Disadvantages:** If there are more than 1000 records, they will not be displayed unless you remove the **TOP 1000** portion of the query.
 
-**Option 2**
+**Option 2 - From New Query Window**
 
 Create a New Query and write the sql yourself.
 
-You can either Right Click on the name of the database, in this case **whFANDL**, or click the **New Query** button on the top. When doing either of thisee, double check the **Database Dropdown** in the upper left menu ribbon. It should say **whFANDL**. If it is blank, or has another database displayed, simply click the dropdown, browse to the appropriate database, and select it.
+You can either Right Click on the name of the database, in this case **whFANDL**, or click the **New Query** button on the top. When doing either of these, double check the **Database Dropdown** in the upper left menu ribbon. It should say **whFANDL**. If it is blank, or has another database displayed, simply click the dropdown, browse to the appropriate database, and select it.
 
 ![New Query][4]
 
@@ -91,11 +91,11 @@ SELECT ESTABLISHMENT_NUMBER, NAME, COMPLAINT from D_COMPLAINT
 
 Now that we can get data out of the system, we need to limit what is returned.
 
-To do this, we'll need to add a "WHERE" clause to our "SELECT" statements by specifying that a given COLUMN from the VIEW we are querying is either within a range of values, or an exact value.
+To do this, we'll need to add a `WHERE` clause to our `SELECT` statements by specifying that a given COLUMN from the VIEW we are querying is either within a range of values, or an exact value.
 
 ##### WHERE - Exact Match
 
-Lets say we are looking up entries in D_COMPLAINT for "ONE WORLD"
+Let's say we are looking up entries in `D_COMPLAINT` for "ONE WORLD"
 
 ```sql
 SELECT * FROM D_COMPLAINT
@@ -106,7 +106,7 @@ Long as we have no typo's, we should get back any records that exist where the c
 
 ##### WHERE - Wild Cards
 
-Lets say we are looking up entries for all entries where the "NAME" starts with the word "ONE"
+Let's say we are looking up entries for all entries where the `NAME` starts with the word "ONE"
 
 ```sql
 SELECT DATE_COMPLAINT_RECEIVED, ESTABLISHMENT_NUMBER, Name
