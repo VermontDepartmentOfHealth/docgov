@@ -119,7 +119,7 @@ WHERE NAME LIKE 'ONE%'
 
 
 
-You may want to find all establishments with the word "ONE" in them. To do this, place % on either side of the string to be matched.
+You may want to find all establishments with the word "ONE" in them. To do this, place a `%` sign on either side of the string to be matched.
 
 ```sql
 SELECT ID, NAME, LINK_ID, LINK_NAME
@@ -158,7 +158,7 @@ Exporting can be done in a few ways
 
 After you have run a query, you can select the data you want to copy in much the same way you would in programs like Microsoft Excel.
 
-The below GIF demonstrates how to select
+The below GIF demonstrates how to select ...
 * A single Row
 * Multiple Rows
 * A block of data
@@ -166,7 +166,7 @@ The below GIF demonstrates how to select
 
 At the point you have the data you want you can copy it in three ways
 
-* Ctrl+C
+* <kbd>Ctrl</kbd>+<kbd>C</kbd>
 * Right-Click -> Copy
 * Right-Click -> Copy With Headers
   * Will copy selected data and include Column Names as they appear in the header.
