@@ -716,10 +716,12 @@ section.intro {
   display: inline-flex;
   align-items: center;
   margin-top: 1em;
-  flex-grow: 1;
   justify-content: flex-end;
 }
 
+.page-title-section .display-toggle {
+  flex-grow: 1;
+}
 
 .display-toggle-group {
   display: inline-flex;
