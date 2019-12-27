@@ -484,6 +484,10 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 .page .mb-0 {
   margin-bottom: 0;
 }
+.page .my-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
 .page .list-unstyled {
   list-style: none;
@@ -640,6 +644,12 @@ section.intro {
   font-size: 1.2em;
 }
 
+.page-title-section {
+  display: flex;
+  place-items: center;
+  flex-wrap: wrap;
+}
+
 /* post preview */
 .posts {
     padding-left: 0;
@@ -706,7 +716,8 @@ section.intro {
   display: inline-flex;
   align-items: center;
   margin-top: 1em;
-  float: right;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 
@@ -1148,7 +1159,16 @@ td > mark  {
 }
 
 
-
+@media (max-width: 420px) {
+  .display-toggle-text {
+      display:none;
+  }
+}
+@media (max-width: 340px) {
+  .display-toggle {
+      display:none;
+  }
+}
 
 /* print styles */
 @media print {
