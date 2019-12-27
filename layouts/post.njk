@@ -27,7 +27,7 @@ layout: default.njk
     {%- for author in authors -%}
       <li class="post-author">
 
-        {% set authorInfo = collections.authors[author] %}
+        {% set authorInfo = collections.authors | findByName(author) %}
         {% if authorInfo %}
           <a href="/pages/authors/{{author | lower}}">{{ author }}</a>
         {% else %}

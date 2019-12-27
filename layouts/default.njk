@@ -39,6 +39,12 @@
     <meta name="twitter:description" content="{{summary}}">
     <meta name="twitter:image" content="{{config.baseUrl}}/assets/images/thumbnail.png">
 
+    {# Structured Content #}
+    {# <script type="application/ld+json">{% include ld ignore missing %}</script> #}
+    {% if ld %}
+        <script type="application/ld+json">{% include ld %}</script>
+    {% endif %}
+
     {# Google Fonts #}
     {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
 
@@ -50,6 +56,7 @@
     {% endset %}
     {# feed it through our cssmin filter to minify #}
     <style type="text/css">{{ css | cssmin | safe }}</style>
+
 </head>
 {% set displayTOC = tags | isPostType %}
 <body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
