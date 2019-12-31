@@ -18,6 +18,14 @@
         return '<p>Sorry, no matches were found.</p>';
     };
 
+    /**
+    * Create the markup when no results are found
+    * @return {String} The markup
+    */
+    var createNoInputHTML = function () {
+        return '<p>Start typing to search</p>';
+    };
+
     var highlightSnippet = function (text, query, summary) {
         var ellipsis = "<span class='text-muted'>...</span>"
         
@@ -124,6 +132,13 @@
         // all lower case, please
         query = query.toLowerCase().trim();
 
+        // we we got an empty query string, return
+        if (!query) {
+            resultList.innerHTML = createNoInputHTML();
+            document.body.classList.add('searching');
+            return;
+        }
+
         var priority1 = [];
         var priority2 = [];
         var priority3 = [];
@@ -154,9 +169,6 @@
             ? createNoResultsHTML()
             : createResultsHTML(results, query);
 
-        resultList.innerHTML += ""
-        
-        console.log(resultList)
         // set search mode
         document.body.classList.add('searching');
     };

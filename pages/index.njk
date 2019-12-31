@@ -17,9 +17,13 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
         
 {% include "_partials/search.njk" %}
 
-<h1 class="page-title mt-2">
-  Recent posts
-</h1>
+<div class="page-title-section mt-1">
+  <h1 class="page-title my-1 ">
+    Recent posts
+  </h1>
+
+  {% include "_partials/displayDensity.njk" %}
+</div>
 
 {% set postList = collections.post | reverse | take(10) %}
 {% include "_partials/postList.njk" %}

@@ -484,6 +484,10 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 .page .mb-0 {
   margin-bottom: 0;
 }
+.page .my-1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 
 .page .list-unstyled {
   list-style: none;
@@ -640,6 +644,12 @@ section.intro {
   font-size: 1.2em;
 }
 
+.page-title-section {
+  display: flex;
+  place-items: center;
+  flex-wrap: wrap;
+}
+
 /* post preview */
 .posts {
     padding-left: 0;
@@ -706,9 +716,12 @@ section.intro {
   display: inline-flex;
   align-items: center;
   margin-top: 1em;
-  float: right;
+  justify-content: flex-end;
 }
 
+.page-title-section .display-toggle {
+  flex-grow: 1;
+}
 
 .display-toggle-group {
   display: inline-flex;
@@ -1092,10 +1105,19 @@ td > mark  {
   transition: background .4s ease;
 }
 
-
 .page .content .tag-badge:hover {
   background: hsl(198, 76%, 93%);
 }
+
+/* unclickable */
+.page .content span.tag-badge {
+  background: white;
+  border-color: #95b1bd;
+}
+.page .content span.tag-badge:hover {
+  background: white;
+}
+
 
 /* post tags */
 
@@ -1139,7 +1161,16 @@ td > mark  {
 }
 
 
-
+@media (max-width: 420px) {
+  .display-toggle-text {
+      display:none;
+  }
+}
+@media (max-width: 340px) {
+  .display-toggle {
+      display:none;
+  }
+}
 
 /* print styles */
 @media print {
@@ -1527,6 +1558,13 @@ aside::-webkit-scrollbar {
   transition: none !important;
 }
 
+/* tweets */
+.page .tweet-card a,
+.page .tweet-card a:hover {
+  background-image: none;
+}
+
+
 /* dark theme */
 body, .sidenav, .sidenav a, footer.footer {
   transition: background-color .3s ease, color .3s ease;
@@ -1660,6 +1698,14 @@ body.color-theme-dark {
 .color-theme-dark .content .tag-badge:hover {
   background: #2e2e2f;
 }
+/* unclickable */
+.color-theme-dark .content span.tag-badge {
+  background: #272727;
+  border-color: #4b6975;
+}
+.color-theme-dark .content span.tag-badge:hover {
+  background: #272727;
+}
 .color-theme-dark .category-count {
   background: #131313;
 }
@@ -1686,4 +1732,50 @@ body.color-theme-dark {
   color: #d641d6;
   border-color: #d641d6;
   background: hsl(0, 0%, 11%);
+}
+
+
+
+/* tweets */
+.color-theme-dark .tweet-card a,
+.color-theme-dark .tweet-card a:hover {
+  background-image: none;
+}
+
+.color-theme-dark blockquote.tweet-card {
+  border: 1px solid grey;
+  background: #162227;
+}
+
+.color-theme-dark .tweet-card:hover {
+  border-color: #9a9ea0;
+}
+
+.color-theme-dark .tweet-card {
+  color: #d6d6d6;
+}
+
+.color-theme-dark .tweet-card a {
+  color: #3b94d9;
+}
+.color-theme-dark .tweet-card a:hover {
+  color: #55acee;
+}
+
+.color-theme-dark .tweet-header .tweet-author-name {
+  color: white
+}
+.color-theme-dark .tweet-header .tweet-author-name:hover {
+  color: #55acee
+}
+
+.color-theme-dark .tweet-header .tweet-author-handle {
+  color: #8899a6;
+}
+.color-theme-dark .tweet-header .tweet-author-handle:hover {
+  color: #a8b3bb;
+}
+
+.color-theme-dark .tweet-footer .tweet-like:hover {
+  color: #e0245e;
 }

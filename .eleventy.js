@@ -27,7 +27,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("dateDisplay", require("./plugins/dates.js") );
     eleventyConfig.addFilter("removeHash", html => html.replace(/ #/g,""));
     eleventyConfig.addFilter("removeParen", html => html.replace(/\(.*?\)/g,""));
-    eleventyConfig.addFilter("contentTags", tags => tags.filter(t=> !["post","draft"].includes(t)));
+    eleventyConfig.addFilter("contentTags", tags => tags.filter(t => !["post","draft"].includes(t)));
+    eleventyConfig.addFilter("findByName", (arr, findValue) => arr.find(a => a.name === findValue));
     eleventyConfig.addFilter("isPostType", tags => tags && tags.some(t => ["post","draft"].includes(t)));
     eleventyConfig.addFilter("take", (array, n) => array.slice(0,n));
     eleventyConfig.addFilter("sortByPostCount", arr => arr.sort((a,b) => (a.posts.length < b.posts.length ? 1 : -1)));
@@ -55,6 +56,14 @@ module.exports = function(eleventyConfig) {
     // add plugins
     let pluginTOC = require('eleventy-plugin-nesting-toc');
     eleventyConfig.addPlugin(pluginTOC, {tags: ['h2, h3']});
+
+    /* embed tweet plugin setup */
+    let pluginEmbedTweet = require("eleventy-plugin-embed-tweet")
+    let tweetEmbedOptions = {
+        cacheDirectory: 'tweets',
+        useInlineStyles: false 
+    }
+    eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
         
     return {
         dir: {

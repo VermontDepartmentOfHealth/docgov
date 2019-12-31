@@ -9,7 +9,7 @@ layout: default.njk
 
 {{ content | safe }}
 
-
-{% set postList = collections.departments[name].posts %}
+{% set department = collections.departments | findByName(name) %}
+{% set postList = department.posts %}
 {% include "_partials/postList.njk" %}
     
