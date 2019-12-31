@@ -20,7 +20,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.10.0-beta.1",
     "clean-css": "^4.2.1",
-    "eleventy-plugin-embed-tweet": "^0.1.4",
+    "eleventy-plugin-embed-tweet": "^0.2.0",
     "eleventy-plugin-nesting-toc": "^1.1.0",
     "firacode": "^2.0.0",
     "gumshoejs": "^5.1.2",
