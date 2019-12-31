@@ -94,3 +94,7 @@ Spelling validation is provided by [vscode-spell-checker](https://github.com/str
 
 Exceptions should be saved to `./.vscode/settings.json` in the `cSpell.words` section
 
+### Screen Capture
+
+GIF created with [Screen To GIF](www.screentogif.com)
+
