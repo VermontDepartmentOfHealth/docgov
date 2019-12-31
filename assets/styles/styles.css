@@ -1558,6 +1558,13 @@ aside::-webkit-scrollbar {
   transition: none !important;
 }
 
+/* tweets */
+.page .tweet-card a,
+.page .tweet-card a:hover {
+  background-image: none;
+}
+
+
 /* dark theme */
 body, .sidenav, .sidenav a, footer.footer {
   transition: background-color .3s ease, color .3s ease;
@@ -1725,4 +1732,50 @@ body.color-theme-dark {
   color: #d641d6;
   border-color: #d641d6;
   background: hsl(0, 0%, 11%);
+}
+
+
+
+/* tweets */
+.color-theme-dark .tweet-card a,
+.color-theme-dark .tweet-card a:hover {
+  background-image: none;
+}
+
+.color-theme-dark blockquote.tweet-card {
+  border: 1px solid grey;
+  background: #162227;
+}
+
+.color-theme-dark .tweet-card:hover {
+  border-color: #9a9ea0;
+}
+
+.color-theme-dark .tweet-card {
+  color: #d6d6d6;
+}
+
+.color-theme-dark .tweet-card a {
+  color: #3b94d9;
+}
+.color-theme-dark .tweet-card a:hover {
+  color: #55acee;
+}
+
+.color-theme-dark .tweet-header .tweet-author-name {
+  color: white
+}
+.color-theme-dark .tweet-header .tweet-author-name:hover {
+  color: #55acee
+}
+
+.color-theme-dark .tweet-header .tweet-author-handle {
+  color: #8899a6;
+}
+.color-theme-dark .tweet-header .tweet-author-handle:hover {
+  color: #a8b3bb;
+}
+
+.color-theme-dark .tweet-footer .tweet-like:hover {
+  color: #e0245e;
 }

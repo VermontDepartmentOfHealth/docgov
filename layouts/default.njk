@@ -55,7 +55,10 @@
         {% include "assets/styles/hljs.css" %}
     {% endset %}
     {# feed it through our cssmin filter to minify #}
-    <style type="text/css">{{ css | cssmin | safe }}</style>
+    <style type="text/css">
+        {{ css | cssmin | safe }}
+        {% tweetStyles %}
+    </style>
 
 </head>
 {% set displayTOC = tags | isPostType %}

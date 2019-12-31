@@ -7,6 +7,9 @@
             "name": "Launch 11ty",
             "program": "${workspaceFolder}/node_modules/@11ty/eleventy/cmd.js",
             "args": [],
+            "runtimeArgs": [
+                "--preserve-symlinks"
+            ]
         }
     ]
 }

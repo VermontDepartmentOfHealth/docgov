@@ -298,8 +298,23 @@ $$\\\\nessie\prog\Software\\$$
 </div>
 
 
+## Nunjucks Filters
+
+### Embed Tweet
+
+<div class="split">
+<span>
+
+<pre><code>&#x007b;% tweet "1188837207206977536" %&#x007d;</code></pre>
+
+</span>
+<span>
 
 
+{% tweet "1188837207206977536" %}
+
+</span>
+</div>
 
 
 
