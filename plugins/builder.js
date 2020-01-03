@@ -60,8 +60,9 @@ function validateCategory(collection, categoryTagName,  categoryKey, categoryDat
     if (missingCategories.length) {
         const chalk = require('chalk');
         var files = missingCategories.map(a => `${filePath}${a}.md`);
-        console.warn(chalk.yellow(`Missing ${postTagName} pages for:\n* ${missingCategories.join("\n* ")}\n`));
+        console.warn(chalk.yellow(`Missing ${categoryTagName} pages for:\n* ${missingCategories.join("\n* ")}\n`));
         console.warn(chalk.yellow(`To fix, create the following files:\n${files.join("\n")}\n`));
+        // todo automatically generate placeholder file or link to create or cli instruction to create
     }
 
 }

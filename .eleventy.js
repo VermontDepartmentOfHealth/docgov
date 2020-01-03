@@ -36,10 +36,10 @@ module.exports = function(eleventyConfig) {
     
     // custom collections
     let builder = require("./plugins/builder.js")
-    eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./projects/"));
-    eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./authors/"));
-    eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./teams/"));
-    eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./departments/"));
+    eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./pages/authors/"));
+    eleventyConfig.addCollection("projects", col => builder(col, "project", "name", "summary", "project", "./pages/projects/"));
+    eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./pages/teams/"));
+    eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./pages/departments/"));
 
     eleventyConfig.addCollection("bundles", col => {
         let scriptCol = col.getFilteredByGlob("**/meta/bundle-scripts.njk")
