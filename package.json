@@ -4,10 +4,10 @@
   "description": "Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
-    "full-build": "set CACHE_BUST=true && npx eleventy",
-    "serve": "npx eleventy --serve",
-    "clean": "rm -rf _site",
+    "build": "npx @11ty/eleventy",
+    "full-build": "set CACHE_BUST=true && npx @11ty/eleventy",
+    "serve": "npx  @11ty/eleventy --serve",
+    "clean": "rm -rf _site && ",
     "clear-cache": "rm -rf tweets",
     "favicon": "npx real-favicon generate \"./tools/favicon-generator.json\" \"./tools/faviconData.json\" \"./assets/images/icons/fav\""
   },

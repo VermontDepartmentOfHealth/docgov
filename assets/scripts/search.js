@@ -217,7 +217,7 @@
                 // Create a submit handler
                 form.addEventListener('submit', submitHandler, false);
                 input.addEventListener('keyup', inputChangeHandler, false);
-                input.addEventListener('change', inputChangeHandler, false);
+                input.addEventListener('input', inputChangeHandler, false);
 
                 // if someone put text there already, fire change on focus
                 input.addEventListener('focus', function(e) {
