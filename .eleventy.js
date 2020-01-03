@@ -40,6 +40,15 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("authors", col => builder(col, "author", "name", "summary", "authors", "./authors/"));
     eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./teams/"));
     eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./departments/"));
+
+    eleventyConfig.addCollection("bundles", col => {
+        let scriptCol = col.getFilteredByGlob("**/meta/bundle-scripts.njk")
+        let styleCol = col.getFilteredByGlob("**/meta/bundle-styles.njk")
+        return {
+            script: scriptCol[0],
+            style: styleCol[0]
+        }
+    });
  
 
     // configure syntax highlighting
