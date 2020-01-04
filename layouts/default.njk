@@ -61,7 +61,11 @@
     </style>
 
 </head>
-{% set displayTOC = tags | isPostType %}
+
+{# display toc if we're on a post and we got results #}
+{% set toc = content | toc | removeHash | removeParen %}
+{% set displayTOC = tags | isPostType and toc %}
+
 <body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
 
     {# scripts to run asap #}
@@ -105,7 +109,7 @@
     {% if displayTOC %}
         <aside class="toc">
             <h3>Contents</h3>
-            {{ content | toc | removeHash | removeParen | safe }}
+            {{ toc | safe }}
         </aside>    
     {% endif %}
     
