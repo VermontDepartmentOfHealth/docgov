@@ -1,5 +1,4 @@
 
-
 module.exports = function(eleventyConfig) {
 
     // static passthroughs - remap to root
@@ -41,16 +40,13 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./pages/teams/"));
     eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./pages/departments/"));
 
+    // bundle collection
     eleventyConfig.addCollection("bundles", col => {
-        let scriptCol = col.getFilteredByGlob("**/meta/bundle-scripts.njk")
-        let styleCol = col.getFilteredByGlob("**/meta/bundle-styles.njk")
-        return {
-            script: scriptCol[0],
-            style: styleCol[0]
-        }
+        let script = col.getFilteredByGlob("**/meta/bundle-scripts.njk")[0]
+        let style = col.getFilteredByGlob("**/meta/bundle-styles.njk")[0]
+        return { script, style }
     });
  
-
     // configure syntax highlighting
     let md = require("./plugins/customize-markdown.js")()
     eleventyConfig.setLibrary("md", md);
@@ -77,8 +73,8 @@ module.exports = function(eleventyConfig) {
     return {
         dir: {
             "data": "data",
-            includes: "assets",
-            layouts: "layouts"
+            "includes": "assets",
+            "layouts": "layouts"
         },
 
         // By default markdown files are pre-processing with liquid template engine
