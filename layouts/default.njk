@@ -55,6 +55,8 @@
     {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
 
     <style type="text/css">
+        /* minimal style sheet if something goes wrong */
+        img[src$=".svg"], svg {max-width: 25px;}
         {{ collections.bundles.style.templateContent | safe }}
     </style>
 

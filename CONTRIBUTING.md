@@ -94,3 +94,24 @@ Spelling validation is provided by [vscode-spell-checker](https://github.com/str
 
 Exceptions should be saved to `./.vscode/settings.json` in the `cSpell.words` section
 
+#### Copy Editing
+
+From [Words To Avoid in Educational Writing](https://css-tricks.com/words-avoid-educational-writing/), consider avoiding the following words:
+
+* Simply
+* Just
+* Obviously
+* Basically
+* Of course
+* Clearly
+* Easy
+
+They often presume a level of mastery that not all users may have and often the writing will make sense without it like this: 
+
+> ~~Simply~~ Use a string array as the `prefix` property.
+
+If you notice any examples in existing posts, feel free to submit a PR.
+
+### Images
+
+Images taken from [undraw.co](https://undraw.co/search) should use theme color `#008a45` and should manually add `role="img"` to the root node.

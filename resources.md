@@ -55,7 +55,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [passing data to includes](https://github.com/mozilla/nunjucks/issues/539#issuecomment-203538566)
 * [built in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters)
 * [paired shortcode](https://github.com/11ty/eleventy/issues/685#issuecomment-528980239)
-
+* [Debug nunjucks data object with `dump` filter](https://mozilla.github.io/nunjucks/templating.html#dump)
 
 ## Accessibility (A11y)
 
@@ -85,6 +85,7 @@ A stash for helpful articles, references, documentation looked up along the way
 ## Node / Node Package Manager (NPM)
 
 * [run multiple scripts sequentially](https://stackoverflow.com/a/39172660/1366033)
+* [Node.js package.json main parameter](https://stackoverflow.com/q/22512992/1366033)
 
 ## Visual Studio Code
 
@@ -98,6 +99,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Issue and pull request templates](https://help.github.com/en/articles/about-issue-and-pull-request-templates)
 * [Setting guidelines for repository contributors](https://help.github.com/en/articles/setting-guidelines-for-repository-contributors)
 * [Organizing members into teams](https://help.github.com/en/articles/organizing-members-into-teams)
+* [Diff syntax highlighting](https://stackoverflow.com/q/40883421/1366033)
+* [Adding line comments & suggestions to a Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)
 
 ## HTML
 
@@ -121,6 +124,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [`Element.Closest`](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
 * [Vanilla JS - Detect Touch](https://stackoverflow.com/a/30192291/1366033)
 * [MDN - Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
+* [How to Minify JSON #540](https://github.com/terser/terser/issues/540)
 
 ## CSS
 

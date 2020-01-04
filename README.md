@@ -24,6 +24,8 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
     ```bash
     npm i @11ty/eleventy -g
+    npm i rimraf -g
+    npm i cross-env -g
     ```
 
 4. Run `npm run serve` to run a local dev environment
