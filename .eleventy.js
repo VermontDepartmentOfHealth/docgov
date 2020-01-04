@@ -46,8 +46,8 @@ module.exports = function(eleventyConfig) {
 
     // bundle collection
     eleventyConfig.addCollection("bundles", col => {
-        let script = col.getFilteredByGlob("**/meta/bundle-scripts.njk")[0]
-        let style = col.getFilteredByGlob("**/meta/bundle-styles.njk")[0]
+        let script = col.getFilteredByGlob("**/meta/bundle-scripts.js.njk")[0]
+        let style = col.getFilteredByGlob("**/meta/bundle-styles.css.njk")[0]
         return { script, style }
     });
  
