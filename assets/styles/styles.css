@@ -315,6 +315,12 @@ code {
     background: #fff8ee;
 }
 
+kbd {
+    border: 1px solid #6a6a6a;
+    padding: 1px 3px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #8080806e;
+}
 
 /* allow anchor background to be visible */
 

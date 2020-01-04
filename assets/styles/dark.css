@@ -91,6 +91,10 @@ body.color-theme-dark {
     background: #2b2925;
 }
 
+.color-theme-dark kbd {
+    border: 1px solid #858585;
+    box-shadow: none;
+}
 
 /* allow anchor background to be visible */
 
