@@ -15,7 +15,8 @@
     * @return {String} The markup
     */
     var createNoResultsHTML = function () {
-        return '<p>Sorry, no matches were found.</p>';
+        return "<button id='close-search'>×</button>" + 
+               "<p>Sorry, no matches were found.</p>";
     };
 
     /**
@@ -23,7 +24,8 @@
     * @return {String} The markup
     */
     var createNoInputHTML = function () {
-        return '<p>Start typing to search</p>';
+        return "<button id='close-search'>×</button>" + 
+               "<p>Start typing to search</p>";
     };
 
     var highlightSnippet = function (text, query, summary) {
@@ -111,9 +113,10 @@
     * @return {String}        The results HTML
     */
     var createResultsHTML = function (results, query) {
-        var html = '<p>Found ' + results.length + ' matching article' + (results.length === 1 ? '' : 's') + '</p>';
+        var html = "<button id='close-search'>×</button>"
+        
+        html += '<p>Found ' + results.length + ' matching article' + (results.length === 1 ? '' : 's') + '</p>';
 
-        html += "<button id='close-search'>×</button>"
         // limit rending results to first 20
         results = results.slice(0, 20);
 

@@ -1006,7 +1006,6 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
     border: 1px solid #d0d0d0;
     border-radius: 0px 0px 4px 4px;
     padding: .5rem;
-    position: absolute;
     background: white;
     left: 16px;
     right: 16px;
@@ -1018,7 +1017,7 @@ input.hide-clear[type="search"]::-webkit-search-results-decoration {
 }
 
 #search-results>p {
-    padding: .5rem;
+    padding: 0 0.5rem;
 }
 
 .search-results-list {
@@ -1076,13 +1075,12 @@ dd mark {
 }
 
 button#close-search {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+    float: right;
+    margin: 15px 0.5rem;
+    padding: 2px 6px;
     border: none;
     border-radius: 3px;
     font-size: 1.5em;
-    padding: 2px 6px;
     line-height: 1em;
     background: white;
     cursor: pointer;
