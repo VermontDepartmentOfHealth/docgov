@@ -1,3 +1,10 @@
+---
+layout: default.njk
+title: Contributing Guidelines
+tags: ['page']
+permalink: 'contributing.md/index.html'
+---
+
 # Contributing to Doc Gov
 
 Hi There! 👋

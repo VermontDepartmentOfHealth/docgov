@@ -1,3 +1,10 @@
+---
+layout: default.njk
+title: Read Me
+tags: ['page']
+permalink: 'readme.md/index.html'
+---
+
 # [Doc Gov](https://docgov.dev)
 
 A Collection of public facing Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS
@@ -12,9 +19,9 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 ## Project Wikis
 
-* [Contributing](/contributing/)
-* [Code of Conduct](/code_of_conduct/)
-* [Resources](/resources/)
+* [Contributing](/contributing.md)
+* [Code of Conduct](/code_of_conduct.md)
+* [Resources](/resources.md)
 
 ## Project Setup
 

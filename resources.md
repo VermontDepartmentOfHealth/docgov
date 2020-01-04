@@ -1,3 +1,10 @@
+---
+layout: default.njk
+title: Resources
+tags: ['page']
+permalink: 'resources.md/index.html'
+---
+
 # Resources & References
 
 A stash for helpful articles, references, documentation looked up along the way
@@ -163,3 +170,9 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [Hyphen or Underscore for SEO URLs?](https://www.ecreativeim.com/blog/index.php/2011/03/30/seo-basics-hyphen-or-underscore-for-seo-urls/)
 * [meta robots noindex vs nofollow](https://yoast.com/which-pages-noindex-or-nofollow/)
+* [What is .htaccess file?](https://stackoverflow.com/q/13170819/1366033)
+* [What is a sitemap.xml](https://support.google.com/webmasters/answer/156184)
+* [Build and submit your sitemap](https://support.google.com/webmasters/answer/183668)
+* [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289)
+* [Intro to Structured Data (JSON-LD)](https://developers.google.com/search/docs/guides/intro-structured-data)
+* [Job Posting Metadata](https://developers.google.com/search/docs/data-types/job-posting)
