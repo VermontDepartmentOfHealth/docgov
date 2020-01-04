@@ -87,11 +87,12 @@ A stash for helpful articles, references, documentation looked up along the way
 * [run multiple scripts sequentially](https://stackoverflow.com/a/39172660/1366033)
 * [Node.js package.json main parameter](https://stackoverflow.com/q/22512992/1366033)
 
-## Visual Studio Code
+## Visual Studio Code (VS Code)
 
 * [workspace recommended extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 * [debug on windows and mac](https://stackoverflow.com/a/42471528/1366033)
 * [add json schema definition](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
+* [How to create per workspace snippets in VSCode?](https://stackoverflow.com/q/44312494/1366033)
 
 ## Github
 

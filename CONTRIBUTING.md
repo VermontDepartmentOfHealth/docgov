@@ -53,17 +53,26 @@ There are [recommended extensions](https://code.visualstudio.com/docs/editor/ext
 Each markdown file should start with a [yaml](https://learnxinyminutes.com/docs/yaml/) [frontmatter](https://www.11ty.io/docs/data-frontmatter/) block to provide meta data used to display and categorize the post.
 
 ```yaml
+layout: default.njk            # which template page to use for layout
 title_word: Hiring             # a single word under 15 characters - will be prepended to "doc Gov" on the site title
 title: Hiring Overview         # a short article title - will be
-tags: ['post', 'workforce']    # all posts must have the tag 'post' in addition to at least one other tagging option in /data/taglist
-authors: ['Kyle', 'Brian']     # an array of authors - each should correspond to a key in /authors/
-date: 2019-08-22               # the original create date for the post
-updated: 2019-08-22            # (optional) most recent change date
 summary: "An overview of ..."  # the summary that will appear when the article is referenced elsewhere.  
                                # Should be 1-2 short sentences with the elevator pitch for the article
+tags: ['post', 'workforce']    # all posts must have the tag 'post' in addition to at least one other tagging option in /data/taglist
+authors: ['Kyle', 'Brian']     # an array of authors - each should correspond to a key in /authors/
+department: 'VDH'              # (optional) department related post - should correspond to a key in /departments/
+project: 'Paper Cuts'          # (optional) project related post - should correspond to a key in /projects/
+team: 'MO'                     # (optional) team related post - should correspond to a key in /teams/
+date: 2019-08-22               # the original create date for the post
+updated: 2019-08-22            # (optional) most recent change date
+draft: true                    # (optional) marks post as draft
 pageClass: "search"            # (optional) class string that will be added to document.body
+permalink: /topic/index.html   # (optional) a static name if you don't want to use the file's path as the URL
 ```
 
+The core frontmatter properties can be added with a snippet by typing <kbd>Ctrl</kbd> + <kbd>Space</kbd> and then selecting **frontmatter-post**, which will give you a starter block with the properties you need to fill in.
+
+ ![frontmatter snippet](/assets/images/posts/contributing/snippet.png)
 
 ## Coding conventions
 
