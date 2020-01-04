@@ -2,9 +2,9 @@
 layout: default.njk
 ---
         
-{% if 'draft' in tags %}
+{% if draft %}
   <div class="alert alert-warn">
-    This post is in <a href="/drafts/">Draft Mode</a>
+    This post is in <a href="/drafts/">Draft Mode</a> - it will not appear on the site or in search results
   </div>
 {% endif %}
 
@@ -45,7 +45,7 @@ layout: default.njk
     </div>
   {% endif %}
 
-  <ol class="taglist list-unstyled d-flex m-0">
+  <ul class="taglist list-unstyled d-flex m-0">
     {% for tag in tags | contentTags %}
       <li class="tag">
         {% set tagInfo = taglist | findByName(tag) %}
@@ -56,7 +56,7 @@ layout: default.njk
         {% endif %}
       </li>
     {% endfor %}
-  </ol>
+  </ul>
 
 </div>
 

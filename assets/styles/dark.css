@@ -187,6 +187,25 @@ body.color-theme-dark {
 }
 
 
+/* alerts */
+.color-theme-dark .alert.alert-warn {
+    background: #593a00;
+    border: 1px solid #7e5100;
+    color: #faf9f7;
+}
+.color-theme-dark .alert.alert-warn a {
+    color: #faf9f7;
+}
+
+.color-theme-dark .alert-warn b {
+    color: #f9cc7a;
+}
+
+.color-theme-dark .alert.alert-warn a,
+.color-theme-dark .alert.alert-warn a:hover {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 4px), #704f01 calc(50% - 8px), #704f01 100%);
+}
+
 /* tweets */
 
 .color-theme-dark .tweet-card a,

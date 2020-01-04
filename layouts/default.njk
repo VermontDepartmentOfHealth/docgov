@@ -26,7 +26,7 @@
     <link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
     
     {# drafts never get crawled, else see config #}
-    {% if draft_mode or tags | isDraft %}
+    {% if draft %}
         <meta name="robots" content="NOINDEX">
     {% else %}
         <meta name="robots" content="{{config.metaRobots}}">

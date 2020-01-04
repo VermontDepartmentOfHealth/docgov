@@ -41,6 +41,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("teams", col => builder(col, "team", "name", "summary", "team", "./pages/teams/"));
     eleventyConfig.addCollection("departments", col => builder(col, "department", "name", "summary", "department", "./pages/departments/"));
 
+    eleventyConfig.addCollection("published", col => col.getFilteredByTag("post").filter(item => !item.data.draft));
+    eleventyConfig.addCollection("drafts", col => col.getFilteredByTag("post").filter(item => item.data.draft));
+
     // bundle collection
     eleventyConfig.addCollection("bundles", col => {
         let script = col.getFilteredByGlob("**/meta/bundle-scripts.njk")[0]

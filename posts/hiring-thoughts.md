@@ -1,7 +1,8 @@
 ---
 title_word: 'Hiring'
 title: 'Thoughts on designing the hiring process'
-tags: ['draft', 'workforce']
+tags: ['post', 'workforce', 'opinion']
+draft: true
 authors: ['Kyle']
 date: 2019-12-26
 summary: "The Department of Health is looking for an application developer to join our team writing software that helps improve health outcomes and health equity across all vermonters"

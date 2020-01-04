@@ -1,7 +1,8 @@
 ---
 title_word: 'Data'
 title: 'How to Install the AdventureWorks Database'
-tags: ['draft', 'sql', 'data']
+tags: ['post', 'sql', 'data']
+draft: true
 authors: ['Kyle']
 date: 2020-01-02
 summary: "How to create shareable demos and isolated test cases with sample data from Microsoft's AdventureWorks database"

@@ -432,6 +432,10 @@ ins {
     border: 1px solid #f3d49b;
 }
 
+.alert-warn b {
+    color: #3f2901;
+}
+
 .alert.alert-warn a,
 .alert.alert-warn a:hover {
     background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), #ffbe2d calc(50% - 8px), #ffbe2d 100%);

@@ -1,7 +1,8 @@
 ---
 title_word: Auth
 title: Rolling our own Impersonation with ASP.NET
-tags: ['draft', 'authentication']
+tags: ['post', 'authentication']
+draft: true
 authors: ['Kyle']
 date: 2019-09-10
 summary: "Forms Authentication + ActiveDirectory MembershipProvider + ASP.NET Impersonation in MVC 5"
