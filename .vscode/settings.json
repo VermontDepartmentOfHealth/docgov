@@ -73,6 +73,7 @@
     "markdownlint",
     "minmax",
     "netlify",
+    "nofollow",
     "nwsprod",
     "nwstest",
     "passthroughs",

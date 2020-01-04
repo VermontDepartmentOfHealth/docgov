@@ -157,3 +157,4 @@ A stash for helpful articles, references, documentation looked up along the way
 ## SEO
 
 * [Hyphen or Underscore for SEO URLs?](https://www.ecreativeim.com/blog/index.php/2011/03/30/seo-basics-hyphen-or-underscore-for-seo-urls/)
+* [meta robots noindex vs nofollow](https://yoast.com/which-pages-noindex-or-nofollow/)
