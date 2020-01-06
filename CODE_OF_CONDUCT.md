@@ -1,3 +1,11 @@
+---
+layout: default.njk
+title: Code of Conduct
+tags: ['page']
+toc: true
+permalink: 'code_of_conduct.md/index.html'
+---
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

@@ -8,6 +8,8 @@ const DEFAULT_DEV_URL = 'http://localhost:8080';
 
 module.exports = {
 
+    ELEVENTY_ENV: process.env.ELEVENTY_ENV,
+
     /**
      * Build Context 
      * https://www.netlify.com/docs/continuous-deployment/#deploy-contexts

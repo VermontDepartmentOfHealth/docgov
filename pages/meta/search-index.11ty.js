@@ -6,14 +6,13 @@ class SearchIndex {
       return {
           // https://www.11ty.io/docs/languages/javascript/#permalinks
         permalink: "/search.json",
-        layout: '',
         eleventyExcludeFromCollections: true,
       };
     }
   
     render(data) {
         // todo - add readme & other docs to posts
-        let search = data.collections.post.map(item => {
+        let search = data.collections.published.map(item => {
           return {
             url: item.url,
             title: item.data.title || item.data.renderData.title || '',

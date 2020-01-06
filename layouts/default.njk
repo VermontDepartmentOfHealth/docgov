@@ -23,9 +23,15 @@
     <title>{{page_title}}</title>
     <meta name="title" content="{{page_title}} | doc gov">
     <meta name="description" content="{{summary}}">
-    <meta name="robots" content="{{config.metaRobots}}">
     <link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
     
+    {# drafts never get crawled, else see config #}
+    {% if draft %}
+        <meta name="robots" content="NOINDEX">
+    {% else %}
+        <meta name="robots" content="{{config.metaRobots}}">
+   {% endif %}
+
     {# Open Graph / Facebook #}
     <meta property="og:type" content="article">
     <meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
@@ -49,11 +55,17 @@
     {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
 
     <style type="text/css">
+        /* minimal style sheet if something goes wrong */
+        img[src$=".svg"], svg {max-width: 25px;}
         {{ collections.bundles.style.templateContent | safe }}
     </style>
 
 </head>
-{% set displayTOC = tags | isPostType %}
+
+{# display toc if we're on a post and we got results #}
+{% set tocHtml = content | toc | removeHash | removeParen %}
+{% set displayTOC = tags | isPostType or toc and tocHtml %}
+
 <body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
 
     {# scripts to run asap #}
@@ -97,7 +109,7 @@
     {% if displayTOC %}
         <aside class="toc">
             <h3>Contents</h3>
-            {{ content | toc | removeHash | removeParen | safe }}
+            {{ tocHtml | safe }}
         </aside>    
     {% endif %}
     

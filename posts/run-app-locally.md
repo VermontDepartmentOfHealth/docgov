@@ -1,17 +1,14 @@
 ---
 title_word: Apps
 title: Run Apps Locally
-tags:
-- draft
-- overview
-authors:
-- Kyle
-- Brian
+tags: [post, overview ]
+authors: [Kyle, Brian]
 department: VDH
 date: 2019-09-16
 summary: How to download, setup, configure, and run VDH Apps Locally
-
+draft: true
 ---
+
 ## 1. Git Clone
 
 Go get the git URL for a project from [Bitbucket (formerly stash)](https://ahs-jira-prod.ahs.state.vt.us:8443/stash/projects/VDH)

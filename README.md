@@ -1,3 +1,11 @@
+---
+layout: default.njk
+title: Read Me
+tags: ['page']
+toc: true
+permalink: 'readme.md/index.html'
+---
+
 # [Doc Gov](https://docgov.dev)
 
 A Collection of public facing Overviews, Guidelines, Strategies, Standards, Technologies, and other shareable resources at VDH / AHS / ADS
@@ -12,9 +20,10 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 ## Project Wikis
 
-* [Contributing](/contributing/)
-* [Code of Conduct](/code_of_conduct/)
-* [Resources](/resources/)
+* [Contributing](/contributing.md)
+* [Code of Conduct](/code_of_conduct.md)
+* [Resources](/resources.md)
+* [Changelog](/changelog.md)
 
 ## Project Setup
 
@@ -24,6 +33,8 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
     ```bash
     npm i @11ty/eleventy -g
+    npm i rimraf -g
+    npm i cross-env -g
     ```
 
 4. Run `npm run serve` to run a local dev environment
@@ -32,6 +43,28 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 ## NPM Scripts
 
 ```bash
-npm run build  # runs `npx eleventy` to build the site
-npm run serve  # builds site + serves `_site` directory
+npm run build       # builds site for production
+npm run serve       # builds site + serves `_site` directory
+npm run clean       # deletes `_site` directory
+npm run clear-cache # deletes twitter cache
+npm run favicon     # generates favicon assets from svg
 ```
+
+## Project Architecture
+
+### Eleventy Collections
+
+Collections provide a way to enumerate processed content.  Collection categories are set by the `tags` page or added via the `.eleventy.js` config
+
+* all
+  * post (tagged post)
+    * published
+    * drafts
+  * page (tagged page)
+    * authors
+    * projects
+    * departments
+    * teams
+  * meta
+* *`<tag_names>`*
+* `eleventyExcludeFromCollections` - will still be processed, but won't appear in collections

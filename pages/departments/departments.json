@@ -1,4 +1,4 @@
-{ 
+{
     "layout": "department.njk",
-    "tags": ["department"]
+    "tags": ["department", "page"]
 }
