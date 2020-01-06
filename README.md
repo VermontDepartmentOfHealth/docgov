@@ -23,6 +23,7 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 * [Contributing](/contributing.md)
 * [Code of Conduct](/code_of_conduct.md)
 * [Resources](/resources.md)
+* [Changelog](/changelog.md)
 
 ## Project Setup
 
@@ -43,7 +44,7 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 ```bash
 npm run build       # builds site for production
-npm run serve  # builds site + serves `_site` directory
+npm run serve       # builds site + serves `_site` directory
 npm run clean       # deletes `_site` directory
 npm run clear-cache # deletes twitter cache
 npm run favicon     # generates favicon assets from svg

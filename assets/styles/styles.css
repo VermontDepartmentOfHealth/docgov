@@ -735,6 +735,7 @@ section.intro {
     flex-direction: column;
 }
 
+h1,
 .post-title,
 .page-title {
     font-size: 2.1rem;
