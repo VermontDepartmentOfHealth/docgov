@@ -58,3 +58,29 @@ WITH ActiveEmployee AS (
 )
 SELECT * FROM Employees
 ```
+
+
+## INI (TOML)
+
+```ini
+CONSUMER_KEY=EFf98235jjsef
+CONSUMER_SECRET=OeiL835Lu8325
+```
+
+## YAML
+
+```yaml
+title_word: 'Careers'
+title: 'Full Stack .NET Software Developer'
+tags: ['post', 'workforce']
+```
+
+
+## Diff
+
+```diff
+- var sayHello = function(name) {
+-   return 'Hi, ' + name
+- }
++ let sayHello = name => `Hi, ${name}`
+```
