@@ -48,3 +48,22 @@ npm run clean       # deletes `_site` directory
 npm run clear-cache # deletes twitter cache
 npm run favicon     # generates favicon assets from svg
 ```
+
+## Project Architecture
+
+### Eleventy Collections
+
+Collections provide a way to enumerate processed content.  Collection categories are set by the `tags` page or added via the `.eleventy.js` config
+
+* all
+  * post (tagged post)
+    * published
+    * drafts
+  * page (tagged page)
+    * authors
+    * projects
+    * departments
+    * teams
+  * meta
+* *`<tag_names>`*
+* `eleventyExcludeFromCollections` - will still be processed, but won't appear in collections
