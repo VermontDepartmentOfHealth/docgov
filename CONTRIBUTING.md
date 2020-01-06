@@ -76,6 +76,7 @@ updated: 2019-08-22            # (optional) most recent change date
 draft: true                    # (optional) marks post as draft
 toc: true                      # (optional) include table of contents (automatic for posts)
 pageClass: "search"            # (optional) class string that will be added to document.body
+hero: "/assets/images/posts/npm-scripts/thumbnail.png" # (optional) hero thumbnail
 permalink: /topic/index.html   # (optional) a static name if you don't want to use the file's path as the URL
 ```
 

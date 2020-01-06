@@ -60,5 +60,13 @@ layout: default.njk
 
 </div>
 
+
+{% if hero %}
+  <div class="hero">
+    <img src="{{hero}}" alt="{{page_title}} thumnail">
+  </div>
+{% endif %}
+
+
 {{ content | safe }}
     
