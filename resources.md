@@ -2,6 +2,7 @@
 layout: default.njk
 title: Resources
 tags: ['page']
+toc: true
 permalink: 'resources.md/index.html'
 ---
 

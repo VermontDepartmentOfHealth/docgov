@@ -2,6 +2,7 @@
 layout: default.njk
 title: Read Me
 tags: ['page']
+toc: true
 permalink: 'readme.md/index.html'
 ---
 
@@ -41,6 +42,9 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 ## NPM Scripts
 
 ```bash
-npm run build  # runs `npx eleventy` to build the site
+npm run build       # builds site for production
 npm run serve  # builds site + serves `_site` directory
+npm run clean       # deletes `_site` directory
+npm run clear-cache # deletes twitter cache
+npm run favicon     # generates favicon assets from svg
 ```

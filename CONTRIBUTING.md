@@ -2,6 +2,7 @@
 layout: default.njk
 title: Contributing Guidelines
 tags: ['page']
+toc: true
 permalink: 'contributing.md/index.html'
 ---
 
@@ -73,6 +74,7 @@ team: 'MO'                     # (optional) team related post - should correspon
 date: 2019-08-22               # the original create date for the post
 updated: 2019-08-22            # (optional) most recent change date
 draft: true                    # (optional) marks post as draft
+toc: true                      # (optional) include table of contents (automatic for posts)
 pageClass: "search"            # (optional) class string that will be added to document.body
 permalink: /topic/index.html   # (optional) a static name if you don't want to use the file's path as the URL
 ```

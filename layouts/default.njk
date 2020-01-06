@@ -63,8 +63,8 @@
 </head>
 
 {# display toc if we're on a post and we got results #}
-{% set toc = content | toc | removeHash | removeParen %}
-{% set displayTOC = tags | isPostType and toc %}
+{% set tocHtml = content | toc | removeHash | removeParen %}
+{% set displayTOC = tags | isPostType or toc and tocHtml %}
 
 <body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
 
@@ -109,7 +109,7 @@
     {% if displayTOC %}
         <aside class="toc">
             <h3>Contents</h3>
-            {{ toc | safe }}
+            {{ tocHtml | safe }}
         </aside>    
     {% endif %}
     
