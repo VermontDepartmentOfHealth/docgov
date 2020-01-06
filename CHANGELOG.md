@@ -49,7 +49,55 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 
 -->
 
-## v0.5 - September 18th, 2019
+## v0.6 - Jan 5th, 2020
+
+### Overview
+
+
+### Release Notes
+
+#### Content Additions
+
+* update merge and remove duplicate pages
+* add [interview page for app developers](https://docgov.dev/hiring/app/)
+* add post on [RAISERROR](https://docgov.dev/posts/raiserror/)
+* add copy editing notes, install instructions, core styles
+* add changelog
+
+#### Enhancements
+
+* #30 add `insert`, `mark`, and `spoiler` md syntax
+* #10 add netlify CMS
+* #69 add dark mode
+* #81 add markdown files in project root (ex. Readme) to site
+* #78 add noindex to draft posts
+* Update format of **display density** toggle
+* Add ability to embed tweets
+* add link to drafts page during dev
+* add <kbd>kbd</kbd> styles
+* add table of contents to root documents
+
+#### Fixes
+
+* #84 don't link to tags that don't have landing pages
+* #77 fix horizontal scrolling
+* fix blurry hr
+* fix contrast on syntax highlighting theme colors
+* don't display toc if empty
+* fix search on 404 page and update styling
+
+#### Tech Debt
+
+* #22 add frontmatter snippet for posts
+* #80 update nunjucks workspace support and recommendations
+* #35 add ie11 compatibility for grid, es6, and polyfills
+* #87 fix build perf for css and js minification
+* #91 add pull request template
+
+
+
+
+## v0.5 - Sep 18th, 2019
 
 ### Overview
 

@@ -71,6 +71,7 @@
     "lifecycle",
     "linkify",
     "markdownlint",
+    "minification",
     "minmax",
     "netlify",
     "nofollow",
