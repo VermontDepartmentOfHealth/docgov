@@ -80,6 +80,9 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 * add link to drafts page during dev
 * add <kbd>kbd</kbd> styles
 * add table of contents to root documents
+* #74 add dev and prod build modes
+* #89 ensure npm scripts work cross platform
+* fix collection builder category validation
 
 #### Fixes
 
@@ -97,7 +100,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 * #35 add ie11 compatibility for grid, es6, and polyfills
 * #87 fix build perf for css and js minification
 * #91 add pull request template
-
+* refactor drafts and posts to separate collections
 
 
 
