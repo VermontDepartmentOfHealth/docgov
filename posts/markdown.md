@@ -7,9 +7,9 @@ date: 2019-08-30
 summary: "Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage"
 ---
 
-It's no surprise... Markdown is my favorite ever! It translates really well into how I want to *\*write\** out of the box.
+Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage! Personally, I find that it translates really well into how I want to *\*write\** out of the box.
 
-It powers Stack Overflow, Github, and a good chunk of the internet, while offering a delicate balance between robust expressiveness in typography, human readability on all platforms, and amazingly simple full text search.
+Markdown powers Stack Overflow, Github, and a good chunk of the internet, while offering a delicate balance between robust expressiveness in typography, human readability on all platforms, and amazingly simple full text search.
 
 If you're just getting started there are a couple symbols to remember that will help translate text into **TEXT**!  There are plenty of online guides already detailing various flavors, but here's a brief overview contextualized into this site, including which elements are available and how they are displayed.
 
@@ -151,9 +151,9 @@ For some external quick reference guides, you can check out [CommonMark](https:/
 <div class="split">
 <span>
 
-Three Dashes: \---
-OR three Astrix: \***
-OR three Underscore: \___
+Three Dashes: \---  
+OR three Astrix: \***  
+OR three Underscore: \___  
 
 </span>
 <span>
@@ -321,9 +321,13 @@ $$\\\\nessie\prog\Software\\$$
 
 <style>
 /* prevent examples from showing up in toc */
-li [href='#h--secondary'],
-li [href='#h--tertiary'],
-li [href='#h--quaternary'] {
+.toc li [href='#h--secondary'],
+.toc li [href='#h--tertiary'],
+.toc li [href='#h--quaternary'] {
     display: none;
+}
+/* override min-width */
+.split table {
+  min-width: 50px;
 }
 </style>

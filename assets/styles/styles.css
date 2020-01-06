@@ -322,6 +322,7 @@ kbd {
     box-shadow: 1px 1px 1px #8080806e;
 }
 
+
 /* allow anchor background to be visible */
 
 a>code {
@@ -505,6 +506,7 @@ dt {
 
 .split>* {
     flex: 1;
+    width: 50%;
 }
 
 .split hr {
