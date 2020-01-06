@@ -33,7 +33,7 @@ Release notes should use the following template:
 If a section is blank, you can omit it from a particular release
 
 
-For the overview, include the following links
+For the overview, include the following links:
 
 * [Site Snapshot](https://5d81bb5a41ee47000a71682f--open-sourced.netlify.com/)
 * [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/d4ca10115ad8a49714668fa8805b901b6fdbcc9c)
@@ -52,6 +52,10 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ## v0.6 - Jan 5th, 2020
 
 ### Overview
+
+* [Site Snapshot](https://5e1295803a630e000917d510--open-sourced.netlify.com/)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.6-beta)
+* [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5e1295803a630e000917d510)
 
 
 ### Release Notes
@@ -102,7 +106,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ### Overview
 
 * [Site Snapshot](https://5d81bb5a41ee47000a71682f--open-sourced.netlify.com/)
-* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/d4ca10115ad8a49714668fa8805b901b6fdbcc9c)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.5-beta)
 * [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5d81bb5a41ee47000a71682f)
 
 ### Release Notes
@@ -137,7 +141,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ### Overview
 
 * [Site Snapshot](https://5d7c34d1692ec7000aab9d03--open-sourced.netlify.com/)
-* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/ee9e66c154ca4707e1b5984d80ed636b46ff6a56)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.4-beta)
 * [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5d7c34d1692ec7000aab9d03)
 
 ### Release Notes
@@ -178,7 +182,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ### Overview
 
 * [Site Snapshot](https://5d72d9533e6aa80008267553--open-sourced.netlify.com/)
-* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/6b81781cf4d72700ffe58924933b3257fc87b72f)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.3-beta)
 * [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5d72d9533e6aa80008267553)
 
 
@@ -224,7 +228,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ### Overview
 
 * [Site Snapshot](https://5d6b3f4cfc2c13000c9a8b3f--open-sourced.netlify.com/)
-* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/b3f44402ffb475ea3b08946ebfd96b1ac08e0fe4)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.2-beta)
 * [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5d6b3f4cfc2c13000c9a8b3f)
 
 ### Release Notes
@@ -262,7 +266,7 @@ In Changelog.md, Github will automatically add links to issue ids and usernames,
 ### Overview
 
 * [Site Snapshot](https://5d60199f98e8d00008f242ac--open-sourced.netlify.com/)
-* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/62d3fd1d47348df7cb081f8628a1e3f8758fb862)
+* [Codebase Snapshot](https://github.com/VermontDepartmentOfHealth/docs/tree/v0.1-beta)
 * [Netlify Build](https://app.netlify.com/sites/open-sourced/deploys/5d60199f98e8d00008f242ac)
 
 ### Release Notes
