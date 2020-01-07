@@ -134,6 +134,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Vanilla JS - Detect Touch](https://stackoverflow.com/a/30192291/1366033)
 * [MDN - Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
 * [How to Minify JSON #540](https://github.com/terser/terser/issues/540)
+* [Determine if element has scrollbar](https://stackoverflow.com/a/4146651/1366033)
 
 ## CSS
 
