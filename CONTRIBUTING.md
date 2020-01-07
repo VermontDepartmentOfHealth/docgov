@@ -84,6 +84,18 @@ The core frontmatter properties can be added with a snippet by typing <kbd>Ctrl<
 
  ![frontmatter snippet](/assets/images/posts/contributing/snippet.png)
 
+### Hero
+
+If you include a hero image, it will be included as the first image in the post and also override the social meta tags
+
+**Post Hero**:
+
+![post-hero](/assets/images/posts/contributing/post-hero.png)
+
+**Social Meta**:
+
+![social-meta](/assets/images/posts/contributing/social-meta.png)
+
 ## Coding conventions
 
 ### Markdown

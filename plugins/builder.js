@@ -13,8 +13,8 @@ module.exports =  function BuildCollection(collection, categoryTagName,  categor
     // all categories that have their own page
     let categoryPages = collection.getFilteredByTag(categoryTagName)
 
-    // grab all posts
-    let allPosts = collection.getFilteredByTag('post')
+    // grab all (published) posts in descending order
+    let allPosts = collection.getFilteredByTag('post').filter(item => !item.data.draft).reverse()
 
     // go through each category page and attach relevant posts
     var categoryCollection = categoryPages.map(page => {
