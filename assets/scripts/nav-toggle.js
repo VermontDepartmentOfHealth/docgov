@@ -38,7 +38,10 @@ function handleTouchStart(evt) {
 
 function handleTouchEnd(evt) {
     // make sure touch start has already fired
-    if ( ! xDown || ! yDown ) { return;}
+    if ( ! xDown || ! yDown ) { return; }
+
+    // if the click came from inside the house (sidenav) don't do anything
+    if (evt.target.closest("nav.sidenav")) { return }
 
     // calculate movements
     var xUp = evt.changedTouches[0].clientX;
