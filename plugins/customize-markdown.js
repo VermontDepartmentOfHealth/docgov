@@ -6,7 +6,7 @@ module.exports = function CustomizeMD() {
     let markdownIt = require("markdown-it");
     let options = {
         html: true,
-        breaks: false,
+        breaks: true,
         linkify: true,
         highlight: highlight
     };
@@ -33,6 +33,7 @@ module.exports = function CustomizeMD() {
     let markdownItMark = require('markdown-it-mark')
     let markdownItIns = require('markdown-it-ins')
     let markdownItSpoiler = require('markdown-it-spoiler')
+    let markdownItCheckbox = require('markdown-it-checkbox')
 
     return markdownIt(options)
         .use(markdownItAnchor, opts)
@@ -40,6 +41,10 @@ module.exports = function CustomizeMD() {
         .use(markdownItDefList)
         .use(markdownItMark)
         .use(markdownItIns)
-        .use(markdownItSpoiler);
+        .use(markdownItSpoiler)
+        .use(markdownItCheckbox, {
+            divWrap: true,
+            divClass: 'checkbox',
+          });
 }
   

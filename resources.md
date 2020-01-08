@@ -82,7 +82,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [how to write lists inside a markdown table](https://stackoverflow.com/q/19950648/1366033)
 * [escape ordered list](https://stackoverflow.com/a/12839171/1366033)
 * [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor)
-
+* [markdown-it-checkbox](https://github.com/mcecot/markdown-it-checkbox)
 
 ## Highlight.JS
 
@@ -145,6 +145,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [How to justify a single flexbox item](https://stackoverflow.com/q/23621650/1366033)
 * [simple tooltip](https://chrisbracco.com/a-simple-css-tooltip/)
 * [How can I implement a spoiler quote with just CSS?](https://stackoverflow.com/a/59166036/1366033)
+* [Pure CSS: Accessible Checkboxes](https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3)
+
 
 ## Fonts
 

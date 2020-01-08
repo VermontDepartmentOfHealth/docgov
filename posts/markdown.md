@@ -240,6 +240,24 @@ var pet = {
 </span>
 </div>
 
+### Checkbox Lists
+
+
+<div class="split">
+<span>
+
+[<span> &nbsp;</span>] unchecked item
+[<span>x</span>] checked item
+
+</span>
+<span>
+
+[ ] unchecked item
+[x] checked item
+
+</span>
+</div>
+
 ### Spoiler
 
 
