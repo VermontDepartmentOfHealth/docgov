@@ -101,6 +101,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [debug on windows and mac](https://stackoverflow.com/a/42471528/1366033)
 * [add json schema definition](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
 * [How to create per workspace snippets in VSCode?](https://stackoverflow.com/q/44312494/1366033)
+* [How do I change Markdownlint settings in Visual Studio Code](https://superuser.com/a/1295410/180163)
 
 ## Github
 

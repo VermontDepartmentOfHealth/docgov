@@ -102,7 +102,7 @@ If you include a hero image, it will be included as the first image in the post 
 
 Markdown validation is provided by [vscode-markdownlint](https://github.com/DavidAnson/vscode-markdownlint).
 
-Current exceptions, which are saved to `/.markdownlint.json`, and their rationale
+Here are the current exceptions, saved to `/.vscode/.settings.json`, and their rationale:
 
 * [MD012](https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md#md012---multiple-consecutive-blank-lines) - **Multiple blank lines**  
   Headings often have a tall visual margin to separate content - if markdown authors want to emulate that, okay
@@ -125,7 +125,7 @@ Spelling validation is provided by [vscode-spell-checker](https://github.com/str
 
 Exceptions should be saved to `./.vscode/settings.json` in the `cSpell.words` section
 
-#### Copy Editing
+#### Inclusive Language
 
 From [Words To Avoid in Educational Writing](https://css-tricks.com/words-avoid-educational-writing/), consider avoiding the following words:
 
