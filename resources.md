@@ -37,7 +37,8 @@ A stash for helpful articles, references, documentation looked up along the way
 
 ## Netlify
 
-* [TOML](https://www.netlify.com/docs/netlify-toml-reference/)
+* [Netlify Config](https://www.netlify.com/docs/netlify-toml-reference/)
+* [Netlify Config - Redirects](https://docs.netlify.com/configure-builds/file-based-configuration/#redirects)
 * [Build](https://www.netlify.com/products/build/)
 * [Dev](https://www.netlify.com/products/dev/)
 * [Asset Optimization / Post Processing](https://www.netlify.com/docs/netlify-toml-reference/#post-processing)
@@ -45,7 +46,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Build Hooks](https://www.netlify.com/docs/webhooks/#incoming-webhooks)
 * [environment variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
 * [CLI (formerly dev)](https://github.com/netlify/cli)
-
+* [Redirects and rewrites](https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file)
 
 ## JAMStack
 

@@ -8,3 +8,5 @@
 [[redirects]]
   from = "/github"
   to = "https://github.com/VermontDepartmentOfHealth/docs"
+  force = true
+  headers = {X-From = "Netlify"}
