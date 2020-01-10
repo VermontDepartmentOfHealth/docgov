@@ -299,6 +299,16 @@ h3 a {
     line-height: 1.4;
 }
 
+h1,
+.post-title,
+.page-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #0171a1;
+    text-decoration: none;
+}
+
+
 p,
 blockquote,
 pre.hljs-container {
@@ -517,9 +527,7 @@ dt {
 }
 
 
-/* spacing 
-https://getbootstrap.com/docs/4.0/utilities/spacing/
-*/
+/* spacing utility - https://getbootstrap.com/docs/4.0/utilities/spacing/ */
 
 .page .m-0 {
     margin: 0;
@@ -568,16 +576,22 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
     color: #111;
     padding: 0;
     text-decoration: none;
-    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .35) calc(50% - 8px), rgba(198, 238, 255, .35) 100%);
+    background-image: linear-gradient(transparent 0, 
+                                      transparent calc(50% - 8px),
+                                    rgba(198, 238, 255, .35) calc(50% - 8px),
+                                    rgba(198, 238, 255, .35) 100%);
     transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
     background-size: 100% 200%;
-    background-position: 0 0
+    background-position: 0 0;
 }
 
 .content a:hover,
 .footer a:hover {
-    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
-    background-position: 0 100%
+    background-image: linear-gradient(transparent 0,
+                                      transparent calc(50% - 8px),
+                                    rgba(198, 238, 255, 1) calc(50% - 8px),
+                                    rgba(198, 238, 255, 1) 100%);
+    background-position: 0 100%;
 }
 
 .content a.post-title {
@@ -731,8 +745,7 @@ section.intro {
     flex-wrap: wrap;
 }
 
-
-/* post preview */
+/* post list */
 
 .posts {
     padding-left: 0;
@@ -743,32 +756,76 @@ section.intro {
 .post {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2em;
 }
 
-h1,
-.post-title,
-.page-title {
-    font-size: 2.1rem;
-    font-weight: bold;
-    color: #0171a1;
-    text-decoration: none;
+.post h2 {
+    margin: .4em 0;
 }
+
+.post a {
+    background-image: none;
+    display: block;
+    padding: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-radius: 5px;
+    transition: background-color 120ms ease-in-out;
+}
+
+.post a:hover {
+    background: rgba(198, 238, 255, 0.20)
+}
+.display-density-list .post a:hover {
+    background: none;
+}
+
+.post .post-title {
+    color: #002331;
+    display: inline-block;
+}
+
+.post a .post-title {
+    display: inline;
+    background-image: linear-gradient(transparent 0,
+                                      transparent calc(50% - 8px),
+                                      rgba(198, 238, 255, .55) calc(50% - 8px),
+                                      rgba(198, 238, 255, .55) 100%);
+    background-size: 100% 200%;
+    background-position: 0 10%;
+    transition: background-position 120ms ease-in-out;
+}
+
+.post a:hover .post-title {
+    background-image: linear-gradient(transparent 0,
+                                      transparent calc(50% - 8px),
+                                      rgba(198, 238, 255, .75) calc(50% - 8px),
+                                      rgba(198, 238, 255, .75) 100%);
+}
+.post a .post-title:hover {
+    background-image: linear-gradient(transparent 0, 
+                                      transparent calc(50% - 8px),
+                                      rgba(198, 238, 255, 1) calc(50% - 8px),
+                                      rgba(198, 238, 255, 1) 100%);
+   background-position: 0 100%;
+}
+
+
+/* post page header */
+
+
 
 .post-title {
     font-size: 1.7rem;
 }
 
-.page-title+.post-meta {
-    margin-top: -1.5rem;
+.page-title + .post-meta {
+    margin-top: -1rem;
 }
 
-.post h2 {
-    margin-bottom: 0.4em;
-    margin-top: 1.6em;
-}
 
 .post-meta {
-    margin-bottom: .4em;
+    margin: .4em 0;
 }
 
 .post-authors {
@@ -791,7 +848,7 @@ h1,
 }
 
 .page .taglist {
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 
@@ -891,8 +948,8 @@ input:focus+.display-icon {
     display: none;
 }
 
-.display-density-list .post h2 {
-    margin-top: 0.3em;
+.display-density-list .post {
+    margin-bottom: 1em;
 }
 
 
