@@ -1,3 +1,7 @@
+/* unset global styles */
+
+img[src$=".svg"], svg {max-width: initial;}
+
 /* page layout */
 
 html,
@@ -544,6 +548,11 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
 .page .my-1 {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.page .my-2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .page .list-unstyled {

@@ -58,6 +58,8 @@ There are [recommended extensions](https://code.visualstudio.com/docs/editor/ext
 
 ## Frontmatter
 
+### Post Frontmatter
+
 Each markdown file should start with a [yaml](https://learnxinyminutes.com/docs/yaml/) [frontmatter](https://www.11ty.io/docs/data-frontmatter/) block to provide meta data used to display and categorize the post.
 
 ```yaml
@@ -84,7 +86,7 @@ The core frontmatter properties can be added with a snippet by typing <kbd>Ctrl<
 
  ![frontmatter snippet](/assets/images/posts/contributing/snippet.png)
 
-### Hero
+#### Hero
 
 If you include a hero image, it will be included as the first image in the post and also override the social meta tags
 
@@ -95,6 +97,20 @@ If you include a hero image, it will be included as the first image in the post 
 **Social Meta**:
 
 ![social-meta](/assets/images/posts/contributing/social-meta.png)
+
+### Author Frontmatter
+
+```yaml
+name: Kyle                                                      # *required - name to match against authors tag in post
+title_word: Kyle                                                # repeat name value
+title: Posts from Kyle                                          # page title - 'posts from ___'
+summary: Kyle 'Do you mind if I Drive?' Mitofsky                # one line personal bio / summary
+full_name: Kyle Mitofsky                                        # (optional) full name - fallback to name
+profile: /assets/images/authors/kyle.jpg                        # (optional) path to profile image (also add image)
+github: https://github.com/KyleMit                              # (optional) path to github profile
+stackoverflow: https://stackoverflow.com/users/1366033/kylemit  # (optional) path to stackoverflow profile
+twitter: https://twitter.com/KyleMitBTV                         # (optional) path to twitter profile
+```
 
 ## Coding conventions
 

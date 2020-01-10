@@ -161,6 +161,9 @@ A stash for helpful articles, references, documentation looked up along the way
 * [How to scale SVG](https://css-tricks.com/scale-svg/)
 * [optimize svg](https://jakearchibald.github.io/svgomg/)
 * [`viewBox` is case-sensitive](https://stackoverflow.com/q/38062394/1366033)
+* [Brand colors - Stackoverflow](https://brandcolors.net/b/stackoverflow)
+* [Brand colors - Github](https://brandcolors.net/b/github)
+* [Brand colors - Twitter](https://brandcolors.net/b/twitter)
 
 ## PWA
 
