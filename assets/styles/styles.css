@@ -1617,6 +1617,32 @@ aside::-webkit-scrollbar {
 }
 
 
+/* dark syntax */
+
+.highlight-theme-ocean .hljs mark,
+.highlight-theme-ocean .hljs mark *,
+.highlight-theme-vs .hljs mark,
+.highlight-theme-vs .hljs mark * {
+    background: #7d7415;
+    border: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
+/* light syntax */
+
+.highlight-theme-gist .hljs mark,
+.highlight-theme-gist .hljs mark *,
+.highlight-theme-github .hljs mark,
+.highlight-theme-github .hljs mark * {
+    background: #fff36b;
+    border: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
 /* disable transitions during page load */
 
 .page-loading,
