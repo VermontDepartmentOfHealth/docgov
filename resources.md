@@ -33,6 +33,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
 * [content dates](https://www.11ty.io/docs/dates/)
 * [ignores](https://www.11ty.io/docs/ignores/)
+* [Add previous / next pages](https://brycewray.com/posts/2019/12/previous-next-eleventy/)
 
 
 ## Netlify

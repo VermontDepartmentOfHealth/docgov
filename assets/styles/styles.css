@@ -1,6 +1,10 @@
 /* unset global styles */
 
-img[src$=".svg"], svg {max-width: initial;}
+img[src$=".svg"],
+svg {
+    max-width: initial;
+}
+
 
 /* page layout */
 
@@ -304,7 +308,6 @@ h1,
     text-decoration: none;
 }
 
-
 p,
 blockquote,
 pre.hljs-container {
@@ -576,10 +579,7 @@ dt {
     color: #111;
     padding: 0;
     text-decoration: none;
-    background-image: linear-gradient(transparent 0, 
-                                      transparent calc(50% - 8px),
-                                    rgba(198, 238, 255, .35) calc(50% - 8px),
-                                    rgba(198, 238, 255, .35) 100%);
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .35) calc(50% - 8px), rgba(198, 238, 255, .35) 100%);
     transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
     background-size: 100% 200%;
     background-position: 0 0;
@@ -587,10 +587,7 @@ dt {
 
 .content a:hover,
 .footer a:hover {
-    background-image: linear-gradient(transparent 0,
-                                      transparent calc(50% - 8px),
-                                    rgba(198, 238, 255, 1) calc(50% - 8px),
-                                    rgba(198, 238, 255, 1) 100%);
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
     background-position: 0 100%;
 }
 
@@ -745,6 +742,7 @@ section.intro {
     flex-wrap: wrap;
 }
 
+
 /* post list */
 
 .posts {
@@ -776,6 +774,7 @@ section.intro {
 .post a:hover {
     background: rgba(198, 238, 255, 0.20)
 }
+
 .display-density-list .post a:hover {
     background: none;
 }
@@ -787,42 +786,31 @@ section.intro {
 
 .post a .post-title {
     display: inline;
-    background-image: linear-gradient(transparent 0,
-                                      transparent calc(50% - 8px),
-                                      rgba(198, 238, 255, .55) calc(50% - 8px),
-                                      rgba(198, 238, 255, .55) 100%);
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .55) calc(50% - 8px), rgba(198, 238, 255, .55) 100%);
     background-size: 100% 200%;
     background-position: 0 10%;
     transition: background-position 120ms ease-in-out;
 }
 
 .post a:hover .post-title {
-    background-image: linear-gradient(transparent 0,
-                                      transparent calc(50% - 8px),
-                                      rgba(198, 238, 255, .75) calc(50% - 8px),
-                                      rgba(198, 238, 255, .75) 100%);
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .75) calc(50% - 8px), rgba(198, 238, 255, .75) 100%);
 }
+
 .post a .post-title:hover {
-    background-image: linear-gradient(transparent 0, 
-                                      transparent calc(50% - 8px),
-                                      rgba(198, 238, 255, 1) calc(50% - 8px),
-                                      rgba(198, 238, 255, 1) 100%);
-   background-position: 0 100%;
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
+    background-position: 0 100%;
 }
 
 
 /* post page header */
 
-
-
 .post-title {
     font-size: 1.7rem;
 }
 
-.page-title + .post-meta {
+.page-title+.post-meta {
     margin-top: -1rem;
 }
-
 
 .post-meta {
     margin: .4em 0;
@@ -850,6 +838,7 @@ section.intro {
 .page .taglist {
     margin-top: 0.5em;
 }
+
 
 /* post nav */
 
@@ -887,7 +876,6 @@ section.intro {
 .nav-title {
     color: #616161;
 }
-
 
 
 /* post display toggle */
@@ -1658,7 +1646,9 @@ aside::-webkit-scrollbar {
     background-image: none;
 }
 
+
 /* checkboxes */
+
 .checkbox input[type="checkbox"] {
     opacity: 0;
     width: 1px;
@@ -1668,7 +1658,6 @@ aside::-webkit-scrollbar {
 .checkbox label {
     position: relative;
     display: inline-block;
-    
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 22px;
 }
@@ -1677,18 +1666,18 @@ aside::-webkit-scrollbar {
 .checkbox label::after {
     position: absolute;
     content: "";
-    
     /*Needed for the line-height to take effect*/
     display: inline-block;
 }
 
+
 /*Outer box of the fake checkbox*/
-.checkbox label::before{
+
+.checkbox label::before {
     height: 16px;
     width: 16px;
     border: 1px solid;
     left: -2px;
-    
     /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
      *to vertically center it.
      */
@@ -1696,7 +1685,9 @@ aside::-webkit-scrollbar {
     border-radius: 1px;
 }
 
+
 /*Checkmark of the fake checkbox*/
+
 .checkbox label::after {
     height: 5px;
     width: 9px;
@@ -1708,28 +1699,32 @@ aside::-webkit-scrollbar {
     border-color: white;
 }
 
+
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+
+.checkbox input[type="checkbox"]+label::after {
     content: none;
 }
 
+
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+
+.checkbox input[type="checkbox"]:checked+label::after {
     content: "";
 }
 
-.checkbox input[type="checkbox"]:checked + label::before {
+.checkbox input[type="checkbox"]:checked+label::before {
     background: #4e8bd6;
 }
 
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+
+.checkbox input[type="checkbox"]:focus+label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
 
-.checkbox + br {
+.checkbox+br {
     /* md will add extra whitespace */
     display: none;
 }
-
