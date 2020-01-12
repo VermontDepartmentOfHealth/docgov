@@ -1587,6 +1587,11 @@ aside::-webkit-scrollbar {
     width: 20px;
 }
 
+.code-header {
+    padding-bottom: 5px;
+    font-variant: small-caps;
+}
+
 
 /* light / dark syntax theme toggles */
 
@@ -1611,7 +1616,7 @@ aside::-webkit-scrollbar {
 .highlight-theme-ocean .hljs mark *,
 .highlight-theme-vs .hljs mark,
 .highlight-theme-vs .hljs mark * {
-    background: #7d7415;
+    background: #726a17;
     border: none;
     color: inherit;
     font-weight: bold;

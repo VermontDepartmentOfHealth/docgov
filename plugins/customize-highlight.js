@@ -18,12 +18,17 @@ const COPY_BTN = `<button class="btn-icon btn-copy">
 
 
 function highlight(str, lang, info) {
-    let formatted = escapeHtml(str)
 
     // grab fenced block metadata
     let useRaw = info.includes('raw')
+    var params = info.split(" ").map(p => ({ key: p.split("=")[0], val: p.split("=")[1] }))
+    var filename = params.find(p => p.key === "file")
+    var title = params.find(p => p.key === "title")
 
-    // parse language if we got one - if we fail, just escape
+    // set default
+    let formatted = useRaw ? str : escapeHtml(str)
+
+    // parse language if we got one
     if (lang && hljs.getLanguage(lang)) {
         try {
             if (!useRaw) {
@@ -39,11 +44,15 @@ function highlight(str, lang, info) {
 
                 formatted = codeNode.innerHTML
             }
-        } catch (__) {}
+        } catch (__) {} // if we fail, just use default
     }
 
+
+    let codeHeader = filename ? `<div class="code-header"><b>file:</b> ${filename.val}</div>` :
+        title ? `<div class="code-header">${title.val}</div>` : ""
+
     // container must start with pre ... if (highlighted.indexOf('<pre') AND is whitespace sensitive
-    let output = `<pre class="hljs-container hljs">${COPY_BTN}<pre class="hljs"><code>${formatted}</code></pre></pre>`;
+    let output = `<pre class="hljs-container hljs">${codeHeader}${COPY_BTN}<pre class="hljs"><code>${formatted}</code></pre></pre>`;
 
     return output;
 }

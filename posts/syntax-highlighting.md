@@ -82,6 +82,8 @@ tags: ['post', 'workforce']
 
 ### Diff
 
+You can visualize diffs by begining each line with a minus (`-`) or plus (`+`) to indicate deletions or additions
+
 ```diff
 - var sayHello = function(name) {
 -   return 'Hi, ' + name
@@ -109,4 +111,39 @@ Which will be displayed like this:
 
 ```html raw
 &lt;a href="<mark>url</mark>"&gt; Link &lt;/a&gt;
+```
+
+### Title in Code Block
+
+If you'd like to include the filename or title at the top of the codeblock, you can add it after the fenced code block header with either <code><b>file</b>=<i>&lt;value&gt;</i></code> or <code><b>title</b>=<i>&lt;value&gt;</i></code> like this:
+
+#### Filename
+
+~~~ raw
+```ini <mark>file=.env</mark>
+TOKEN=Value
+```
+~~~
+
+
+Which will be displayed like this:
+
+```ini file=.env
+TOKEN=Value
+```
+
+#### Title
+
+~~~ raw
+```js <mark>title=javascript</mark>
+let pet = { name: "frida", type: "cat" }
+let { name } = pet // destructure
+```
+~~~
+
+Which will be displayed like this:
+
+```js title=javascript
+let pet = { name: "frida", type: "cat" }
+let { name } = pet // destructure
 ```
