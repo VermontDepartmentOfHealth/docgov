@@ -70,3 +70,27 @@ layout: default.njk
 
 {{ content | safe }}
     
+<nav class="post-nav">
+  <ul>
+    {% if prevPost.url %}
+      <li class="prev"><a  href="{{ prevPost.url }}">
+        <div class="nav-arrow">
+          {% include "assets/images/icons/fa/arrow-left.svg" %}
+          <span class="nav-label">Previous</span>
+        </div>
+        <div class="nav-title">{{ prevPost.data.title or (prevPost.data.renderData and prevPost.data.renderData.title) }}</div>
+      </a></li>
+    {% endif %}
+    <li class="spacer"></li>
+    {% if nextPost.url %}
+      <li class="next"><a href="{{ nextPost.url }}">
+        <div class="nav-arrow">
+          <span class="nav-label">Next</span>
+          {% include "assets/images/icons/fa/arrow-right.svg" %}
+        </div>
+        <div class="nav-title">{{ nextPost.data.title or (nextPost.data.renderData and nextPost.data.renderData.title) }}</div>
+      </a></li>
+    {% endif %}
+
+  </ul>
+</nav>

@@ -128,7 +128,7 @@ rd /s /q _site
 
 Use [`fs.rmdir`](https://nodejs.org/api/fs.html#fs_fs_rmdir_path_options_callback) to [remove entire directory](https://stackoverflow.com/a/57866165/1366033) which will work recursively as of [Node **v12.10.0**](https://nodejs.org/en/blog/release/v12.10.0/)
 
-```
+```js
 const fs = require('fs');
 fs.rmdir("_site", { recursive: true });
 ```

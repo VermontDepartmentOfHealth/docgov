@@ -33,6 +33,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
 * [content dates](https://www.11ty.io/docs/dates/)
 * [ignores](https://www.11ty.io/docs/ignores/)
+* [Add previous / next pages](https://brycewray.com/posts/2019/12/previous-next-eleventy/)
 
 
 ## Netlify
@@ -161,6 +162,9 @@ A stash for helpful articles, references, documentation looked up along the way
 * [How to scale SVG](https://css-tricks.com/scale-svg/)
 * [optimize svg](https://jakearchibald.github.io/svgomg/)
 * [`viewBox` is case-sensitive](https://stackoverflow.com/q/38062394/1366033)
+* [Brand colors - Stackoverflow](https://brandcolors.net/b/stackoverflow)
+* [Brand colors - Github](https://brandcolors.net/b/github)
+* [Brand colors - Twitter](https://brandcolors.net/b/twitter)
 
 ## PWA
 

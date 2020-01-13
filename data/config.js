@@ -1,12 +1,14 @@
 // These come from Netlify https://www.netlify.com/docs/continuous-deployment/#build-environment-variables
-const CONTEXT = process.env.CONTEXT;                   // Name of the context a deploy is built around, it can be production, deploy-preview or branch-deploy.
-const URL = process.env.URL;                           // This URL represents the main address to your site
+const CONTEXT = process.env.CONTEXT; // Name of the context a deploy is built around, it can be production, deploy-preview or branch-deploy.
+const URL = process.env.URL; // This URL represents the main address to your site
 const DEPLOY_PRIME_URL = process.env.DEPLOY_PRIME_URL; // This URL represents the unique URL for an individual deploy
 
 const DEFAULT_DEV_URL = 'http://localhost:8080';
 
 
 module.exports = {
+
+    PROD_DOMAIN: "docgov.dev",
 
     ELEVENTY_ENV: process.env.ELEVENTY_ENV,
 
@@ -45,8 +47,7 @@ module.exports = {
 };
 
 
-function getBaseUrl()
-{
+function getBaseUrl() {
     if (CONTEXT == 'production') {
         return URL;
     } else if (DEPLOY_PRIME_URL) {

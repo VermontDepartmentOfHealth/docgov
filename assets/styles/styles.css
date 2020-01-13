@@ -1,3 +1,11 @@
+/* unset global styles */
+
+img[src$=".svg"],
+svg {
+    max-width: initial;
+}
+
+
 /* page layout */
 
 html,
@@ -149,10 +157,6 @@ main.content {
     margin: 5px 18px;
 }
 
-.sidenav .spacer {
-    flex-grow: 1;
-}
-
 @media (max-width: 1100px) {
     body.toc-layout {
         grid-template-columns: 225px 1fr minmax(100px, 48rem) 1fr;
@@ -246,6 +250,7 @@ aside.toc {
 .toc a::before {
     content: "{";
     color: #1a7498;
+    font-weight: bold;
     position: absolute;
     left: -10px;
     top: -1px;
@@ -293,6 +298,15 @@ h1 a,
 h2 a,
 h3 a {
     line-height: 1.4;
+}
+
+h1,
+.post-title,
+.page-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #0171a1;
+    text-decoration: none;
 }
 
 p,
@@ -512,10 +526,12 @@ dt {
     margin-top: 1.7rem;
 }
 
+.spacer {
+    flex-grow: 1;
+}
 
-/* spacing 
-https://getbootstrap.com/docs/4.0/utilities/spacing/
-*/
+
+/* spacing utility - https://getbootstrap.com/docs/4.0/utilities/spacing/ */
 
 .page .m-0 {
     margin: 0;
@@ -546,6 +562,11 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
     margin-bottom: 1em;
 }
 
+.page .my-2 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .page .list-unstyled {
     list-style: none;
     padding-left: 0;
@@ -562,13 +583,26 @@ https://getbootstrap.com/docs/4.0/utilities/spacing/
     background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .35) calc(50% - 8px), rgba(198, 238, 255, .35) 100%);
     transition: background-position 120ms ease-in-out, padding 120ms ease-in-out;
     background-size: 100% 200%;
-    background-position: 0 0
+    background-position: 0 0;
 }
 
 .content a:hover,
 .footer a:hover {
     background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
-    background-position: 0 100%
+    background-position: 0 100%;
+}
+
+.content a.external-link:hover::after {
+    content: "";
+    background-image: url(/assets/images/icons/fa/external-link.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    filter: invert(1)brightness(0.5);
+    margin-left: -1px;
+    margin-top: -5px;
+    position: absolute;
 }
 
 .content a.post-title {
@@ -723,7 +757,7 @@ section.intro {
 }
 
 
-/* post preview */
+/* post list */
 
 .posts {
     padding-left: 0;
@@ -734,32 +768,66 @@ section.intro {
 .post {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2em;
 }
 
-h1,
-.post-title,
-.page-title {
-    font-size: 2.1rem;
-    font-weight: bold;
-    color: #0171a1;
-    text-decoration: none;
+.post h2 {
+    margin: .4em 0;
 }
+
+.post a {
+    background-image: none;
+    display: block;
+    padding: 5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    border-radius: 5px;
+    transition: background-color 120ms ease-in-out;
+}
+
+.post a:hover {
+    background: rgba(198, 238, 255, 0.20)
+}
+
+.display-density-list .post a:hover {
+    background: none;
+}
+
+.post .post-title {
+    color: #002331;
+    display: inline-block;
+}
+
+.post a .post-title {
+    display: inline;
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .55) calc(50% - 8px), rgba(198, 238, 255, .55) 100%);
+    background-size: 100% 200%;
+    background-position: 0 10%;
+    transition: background-position 120ms ease-in-out;
+}
+
+.post a:hover .post-title {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, .75) calc(50% - 8px), rgba(198, 238, 255, .75) 100%);
+}
+
+.post a .post-title:hover {
+    background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
+    background-position: 0 100%;
+}
+
+
+/* post page header */
 
 .post-title {
     font-size: 1.7rem;
 }
 
 .page-title+.post-meta {
-    margin-top: -1.5rem;
-}
-
-.post h2 {
-    margin-bottom: 0.4em;
-    margin-top: 1.6em;
+    margin-top: -1rem;
 }
 
 .post-meta {
-    margin-bottom: .4em;
+    margin: .4em 0;
 }
 
 .post-authors {
@@ -782,7 +850,45 @@ h1,
 }
 
 .page .taglist {
-    margin-top: 1em;
+    margin-top: 0.5em;
+}
+
+
+/* post nav */
+
+.post-nav ul {
+    display: flex;
+    padding-left: 0px;
+    margin-top: 3em;
+}
+
+.post-nav li {
+    list-style: none;
+}
+
+.post-nav a {
+    max-width: 225px;
+    display: inline-block;
+    background-image: none;
+    padding: 5px;
+    margin: -5px;
+}
+
+.post-nav .next a {
+    text-align: right;
+}
+
+.post-nav a .nav-arrow {
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-nav .nav-label {
+    margin: 0 10px;
+}
+
+.nav-title {
+    color: #616161;
 }
 
 
@@ -882,8 +988,8 @@ input:focus+.display-icon {
     display: none;
 }
 
-.display-density-list .post h2 {
-    margin-top: 0.3em;
+.display-density-list .post {
+    margin-bottom: 1em;
 }
 
 
@@ -1105,6 +1211,10 @@ button#close-search:hover {
 
 
 /* table */
+
+.table-wrapper {
+    overflow-x: auto;
+}
 
 table {
     border-collapse: collapse;
@@ -1495,6 +1605,11 @@ aside::-webkit-scrollbar {
     width: 20px;
 }
 
+.code-header {
+    padding-bottom: 5px;
+    font-variant: small-caps;
+}
+
 
 /* light / dark syntax theme toggles */
 
@@ -1513,6 +1628,32 @@ aside::-webkit-scrollbar {
 }
 
 
+/* dark syntax */
+
+.highlight-theme-ocean .hljs mark,
+.highlight-theme-ocean .hljs mark *,
+.highlight-theme-vs .hljs mark,
+.highlight-theme-vs .hljs mark * {
+    background: #726a17;
+    border: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
+/* light syntax */
+
+.highlight-theme-gist .hljs mark,
+.highlight-theme-gist .hljs mark *,
+.highlight-theme-github .hljs mark,
+.highlight-theme-github .hljs mark * {
+    background: #fff36b;
+    border: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
 /* disable transitions during page load */
 
 .page-loading,
@@ -1528,7 +1669,9 @@ aside::-webkit-scrollbar {
     background-image: none;
 }
 
+
 /* checkboxes */
+
 .checkbox input[type="checkbox"] {
     opacity: 0;
     width: 1px;
@@ -1538,7 +1681,6 @@ aside::-webkit-scrollbar {
 .checkbox label {
     position: relative;
     display: inline-block;
-    
     /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
     padding-left: 22px;
 }
@@ -1547,18 +1689,18 @@ aside::-webkit-scrollbar {
 .checkbox label::after {
     position: absolute;
     content: "";
-    
     /*Needed for the line-height to take effect*/
     display: inline-block;
 }
 
+
 /*Outer box of the fake checkbox*/
-.checkbox label::before{
+
+.checkbox label::before {
     height: 16px;
     width: 16px;
     border: 1px solid;
     left: -2px;
-    
     /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
      *to vertically center it.
      */
@@ -1566,7 +1708,9 @@ aside::-webkit-scrollbar {
     border-radius: 1px;
 }
 
+
 /*Checkmark of the fake checkbox*/
+
 .checkbox label::after {
     height: 5px;
     width: 9px;
@@ -1578,28 +1722,32 @@ aside::-webkit-scrollbar {
     border-color: white;
 }
 
+
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+
+.checkbox input[type="checkbox"]+label::after {
     content: none;
 }
 
+
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+
+.checkbox input[type="checkbox"]:checked+label::after {
     content: "";
 }
 
-.checkbox input[type="checkbox"]:checked + label::before {
+.checkbox input[type="checkbox"]:checked+label::before {
     background: #4e8bd6;
 }
 
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+
+.checkbox input[type="checkbox"]:focus+label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
 
-.checkbox + br {
+.checkbox+br {
     /* md will add extra whitespace */
     display: none;
 }
-

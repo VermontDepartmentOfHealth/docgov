@@ -66,7 +66,7 @@
 
 {# display toc if we're on a post and we got results #}
 {% set tocHtml = content | toc | removeHash | removeParen %}
-{% set displayTOC = tags | isPostType or toc and tocHtml %}
+{% set displayTOC = (tags | isPostType or toc) and tocHtml %}
 
 <body class="page no-js page-loading nav-closed {{pageClass}} {% if displayTOC %} toc-layout {% endif %}">
 
