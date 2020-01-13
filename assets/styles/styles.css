@@ -1198,6 +1198,10 @@ button#close-search:hover {
 
 /* table */
 
+.table-wrapper {
+    overflow-x: auto;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
