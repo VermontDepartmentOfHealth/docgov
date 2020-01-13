@@ -60,6 +60,43 @@ module.exports = function CustomizeMD() {
     };
 
 
+    // Remember old renderer, if overridden, or proxy to default renderer
+    let defaultAnchorRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
+
+    md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
+        // If you are sure other plugins can't add `target` - drop check below
+        let token = tokens[idx]
+        var tarIndex = token.attrIndex('target');
+
+        let setAttribute = function(token, attrName, attrValue, append) {
+            var index = token.attrIndex(attrName);
+
+            if (index < 0) {
+                // add new attribute
+                token.attrPush([attrName, attrValue]);
+            } else {
+                // update value of existing attr
+                token.attrs[index][1] = (append ? token.attrs[index][1] : "") + attrValue;
+            }
+        }
+
+        let config = require("../data/config")
+        let externalRegex = new RegExp(`^https?:\/\/(?!${config.PROD_DOMAIN})`)
+        let isExternal = externalRegex.test(token.attrGet('href'))
+
+        if (isExternal) {
+            setAttribute(token, "target", "_blank")
+            setAttribute(token, "rel", "noopener")
+            setAttribute(token, "class", " external-link", true)
+        }
+
+        // pass token to default renderer.
+        return defaultAnchorRender(tokens, idx, options, env, self);
+    };
+
+
     return md
 }
 

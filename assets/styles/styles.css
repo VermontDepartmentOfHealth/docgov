@@ -250,6 +250,7 @@ aside.toc {
 .toc a::before {
     content: "{";
     color: #1a7498;
+    font-weight: bold;
     position: absolute;
     left: -10px;
     top: -1px;
@@ -589,6 +590,19 @@ dt {
 .footer a:hover {
     background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
     background-position: 0 100%;
+}
+
+.content a.external-link:hover::after {
+    content: "";
+    background-image: url(/assets/images/icons/fa/external-link.svg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    filter: invert(1)brightness(0.5);
+    margin-left: -1px;
+    margin-top: -5px;
+    position: absolute;
 }
 
 .content a.post-title {

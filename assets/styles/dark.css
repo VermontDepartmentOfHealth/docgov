@@ -45,7 +45,17 @@ body.color-theme-dark {
 }
 
 .color-theme-dark .toc a {
-    color: #97a0a3;
+    color: #b5c4c9;
+}
+
+.color-theme-dark .toc a:hover,
+.color-theme-dark .toc li.active>a {
+    color: #5db6d9;
+}
+
+.color-theme-dark .toc a::before {
+    content: "{";
+    color: #5db6d9;
 }
 
 .color-theme-dark footer.footer {
