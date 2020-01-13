@@ -31,10 +31,10 @@ module.exports = function CustomizeMD() {
     // add file extension
     let markdownItFile = require("./markdown-it-file");
     let markdownItDefList = require("markdown-it-deflist")
-    let markdownItMark = require('markdown-it-mark')
-    let markdownItIns = require('markdown-it-ins')
-    let markdownItSpoiler = require('markdown-it-spoiler')
-    let markdownItCheckbox = require('markdown-it-checkbox')
+    let markdownItMark = require("markdown-it-mark")
+    let markdownItIns = require("markdown-it-ins")
+    let markdownItSpoiler = require("markdown-it-spoiler")
+    let markdownItCheckbox = require("markdown-it-checkbox")
 
     let md = markdownIt(options)
         .use(markdownItAnchor, opts)

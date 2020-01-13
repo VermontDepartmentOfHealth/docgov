@@ -320,20 +320,16 @@ $$\\\\nessie\prog\Software\\$$
 
 ### Embed Tweet
 
-<div class="split">
-<span>
+#### Use Like This
+<!-- {% raw %} -->
+```hbs
+{% tweet "1188837207206977536" %}
+```
+<!-- {% endraw %} -->
 
-<pre><code>&#x007b;% tweet "1188837207206977536" %&#x007d;</code></pre>
-
-</span>
-<span>
-
+#### Which Displays Like This
 
 {% tweet "1188837207206977536" %}
-
-</span>
-</div>
-
 
 
 
