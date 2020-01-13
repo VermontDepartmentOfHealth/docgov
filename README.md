@@ -20,10 +20,11 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 ## Project Wikis
 
-* [Contributing](/contributing.md)
-* [Code of Conduct](/code_of_conduct.md)
-* [Resources](/resources.md)
-* [Changelog](/changelog.md)
+* [ReadMe](/readme.md) - Running the project locally and overview of project architecture
+* [Contributing](/contributing.md) - Guidelines for authoring a post
+* [Code of Conduct](/code_of_conduct.md) - Requirements for being a respectful community member
+* [Resources](/resources.md) - Scratchpad of links and notes during development
+* [Changelog](/changelog.md) - Release notes over time
 
 ## Project Setup
 
@@ -49,6 +50,38 @@ npm run clean       # deletes `_site` directory
 npm run clear-cache # deletes twitter cache
 npm run favicon     # generates favicon assets from svg
 ```
+
+
+## File Structure
+
+``` bash
+2019.vtcodecamp
+├── _site/                # generated site output
+├── .vscode/              # vs code editor configs
+├── .github/              # github configs
+├── .netlify/             # netlify dev settings
+├── node_modules/         # created by npm install
+├── admin/                # pages for Netlify CMS
+├── src
+│   ├── _data             # data directory for 11ty (json + js)
+│   │   ├── config.js     # environment settings
+│   │   └── sponsor.js    # data driving sponsor section
+│   ├── _includes         # template directory for 11ty
+│   │   └── defaultLayout # parent template layout page
+│   ├── assets            # static assets to build into site
+│   │   └── sponsorLogos/ # sponsor logos
+│   ├── [PageName].md     # any .md files will be built into html
+│   ├── [PageName].njk    # any .njk files will be built into html
+│   ├── favicon.ico       # favicon needs to be in root dir
+│   └── index.njk         # home page
+├── package.json          # lists npm modules, package, and scripts
+├── .eleventy.js          # config information for 11ty
+├── .gitignore            # ignored files in git
+├── netlify.toml          # deploy settings for netlify
+├── resources.md          # helpful links
+└── readme.md             # 🟊 [You Are Here]
+```
+
 
 ## Project Architecture
 
