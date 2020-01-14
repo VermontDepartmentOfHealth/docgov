@@ -1,6 +1,6 @@
 ---
 title_word: Querying
-title: Sql Database querying
+title: SQL Database Querying
 tags: ['post', 'sql', 'ssms']
 authors: ['Brian']
 date: 2019-10-23
@@ -17,13 +17,13 @@ The following will lay out how to:
 
 ## Connecting to the database
 
-When you open SQL Server Management Studio (SSMS), you will be prompted to connect to a Database Server. The first time you connect, you'll need to type in the name of the server. After the initial connection, the next time you start SSMS, it will be there by default. If it is not there, you can always type it in again, or use the drop down to select a previously visited server.
+Each time you open `SQL Server Management Studio (SSMS)`, you will be prompted to connect to a Database Server. The first time you connect, you'll need to fill in the `Server name:` field. After your first connection, the last `Server name:` you connected to will be there by default. If you have connected to other servers in the past, they should appear in the `Sever name:` drop down.
 
-The **Authentication** field will always be **Windows Authentication**. You should never need to type in a password in order to connect. 
+The **Authentication** field will always be **Windows Authentication**. You should never need to type in a password in order to connect, this is handled by Active Directory permissions.
 
 ![Connecting to the server][1]
 
-**If you cannot connect, contact AHS.VDHITDatabaseTeam@vermont.gov.** They can help with getting you assigned to the appropriate Active Directory Group(s) needed for accessing a database.
+**If you cannot connect, contact AHS.VDHITDatabaseTeam@vermont.gov.** They can help with getting you assigned to the appropriate Active Directory Group(s) needed for accessing a database. If you do not see the **Object Explorer Window**, press the <kbd>F8</kbd> key, or go to `View`-->`Object Explorer`
 
 ## Querying Data
 
@@ -33,9 +33,9 @@ After you connect to your database, the **Object Explorer** window will appear o
 
 Example : Browse to your database's **Views**
 
-* Expand the **Server** Node
+* Expand the **Server** Node (Often expanded by default)
 * Expand the **Databases** Node
-* Expand the Database Node - In this example it's our `AdventureWorks2017` database.
+* Expand the Node of the database you are working with - In this example it's our `AdventureWorks2017` database.
 * Expand the **Views** Node
 
 ![Browsing the server][2]
@@ -44,7 +44,7 @@ You can follow this same process to expand the **Tables** folder if you wish to 
 
 ### Basic Queries
 
-There are a number of ways data can be queried.
+There are a number of ways data can be queried, a few of these are explained below.
 
 **Option 1 -  From Object Explorer**
 
@@ -54,7 +54,7 @@ If you **Right-Click** on a view, you can then use the `SELECT Top 1000 Rows` op
 
 This will generate a select statement against the system for the TOP 1000 rows in the view.
 
-**Advantages:** This is a very quick way to get a select statement that can then be modified with a Where Clause for quickly retrieving data. It also includes the names of all the columns, so you can remove those that you do not need in your results.
+**Advantages:** This is a very quick way to get a `select statement` that can then be modified with a `Where Clause` for quickly retrieving data. It also includes the names of all the columns, so you can remove those that you do not need in your results.
 
 **Disadvantages:** If there are more than 1000 records, they will not be displayed unless you remove the `TOP 1000` portion of the query.
 
@@ -62,7 +62,11 @@ This will generate a select statement against the system for the TOP 1000 rows i
 
 Create a New Query and write the sql yourself.
 
-You can either Right Click on the name of the database, in this case `AdventureWorks2017`, or click the **New Query** button on the top. When doing either of these, double check the **Database Dropdown** in the upper left menu ribbon. It should be populated with the name of your database. If it is blank, or has another database displayed, simply click the dropdown, browse to the appropriate database, and select it.
+You can either Right Click on the name of the database, in this case `AdventureWorks2017`, or click the **New Query** button on the top. When doing either of these, double check the **Database Dropdown** in the upper left menu ribbon. It should be populated with the name of your database. If it is blank, or has another database displayed follow the below instructions
+
+* Click the `database dropdown`
+* Browse to the appropriate database
+* Select it.
 
 ![New Query][4]
 
@@ -75,7 +79,7 @@ SELECT * FROM <Schema Name>.<Name of the VIEW or TABLE>
 
 ![New Query Select][5]
 
-The * (Asterix) in a SQL `SELECT` means "All Columns". If we only wanted to return results for specific columns, we'd need to specify them.
+The `*` (Asterix) in a SQL `SELECT` means "All Columns". If we only wanted to return results for specific columns, we'd need to specify them.
 
 **\<Schema Name>** is displayed on all objects in the **Object Explorer** window. In the above GIF, the **\<Schema Name>** for the View `vEmployee` is `HumanResources`. [Schemas][9] are a way to logically group related objects together.
 
@@ -87,7 +91,7 @@ SELECT jobtitle, firstname, lastname FROM HumanResources.vEmployee
 
 **Advantages:** Over time, it's more likely that you'll be reusing saved query files. Once opened, all you'll need to do is confirm the correct target database, making this the faster option.
 
-**Disadvantages:** You can unintentionally connect to the wrong database when you create a new query or open an existing one.
+**Disadvantages:** You can unintentionally connect to the wrong database when you create a new query or open an existing one when working with multiple systems.
 
 ### Limiting Data
 
@@ -135,13 +139,35 @@ WHERE	JobTitle LIKE '%technician%';
 
 There may be instances where you want to search for data that falls within a range of values, say two dates.
 
-The following selects all columns where the **EFFECTIVE_DATE** is between **'01/01/2010' AND '12/31/2011'** and the **LICENSE_TYPE** ends with **"caterer"**
+The following returns all employees with a `HireDate` between **'01/01/2009' AND '01/01/2010'**.
 
 ```sql
 SELECT * 
-FROM D_LICENSE_IMAGE
-WHERE EFFECTIVE_DATE BETWEEN '01/01/2010' AND '12/31/2011'
-AND LICENSE_TYPE LIKE '%CATERER'
+FROM [HumanResources].[Employee]
+WHERE HireDate BETWEEN '01/01/2009' AND '01/01/2010'
+```
+
+#### WHERE - Multiple Criteria
+
+Often times we are limiting data by a number of factors. Say we want to know all employee's with a `HireDate` between **'01/01/2009' AND '01/01/2010'** who are **Technicians**?
+
+We can use the `AND` key word to combine multiple [Boolean Expressions][10].
+
+```sql
+SELECT * 
+FROM [HumanResources].[Employee]
+WHERE HireDate BETWEEN '01/01/2009' AND '01/01/2010'
+AND JobTitle LIKE '%technician%';
+```
+
+There is no limit to the number of these that we can add. For example, we can then check to see which employee's have 40 or more `SickLeaveHours`
+
+```sql
+SELECT * 
+FROM [HumanResources].[Employee]
+WHERE HireDate BETWEEN '01/01/2009' AND '01/01/2010'
+AND JobTitle LIKE '%technician%'
+AND SickLeaveHours >= 40;
 ```
 
 
@@ -174,7 +200,7 @@ At the point you have the data you want you can copy it in a number of ways
 * Right-Click -> Copy With Headers
   * Will copy selected data and include Column Names as they appear in the header.
 * Right-Click -> Open in Excel
-  * Open the selected results in Excel
+  * Open the selected results in Excel (Not shown in below GIF)
 * Right-Click -> Save As
   * Export to a `.CSV` file.
 
@@ -190,3 +216,4 @@ At the point you have the data you want you can copy it in a number of ways
 [7]: /assets/images/posts/query_tutorial/Query_Tutorial_WhereWildCard_All.gif
 [8]: /assets/images/posts/query_tutorial/Query_Tutorial_SelectResults.gif
 [9]: https://en.wikipedia.org/wiki/Database_schema
+[10]: https://docs.microsoft.com/en-us/sql/t-sql/language-elements/and-transact-sql?view=sql-server-ver15
