@@ -680,6 +680,16 @@ dt {
     background-image: none;
 }
 
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon-link svg {
+    height: 14px;
+    margin-right: 5px;
+}
+
 .content .direct-link {
     opacity: 0;
     color: grey;
@@ -1004,6 +1014,7 @@ footer.footer {
     padding-left: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0;
 }
@@ -1214,13 +1225,13 @@ button#close-search:hover {
 
 .table-wrapper {
     overflow-x: auto;
+    margin: 1em 0em;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 1em 0em;
-    /* todo - more responsive table width */
+    margin: 0em;
 }
 
 table th {
@@ -1512,6 +1523,7 @@ td>mark {
 
 ::-webkit-scrollbar {
     width: 12px;
+    height: 10px
 }
 
 nav::-webkit-scrollbar {
@@ -1547,13 +1559,34 @@ aside::-webkit-scrollbar {
     background: black;
 }
 
+/* code block */
 
-/* copy snippet */
-
-.hljs-container.hljs {
+/* don't scroll so copy btn has fixed frame */
+.page .hljs-container.hljs {
     overflow: hidden;
     position: relative;
+    padding: 0;
 }
+
+/* scroll on inner container */
+.page .hljs-container.hljs .hljs {
+    overflow-x: auto;
+    padding: 0;
+}
+
+/* pad inner most container */
+.page .hljs-container.hljs .hljs code {
+    overflow: visible;
+    padding: 10px;
+}
+
+.code-header {
+    padding: 3px 7px;
+    font-variant: small-caps;
+}
+
+
+/* copy snippet */
 
 .hljs {
     margin: 0;
@@ -1572,7 +1605,7 @@ aside::-webkit-scrollbar {
 }
 
 .btn-text {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-right: .5em;
 }
 
@@ -1602,12 +1635,7 @@ aside::-webkit-scrollbar {
 .btn-icon img {
     border: none;
     box-shadow: none;
-    width: 20px;
-}
-
-.code-header {
-    padding-bottom: 5px;
-    font-variant: small-caps;
+    width: 15px;
 }
 
 
