@@ -34,7 +34,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [content dates](https://www.11ty.io/docs/dates/)
 * [ignores](https://www.11ty.io/docs/ignores/)
 * [Add previous / next pages](https://brycewray.com/posts/2019/12/previous-next-eleventy/)
-
+* [Nunjucks shortcode returns undefined when value is an int #856](https://github.com/11ty/eleventy/issues/856)
 
 ## Netlify
 
@@ -77,6 +77,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [FF a11y inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
 * [semantic vs decorative icons](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 * [SVG alt text and role](https://stackoverflow.com/q/57983591/1366033)
+* [Add `aria-label` to close button](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html#ARIA14-examples)
 
 ## Markdown
 

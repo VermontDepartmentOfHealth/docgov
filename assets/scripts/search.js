@@ -15,7 +15,7 @@
     * @return {String} The markup
     */
     var createNoResultsHTML = function () {
-        return "<button id='close-search'>×</button>" + 
+        return "<button id='close-search' aria-label='Close'>×</button>" + 
                "<p>Sorry, no matches were found.</p>";
     };
 
@@ -24,7 +24,7 @@
     * @return {String} The markup
     */
     var createNoInputHTML = function () {
-        return "<button id='close-search'>×</button>" + 
+        return "<button id='close-search' aria-label='Close'>×</button>" + 
                "<p>Start typing to search</p>";
     };
 
@@ -113,7 +113,7 @@
     * @return {String}        The results HTML
     */
     var createResultsHTML = function (results, query) {
-        var html = "<button id='close-search'>×</button>"
+        var html = "<button id='close-search' aria-label='Close'>×</button>"
         
         html += '<p>Found ' + results.length + ' matching article' + (results.length === 1 ? '' : 's') + '</p>';
 
