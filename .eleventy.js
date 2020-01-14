@@ -69,6 +69,7 @@ module.exports = function(eleventyConfig) {
     let md = require("./plugins/customize-markdown.js")()
     eleventyConfig.setLibrary("md", md);
 
+    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
     eleventyConfig.addPairedShortcode("markdown", (content, inline = null) => {
         return inline

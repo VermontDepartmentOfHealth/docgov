@@ -34,7 +34,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [content dates](https://www.11ty.io/docs/dates/)
 * [ignores](https://www.11ty.io/docs/ignores/)
 * [Add previous / next pages](https://brycewray.com/posts/2019/12/previous-next-eleventy/)
-
+* [Nunjucks shortcode returns undefined when value is an int #856](https://github.com/11ty/eleventy/issues/856)
 
 ## Netlify
 
