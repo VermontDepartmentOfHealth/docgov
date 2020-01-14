@@ -143,11 +143,13 @@ main.content {
     margin-right: 1rem;
 }
 
-.sidenav a:hover,
-.sidenav a.active {
+.page .sidenav a.active,
+.page .sidenav a:hover,
+.page .sidenav a:focus {
     color: #ffffff;
     border-left-color: #9ae1ff;
 }
+
 
 .sidenav .divider {
     height: 1px;
@@ -587,7 +589,9 @@ dt {
 }
 
 .content a:hover,
-.footer a:hover {
+.content a:focus,
+.footer a:hover,
+.footer a:focus {
     background-image: linear-gradient(transparent 0, transparent calc(50% - 8px), rgba(198, 238, 255, 1) calc(50% - 8px), rgba(198, 238, 255, 1) 100%);
     background-position: 0 100%;
 }
@@ -700,7 +704,8 @@ dt {
 h1:hover .direct-link,
 h2:hover .direct-link,
 h3:hover .direct-link,
-h4:hover .direct-link {
+h4:hover .direct-link,
+.direct-link:focus {
     opacity: 1;
 }
 
@@ -1600,7 +1605,8 @@ aside::-webkit-scrollbar {
     transition: opacity .4s ease;
 }
 
-.hljs:hover .btn-copy {
+.hljs:hover .btn-copy,
+.btn-copy:focus {
     opacity: 1;
 }
 
