@@ -4,16 +4,30 @@ title: Markdown Overview
 tags: ['post', 'overview']
 authors: ['Kyle']
 date: 2019-08-30
+updated: 2020-01-15
 summary: "Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage"
 ---
 
-Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage! Personally, I find that it translates really well into how I want to *\*write\** out of the box.
+<!-- TODO multiple versions - basic & advanced -->
+
+Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage. It's goal is author cleanly and display richly. And personally, I find that it translates really well into how I want to *\*write\** out of the box.
 
 Markdown powers Stack Overflow, Github, and a good chunk of the internet, while offering a delicate balance between robust expressiveness in typography, human readability on all platforms, and amazingly simple full text search.
 
 If you're just getting started there are a couple symbols to remember that will help translate text into **TEXT**!  There are plenty of online guides already detailing various flavors, but here's a brief overview contextualized into this site, including which elements are available and how they are displayed.
 
 For some external quick reference guides, you can check out [CommonMark](https://commonmark.org/help/) or the original [Markdown Syntax documentation](https://daringfireball.net/projects/markdown/syntax) by John Gruber
+
+## Markdown Editor / Viewer
+
+For folks getting started with markdown, I highly recommend using an editor that formats markdown while you type.  One online option is [**StackEdit**.io](https://stackedit.io/).  
+
+If you're working with local files, I highly recommend downloading [Visual Studio Code](https://code.visualstudio.com/download) and installing the following extensions:
+
+* [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) by Yu Zhang
+* [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) by Yiyi Wang
+* [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) by David Anson
+
 
 ## Syntax Guide
 
