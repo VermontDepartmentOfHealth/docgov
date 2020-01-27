@@ -349,9 +349,9 @@ $$\\\\nessie\prog\Software\\$$
 
 <style>
 /* prevent examples from showing up in toc */
-.toc li [href='#h--secondary'],
-.toc li [href='#h--tertiary'],
-.toc li [href='#h--quaternary'] {
+.toc li [href='#h-secondary'],
+.toc li [href='#h-tertiary'],
+.toc li [href='#h-quaternary'] {
     display: none;
 }
 /* override min-width */
