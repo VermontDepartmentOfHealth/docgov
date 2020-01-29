@@ -97,6 +97,8 @@ A stash for helpful articles, references, documentation looked up along the way
 
 * [run multiple scripts sequentially](https://stackoverflow.com/a/39172660/1366033)
 * [Node.js package.json main parameter](https://stackoverflow.com/q/22512992/1366033)
+* [Get all directories within directory nodejs](https://stackoverflow.com/a/35759360/1366033)
+* [Need to ZIP an entire directory using Node.js](https://stackoverflow.com/a/52598886/1366033)
 
 ## Visual Studio Code (VS Code)
 
