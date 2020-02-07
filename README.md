@@ -20,10 +20,11 @@ A Collection of public facing Overviews, Guidelines, Strategies, Standards, Tech
 
 ## Project Wikis
 
-* [Contributing](/contributing.md)
-* [Code of Conduct](/code_of_conduct.md)
-* [Resources](/resources.md)
-* [Changelog](/changelog.md)
+* [ReadMe](/readme.md) - Running the project locally and overview of project architecture
+* [Contributing](/contributing.md) - Guidelines for authoring a post
+* [Code of Conduct](/code_of_conduct.md) - Requirements for being a respectful community member
+* [Resources](/resources.md) - Scratchpad of links and notes during development
+* [Changelog](/changelog.md) - Release notes over time
 
 ## Project Setup
 
