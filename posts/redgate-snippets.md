@@ -8,8 +8,6 @@ summary: "An overview of how to create custom Redgate Snippets"
 ---
 
 
-![sql diagram](/assets/images/posts/redgate/drawing.svg)
-
 ## Overview
 
 [Redgate Snippets][3] are custom blocks of code with pre-defined fields that allow users to quickly create SQL Queries in SSMS by allowing the user to focus on what it is they want to do but not requiring them to remember every bit of syntax.

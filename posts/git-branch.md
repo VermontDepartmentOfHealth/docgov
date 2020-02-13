@@ -5,6 +5,7 @@ tags: ['post', 'git']
 authors: ['Kyle']
 date: 2020-02-04
 summary: "A review of the happy path git workflow and what to do when you find yourself in the #1 predicament in git of making changes against a different working copy than the one you intended."
+draft: true
 ---
 
 ## Happy Path - Git Workflow
