@@ -60,6 +60,29 @@ module.exports = function CustomizeMD() {
     };
 
 
+    let origImg = md.renderer.rules.image
+    md.renderer.rules.image = function (tokens, idx, options, env, slf) {
+        let token = tokens[idx];
+
+        // if we're on prod release, gather image dimensions
+        if (process.env.ELEVENTY_ENV === 'prod') { 
+            let src = token.attrs[token.attrIndex('src')][1]
+
+            let dimensions = getImgDimensions(src)
+
+            if (dimensions) {
+                token.attrPush(["width", dimensions.width]);
+                //token.attrPush(["height", dimensions.height]); don't set both height/width for responsive aspect ratio
+                token.attrPush(["style", `max-height:${dimensions.height}px;`]);
+            }
+        }
+
+        token.attrPush(["loading", "lazy"]);
+        return origImg(tokens, idx, options, env, slf)
+    };
+
+
+
     // Remember old renderer, if overridden, or proxy to default renderer
     let defaultAnchorRender = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
         return self.renderToken(tokens, idx, options);
@@ -153,3 +176,33 @@ function fence(tokens, idx, options, env, slf) {
         highlighted +
         '</code></pre>\n';
 };
+
+
+let sizeOf = require('image-size');
+let path = require("path")
+function getImgDimensions(src) {
+    
+    let isExternal = src.startsWith("http")
+    if (isExternal) return null; // TODO fetch from url - https://www.npmjs.com/package/image-size#using-a-url
+
+    try {
+        
+        // get directory for main thread
+        let appPath = require.main.filename       // C:\user\github\app\node_modules\@11ty\eleventy\cmd.js
+        let pos = appPath.indexOf("node_modules")
+        let appRoot = appPath.substr(0, pos)      // C:\user\github\app\
+
+        // build image file path
+        let imgPath = path.join(appRoot, src)
+
+        let dimensions = sizeOf(imgPath);
+
+        return dimensions
+        
+    } catch (error) {
+        // don't fail build if we can't find image
+        console.warn(`ERROR - Image not found at ${src}`)
+        return null
+    }
+    
+}

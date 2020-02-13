@@ -16,7 +16,7 @@ Markdown powers Stack Overflow, Github, and a good chunk of the internet, while 
 
 If you're just getting started there are a couple symbols to remember that will help translate text into **TEXT**!  There are plenty of online guides already detailing various flavors, but here's a brief overview contextualized into this site, including which elements are available and how they are displayed.
 
-For some external quick reference guides, you can check out [CommonMark](https://commonmark.org/help/) or the original [Markdown Syntax documentation](https://daringfireball.net/projects/markdown/syntax) by John Gruber
+For some external quick reference guides, you can check out [CommonMark](https://commonmark.org/help/) or the original [Markdown Syntax documentation](https://daringfireball.net/projects/markdown/syntax) by John Gruber. If you're converting existing info to Markdown, try [Paste 2 Markdown](https://euangoddard.github.io/clipboard2markdown/)
 
 ## Markdown Editor / Viewer
 

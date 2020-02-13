@@ -1452,8 +1452,8 @@ td>mark {
     margin: 0;
     overflow: visible;
     width: 35px;
-    height: 30px;
-    padding: 3px;
+    height: 34px;
+    padding: 5px;
     cursor: pointer;
     display: flex;
     flex-direction: column;

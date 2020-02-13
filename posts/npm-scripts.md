@@ -103,7 +103,7 @@ require('dotenv').config()
 
 You might also set some environment variables on your build server settings like in [Netlify Environment Variables](https://docs.netlify.com/configure-builds/environment-variables/):
 
-![image](https://user-images.githubusercontent.com/4307307/71743381-6cfd3f00-2e32-11ea-93e2-e355765e17fc.png)
+![image](/assets/images/posts/npm-scripts/netlify-environment-variables.png)
 
 
 ## #2 Delete Files / Folder
