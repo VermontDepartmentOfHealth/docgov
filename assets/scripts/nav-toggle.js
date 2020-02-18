@@ -37,32 +37,44 @@ function handleTouchStart(evt) {
 }; 
 
 function handleTouchEnd(evt) {
-    if ( ! xDown || ! yDown ) {
-        return;
-    }
+    // make sure touch start has already fired
+    if ( ! xDown || ! yDown ) { return; }
+
+    // if the click came from inside the house (sidenav) don't do anything
+    if (evt.target.closest("nav.sidenav")) { return }
+
+    // calculate movements
     var xUp = evt.changedTouches[0].clientX;
     var yUp = evt.changedTouches[0].clientY;
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
 
-	// we moved more x than y and moved at least 20px x
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) && Math.abs( xDiff ) > 40 ) {
-        if ( xDiff < 0 ) {
-            // right swipe
-            // if nav closed and started on left half, open
-            var isOpen = !document.body.classList.contains('nav-closed')
-            if (!isOpen) {
-                toggleNav()
-            }
-        } else {
-            // left swipe 
-            // if nav open, close
-            console.log("left", xDiff)
-            toggleNav()
-        }                       
+    // check if we're open
+    var isOpen = !document.body.classList.contains('nav-closed')
+
+    if (!isOpen) {
+        // if we're not open, only open if we've moved more x than y
+        var movedMostlyHorizontal = Math.abs( xDiff ) > Math.abs( yDiff )
+        var movedFarEnough = Math.abs( xDiff ) > 60
+        var movedRight = xDiff < 0
+        var notScrollable = !IsScrollable(evt.target)
+
+        var shouldOpen = movedMostlyHorizontal && movedFarEnough && movedRight && notScrollable
+
+        if (shouldOpen) { toggleNav() }
+
+    } else {
+        // if we're already open, any touch will close
+        toggleNav()
     }
 
     // reset values
     xDown = null;
     yDown = null;                                             
 };
+
+function IsScrollable(el) {
+	if (el.clientWidth < el.scrollWidth) return true
+    if (!el.parentElement) return false
+    return IsScrollable(el.parentElement)
+}

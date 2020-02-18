@@ -3,14 +3,17 @@ var CACHE = 'doc-gov-cache-v5';
 
 
 if ('serviceWorker' in navigator) {
+    // wait until dom loads to register
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-        });
+        navigator.serviceWorker.register('/service-worker.js').then(
+            function(registration) {
+                // registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            },
+            function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            }
+        );
     });
 }
-

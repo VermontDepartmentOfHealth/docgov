@@ -13,8 +13,8 @@ module.exports =  function BuildCollection(collection, categoryTagName,  categor
     // all categories that have their own page
     let categoryPages = collection.getFilteredByTag(categoryTagName)
 
-    // grab all posts
-    let allPosts = collection.getFilteredByTag('post')
+    // grab all (published) posts in descending order
+    let allPosts = collection.getFilteredByTag('post').filter(item => !item.data.draft).reverse()
 
     // go through each category page and attach relevant posts
     var categoryCollection = categoryPages.map(page => {
@@ -60,8 +60,9 @@ function validateCategory(collection, categoryTagName,  categoryKey, categoryDat
     if (missingCategories.length) {
         const chalk = require('chalk');
         var files = missingCategories.map(a => `${filePath}${a}.md`);
-        console.warn(chalk.yellow(`Missing ${postTagName} pages for:\n* ${missingCategories.join("\n* ")}\n`));
+        console.warn(chalk.yellow(`Missing ${categoryTagName} pages for:\n* ${missingCategories.join("\n* ")}\n`));
         console.warn(chalk.yellow(`To fix, create the following files:\n${files.join("\n")}\n`));
+        // todo automatically generate placeholder file or link to create or cli instruction to create
     }
 
 }

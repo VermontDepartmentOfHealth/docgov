@@ -2,7 +2,7 @@
     "name": "Doc Gov",
     "short_name": "Doc Gov",
     "theme_color": "#0171a1",
-    "background_color": "#bfd3dc",
+    "background_color": "#fffffa",
     "icons": [
       {
         "src": "/assets/images/icons/fav/android-chrome-192x192.png",

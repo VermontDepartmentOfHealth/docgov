@@ -1,3 +1,11 @@
+---
+layout: default.njk
+title: Resources
+tags: ['page']
+toc: true
+permalink: 'resources.md/index.html'
+---
+
 # Resources & References
 
 A stash for helpful articles, references, documentation looked up along the way
@@ -25,11 +33,13 @@ A stash for helpful articles, references, documentation looked up along the way
 * [apply default template to posts](https://www.11ty.io/docs/data-template-dir/#example%3A-apply-a-default-layout-to-multiple-templates)
 * [content dates](https://www.11ty.io/docs/dates/)
 * [ignores](https://www.11ty.io/docs/ignores/)
-
+* [Add previous / next pages](https://brycewray.com/posts/2019/12/previous-next-eleventy/)
+* [Nunjucks shortcode returns undefined when value is an int #856](https://github.com/11ty/eleventy/issues/856)
 
 ## Netlify
 
-* [TOML](https://www.netlify.com/docs/netlify-toml-reference/)
+* [Netlify Config](https://www.netlify.com/docs/netlify-toml-reference/)
+* [Netlify Config - Redirects](https://docs.netlify.com/configure-builds/file-based-configuration/#redirects)
 * [Build](https://www.netlify.com/products/build/)
 * [Dev](https://www.netlify.com/products/dev/)
 * [Asset Optimization / Post Processing](https://www.netlify.com/docs/netlify-toml-reference/#post-processing)
@@ -37,7 +47,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Build Hooks](https://www.netlify.com/docs/webhooks/#incoming-webhooks)
 * [environment variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables)
 * [CLI (formerly dev)](https://github.com/netlify/cli)
-
+* [Redirects and rewrites](https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file)
 
 ## JAMStack
 
@@ -55,7 +65,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [passing data to includes](https://github.com/mozilla/nunjucks/issues/539#issuecomment-203538566)
 * [built in filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters)
 * [paired shortcode](https://github.com/11ty/eleventy/issues/685#issuecomment-528980239)
-
+* [Debug nunjucks data object with `dump` filter](https://mozilla.github.io/nunjucks/templating.html#dump)
 
 ## Accessibility (A11y)
 
@@ -67,6 +77,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [FF a11y inspector](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
 * [semantic vs decorative icons](https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility)
 * [SVG alt text and role](https://stackoverflow.com/q/57983591/1366033)
+* [Add `aria-label` to close button](https://www.w3.org/TR/WCAG20-TECHS/ARIA14.html#ARIA14-examples)
 
 ## Markdown
 
@@ -74,7 +85,7 @@ A stash for helpful articles, references, documentation looked up along the way
 * [how to write lists inside a markdown table](https://stackoverflow.com/q/19950648/1366033)
 * [escape ordered list](https://stackoverflow.com/a/12839171/1366033)
 * [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor)
-
+* [markdown-it-checkbox](https://github.com/mcecot/markdown-it-checkbox)
 
 ## Highlight.JS
 
@@ -85,12 +96,17 @@ A stash for helpful articles, references, documentation looked up along the way
 ## Node / Node Package Manager (NPM)
 
 * [run multiple scripts sequentially](https://stackoverflow.com/a/39172660/1366033)
+* [Node.js package.json main parameter](https://stackoverflow.com/q/22512992/1366033)
+* [Get all directories within directory nodejs](https://stackoverflow.com/a/35759360/1366033)
+* [Need to ZIP an entire directory using Node.js](https://stackoverflow.com/a/52598886/1366033)
 
-## Visual Studio Code
+## Visual Studio Code (VS Code)
 
 * [workspace recommended extensions](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)
 * [debug on windows and mac](https://stackoverflow.com/a/42471528/1366033)
 * [add json schema definition](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)
+* [How to create per workspace snippets in VSCode?](https://stackoverflow.com/q/44312494/1366033)
+* [How do I change Markdownlint settings in Visual Studio Code](https://superuser.com/a/1295410/180163)
 
 ## Github
 
@@ -98,6 +114,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [Issue and pull request templates](https://help.github.com/en/articles/about-issue-and-pull-request-templates)
 * [Setting guidelines for repository contributors](https://help.github.com/en/articles/setting-guidelines-for-repository-contributors)
 * [Organizing members into teams](https://help.github.com/en/articles/organizing-members-into-teams)
+* [Diff syntax highlighting](https://stackoverflow.com/q/40883421/1366033)
+* [Adding line comments & suggestions to a Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)
 
 ## HTML
 
@@ -121,6 +139,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [`Element.Closest`](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest)
 * [Vanilla JS - Detect Touch](https://stackoverflow.com/a/30192291/1366033)
 * [MDN - Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
+* [How to Minify JSON #540](https://github.com/terser/terser/issues/540)
+* [Determine if element has scrollbar](https://stackoverflow.com/a/4146651/1366033)
 
 ## CSS
 
@@ -131,6 +151,8 @@ A stash for helpful articles, references, documentation looked up along the way
 * [How to justify a single flexbox item](https://stackoverflow.com/q/23621650/1366033)
 * [simple tooltip](https://chrisbracco.com/a-simple-css-tooltip/)
 * [How can I implement a spoiler quote with just CSS?](https://stackoverflow.com/a/59166036/1366033)
+* [Pure CSS: Accessible Checkboxes](https://medium.com/claritydesignsystem/pure-css-accessible-checkboxes-and-radios-buttons-54063e759bb3)
+
 
 ## Fonts
 
@@ -143,6 +165,9 @@ A stash for helpful articles, references, documentation looked up along the way
 * [How to scale SVG](https://css-tricks.com/scale-svg/)
 * [optimize svg](https://jakearchibald.github.io/svgomg/)
 * [`viewBox` is case-sensitive](https://stackoverflow.com/q/38062394/1366033)
+* [Brand colors - Stackoverflow](https://brandcolors.net/b/stackoverflow)
+* [Brand colors - Github](https://brandcolors.net/b/github)
+* [Brand colors - Twitter](https://brandcolors.net/b/twitter)
 
 ## PWA
 
@@ -157,3 +182,10 @@ A stash for helpful articles, references, documentation looked up along the way
 ## SEO
 
 * [Hyphen or Underscore for SEO URLs?](https://www.ecreativeim.com/blog/index.php/2011/03/30/seo-basics-hyphen-or-underscore-for-seo-urls/)
+* [meta robots noindex vs nofollow](https://yoast.com/which-pages-noindex-or-nofollow/)
+* [What is .htaccess file?](https://stackoverflow.com/q/13170819/1366033)
+* [What is a sitemap.xml](https://support.google.com/webmasters/answer/156184)
+* [Build and submit your sitemap](https://support.google.com/webmasters/answer/183668)
+* [URL Inspection Tool](https://support.google.com/webmasters/answer/9012289)
+* [Intro to Structured Data (JSON-LD)](https://developers.google.com/search/docs/guides/intro-structured-data)
+* [Job Posting Metadata](https://developers.google.com/search/docs/data-types/job-posting)

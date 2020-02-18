@@ -11,6 +11,6 @@ summary: "A complete listing of all posts and pages"
   {{title}}
 </h1>
 
-{% set postList = collections.post | reverse %}
+{% set postList = collections.published | reverse %}
 {% include "_partials/postList.njk" %}
 

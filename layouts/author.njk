@@ -5,11 +5,105 @@ layout: default.njk
 
 <h2><a href="/authors/"> {% include "assets/images/icons/fa/arrow-left.svg" %} All Authors</a></h2>
 
-<h1 class="page-title">{{ title }}</h1>
+
+<div class="author-header">
+
+
+    {% if profile %}
+        <img src="{{profile}}" alt="Profile picture for {{name}}" class="profile">
+    {% endif %}
+
+    <div class="author-info">
+
+        <h1 class="page-title">{{ full_name or name }}</h1>
+
+        <ul class="author-links">
+            {% if github %}
+                <li><a href="{{github}}" class="github">
+                    {% include "assets/images/icons/fa/github.svg" %} 
+                    {{ github | lastDir }}
+                </a></li>
+            {% endif %}
+            {% if stackoverflow %}
+                <li><a href="{{stackoverflow}}" class="stack-overflow">
+                    {% include "assets/images/icons/fa/stack-overflow.svg" %} 
+                    {{ stackoverflow | lastDir }}
+                </a></li>
+            {% endif %}
+            {% if twitter %}
+                <li><a href="{{twitter}}" class="twitter">
+                    {% include "assets/images/icons/fa/twitter.svg" %} 
+                    @{{ twitter | lastDir }}
+                </a></li>
+            {% endif %}
+        </ul>
+
+    </div>
+</div>
+
 
 {{ content | safe }}
 
+<hr class="my-2"/>
 
-{% set postList = collections.authors[name].posts %}
+<h2 class="post-title mt-0">Posts from {{ name }}</h2>
+
+{% set author = collections.authors | findByName(name) %}
+{% set postList = author.posts %}
 {% include "_partials/postList.njk" %}
     
+
+<style>
+img.profile {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border-width: 1px;
+    margin-right: 1.3rem;
+}
+.author-header {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.author-info .page-title {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.author-links {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+}
+
+.author-links li {
+    list-style: none;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.author-links li svg {
+    margin-bottom: -2px;
+}
+
+.twitter:hover path {
+    fill: #1d9deb;
+}
+.github:hover path {
+    fill: #642683;
+}
+.stack-overflow:hover path.stacks {
+    fill: #f48024;
+}
+.stack-overflow:hover path.overflow {
+    fill: #bcbbbb;
+}
+</style>

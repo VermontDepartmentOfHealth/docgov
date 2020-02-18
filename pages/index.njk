@@ -17,14 +17,18 @@ A Collection of Overviews, Guidelines, Strategies, Standards, Technologies, and 
         
 {% include "_partials/search.njk" %}
 
-<h1 class="page-title mt-2">
-  Recent posts
-</h1>
+<div class="page-title-section mt-1">
+  <h1 class="page-title my-1 ">
+    Recent posts
+  </h1>
 
-{% set postList = collections.post | reverse | take(10) %}
+  {% include "_partials/displayDensity.njk" %}
+</div>
+
+{% set postList = collections.published | reverse | take(10) %}
 {% include "_partials/postList.njk" %}
 
-{% if collections.post.length > 10 %}
+{% if collections.published.length > 10 %}
   <hr>
-  <h3>Showing latest 10 of {{collections.post.length}} - <a href="/archive/">View All Archives</a></h3>
+  <h3>Showing latest 10 of {{collections.published.length}} - <a href="/archive/">View All Archives</a></h3>
 {% endif %}

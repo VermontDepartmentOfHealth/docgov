@@ -1,17 +1,18 @@
 ---
 title_word: Acronyms
 title: Acronyms List
-summary: >-
-  A semi-complete listing of acronyms and other jargon used across the State of
-  Vermont
+summary: "A semi-complete listing of acronyms and other jargon used across the State of Vermont"
 tags:
   - post
   - overview
 authors:
   - Kyle
-date: 2019-09-04T00:00:00.000Z
-updated: 2019-10-07T21:00:31.857Z
+date: 2019-09-04
+updated: 2020-01-15
 ---
+
+<!-- TODO: Add sections -->
+
 <form id="form-filter" class="search mt-0" autocomplete="off">
     <input type="search" id="input-filter" class="hide-clear mt-1" placeholder="Type to filter" autocomplete="off">
     <label for="input-search" aria-label="Search Page" class="mt-1">
@@ -75,6 +76,27 @@ CVX
 
 NDC
     ~ National Drug Code - https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+
+MO
+    ~ Maintenance & Operations
+
+ECM
+    ~ Enterprise Content Management
+    
+SAFe
+    ~ Scaled Agile Framework
+
+HIP Sprint
+    ~ Hardening, Innovation, Planning Sprint
+
+SP
+    ~ Stored Procedure
+
+DBA
+    ~ Database Administrator
+
+TDD
+    ~ Test Driven Development    
 
 ## Terms
 

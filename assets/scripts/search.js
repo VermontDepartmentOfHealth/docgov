@@ -15,7 +15,17 @@
     * @return {String} The markup
     */
     var createNoResultsHTML = function () {
-        return '<p>Sorry, no matches were found.</p>';
+        return "<button id='close-search' aria-label='Close'>×</button>" + 
+               "<p>Sorry, no matches were found.</p>";
+    };
+
+    /**
+    * Create the markup when no results are found
+    * @return {String} The markup
+    */
+    var createNoInputHTML = function () {
+        return "<button id='close-search' aria-label='Close'>×</button>" + 
+               "<p>Start typing to search</p>";
     };
 
     var highlightSnippet = function (text, query, summary) {
@@ -103,9 +113,10 @@
     * @return {String}        The results HTML
     */
     var createResultsHTML = function (results, query) {
-        var html = '<p>Found ' + results.length + ' matching article' + (results.length === 1 ? '' : 's') + '</p>';
+        var html = "<button id='close-search' aria-label='Close'>×</button>"
+        
+        html += '<p>Found ' + results.length + ' matching article' + (results.length === 1 ? '' : 's') + '</p>';
 
-        html += "<button id='close-search'>×</button>"
         // limit rending results to first 20
         results = results.slice(0, 20);
 
@@ -123,6 +134,13 @@
     var search = function (query) {
         // all lower case, please
         query = query.toLowerCase().trim();
+
+        // we we got an empty query string, return
+        if (!query) {
+            resultList.innerHTML = createNoInputHTML();
+            document.body.classList.add('searching');
+            return;
+        }
 
         var priority1 = [];
         var priority2 = [];
@@ -154,9 +172,6 @@
             ? createNoResultsHTML()
             : createResultsHTML(results, query);
 
-        resultList.innerHTML += ""
-        
-        console.log(resultList)
         // set search mode
         document.body.classList.add('searching');
     };
@@ -205,7 +220,7 @@
                 // Create a submit handler
                 form.addEventListener('submit', submitHandler, false);
                 input.addEventListener('keyup', inputChangeHandler, false);
-                input.addEventListener('change', inputChangeHandler, false);
+                input.addEventListener('input', inputChangeHandler, false);
 
                 // if someone put text there already, fire change on focus
                 input.addEventListener('focus', function(e) {

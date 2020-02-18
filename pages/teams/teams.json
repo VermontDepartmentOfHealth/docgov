@@ -1,4 +1,4 @@
-{ 
+{
     "layout": "team.njk",
-    "tags": ["team"]
+    "tags": ["team", "page"]
 }

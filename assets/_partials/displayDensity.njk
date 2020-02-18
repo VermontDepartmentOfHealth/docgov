@@ -1,9 +1,9 @@
 {# capture the JS content as a Nunjucks variable #}
 {% set js %}{% include "assets/scripts/settings-display-density.js" %}{% endset %}
-{# feed it through our cssmin filter to minify #}
+{# feed it through our jsmin filter to minify #}
 <script type="text/javascript">{{ js | jsmin | safe }}</script>
 
-<div class="display-toggle">
+<div class="display-toggle my-1">
 
   <label for="card" class="display-toggle-text">Card</label>
 
