@@ -141,6 +141,7 @@ Spelling validation is provided by [vscode-spell-checker](https://github.com/str
 
 Exceptions should be saved to `./.vscode/settings.json` in the `cSpell.words` section
 
+
 #### Inclusive Language
 
 From [Words To Avoid in Educational Writing](https://css-tricks.com/words-avoid-educational-writing/), consider avoiding the following words:
@@ -162,3 +163,8 @@ If you notice any examples in existing posts, feel free to submit a PR.
 ### Images
 
 Images taken from [undraw.co](https://undraw.co/search) should use theme color `#008a45` and should manually add `role="img"` to the root node.
+
+### Screen Capture
+
+You can create GIFs with [Screen To GIF](www.screentogif.com) or [LiceCap](https://licecap.en.softonic.com/)
+
