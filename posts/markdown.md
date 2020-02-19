@@ -8,7 +8,9 @@ updated: 2020-01-15
 summary: "Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage"
 ---
 
-<!-- TODO multiple versions - basic & advanced -->
+<!-- TODO multiple versions - basic & advanced
+prevent auto-link https://stackoverflow.com/a/60306770/1366033
+ -->
 
 Markdown is a simple way to format text that is both human readable and can also be easily converted to a webpage. It's goal is author cleanly and display richly. And personally, I find that it translates really well into how I want to *\*write\** out of the box.
 
