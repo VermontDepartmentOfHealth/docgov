@@ -1,7 +1,7 @@
 ---
 title_word: SSIS
 title: How to Install SSIS 2010
-tags: ['post', 'how-to']
+tags: ['post', 'how-to', 'ssis']
 authors: ['Sandra']
 date: 2019-08-30
 summary: "How to install and configure SQL Server Integration Services (SSIS)"
