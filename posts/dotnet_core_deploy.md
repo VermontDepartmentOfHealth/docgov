@@ -1,14 +1,14 @@
 ---
-title_word: 'DotNetCoreDeploy'
+title_word: 'Warp'
 title: 'Deploying a .Net Core Application'
-tags: ['post', 'how-to', 'process', '.net-Core', 'deployment']
+tags: ['post', 'how-to', 'process', 'dotnet-core', 'deployment']
 authors: ['John']
 date: 2020-02-15
 summary: "How to deploy a .Net core application"
 draft: true
 ---
 ## Overview
-Is there stuff in the read me i did for the NDC sync that would be good in this doc?
+<!--TODO Is there stuff in the read me i did for the NDC sync that would be good in this doc? -->
 .Net core is the successor to the .Net framework. We are transitioning to developing in .Net core and when possible we will port existing .Net applications. There are significant advantages to using .Net core but also differences that necessitate a change to some of our deployment processes.
 
 ### Advantages
