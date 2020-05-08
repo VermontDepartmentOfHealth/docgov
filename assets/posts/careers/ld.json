@@ -1,0 +1,40 @@
+{
+  "@context" : "https://schema.org/",
+  "@type" : "JobPosting",
+  "title" : ".NET Software Developer",
+  "description" : "<p>The Vermont Department of Health's is to protect and promote the best health outcomes for <b>all</b> Vermonters</p>",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "MagsRUs Wheel Company",
+    "value": "1234567"
+  },
+  "datePosted" : "2020-02-12",
+  "validThrough" : "2020-02-28",
+  "employmentType" : "",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Vermont Department of Health",
+    "sameAs" : "https://www.healthvermont.gov/",
+    "logo" : "http://www.example.com/images/logo.png"
+  },
+  "jobLocation": {
+  "@type": "Place",
+    "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "108 Cherry Street",
+    "addressLocality": ", Burlington",
+    "addressRegion": "VT",
+    "postalCode": "05401",
+    "addressCountry": "US"
+    }
+  },
+ "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": {
+      "@type": "QuantitativeValue",
+      "value": 40.00,
+      "unitText": "HOUR"
+    }
+  }
+}

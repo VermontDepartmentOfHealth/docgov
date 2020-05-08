@@ -10,19 +10,12 @@ pagination:
 roles:
  - DBA
  - App
-permalink: "hiring/{{role | lower }}/index.html"
+permalink: "interview/{{role | lower }}/index.html"
 renderData:
   title: "Dev Interview Process"
   title_word: 'Interviews'
 ---
 
-
-
-{% if 'app' == role | lower %}
-    {% include "assets/images/hiring-yes.svg" %}
-{% elif 'dba' == role | lower%}
-    {% include "assets/images/hiring-no.svg" %}
-{% endif %}
 
 ## Positions
 
@@ -31,8 +24,8 @@ Slightly different versions of this page exist for two different roles:
 
 <ul class="radio-buttons list-unstyled d-flex">
 {%- for rl in roles %}
-  <li><a href="/hiring/{{rl | lower }}/" {% if rl == role %} aria-current {% endif %} >
-     {{ rl }} 
+  <li><a href="/interview/{{rl | lower }}/" {% if rl == role %} aria-current {% endif %} >
+     {{ rl }}
    </a></li>
 {% endfor -%}
 </ul>
@@ -130,27 +123,13 @@ Here's an overview of the types of SQL we'll look at:
 {% endif %}
 
 
-
-
-
 ## Next Steps
 
 Following any interview, we'll make sure to get back to you within 1-2 weeks and let you know if we'll be moving forward or not
 
-## Equal Opportunity
-
-### Legally, we need you to know this
-
-The Vermont Department of Health does not discriminate in employment matters on the basis of race, color, religion, gender identity or expression, national origin, age, military service eligibility, veteran status, sexual orientation, marital status, genetic information, AIDS/HIV status, place of birth, credit history, or disability (physical, mental, or emotional).
-
-### But also, we *want* you to know this
-
-We believe that diverse *and* inclusive teams build better products and workplace environments.  We actively encourage people from all groups to join and be a part of our team.
 
 
 
-[yes]: https://img.shields.io/badge/Hiring-Yes-green.svg
-[no]: https://img.shields.io/badge/Hiring-Not%20Currently-orange.svg
 [2]: https://humanresources.vermont.gov/talent-acquisition/successfactors-recruiting/successfactors-first-time-login
 [3]: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
 [4]: https://www.microsoft.com/en-us/sql-server/sql-server-downloads

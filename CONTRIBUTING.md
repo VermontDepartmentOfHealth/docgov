@@ -112,7 +112,18 @@ stackoverflow: https://stackoverflow.com/users/1366033/kylemit  # (optional) pat
 twitter: https://twitter.com/KyleMitBTV                         # (optional) path to twitter profile
 ```
 
-## Coding conventions
+## Content conventions
+
+### Tags
+
+Tagging posts should be done using `all-lowercase-hyphenated-with-no-symbols` like this:
+
+```diff
+- .Net-Core
++ dotnet-core
+```
+
+Search through the available tags in `/data/taglist.json` for ideas and if you create a new one, please add it there with a description
 
 ### Markdown
 
