@@ -31,7 +31,7 @@ description: Working with Microsoft QnA Maker + Bot Framework
 
 ## QnA Maker GUI
 
-![QnA Maker GUI](/assets/images/presentations/chat-bot/qna-maker-gui.png)
+![QnA Maker GUI](/assets/images/slides/chat-bot/qna-maker-gui.png)
 
 ---
 
