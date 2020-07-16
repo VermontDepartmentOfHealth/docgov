@@ -12,13 +12,17 @@ permalink: "{{slide.href}}"
 
 <div class="pagination">
   {% if slide.prev %}
-    <a class="pagination-item prev" rel="prev" href="{{ slide.prev.href }}">‹</a>
+    <a class="pagination-item prev" rel="prev" href="{{ slide.prev.href }}">
+      {% include "assets/images/icons/fa/chevron-left.svg" %}
+    </a>
   {% endif %}
 
     <span class="flex-spacer" ></span>
 
   {% if slide.next %}
-    <a class="pagination-item next" rel="next" href="{{ slide.next.href }}">›</a>
+    <a class="pagination-item next" rel="next" href="{{ slide.next.href }}">
+      {% include "assets/images/icons/fa/chevron-right.svg" %}
+    </a>
   {% endif %}
 
   <div class="progress-bar" style="width: {{ slide.cur.perComplete }}"></div>
