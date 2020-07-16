@@ -97,6 +97,10 @@ body {
     font-size: 1.2rem;
 }
 
+iframe {
+    width: 90%;
+}
+
 main.content {
     max-width: 100%;
     padding: 2rem 1rem;
@@ -130,6 +134,9 @@ main.content {
     }
     main.content {
         max-width: 60rem;
+    }
+    iframe {
+        width: 50rem;
     }
 }
 
