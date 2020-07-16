@@ -623,6 +623,27 @@ dt {
 }
 
 
+/* btn-hero */
+
+.page .content .btn.btn-hero {
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1f81ab;
+    padding: 5px 20px;
+    border-radius: 18px;
+    font-size: 1.4em;
+    color: #0a4b67;
+}
+
+.page .content .btn.btn-hero:hover {
+    background: #f5fcff;
+    border-color: #0a4b67;
+    color: #021b26;
+}
+
+
 /* radio button */
 
 .radio-buttons a {
@@ -1571,6 +1592,7 @@ aside::-webkit-scrollbar {
     overflow: hidden;
     position: relative;
     padding: 0;
+    min-height: 45px;
 }
 
 /* scroll on inner container */

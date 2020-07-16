@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include "_partials/meta.njk" %}
+
+
+    {# capture the CSS content as a Nunjucks variable #}
+    {% set css %}
+        {% include "assets/styles/hljs.css" %}
+        {% include "assets/styles/fonts.css" %}
+        {% include "assets/styles/slides.css" %}
+    {% endset %}
+    {# feed it through our cssmin filter to minify #}
+    <style type="text/css">{{ css | cssmin | safe }}</style>
+
+    {# Google Fonts #}
+    {# <link href="https://fonts.googleapis.com/css?family=Fira+Code|Noto+Serif|Roboto&display=swap" rel="stylesheet"> #}
+</head>
+
+<body class="page {{theme}}">
+
+
+    <a href="/presentations/{{slide.pres.fileSlug}}/" class="icon-link fixed-link">
+     {% include "assets/images/icons/fa/arrow-left.svg" %} Back to Doc Gov
+    </a>
+
+    <main class="content">
+
+        {{ content | safe }}
+
+    </main>
+
+    <script type="text/javascript">
+        {% set js %}{% include "assets/scripts/slide.js" %}{% endset %}
+        {{ js | jsmin | safe }}
+    </script>
+</body>
+</html>

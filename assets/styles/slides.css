@@ -1,0 +1,207 @@
+/* layout */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.content {
+    text-align: center;
+}
+
+ul,
+ol {
+    text-align: left;
+    display: inline-block;
+}
+
+li>ol,
+li>ul {
+    display: block;
+}
+
+aside.notes {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+hr {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #435c63;
+    margin-top: 6rem;
+}
+
+pre.hljs {
+    text-align: left;
+    max-width: 60rem;
+    overflow-y: auto;
+}
+
+
+/* typography */
+
+body {
+    background: #002b36;
+    color: #a2b7b7;
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Archivo Black', sans-serif;
+    color: #eee8d5;
+}
+
+body.page a {
+    color: #42affa;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+body.page a:hover {
+    color: #72b6e4;
+}
+
+
+/* responsive sizing */
+
+body {
+    font-size: 1.2rem;
+}
+
+main.content {
+    max-width: 100%;
+    padding: 2rem 1rem;
+    align-self: flex-start;
+}
+
+@media (min-width: 30rem) {
+    body {
+        font-size: 1.6rem;
+    }
+    main.content {
+        max-width: 100%;
+        padding: 1rem 1rem;
+        align-self: center;
+    }
+}
+
+@media (min-width: 40rem) {
+    body {
+        font-size: 1.8rem;
+    }
+    main.content {
+        max-width: 100%;
+        padding: 2rem 1rem;
+    }
+}
+
+@media (min-width: 60rem) {
+    body {
+        font-size: 2rem;
+    }
+    main.content {
+        max-width: 60rem;
+    }
+}
+
+
+/* pagination controls */
+
+.pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    font-size: 6rem;
+}
+
+span.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.progress-bar {
+    position: absolute;
+    background: #42affa;
+    height: 5px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* page */
+
+.title-word {
+    margin-top: -30px;
+}
+
+.typed-text {
+    color: #ffff58;
+}
+
+.display-hidden {
+    display: none;
+}
+
+.typed-cursor--blink {
+    display: none;
+}
+
+.landing h2 {
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+}
+
+body.block.page {
+    height: auto;
+}
+
+.block main.content {
+    margin-top: 6rem;
+}
+
+.fixed-link {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.2rem;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon-link svg {
+    height: 19px;
+    margin-right: 5px;
+}
+
+a.direct-link,
+.btn-icon.btn-copy {
+    display: none;
+}
