@@ -60,15 +60,17 @@ pre.hljs {
 /* typography */
 
 body {
-    background: #002b36;
+    background: rgb(0, 43, 54);
+    background: radial-gradient(circle, rgba(0, 43, 54, 1) 42%, rgba(8, 64, 78, 1) 100%);
     color: #a2b7b7;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Archivo Black', sans-serif;
+    line-height: 1.2;
+    font-family: 'Noto Serif', serif;
     color: #eee8d5;
 }
 
