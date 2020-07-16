@@ -11,7 +11,7 @@ permalink: "slides/index.html"
   {% for pres in collections.presentation  %}
     <li class="category-item">
       <a href="/slides/{{pres.fileSlug}}/" class="category-name">{{ pres.data.title }}</a>
-      <div class="category-description">{{ pres.data.description }}</div>
+      <div class="category-description">{{ pres.data.summary }}</div>
     </li>
   {% endfor %}
 </ol>
