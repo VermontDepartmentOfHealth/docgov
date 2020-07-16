@@ -1,0 +1,106 @@
+
+  /* Ocean Dark Theme */
+  /* https://github.com/gavsiu */
+  /* Original theme - https://github.com/chriskempson/base16 */
+
+  /* Ocean Comment */
+                         .hljs-comment,
+                         .hljs-quote
+  .highlight-theme-ocean .hljs-comment,
+  .highlight-theme-ocean .hljs-quote {
+    color: #98c1a3;
+  }
+
+  /* Ocean Red */
+                         .hljs-variable,
+                         .hljs-template-variable,
+                         .hljs-tag,
+                         .hljs-name,
+                         .hljs-selector-id,
+                         .hljs-selector-class,
+                         .hljs-regexp,
+                         .hljs-deletion,
+  .highlight-theme-ocean .hljs-variable,
+  .highlight-theme-ocean .hljs-template-variable,
+  .highlight-theme-ocean .hljs-tag,
+  .highlight-theme-ocean .hljs-name,
+  .highlight-theme-ocean .hljs-selector-id,
+  .highlight-theme-ocean .hljs-selector-class,
+  .highlight-theme-ocean .hljs-regexp,
+  .highlight-theme-ocean .hljs-deletion {
+    color: #e0838c;
+  }
+
+  /* Ocean Orange */
+                         .hljs-number,
+                         .hljs-built_in,
+                         .hljs-builtin-name,
+                         .hljs-literal,
+                         .hljs-type,
+                         .hljs-params,
+                         .hljs-meta,
+                         .hljs-link,
+  .highlight-theme-ocean .hljs-number,
+  .highlight-theme-ocean .hljs-built_in,
+  .highlight-theme-ocean .hljs-builtin-name,
+  .highlight-theme-ocean .hljs-literal,
+  .highlight-theme-ocean .hljs-type,
+  .highlight-theme-ocean .hljs-params,
+  .highlight-theme-ocean .hljs-meta,
+  .highlight-theme-ocean .hljs-link {
+    color: #d08770;
+  }
+
+  /* Ocean Yellow */
+                         .hljs-attribute,
+                         .hljs-attr
+  .highlight-theme-ocean .hljs-attribute,
+  .highlight-theme-ocean .hljs-attr {
+    color: #ebcb8b;
+  }
+
+  /* Ocean Green */
+                         .hljs-string,
+                         .hljs-symbol,
+                         .hljs-bullet,
+                         .hljs-addition,
+  .highlight-theme-ocean .hljs-string,
+  .highlight-theme-ocean .hljs-symbol,
+  .highlight-theme-ocean .hljs-bullet,
+  .highlight-theme-ocean .hljs-addition {
+    color: #a3be8c;
+  }
+
+  /* Ocean Blue */
+                         .hljs-title,
+                         .hljs-section,
+  .highlight-theme-ocean .hljs-title,
+  .highlight-theme-ocean .hljs-section {
+    color: #8fa1b3;
+  }
+
+  /* Ocean Purple */
+                         .hljs-keyword,
+                         .hljs-selector-tag,
+  .highlight-theme-ocean .hljs-keyword,
+  .highlight-theme-ocean .hljs-selector-tag {
+    color: #b48ead;
+  }
+
+                         .hljs,
+  .highlight-theme-ocean .hljs {
+    display: block;
+    overflow-x: auto;
+    background: #2b303b;
+    color: #d6dae0;
+    padding: 0.5em;
+  }
+
+                         .hljs-emphasis,
+  .highlight-theme-ocean .hljs-emphasis {
+    font-style: italic;
+  }
+                         .hljs-strong,
+  .highlight-theme-ocean .hljs-strong {
+    font-weight: bold;
+  }

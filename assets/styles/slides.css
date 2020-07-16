@@ -74,6 +74,12 @@ h3 {
     color: #eee8d5;
 }
 
+pre,
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: .9em;
+}
+
 body.page a {
     color: #42affa;
     text-decoration: none;
