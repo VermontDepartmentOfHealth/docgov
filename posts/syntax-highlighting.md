@@ -82,7 +82,7 @@ tags: ['post', 'workforce']
 
 ### Diff
 
-You can visualize diffs by begining each line with a minus (`-`) or plus (`+`) to indicate deletions or additions
+You can visualize diffs by beginning each line with a minus (`-`) or plus (`+`) to indicate deletions or additions
 
 ```diff
 - var sayHello = function(name) {
