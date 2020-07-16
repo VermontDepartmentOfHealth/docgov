@@ -55,7 +55,7 @@ module.exports = function(eleventyConfig) {
                     href: `/slides/${pres.fileSlug}/${i + 1}/`,
                     pres: {
                         title: pres.data.title,
-                        description: pres.data.description,
+                        summary: pres.data.summary,
                         totalPages: pages.length,
                         fileSlug: pres.fileSlug
                     },

@@ -1,6 +1,6 @@
 ---
 title: Chat Bots on Azure
-description: Working with Microsoft QnA Maker + Bot Framework
+summary: Working with Microsoft QnA Maker + Bot Framework
 # theme: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Azure FUN-ctions
-description: An Introduction to Serverless Compute on the .NET Cloud
+summary: An Introduction to Serverless Compute on the .NET Cloud
 # theme: default
 ---
 

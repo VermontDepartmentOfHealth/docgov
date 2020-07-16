@@ -1,5 +1,8 @@
-{% set page_title = title or (renderData and renderData.title) or page.fileSlug %}
+{% set page_title = title or (renderData and renderData.title) or (slide and slide.pres.title) or page.fileSlug %}
+{% set page_summary = summary or (slide and slide.pres.summary) %}
 {% set page_thumbnail = config.baseUrl + (hero or "/assets/images/thumbnail.png") %}
+
+
 
 {# Page #}
 <meta name="viewport" content="initial-scale=1.0, width=device-width" >
@@ -22,7 +25,7 @@
 {# Primary Meta Tags #}
 <title>{{page_title}}</title>
 <meta name="title" content="{{page_title}} | doc gov">
-<meta name="description" content="{{summary}}">
+<meta name="description" content="{{page_summary}}">
 <link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
 
 {# drafts never get crawled, else see config #}
@@ -35,12 +38,12 @@
 {# Open Graph / Facebook #}
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
-<meta property="og:title" content="{{page_title}}  | doc gov">
-<meta property="og:description" content="{{summary}}">
+<meta property="og:title" content="{{page_title}} | doc gov">
+<meta property="og:description" content="{{page_summary}}">
 <meta property="og:image" content="{{page_thumbnail}}">
 
 {# Twitter #}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{page_title}}">
-<meta name="twitter:description" content="{{summary}}">
+<meta name="twitter:description" content="{{page_summary}}">
 <meta name="twitter:image" content="{{page_thumbnail}}">
