@@ -1,0 +1,46 @@
+{% set page_title = title or (renderData and renderData.title) or page.fileSlug %}
+{% set page_thumbnail = config.baseUrl + (hero or "/assets/images/thumbnail.png") %}
+
+{# Page #}
+<meta name="viewport" content="initial-scale=1.0, width=device-width" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{# Favicons #}
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/fav/favicon-16x16.png">
+<link rel="mask-icon" href="/assets/images/icons/fav/safari-pinned-tab.svg" color="#00843d">
+<meta name="msapplication-TileColor" content="#00843d">
+<meta name="msapplication-config" content="/assets/images/icons/fav/browserconfig.xml">
+
+{# Theme color for browser chrome (chrome android) #}
+<meta name="theme-color" content="#00843d">
+<link rel="manifest" href="/manifest.json">
+
+
+{# Primary Meta Tags #}
+<title>{{page_title}}</title>
+<meta name="title" content="{{page_title}} | doc gov">
+<meta name="description" content="{{summary}}">
+<link rel="canonical" href="{{config.baseUrlCanonical}}{{page.url}}">
+
+{# drafts never get crawled, else see config #}
+{% if draft %}
+    <meta name="robots" content="NOINDEX">
+{% else %}
+    <meta name="robots" content="{{config.metaRobots}}">
+{% endif %}
+
+{# Open Graph / Facebook #}
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{config.baseUrl}}{{page.url}}">
+<meta property="og:title" content="{{page_title}}  | doc gov">
+<meta property="og:description" content="{{summary}}">
+<meta property="og:image" content="{{page_thumbnail}}">
+
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{page_title}}">
+<meta name="twitter:description" content="{{summary}}">
+<meta name="twitter:image" content="{{page_thumbnail}}">

@@ -1,0 +1,17 @@
+---
+layout: default.njk
+title_word: Presentations
+title: Presentations
+permalink: "presentations/index.html"
+---
+
+<h1 class="page-title">{{title}}</h1>
+
+<ol class="category-list category-presentations list-unstyled">
+  {% for pres in collections.presentation  %}
+    <li class="category-item">
+      <a href="/presentations/{{pres.fileSlug}}/" class="category-name">{{ pres.data.title }}</a>
+      <div class="category-description">{{ pres.data.description }}</div>
+    </li>
+  {% endfor %}
+</ol>
