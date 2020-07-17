@@ -21,7 +21,10 @@ summary: Working with Microsoft QnA Maker + Bot Framework
 
 ## Recording - 7/16/20
 
-<iframe width="1903" height="800" src="https://www.youtube.com/embed/YNBwSuICVac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <iframe width="634" height="316" src="https://www.youtube.com/embed/YNBwSuICVac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+[![youtube thumbnail](/assets/images/slides/chat-bot/youtube-thumbnail.png)](https://www.youtube.com/watch?v=YNBwSuICVac)
+
 
 ---
 
