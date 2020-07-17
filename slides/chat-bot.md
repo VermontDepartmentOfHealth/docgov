@@ -16,9 +16,16 @@ summary: Working with Microsoft QnA Maker + Bot Framework
     @KyleMitBTV
 </a>
 
+
 ---
 
-### Overview
+## Recording - 7/16/20
+
+<iframe width="1903" height="800" src="https://www.youtube.com/embed/YNBwSuICVac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+## Overview
 
 * Acknowledgements
 * Chat Bot Demo
@@ -62,7 +69,7 @@ summary: Working with Microsoft QnA Maker + Bot Framework
 
 ## Demo Sites
 
-* BOT - https://apps.health.vermont.gov/COVID/
+* BOT - https://apps-test.health.vermont.gov/COVID/
 * FAQ - https://apps-test.health.vermont.gov/COVID/faq/
 
 
@@ -126,7 +133,7 @@ summary: Working with Microsoft QnA Maker + Bot Framework
 
 ## Bot Framework
 
-> AI and natural language. Create a bot with the ability to speak, listen, understand, and learn from your users with Azure Cognitive Services.
+> Create a bot with the ability to speak, listen, understand, and learn from your users with Azure Cognitive Services.
 
 ---
 
@@ -165,6 +172,10 @@ summary: Working with Microsoft QnA Maker + Bot Framework
 * Static Site Generator
 * Live Data over API
 
+<!-- https://www.staticgen.com/ -->
+
+---
+
 #### Structured Data
 
 Use [FAQ Structured Data](https://developers.google.com/search/docs/data-types/faqpage)
@@ -189,11 +200,14 @@ Use [FAQ Structured Data](https://developers.google.com/search/docs/data-types/f
 
 ---
 
-## Training
+## Triage & Training
 
-* Triage & Training (labor hours)
-* Alternative Phrases (question level)
-* Alterations (word level)
+* **Triage** (labor hours)
+  * **Training Opportunity** - Query should have matched to better Answer
+  * **Missing FAQ** - Answer doesn't yet exist in knowledge base
+* **Training**
+  * **Alternative Phrases** - question level
+  * **Alterations** - word level
 
 ---
 
@@ -201,7 +215,7 @@ Use [FAQ Structured Data](https://developers.google.com/search/docs/data-types/f
 
 ```kql
 traces
-| where and message contains "GenerateAnswer"
+| where message contains "GenerateAnswer"
 | extend input = tostring(customDimensions.Question),
         answer = tostring(customDimensions.Answer),
         scoreInt = toint(round(todouble(customDimensions.Score))),
@@ -291,6 +305,7 @@ look at google docs her
 3. Test / Train
 4. Publish
 5. Create Bot
+6. Embed Bot
 
 <!-- make sure to verify create  -->
 
@@ -316,7 +331,10 @@ look at google docs her
 
 ### Community Resources
 
-* **Microsoft - Create an Azure Covid-19 Chatbot** - https://microsoft.github.io/slg-covid-bot/
+* **Microsoft - Chatbot Starter** - https://microsoft.github.io/slg-covid-bot/
 * **QnA Maker** - https://www.qnamaker.ai/
 * **Azure Bot Service** - https://azure.microsoft.com/en-us/services/bot-service/
 
+---
+
+## Thank You!
